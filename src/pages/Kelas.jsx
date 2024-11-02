@@ -67,7 +67,7 @@ const Kelas = () => {
                                 <span>Gratis</span>
                             </div>
                         </div>
-                        <img src="foto1.jpg" alt=""/>
+                        <img src="./foto1.jpg" alt=""/>
                         <button className="button-daftar">Daftar Sekarang</button>
                     </div>
 
@@ -84,7 +84,7 @@ const Kelas = () => {
                                 <span>Gratis</span>
                             </div>
                         </div>
-                        <img src="foto2.jpg" alt=""/>
+                        <img src="./foto2.jpg" alt=""/>
                         <button className="button-daftar">Daftar Sekarang</button>
                     </div>
 
@@ -101,7 +101,7 @@ const Kelas = () => {
                                 <span>Gratis</span>
                             </div>
                         </div>
-                        <img src="foto3.jpg" alt=""/>
+                        <img src="./foto3.jpg" alt=""/>
                         <button className="button-daftar">Daftar Sekarang</button>
                     </div>
 
@@ -118,7 +118,7 @@ const Kelas = () => {
                                 <span>Gratis</span>
                             </div>
                         </div>
-                        <img src="foto4.jpg" alt=""/>
+                        <img src="./foto4.jpg" alt=""/>
                         <button className="button-daftar">Daftar Sekarang</button>
                     </div>
 
@@ -135,7 +135,7 @@ const Kelas = () => {
                                 <span>Gratis</span>
                             </div>
                         </div>
-                        <img src="foto5.jpg" alt=""/>
+                        <img src="./foto5.jpg" alt=""/>
                         <button className="button-daftar">Daftar Sekarang</button>
                     </div>
 
@@ -152,7 +152,7 @@ const Kelas = () => {
                                 <span>Gratis</span>
                             </div>
                         </div>
-                        <img src="foto6.jpg" alt=""/>
+                        <img src="./foto6.jpg" alt=""/>
                         <button className="button-daftar">Daftar Sekarang</button>
                     </div>
                 </div>
