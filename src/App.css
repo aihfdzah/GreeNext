@@ -45,7 +45,7 @@ body {
     list-style: none;
     padding: 10px 20px;
     background-color: var(--main-color) !important;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .navbar .collapse  { /*navbar berjarak*/ 
@@ -55,10 +55,13 @@ body {
     margin-right: 30px;
     text-decoration: none;
 }
-.navbar-ul {
+.navbar-nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.nav-link {
+    display: flex;
+    gap: 20px;
+    color: white;
 }
 .navbar a:hover { /*tulisan berwarna*/
     color: var(--text-color2) !important;
@@ -97,10 +100,6 @@ body {
     background-color: var(--text-color2) !important;
     color: white;
     transition: .2s;
-}
-
-div .collapse {
-    display: none;
 }
 
 /* ----------kelas------------ */
@@ -340,12 +339,12 @@ option {
     padding-right: 100px;
 }
 
-.footer-logo img {
+.logo-footer {
     width: 150px; /* Ukuran logo */
     margin-bottom: 10px;
 }
 
-.footer-logo a {
+.item {
     position: fixed;
     width: 150px;
     margin-top:110px;
@@ -358,7 +357,7 @@ option {
     transition: 0s;
 }
 
-.footer-logo i {
+.bx bx-globe {
     color: white;
     text-decoration: none;
     font-size: 14px;
@@ -366,6 +365,11 @@ option {
 }
 
 /* Style untuk setiap bagian link di footer */
+.footer-item {
+    display: block;
+    align-items: center;
+    gap: 10px;
+}
 .footer-link {
     list-style-type: none;
     padding-top: 13px;

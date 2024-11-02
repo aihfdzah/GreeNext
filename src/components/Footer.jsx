@@ -2,15 +2,18 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="footer fixed-bottom" >
+        <footer className="footer navbar-expand-lg navbar-dark bg-dark fixed-bottom" >
             <div className="footer-content">
-
+                
                 <div className="footer-logo">
                     <img src="./logo.png" className="logo-footer" alt="FarmEduZ Logo" />
-                    <a href="#"><i className='bx bx-globe'></i> Bahasa Indonesia</a>
+                    <a className="item" href="#">
+                        <i className='bx bx-globe'></i>
+                        Bahasa Indonesia
+                    </a>
                 </div>
 
-                <div className="collapse-footer-collapse" id="footerFoot">
+                <div className="collapse footer-collapse" id="footerFoot">
                     <ul className="footer">
                         <li className="footer-item">
                             <a className="footer-link" href="#dashboard">
@@ -42,18 +45,18 @@ const Footer = () => {
                 <div className="collapse-footer-collapse" id="footerFoot">
                     <div className="down">
                         <ul className="footer">
-                        <li className="footer-link">
-                            <a href="#">
+                        <li className="footer-item">
+                            <a className="footer-link" href="#">
                                 Tentang Kami</a>
                         </li>
 
-                        <li className="footer-link">
-                            <a href="#">
+                        <li className="footer-item">
+                            <a className="footer-link" href="#">
                                 Hubungi Kami</a>
                         </li>
 
-                        <li className="footer-link">
-                            <a href="#">
+                        <li className="footer-item">
+                            <a className="footer-link" href="#">
                                 Tentang Privasi</a>
                         </li>
                         </ul>

@@ -174,3 +174,5 @@ const Kelas = () => {
         </div>
     );
 };
+
+export default Kelas;
