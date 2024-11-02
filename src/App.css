@@ -45,7 +45,7 @@ header {
     list-style: none;
 }
 .navbar a { /*navbar berjarak*/ 
-    color: #fff !important;
+    color: #fff ;
     font-size: 1rem;
     padding: 10px 20px;
     font-weight: 500;
@@ -53,7 +53,7 @@ header {
     text-decoration: none;
 }
 .navbar a:hover { /*tulisan berwarna*/
-    color: var(--text-color2);
+    color: var(--text-color2) !important;
     transition: .4s;
 }
 /*logo*/ 
@@ -79,18 +79,102 @@ header {
 }
 .masuk-btn {
     background-color: transparent; 
-    color: var(--text-color2);               
+    color: var(--text-color2) !important;               
     padding: 8px 13px;            
-    border: 2px solid var(--text-color2);    
+    border: 2px solid var(--text-color2) !important;    
     border-radius: 5px;            
     text-decoration: none;     
 }
 .masuk-btn:hover {
-    background-color: var(--text-color2);
+    background-color: var(--text-color2) !important;
     color: white;
     transition: .2s;
 }
 
 div .collapse {
     display: none;
+}
+
+
+/* -----------footer----------- */
+.footer {
+    background-color: #174728 !important;  
+    color: white;
+    padding: 20px 170px;
+    font-size: 14px;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;        
+}
+
+/* Mengatur logo dan teks bahasa */
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 100px;
+}
+
+.footer-logo img {
+    width: 150px; /* Ukuran logo */
+    margin-bottom: 10px;
+}
+
+.footer-logo a {
+    position: fixed;
+    width: 150px;
+    margin-top:110px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-logo a:hover {
+    color: var(--text-color2) !important;
+    transition: 0s;
+}
+
+.footer-logo i {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Style untuk setiap bagian link di footer */
+.footer-link {
+    list-style-type: none;
+    padding-top: 13px;
+}
+
+.footer-link ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link ul li {
+    margin-bottom: 10px;
+}
+
+.footer-link ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0;
+}
+
+.footer-link ul li a:hover {
+    color: var(--text-color2) !important; /* Warna oranye saat hover */
+}
+
+.footer-link .down {
+    padding-top: 55px;
 }

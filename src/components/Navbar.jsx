@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
-            <img src="#" className="logo" alt="logo"/>
+            <img src="./logo2.png" className="logo" alt="logo"/>
 
 
             <div className="collapse navbar-collapse" id="navbarNav">
