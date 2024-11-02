@@ -45,7 +45,7 @@ header {
     list-style: none;
 }
 .navbar a { /*navbar berjarak*/ 
-    color: #fff;
+    color: #fff !important;
     font-size: 1rem;
     padding: 10px 20px;
     font-weight: 500;
@@ -89,4 +89,8 @@ header {
     background-color: var(--text-color2);
     color: white;
     transition: .2s;
+}
+
+div .collapse {
+    display: none;
 }
