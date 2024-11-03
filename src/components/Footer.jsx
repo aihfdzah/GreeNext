@@ -2,18 +2,17 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="footer footer-expand-lg footer-dark bg-dark" >
+        <footer className="footer footer-expand-lg footer-dark bg-dark text-white py-3" >
             <div className="footer-content">
                 
                 <div className="footer-logo">
                     <img src="./logo.png" className="logo-footer" alt="FarmEduZ Logo" />
-                    <a className="item" href="#">
-                        <i className='bx bx-globe'></i>
-                        Bahasa Indonesia
-                    </a>
+                    <i className="bx fa-solid fa-globe">
+                        <br/>Bahasa Indonesia
+                    </i>
                 </div>
 
-                <div className="collapse footer-collapse" id="footerFoot">
+                <div className="collapse footer-collapse flex-direction-column" id="footerFoot">
                     <ul className="foooter">
                         <li className="footer-item">
                             <a className="footer-link" href="#dashboard">
@@ -44,7 +43,7 @@ const Footer = () => {
 
                 <div className="collapse-footer-collapse" id="footerFoot">
                     <div className="down">
-                        <ul className="footer">
+                        <ul className="foooter">
                         <li className="footer-item">
                             <a className="footer-link" href="#">
                                 Tentang Kami</a>
@@ -65,7 +64,7 @@ const Footer = () => {
 
                 <div className="collapse-footer-collapse" id="footerFoot">
                     <div className="down">
-                        <ul className="footer">
+                        <ul className="foooter">
                             <li className="footer-item">
                                 <a className="footer-link" href="#">
                                     Bantuan & Dukungan</a>

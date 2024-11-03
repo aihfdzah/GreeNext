@@ -136,9 +136,9 @@ body {
     cursor: pointer;
 }
 .button-filter:hover {
-        background-color: var(--text-color2);
-        color: white;
-        transition: .2s;
+    background-color: var(--text-color2);
+    color: white;
+    transition: .2s;
 }
 .search-bar {
     display: flex;
@@ -276,7 +276,7 @@ option {
     color: #555 !important;
     font-size: 0.9em;
     padding: 25px 0;
-    margin-left: 18%;
+    margin-left: 15%;
 }
 .pagination .prev.disabled {
     color: #ccc !important;
@@ -317,24 +317,23 @@ option {
 
 /* -----------footer----------- */
 .footer {
-    background-color: #17412D !important;  
-    color: white;
-    padding: 10px 170px;
+    background-color: #17412D !important;
+    padding: 10px 50px;
     font-size: 14px;
     align-items: center;
     justify-content: center;
     position: relative;
-    bottom: 0;
-    right: 0;
     width: 100%;
     flex-direction: column;
+    margin: 10px 10px;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-around; 
     align-items: flex-start; 
     flex: 1;
+    flex-wrap: wrap;
 }
 
 /* Mengatur logo dan teks bahasa */
@@ -344,6 +343,7 @@ option {
     align-items: flex-start;
     justify-content: space-between;
     padding-right: 100px;
+    margin-left: 5%;
 }
 
 .logo-footer {
@@ -351,32 +351,39 @@ option {
     margin-bottom: 10px;
 }
 
-.item {
+/* .item {
     position: fixed;
     width: 150px;
-    margin-top:110px;
+    margin-top: 0;
     color: #fff;
     text-decoration: none;
-}
-
-.footer-logo a:hover {
-    color: var(--text-color2) !important;
-    transition: 0s;
-}
-
-.bx bx-globe {
+} */
+.bx {
+    margin-left: 10px;
     color: white;
     text-decoration: none;
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 10px;
+    margin-top: 50px;
+    line-height: 2;
 }
+
+/* .footer-logo a:hover {
+    color: var(--text-color2) !important;
+    transition: 0s;
+} */
 
 .footer .collapse {
     display: flex;
-    flex-direction: column;
 }
 
 /* Style untuk setiap bagian link di footer */
+.foooter {
+    margin-bottom: 10px;
+    color: white;
+    min-width: 150px;
+    margin: 10px;
+    flex: 1;
+}
 .footer-item {
     display: block;
     align-items: center;
@@ -385,27 +392,18 @@ option {
 .footer-link {
     list-style-type: none;
     padding-top: 13px;
-}
-
-.footer-link {
-    padding: 0;
-    margin: 0;
-}
-
-.footer-link ul li {
-    margin-bottom: 10px;
-}
-
-.footer-link ul li a {
     color: white;
     text-decoration: none;
     transition: color 0;
+    padding: 0;
+    margin: 0;
 }
-
-.footer-link ul li a:hover {
+.footer-link:hover {
     color: var(--text-color2) !important; /* Warna oranye saat hover */
 }
 
-.footer-link .down {
-    padding-top: 55px;
+.footer .down {
+    padding-top: 40px;
+    align-items: center;
+    display: flexbox;
 }
