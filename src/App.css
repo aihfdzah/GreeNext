@@ -26,6 +26,8 @@ body {
     align-items: center;
     height: 100%;
     background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
 }
 /* header {
     position: fixed;
@@ -110,6 +112,9 @@ body {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header {
@@ -312,22 +317,24 @@ option {
 
 /* -----------footer----------- */
 .footer {
-    background-color: #174728 !important;  
+    background-color: #17412D !important;  
     color: white;
-    padding: 20px 170px;
+    padding: 10px 170px;
     font-size: 14px;
-    position: fixed;
     align-items: center;
     justify-content: center;
+    position: relative;
     bottom: 0;
     right: 0;
     width: 100%;
+    flex-direction: column;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between; 
-    align-items: flex-start;        
+    align-items: flex-start; 
+    flex: 1;
 }
 
 /* Mengatur logo dan teks bahasa */
@@ -364,6 +371,11 @@ option {
     margin-top: 10px;
 }
 
+.footer .collapse {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Style untuk setiap bagian link di footer */
 .footer-item {
     display: block;
@@ -375,7 +387,7 @@ option {
     padding-top: 13px;
 }
 
-.footer-link ul {
+.footer-link {
     padding: 0;
     margin: 0;
 }

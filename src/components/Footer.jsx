@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="footer navbar-expand-lg navbar-dark bg-dark fixed-bottom" >
+        <footer className="footer footer-expand-lg footer-dark bg-dark" >
             <div className="footer-content">
                 
                 <div className="footer-logo">
@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
 
                 <div className="collapse footer-collapse" id="footerFoot">
-                    <ul className="footer">
+                    <ul className="foooter">
                         <li className="footer-item">
                             <a className="footer-link" href="#dashboard">
                                 Dashboard</a>
