@@ -14,7 +14,7 @@ const Navbar = () => {
                     </li>
 
                     <li className="nav-item me-5">
-                        <a className="nav-link" href="#kelas">
+                        <a className="nav-link" href="kelas.jsx">
                             Kelas</a>
                     </li>
 
@@ -29,13 +29,14 @@ const Navbar = () => {
                     </li>   
                     
                     <li className="nav-item me-5">
-                        <a className="nav-link" href="#tentangkita">
+                        <a className="nav-link" href="tentang.jsx">
                             Tentang Kita</a>
                     </li>
                 </ul>
 
                 <div className="masuk">
-                    <a href="#" className="masuk-btn">Masuk</a>
+                    <a className="masuk-btn" href="#">
+                        Masuk</a>
                 </div>
             </div>
         </nav>
