@@ -99,9 +99,9 @@ body {
     text-decoration: none;     
 }
 .masuk-btn:hover {
-    background-color: var(--text-color2) !important;
+    background: var(--text-color2) !important;
     color: white;
-    transition: .2s;
+    transition: 2s;
 }
 
 /* ----------kelas------------ */
@@ -197,20 +197,36 @@ option {
     flex-direction: column;
     gap: 15px;
     margin-left: 5%;
+    padding: 16px;
 }
 .course-item {
     display: flex;
-    align-items: flex-start;
+    gap: 8px;
+    align-items: center;
     padding: 15px;
     border-bottom: 1px solid #116448 !important;
     background-color: #fff;
+    flex-direction: column;
+    margin-top: 8px;
+}
+.action-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .course-item img {
     width: 100px;
-    height: 80px;
+    height: 100px;
     object-fit: cover;
     border-radius: 5px;
     margin-right: 15px;
+    margin-bottom: 8px;
 }
 .konten-course {
     flex: 1;
@@ -311,18 +327,110 @@ option {
     cursor: pointer;
 }
 
+/* ----------------Tentang Kita--------------------- */
+.about-section, .features-section {
+    margin-bottom: 2rem;
+    padding: 50px 45px;
+}
 
+.about h2 {
+    color: #004d40;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
 
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 50%;
+    z-index: 1;
+}
+
+.about p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.about-image {
+    width: 50%;
+    max-width: 400px;
+    border-radius: 5px;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    height: auto;
+    z-index: 0;
+    margin-right: 15px;
+}
+
+.features {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.features h3 {
+    font-size: 1.5rem;
+    color: #004d40;
+    margin-bottom: 1rem;
+}
+
+.features h3 span {
+    color: #00796b;
+    font-weight: bold;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-item {
+    background-color: #e8f5e9;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.feature-item h4 {
+    margin: 0.5rem 0;
+    color: #004d40;
+    font-size: 1.1rem;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #555;
+}
 
 
 /* -----------footer----------- */
 .footer {
-    background-color: #17412D !important;
+    background-color: var(--main-color) !important;
     padding: 10px 50px;
     font-size: 14px;
     align-items: center;
     justify-content: center;
     position: relative;
+    bottom: 0;
+    right: 0;
     width: 100%;
     flex-direction: column;
     margin: 10px 10px;

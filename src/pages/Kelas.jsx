@@ -67,8 +67,14 @@ const Kelas = () => {
                                 <span>Gratis</span>
                             </div>
                         </div>
-                        <img src="./foto1.jpg" alt=""/>
-                        <button className="button-daftar">Daftar Sekarang</button>
+                        <div className="action-section">
+                            <div className="content">
+                                <img src="./foto1.jpg" alt=""/>
+                                <button className="button-daftar">Daftar Sekarang</button>
+                            </div>
+                        
+                        </div>
+                        
                     </div>
 
                     <div className="course-item">
