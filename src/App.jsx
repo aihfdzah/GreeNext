@@ -16,4 +16,15 @@ const App = () => {
   );
 };
 
+// function App () {
+//   return (
+//     <BrowserRouter>
+//       <Router>
+//         <Route path="/kelas" element={<Kelas />} />
+//         <Route path="/tentang" element={<Tentang />} />
+//       </Router>
+//     </BrowserRouter>
+//   );
+// }
+
 export default App

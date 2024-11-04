@@ -127,8 +127,6 @@ body {
 .button-filter {
     padding: 8px 12px;
     margin-right: 40px;
-    justify-content: center;
-    align-items: center;
     background: transparent;
     color: #ef7a53;
     border-radius: 10px;
@@ -141,11 +139,9 @@ body {
     transition: .2s;
 }
 .search-bar {
-    display: flex;
     align-items: center;
     padding: 10px 20px;
     border: 1px solid #ef7a53;
-    background: transparent;
     border-radius: 15px;
     width: 100%;
     margin-right: 20px;
@@ -193,8 +189,6 @@ option {
 
 /* Daftar Kursus */
 .daftar-kursus {
-    display: flex;
-    flex-direction: column;
     gap: 15px;
     margin-left: 5%;
     padding: 16px;
@@ -204,7 +198,7 @@ option {
     gap: 8px;
     align-items: center;
     padding: 15px;
-    border-bottom: 1px solid #116448 !important;
+    border-bottom: 1px solid var(--main-color) !important;
     background-color: #fff;
     flex-direction: column;
     margin-top: 8px;
@@ -334,55 +328,58 @@ option {
 }
 
 .about h2 {
-    color: #004d40;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    color: var(--main-color);
+    font-size: 2rem;
+    margin-bottom: 4rem;
 }
 
 .about-content {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    position: relative;
+    position: absolute;
 }
 
 .about-text {
     flex: 1;
-    padding-right: 50%;
+    padding-right: 60%;
     z-index: 1;
 }
 
 .about p {
-    font-size: 1rem;
+    font-size: 18px;
     margin: 0.5rem 0;
-    color: #333;
+    color: var(--text-color);
+}
+
+.about p strong {
+    color: var(--text-color2);
 }
 
 .about-image {
     width: 50%;
     max-width: 400px;
     border-radius: 5px;
-    position: absolute;
-    top: 20%;
-    right: 20%;
+    position: relative;
+    top: 71%;
+    left: 50%;
     height: auto;
     z-index: 0;
     margin-right: 15px;
 }
 
 .features {
-    text-align: center;
     margin-top: 2rem;
 }
 
 .features h3 {
     font-size: 1.5rem;
-    color: #004d40;
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
 .features h3 span {
-    color: #00796b;
+    color: var(--main-color);
     font-weight: bold;
 }
 
@@ -391,15 +388,18 @@ option {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: 1rem;
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
 }
 
 .feature-item {
-    background-color: #e8f5e9;
+    background-color: #F5F2ED;
+    border: 1px solid var(--text-color) ;
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 5px;
     text-align: left;
     display: flex;
-    align-items: start;
     gap: 0.5rem;
 }
 
@@ -409,9 +409,10 @@ option {
 }
 
 .feature-item h4 {
-    margin: 0.5rem 0;
-    color: #004d40;
-    font-size: 1.1rem;
+    color: var(--main-color);
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: flex;
 }
 
 .feature-item p {
