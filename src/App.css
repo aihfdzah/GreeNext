@@ -116,6 +116,15 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+#profile{
+    flex-direction: row;
+}
+#profilefoto {
+    flex-direction: row;
+}
+#profileinfo {
+    flex-direction: row;
+}
 
 .header {
     display: flex;
@@ -321,7 +330,7 @@ option {
     cursor: pointer;
 }
 
-/* ----------------Tentang Kita--------------------- */
+/* ----------------Tentang Kita---------------- */
 .about-section, .features-section {
     margin-bottom: 2rem;
     padding: 50px 45px;
@@ -419,6 +428,313 @@ option {
     margin: 0;
     color: #555;
 }
+
+/* ------------profile-------------- */
+.sidebar {
+    flex: 1;
+    max-width: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.sidebar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.sidebar p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f87042;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Profile Form Styling */
+.profile-content {
+    flex: 2;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-content h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.profile-content h2 {
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #f87042;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-save {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f87042;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+ /* -----------profilefoto----------- */
+
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #060807;
+}
+p {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.photo-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.placeholder-icon {
+    font-size: 100px;
+    color: #060807;
+    border: 1px solid #ccc;
+    background: #ccc;
+    padding: 50px 40%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    margin-bottom: 10px;
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-button,
+.save-button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.upload-button {
+    background-color: var(--text-color2);
+    border: none;
+    color: white;
+}
+
+.save-button {
+    background-color: var(--text-color2);
+    border: none;
+    color: white;
+}
+
+/* ----------profileinfo--------- */
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.tabs {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    gap: 20px;
+    border-radius: 5px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--text-color2);
+    color: var(--background-color);
+}
+
+.tab.active {
+    background-color: #eaeaea;
+    color: var(--text-color);
+    pointer-events: none;
+}
+
+.notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 40px;
+}
+
+.notification-card {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.notification-card h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.notification-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.open-button {
+    background-color: var(--text-color2);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ---------------profile privasi---------- */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.privacy-settings {
+    margin-top: 20px;
+}
+
+.privacy-settings h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.toggle-switch {
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+.toggle-switch:checked {
+    background-color: #ffa07a;
+}
+
+.toggle-switch:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: 0.3s;
+}
+
+.toggle-switch:checked:before {
+    left: 21px;
+}
+
+.save-button {
+    background-color: var(--text-color2);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* -----------profile keamanan----- */
 
 
 /* -----------footer----------- */

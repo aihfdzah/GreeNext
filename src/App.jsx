@@ -3,23 +3,29 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Kelas from "./pages/Kelas";
-import Tentang from "./pages/Tentang";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Kelas from './pages/Kelas';
+import Tentang from './pages/Tentang';
 
 const App = () => {
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="/login" element={<Login />} />
-				<Route path="/register" element={<Register />} />
-				<Route path="/" element={<Navbar />} />
-				<Route path="/kelas" element={<Kelas />} />
-				<Route path="/tentang" element={<Tentang />} />
-				<Route path="/footer" element={<Footer />} />
-			</Routes>
-		</BrowserRouter>
-	);
+  return (
+    <div>
+      <Navbar />
+      <Kelas />
+      <Tentang />
+      <Footer />
+    </div>
+  );
 };
+
+// function App () {
+//   return (
+//     <BrowserRouter>
+//       <Router>
+//         <Route path="/kelas" element={<Kelas />} />
+//         <Route path="/tentang" element={<Tentang />} />
+//       </Router>
+//     </BrowserRouter>
+//   );
+// }
 
 export default App;
