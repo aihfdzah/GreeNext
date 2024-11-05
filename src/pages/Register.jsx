@@ -117,7 +117,7 @@ function Register() {
 				<p className="mt-3 small">
 					Apakah anda memiliki akun?{" "}
 					<a
-						href="/"
+						href="/login"
 						className="text-decoration-none"
 						style={{ color: "#17412d", fontWeight: "bold" }}>
 						Masuk
