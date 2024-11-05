@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Kelas from './pages/Kelas';
+import Profile from './pages/Profile';
 import Tentang from './pages/Tentang';
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Kelas />
       <Tentang />
+      <Profile />
       <Footer />
     </div>
   );
