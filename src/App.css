@@ -116,6 +116,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+#profile{
+    flex-direction: row;
+}
 
 .header {
     display: flex;
