@@ -33,8 +33,8 @@ const Profileprivasi = () => {
             </div>
 
             <main class="content">
-                <h1>Privasi</h1>
-                <p>Ubah pengaturan privasi Anda di sini</p>
+                <h1>Privasii</h1>
+                <p>Ubah pengaturan privasi anda di sini</p>
                 <hr/>
 
             <div class="privacy-settings">
