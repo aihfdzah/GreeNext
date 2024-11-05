@@ -21,8 +21,8 @@ const App = () =>
 		return (
 			<BrowserRouter>
 				<Router>
-          <Route path=/>
-          <Route path="/register " element={<Register/>}/>
+					<Route path="/login" element={<Login />} />
+					<Route path="/register " element={<Register />} />
 					<Route path="/kelas" element={<Kelas />} />
 					<Route path="/tentang" element={<Tentang />} />
 				</Router>
