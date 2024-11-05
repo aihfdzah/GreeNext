@@ -5,6 +5,9 @@ import Footer from "./components/Footer";
 import Kelas from './pages/Kelas';
 import Profile from './pages/Profile';
 import Tentang from './pages/Tentang';
+import Profilefoto from './pages/Profilefoto';
+import Proinfo from './pages/Proinfo';
+import Profileprivasi from './pages/Profileprivasi';
 
 const App = () => {
   return (
@@ -13,6 +16,9 @@ const App = () => {
       <Kelas />
       <Tentang />
       <Profile />
+      <Profilefoto />
+      <Proinfo />
+      <Profileprivasi />
       <Footer />
     </div>
   );
