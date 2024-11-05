@@ -1,13 +1,10 @@
-import './App.css'
-import React from "react";
+import "./App.css";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Kelas from './pages/Kelas';
-import Profile from './pages/Profile';
 import Tentang from './pages/Tentang';
-import Profilefoto from './pages/Profilefoto';
-import Proinfo from './pages/Proinfo';
-import Profileprivasi from './pages/Profileprivasi';
 
 const App = () => {
   return (
@@ -15,10 +12,6 @@ const App = () => {
       <Navbar />
       <Kelas />
       <Tentang />
-      <Profile />
-      <Profilefoto />
-      <Proinfo />
-      <Profileprivasi />
       <Footer />
     </div>
   );
@@ -35,4 +28,4 @@ const App = () => {
 //   );
 // }
 
-export default App
+export default App;
