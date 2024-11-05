@@ -1,30 +1,21 @@
-import './App.css'
-import React from "react";
+import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Kelas from './pages/Kelas';
-import Tentang from './pages/Tentang';
+import Kelas from "./pages/Kelas";
+import Tentang from "./pages/Tentang";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
-  return (
-    <div>
-      <Navbar />
-      <Kelas />
-      <Tentang />
-      <Footer />
-    </div>
-  );
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Navbar />} />
+				<Route path="/kelas" element={<Kelas />} />
+				<Route path="/tentang" element={<Tentang />} />
+				<Route path="/footer" element={<Footer />} />
+			</Routes>
+		</BrowserRouter>
+	);
 };
 
-// function App () {
-//   return (
-//     <BrowserRouter>
-//       <Router>
-//         <Route path="/kelas" element={<Kelas />} />
-//         <Route path="/tentang" element={<Tentang />} />
-//       </Router>
-//     </BrowserRouter>
-//   );
-// }
-
-export default App
+export default App;
