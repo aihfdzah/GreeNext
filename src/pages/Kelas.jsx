@@ -5,9 +5,9 @@ const Kelas = () => {
         <div className="container ">
             <div className="header">
                 <div>
-                    <button className="button-filter">Filter</button>
+                    <button className="button-filter justify-content-center align-items-center">Filter</button>
                 </div>
-                <div className="search-bar">
+                <div className="search-bar display-flex background-transparent">
                     <i className="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Cari kursus..."/>
                 </div>
                 <i className="fa-regular fa-heart"></i> 
@@ -52,7 +52,7 @@ const Kelas = () => {
                 </div>
 
                 {/* ---------------- Daftar Kursus ------------- */}
-                <div className="daftar-kursus">
+                <div className="daftar-kursus display-flex flex-direction-column">
                     {/* <!-- Kursus 1 --> */}
                     <div className="course-item">
                         <div className="konten-course">
