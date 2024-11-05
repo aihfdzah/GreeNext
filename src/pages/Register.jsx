@@ -1,7 +1,6 @@
-import "../styles/Styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import W from "../assets/W.png";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/logo.png";
 import { useState } from "react";
 import { FaEye, FaEyeSlash, FaLock, FaRegEnvelope } from "react-icons/fa";
 

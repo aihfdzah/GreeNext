@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import S from "../assets/S.png";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/logo.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaLock, FaRegEnvelope } from "react-icons/fa";
