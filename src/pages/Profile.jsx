@@ -2,7 +2,7 @@ import React from "react";
 
 const Profile = () => {
     return (
-        <div className="container">
+        <div className="container" id="profile">
             <div className="sidebar">
                 <img src="./profile.png" alt="Profile Picture"/>
                 <h3>Wahyu Redioko</h3>
