@@ -546,7 +546,6 @@ option {
 .content {
     flex-grow: 1;
     padding: 40px;
-    background-color: white;
 }
 
 h1 {
@@ -572,17 +571,27 @@ p {
     color: #060807;
     border: 1px solid #ccc;
     background: #ccc;
-    padding: 50px 40%;
+    padding: 50px 150%;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
+.label {
+    text-align: left;
+}
 .upload-label {
     margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.upload-control {
+    display: inline-flex;
 }
 
 .upload-input {
-    display: none;
+    display: flex;
+    padding: 10px 40px;
+    border-radius: 8px;
 }
 
 .upload-button,
@@ -591,17 +600,31 @@ p {
     margin: 10px 0;
     cursor: pointer;
 }
+/* 
+#upload-button {
+    flex-direction: row;
+} */
 
 .upload-button {
-    background-color: var(--text-color2);
+    background-color: #ccc;
     border: none;
-    color: white;
+    padding: 10px 16px;
+    color: var(--text-color);
+    border-radius: 8px;
+    transition: 2s;
+}
+
+.upload-input a:hover {
+    background-color: var(--text-color2);
+    color: var(--background-color);
+    transition: 2s;
 }
 
 .save-button {
     background-color: var(--text-color2);
     border: none;
     color: white;
+    border-radius: 8px;
 }
 
 /* ----------profileinfo--------- */
@@ -616,7 +639,6 @@ h1 {
     margin-top: 20px;
     flex-direction: row;
     gap: 20px;
-    border-radius: 5px;
 }
 
 .tab {
@@ -624,12 +646,14 @@ h1 {
     cursor: pointer;
     background-color: var(--text-color2);
     color: var(--background-color);
+    border-radius: 8px;
 }
 
 .tab.active {
     background-color: #eaeaea;
     color: var(--text-color);
     pointer-events: none;
+    border-radius: 8px;
 }
 
 .notifications {
@@ -776,8 +800,8 @@ input[type="password"] {
 }
 
 .action-button {
-    background-color: var(--text-color2);
-    color: white;
+    background-color: #ccc;
+    color: var(--text-color);
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
@@ -786,7 +810,7 @@ input[type="password"] {
 }
 
 .save-button {
-    background-color: #ff4500;
+    background-color: var(--text-color2);
     color: white;
     padding: 10px 20px;
     border: none;
