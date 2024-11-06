@@ -1,5 +1,5 @@
 import Profile from "../assets/profile.png";
-import React, { useState } from "react";
+import { useState } from "react";
 import {
 	Dropdown,
 	DropdownToggle,
@@ -21,31 +21,31 @@ const NavbarWeb = () => {
 				id="navbarNav">
 				<ul className="navbar-nav">
 					<li className="nav-item me-5">
-						<a className="nav-link" href="#dashboard">
+						<a className="nav-link" href="/home">
 							Dashboard
 						</a>
 					</li>
 
 					<li className="nav-item me-5">
-						<a className="nav-link" href="kelas.jsx">
+						<a className="nav-link" href="/kelas">
 							Kelas
 						</a>
 					</li>
 
 					<li className="nav-item me-5">
-						<a className="nav-link" href="#sumberdaya">
+						<a className="nav-link" href="">
 							Sumber Daya
 						</a>
 					</li>
 
 					<li className="nav-item me-5">
-						<a className="nav-link" href="#komunitas">
+						<a className="nav-link" href="">
 							Komunitas
 						</a>
 					</li>
 
 					<li className="nav-item me-5">
-						<a className="nav-link" href="tentang.jsx">
+						<a className="nav-link" href="">
 							Tentang Kita
 						</a>
 					</li>
@@ -70,7 +70,8 @@ const NavbarWeb = () => {
 							Profile
 						</DropdownToggle>
 						<DropdownMenu>
-							<DropdownItem href="/logout">Log Out</DropdownItem>
+							<DropdownItem href="/">Log Out</DropdownItem>
+							<DropdownItem href="/profile">Profile</DropdownItem>
 						</DropdownMenu>
 					</Dropdown>
 				</div>
