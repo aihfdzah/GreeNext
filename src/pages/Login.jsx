@@ -40,7 +40,7 @@ function Login() {
 						style={{ fontSize: "16pt", color: "#ef7a53", fontWeight: "bold" }}>
 						Konsep Panduan Pertanian Presisi
 					</h1>
-					<p className="mt-3">
+					<p className="mt-3" style={{ color: "#F5F2ED" }}>
 						Kursus ini secara komprehensif memperkenalkan sistem panduan
 						otomatis, yang penting untuk pertanian modern.
 					</p>

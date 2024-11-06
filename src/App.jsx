@@ -1,33 +1,34 @@
 import "./App.css";
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
+// import Kelas from "./components/Kelas";
+// import Tentang from "./components/Tentang";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Kelas from "./pages/Kelas";
-import Tentang from "./pages/Tentang";
-import { BrowserRouter, Router, Route } from "react-dom";
+import HalamanKelas from "./pages/HalamanKelas";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// const App = () => {
+// 	return (
+// 		<div>
+// 			<Navbar />
+// 			<Kelas />
+// 			<Tentang />
+// 			<Footer />
+// 		</div>
+// 	);
+// };
 
-const App = () =>
-	//   {
-	//   return (
-	//     <div>
-	//       <Navbar />
-	//       <Kelas />
-	//       <Tentang />
-	//       <Footer />
-	//     </div>
-	//   );
-	// };
-
-	function App() {
-		return (
-			<BrowserRouter>
-				<Router>
-					<Route path="/login" element={<Login />} />
-					<Route path="/register " element={<Register />} />
-					<Route path="/kelas" element={<Kelas />} />
-					<Route path="/tentang" element={<Tentang />} />
-				</Router>
-			</BrowserRouter>
-		);
-	};
+function App() {
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/login" element={<Login />} />
+				<Route path="/register" element={<Register />} />
+				<Route path="/" element={<HalamanKelas />} />
+				{/* <Route path="/tentang" element={<Tentang />} /> */}
+			</Routes>
+		</BrowserRouter>
+	);
+}
 
 export default App;
