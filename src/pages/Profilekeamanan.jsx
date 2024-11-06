@@ -32,24 +32,26 @@ const Profilekeamanan = () => {
                 </div>
             </div>
 
-            <main class="content">
+            <main className="content">
                 <h1>Akun</h1>
                 <p>Edit pengaturan akun dan ubah sandi Anda di sini</p>
                 <hr/>
-                <div class="account-settings">
-                    <div class="email-section">
+                
+                <div className="account-settings">
+                    <div className="email-section">
                         <label for="email">Email Terdaftar:</label>
                         <input type="email" id="email" value="wahyurajabie123@gmail.com" disabled></input>
-                        <button class="action-button">Ubah Email</button>
+                        <button className="action-button">Ubah Email</button>
                     </div>
-                    <div class="password-section">
+
+                    <div className="password-section">
                         <label for="current-password">Sandi:</label>
                         <input type="password" id="current-password" placeholder="Masukkan sandi saat ini"></input>
                         <input type="password" id="new-password" placeholder="Masukkan sandi baru"></input>
                         <input type="password" id="confirm-password" placeholder="Ketik ulang sandi baru"></input>
-                        <button class="action-button">Ubah Sandi</button>
+                        <button className="action-button">Ubah Sandi</button>
                     </div>
-                    <button class="save-button">Simpan Perubahan</button>
+                    <button className="save-button">Simpan Perubahan</button>
                 </div>
             </main>
 

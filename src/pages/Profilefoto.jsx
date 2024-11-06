@@ -32,23 +32,31 @@ const Profilefoto = () => {
                 </div>
             </div>
 
-            <main className="content">
+            <main className="content bg-white">
                 <h1>Foto</h1>
                 <p>Tambahkan foto Anda yang bagus untuk profil</p>
                 <hr/>
+
                 <div className="photo-preview"> Pratinjau Gambar
                     <div className="placeholder-icon"><i class="fa-regular fa-user"></i></div>
-                    
-                    <div>
-                        <label>Tambah atau Ganti Gambar</label>
-                            <input type="text" value="Tidak ada gambar yang di pilih"></input>
+                </div>
+
+                <div>
+                    <label className="label">Tambah atau Ganti Gambar</label>
+
+                    <div className="upload-control gap-10 align-items-center">
+                        <input type="file" aria-label="Unggah gambar" id=""/>
+                        {/* <input type="file" aria-label="Unggah Gambar" id="upload-photo" className="upload-input" value="Tidak ada gambar yang di pilih" style="widht: auto"></input> */}
                         {/* <input type="file" id="upload-photo" className="upload-input" value="Tidak ada gambar yang di pilih"></input> */}
+                        <button className="upload-button gap-10" id="upload-button">Unggah Gambar</button>
                     </div>
+
+                </div>
                     
 
-                    <button className="upload-button">Unggah Gambar</button>
+                    
                     <button className="save-button">Simpan Perubahan</button>
-                </div>
+                
             </main>
         </div>
 
