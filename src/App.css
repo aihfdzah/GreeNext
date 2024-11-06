@@ -849,7 +849,7 @@ h1 {
 }
 
 .logout-button {
-    background-color: #ff4500;
+    background-color: var(--text-color2);
     color: white;
 }
 
