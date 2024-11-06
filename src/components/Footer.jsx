@@ -1,8 +1,6 @@
 const Footer = () => {
 	return (
-		<footer
-			className="footer footer-expand-lg footer-dark bg-dark text-white py-3"
-			style={{ width: "100%" }}>
+		<footer className="footer footer-expand-lg footer-dark bg-dark text-white py-3">
 			<div className="footer-content">
 				<div className="footer-logo">
 					<img src="./logo.png" className="logo-footer" alt="FarmEduZ Logo" />

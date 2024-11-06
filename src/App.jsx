@@ -6,6 +6,7 @@ import "./App.css";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import HalamanKelas from "./pages/HalamanKelas";
+import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // const App = () => {
 // 	return (
@@ -25,7 +26,7 @@ function App() {
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/" element={<HalamanKelas />} />
-				{/* <Route path="/tentang" element={<Tentang />} /> */}
+				<Route path="/home" element={<Home />} />
 			</Routes>
 		</BrowserRouter>
 	);
