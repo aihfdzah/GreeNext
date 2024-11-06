@@ -99,6 +99,7 @@ function Dashboard() {
 							<h2>Kelas Saya</h2>
 							<p>Tidak ada kelas yang sedang berlangsung</p>
 							<Button
+								href="/kelas"
 								className="w-100"
 								style={{
 									color: "#F5F2ED",

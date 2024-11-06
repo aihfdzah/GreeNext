@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import HalamanKelas from "./pages/HalamanKelas";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HalamanProfile from "./pages/HalamanProfile";
 // const App = () => {
 // 	return (
 // 		<div>
@@ -25,6 +26,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Login />} />
 				<Route path="/register" element={<Register />} />
+				<Route path="/profile" element={<HalamanProfile />} />
 				<Route path="/Kelas" element={<HalamanKelas />} />
 				<Route path="/home" element={<Home />} />
 			</Routes>
