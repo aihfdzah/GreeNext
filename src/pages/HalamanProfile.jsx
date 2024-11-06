@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import NavbarWeb from "../components/NavbarWeb";
 import Proinfo from "../components/Proinfo";
 
@@ -7,7 +6,6 @@ function HalamanProfile() {
 		<>
 			<NavbarWeb />
 			<Proinfo />
-			<Footer />
 		</>
 	);
 }

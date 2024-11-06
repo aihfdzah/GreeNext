@@ -4,10 +4,10 @@ const Proinfo = () => {
 		<div className="container" id="profileinfo">
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
-				<h3>Wahyu Redioko</h3>
-				<p>@wahyuredioko123</p>
+				<h3>Wahyu Rojolele</h3>
+				<p>@wahyurojolele123</p>
 				<div className="button-sidebar">
-					<button>Profil</button>
+					<button href="/profile">Profile</button>
 				</div>
 
 				<div className="button-sidebar">

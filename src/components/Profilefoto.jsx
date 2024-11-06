@@ -1,10 +1,12 @@
+import profile from "../assets/profile.png";
+
 const Profilefoto = () => {
 	return (
 		<div className="container" id="profilefoto">
 			<div className="sidebar">
-				<img src="./profile.png" alt="Profile Picture" />
-				<h3>Wahyu Redioko</h3>
-				<p>@wahyuredioko123</p>
+				<img src={profile} alt="Profile Picture" />
+				<h3>Wahyu Rojolele</h3>
+				<p>@wahyurojolele123</p>
 				<div className="button-sidebar">
 					<button>Profil</button>
 				</div>
