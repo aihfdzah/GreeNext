@@ -7,7 +7,7 @@ import Kelas from './pages/Kelas';
 import Tentang from './pages/Tentang';
 import Profile from './pages/Profile';
 import Profilefoto from './pages/Profilefoto';
-import Proinfo from "./pages/Proinfo";
+import Profileinfo from "./pages/Profileinfo";
 import Profileprivasi from "./pages/Profileprivasi";
 import Profilekeamanan from "./pages/Profilekeamanan";
 
@@ -20,7 +20,7 @@ const App = () => {
       <Tentang />
       <Profile />
       <Profilefoto />
-      <Proinfo />
+      <Profileinfo />
       <Profileprivasi />
       <Profilekeamanan />
       <Footer />

@@ -1,6 +1,6 @@
 import React from "react"
 
-const Proinfo = () => {
+const Profileinfo = () => {
     return (
         <div className="container" id="profileinfo">
             <div className="sidebar">
@@ -68,4 +68,4 @@ const Proinfo = () => {
     );
 };
 
-export default Proinfo;
+export default Profileinfo;
