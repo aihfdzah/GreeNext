@@ -32,7 +32,7 @@ function Register() {
 						style={{ fontSize: "16pt", color: "#ef7a53", fontWeight: "bold" }}>
 						Pemanfaatan Big Data dan AI untuk Pertanian
 					</h1>
-					<p className="mt-3">
+					<p className="mt-3" style={{ color: "#F5F2ED" }}>
 						Di era digital, penggunaan Big Data dan kecerdasan buatan (AI) dapat
 						membantu meningkatkan hasil pertanian dan mengurangi risiko.
 					</p>
