@@ -16,32 +16,32 @@ function Dashboard() {
 		<Container fluid className="100vh p-lg-4 p-md-0 mt-5">
 			<Row className="py-3">
 				<Col>
-					<h1 style={{ fontSize: "20pt", color: "grey" }}>Dashboard</h1>
+					<h1 style={{ color: "#17412d" }}>Dashboard</h1>
 				</Col>
-				<Col className="text-end ">
+				<Col className="text-end me-auto">
 					<Button
-						className={`ml-1 w-25 button-custom ${
+						className={`me-5 w-15 button-custom ${
 							activeButton === "home" ? "active" : ""
 						}`}
 						onClick={() => handleButtonClick("home", "/home")}>
 						Home
 					</Button>
 					<Button
-						className={`ml-3 w-25 button-custom ${
+						className={` p-0 me-5 w-15 button-custom ${
 							activeButton === "sertifikat" ? "active" : ""
 						}`}
 						onClick={() => handleButtonClick("sertifikat", "/sertifikat")}>
 						Sertifikat
 					</Button>
 					<Button
-						className={`ml-4 me-3 w-25 button-custom ${
+						className={`me-5  w-15 button-custom ${
 							activeButton === "sumber" ? "active" : ""
 						}`}
 						onClick={() => handleButtonClick("sumber", "/sumber")}>
 						Sumber Daya
 					</Button>
 					<Button
-						className={`me-5 button-custom ${
+						className={`me-5 w-15 button-custom ${
 							activeButton === "histori" ? "active" : ""
 						}`}
 						onClick={() => handleButtonClick("histori", "/histori")}>
