@@ -689,7 +689,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #555;
     border-radius: 8px;
     margin-bottom: 15px;
     background-color: #f9f9f9;
@@ -755,7 +755,6 @@ h1 {
 
 .email-section,
 .password-section {
-    margin-top: 50px;
     margin-bottom: 20px;
 }
 
@@ -777,7 +776,7 @@ input[type="password"] {
 }
 
 .action-button {
-    background-color: #ffa07a;
+    background-color: var(--text-color2);
     color: white;
     padding: 8px 16px;
     border: none;
@@ -796,6 +795,62 @@ input[type="password"] {
     display: block;
     margin-top: 20px;
     width: 100%;
+}
+
+/* -------profile keluar--------- */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.logout-confirmation {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logout-confirmation p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.cancel-button,
+.logout-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #888;
+}
+
+.cancel-button {
+    background-color: #eaeaea;
+    color: #333;
+}
+
+.logout-button {
+    background-color: #ff4500;
+    color: white;
 }
 
 /* -----------footer----------- */

@@ -10,6 +10,7 @@ import Profilefoto from './pages/Profilefoto';
 import Profileinfo from "./pages/Profileinfo";
 import Profileprivasi from "./pages/Profileprivasi";
 import Profilekeamanan from "./pages/Profilekeamanan";
+import Profilekeluar from "./pages/Profilekeluar";
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       <Profileinfo />
       <Profileprivasi />
       <Profilekeamanan />
+      <Profilekeluar />
       <Footer />
     </div>
   );
