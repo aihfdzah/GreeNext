@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HalamanProfile from "./pages/HalamanProfile";
 import FotoProfile from "./pages/FotoProfile";
-import Pemebritahuan from "./pages/Pemebritahuan";
+import Pemberitahuan from "./pages/Pemberitahuan";
 // const App = () => {
 // 	return (
 // 		<div>
@@ -30,7 +30,7 @@ function App() {
 				<Route path="/register" element={<Register />} />
 				<Route path="/profile" element={<HalamanProfile />} />
 				<Route path="/fotoprofile" element={<FotoProfile />} />
-				<Route path="/pemberitahuan" element={<Pemebritahuan />} />
+				<Route path="/pemberitahuan" element={<Pemberitahuan />} />
 				<Route path="/Kelas" element={<HalamanKelas />} />
 				<Route path="/home" element={<Home />} />
 			</Routes>

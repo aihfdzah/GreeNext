@@ -1,6 +1,6 @@
 import NavbarWeb from "../components/NavbarWeb";
 import Proinfo from "../components/Proinfo";
-function Pemebritahuan() {
+function Pemberitahuan() {
 	return (
 		<>
 			<NavbarWeb />
@@ -9,4 +9,4 @@ function Pemebritahuan() {
 	);
 }
 
-export default Pemebritahuan;
+export default Pemberitahuan;
