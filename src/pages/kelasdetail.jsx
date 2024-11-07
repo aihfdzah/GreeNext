@@ -8,11 +8,11 @@ const Kelasdetail = () => {
                 <div className="col-md-8">
                     <h1 className="course-title">Belajar Teknologi Pertanian Modern: Drone untuk Pertanian Cerdas</h1>
                     <p className="course-meta">4.9 (294,203 ratings) | 100 member | Charlie Vetrows</p>
-                    <img src="https://via.placeholder.com/800x400" alt="Drone Pertanian" class="course-image"/>
+                    <img src="#" alt="Drone Pertanian" class="course-image"/>
                     <p className="course-description">Pelajari cara memanfaatkan teknologi drone dalam sektor pertanian untuk meningkatkan hasil panen dan efisiensi lahan. Kelas ini dirancang untuk memberikan pengetahuan praktis dalam mengoperasikan drone, memetakan lahan, dan menganalisis data pertanian secara cerdas. Cocok bagi pemula maupun profesional yang ingin mengembangkan keterampilan di era pertanian 4.0.</p>
                     
                     {/* <!-- Course Pricing and Benefits --> */}
-                <div className="col-md-4">
+                <div className="col-md-4" id="col">
                     <div className="benefits-card">
                         <div className="price">Rp 129,000</div>
                         <a href="#" className="btn-orange">Daftar Kelas</a>
