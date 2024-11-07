@@ -134,7 +134,6 @@ body {
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
 }
 
 #profile {
@@ -147,6 +146,9 @@ body {
 
 #profileinfo {
 	flex-direction: row;
+}
+#profilekeamanan {
+    flex-direction: row;
 }
 
 .header {
@@ -597,9 +599,8 @@ option {
 /* -----------profilefoto----------- */
 
 .content {
-	flex-grow: 1;
-	padding: 40px;
-	background-color: white;
+    flex-grow: 1;
+    padding: 40px;
 }
 
 h1 {
@@ -626,17 +627,27 @@ p {
 	color: #060807;
 	border: 1px solid #ccc;
 	background: #ccc;
-	padding: 50px 40%;
+	padding: 50px 150%;
 	border-radius: 10px;
 	margin-bottom: 20px;
 }
 
+.label {
+    text-align: left;
+}
 .upload-label {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.upload-control {
+    display: inline-flex;
 }
 
 .upload-input {
-	display: none;
+    display: flex;
+    padding: 10px 40px;
+    border-radius: 8px;
 }
 
 .upload-button,
@@ -645,17 +656,31 @@ p {
 	margin: 10px 0;
 	cursor: pointer;
 }
+/* 
+#upload-button {
+    flex-direction: row;
+} */
 
 .upload-button {
-	background-color: var(--text-color2);
-	border: none;
-	color: white;
+    background-color: #ccc;
+    border: none;
+    padding: 10px 16px;
+    color: var(--text-color);
+    border-radius: 8px;
+    transition: 2s;
+}
+
+.upload-input a:hover {
+    background-color: var(--text-color2);
+    color: var(--background-color);
+    transition: 2s;
 }
 
 .save-button {
-	background-color: var(--text-color2);
-	border: none;
-	color: white;
+    background-color: var(--text-color2);
+    border: none;
+    color: white;
+    border-radius: 8px;
 }
 
 /* ----------profileinfo--------- */
@@ -666,24 +691,25 @@ h1 {
 }
 
 .tabs {
-	display: flex;
-	margin-top: 20px;
-	flex-direction: row;
-	gap: 20px;
-	border-radius: 5px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .tab {
-	padding: 10px 20px;
-	cursor: pointer;
-	background-color: var(--text-color2);
-	color: var(--background-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--text-color2);
+    color: var(--background-color);
+    border-radius: 8px;
 }
 
 .tab.active {
-	background-color: #eaeaea;
-	color: var(--text-color);
-	pointer-events: none;
+    background-color: #eaeaea;
+    color: var(--text-color);
+    pointer-events: none;
+    border-radius: 8px;
 }
 
 .notifications {
@@ -739,14 +765,14 @@ h1 {
 }
 
 .setting-item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px;
-	border: 1px solid #eaeaea;
-	border-radius: 8px;
-	margin-bottom: 15px;
-	background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
 }
 
 .toggle-switch {
@@ -792,9 +818,124 @@ h1 {
 }
 
 /* -----------profile keamanan----- */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.account-settings {
+    margin-top: 20px;
+}
+
+.email-section,
+.password-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.action-button {
+    background-color: #ccc;
+    color: var(--text-color);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.save-button {
+    background-color: var(--text-color2);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* -------profile keluar--------- */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.logout-confirmation {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logout-confirmation p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.cancel-button,
+.logout-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #888;
+}
+
+.cancel-button {
+    background-color: #eaeaea;
+    color: #333;
+}
+
+.logout-button {
+    background-color: var(--text-color2);
+    color: white;
+}
 
 /* -----------footer----------- */
 .footer {
+<<<<<<< HEAD
 	background-color: var(--main-color) !important;
 	padding: 10px 50px;
 	font-size: 14px;
@@ -806,6 +947,18 @@ h1 {
 	width: 100%;
 	flex-direction: column;
 	margin: 0px 10px;
+=======
+    background-color: var(--main-color) !important;
+    padding: 10px 50px;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+>>>>>>> 286deed3f7b614b547550febc7828c1f9a0d0535
 }
 
 .footer-content {
@@ -891,4 +1044,10 @@ h1 {
 	padding-top: 40px;
 	align-items: center;
 	display: flexbox;
+<<<<<<< HEAD
 }
+=======
+}
+
+
+>>>>>>> 286deed3f7b614b547550febc7828c1f9a0d0535
