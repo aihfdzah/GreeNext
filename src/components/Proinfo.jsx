@@ -1,33 +1,38 @@
+import { useNavigate } from "react-router-dom";
 import profile from "../assets/profile.png";
+
 const Proinfo = () => {
+	const navigate = useNavigate();
+
 	return (
 		<div className="container" id="profileinfo">
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
 				<p>@wahyurojolele123</p>
+				
 				<div className="button-sidebar">
-					<button href="/profile">Profile</button>
+					<button onClick={() => navigate("/profile")}>Profile</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Foto</button>
+					<button onClick={() => navigate("/fotoprofile")}>Foto</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Pemberitahuan</button>
+					<button onClick={() => navigate("/pemberitahuan")}>Pemberitahuan</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Privasi</button>
+					<button onClick={() => navigate("/privasi")}>Privasi</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Keamanan</button>
+					<button onClick={() => navigate("/keamanan")}>Keamanan</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Keluar Akun</button>
+					<button onClick={() => navigate("/keluar")}>Keluar Akun</button>
 				</div>
 			</div>
 

@@ -1,11 +1,10 @@
 import NavbarWeb from "../components/NavbarWeb";
-import Proinfo from "../components/Proinfo";
-
+import Profile from "../components/Profile";
 function HalamanProfile() {
 	return (
 		<>
 			<NavbarWeb />
-			<Proinfo />
+			<Profile />
 		</>
 	);
 }
