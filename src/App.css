@@ -107,8 +107,8 @@ body {
 /* ----------kelas------------ */
 .container {
     max-width: 1000px;
-    margin: 80px auto;
-    padding: 50px 50px;
+    margin: 14rem auto 14rem auto;
+    padding: 50px 50px ;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
