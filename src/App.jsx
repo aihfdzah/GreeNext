@@ -1,44 +1,43 @@
 import "./App.css";
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
+// import Kelas from "./components/Kelas";
+// import Tentang from "./components/Tentang";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Kelas from './pages/Kelas';
-import Tentang from './pages/Tentang';
-import Profile from './pages/Profile';
-import Profilefoto from './pages/Profilefoto';
-import Profileinfo from "./pages/Profileinfo";
-import Profileprivasi from "./pages/Profileprivasi";
-import Profilekeamanan from "./pages/Profilekeamanan";
-import Profilekeluar from "./pages/Profilekeluar";
+import HalamanKelas from "./pages/HalamanKelas";
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HalamanProfile from "./pages/HalamanProfile";
+import FotoProfile from "./pages/FotoProfile";
+import Pemberitahuan from "./pages/Pemberitahuan";
+import NotFound from "./pages/NotFound";
+// const App = () => {
+// 	return (
+// 		<div>
+// 			<Navbar />
+// 			<Kelas />
+// 			<Tentang />
+// 			<Footer />
+// 		</div>
+// 	);
+// };
 
-
-const App = () => {
-  return (
-    <div>
-      <Navbar />
-      <Kelas />
-      <Tentang />
-      <Profile />
-      <Profilefoto />
-      <Profileinfo />
-      <Profileprivasi />
-      <Profilekeamanan />
-      <Profilekeluar />
-      <Footer />
-    </div>
-  );
-};
-
-// function App () {
-//   return (
-//     <BrowserRouter>
-//       <Router>
-//         <Route path="/kelas" element={<Kelas />} />
-//         <Route path="/tentang" element={<Tentang />} />
-//       </Router>
-//     </BrowserRouter>
-//   );
-// }
+function App() {
+	return (
+		<BrowserRouter>
+			<Routes>
+					<Route path="/" element={<Login />} />
+					<Route path="/register" element={<Register />}/>
+					<Route path="/profile" element={<HalamanProfile />}/>
+					<Route path="/fotoprofile" element={<FotoProfile />}/>
+					<Route path="/pemberitahuan" element={<Pemberitahuan />}/>
+					<Route path="/kelas" element={<HalamanKelas />}/>
+					<Route path="/home" element={<Home />}/>
+					<Route path="*" element={<NotFound />} />
+			</Routes>
+		</BrowserRouter>
+	);
+}
 
 export default App;

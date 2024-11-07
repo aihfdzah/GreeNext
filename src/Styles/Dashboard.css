@@ -1,0 +1,18 @@
+.button-custom {
+	background-color: #f5f2ed;
+	color: #17412d;
+	border: none;
+}
+
+.button-custom:hover {
+	color: #ef7a53;
+	font-weight: bold;
+	text-decoration: underline;
+	background-color: #f5f2ed;
+}
+
+.button-custom.active {
+	color: #ef7a53 !important;
+	text-decoration: underline;
+	background-color: #f5f2ed;
+}
