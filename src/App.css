@@ -884,12 +884,11 @@ h1 {
     font-size: 14px;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
     bottom: 0;
     right: 0;
     width: 100%;
     flex-direction: column;
-    margin: 10px 10px;
 }
 
 .footer-content {
