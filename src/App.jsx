@@ -11,6 +11,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HalamanProfile from "./pages/HalamanProfile";
 import FotoProfile from "./pages/FotoProfile";
 import Pemberitahuan from "./pages/Pemberitahuan";
+import NotFound from "./pages/NotFound";
 // const App = () => {
 // 	return (
 // 		<div>
@@ -26,13 +27,14 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<Login />} />
-				<Route path="/register" element={<Register />} />
-				<Route path="/profile" element={<HalamanProfile />} />
-				<Route path="/fotoprofile" element={<FotoProfile />} />
-				<Route path="/pemberitahuan" element={<Pemberitahuan />} />
-				<Route path="/Kelas" element={<HalamanKelas />} />
-				<Route path="/home" element={<Home />} />
+					<Route path="/" element={<Login />} />
+					<Route path="/register" element={<Register />}/>
+					<Route path="/profile" element={<HalamanProfile />}/>
+					<Route path="/fotoprofile" element={<FotoProfile />}/>
+					<Route path="/pemberitahuan" element={<Pemberitahuan />}/>
+					<Route path="/kelas" element={<HalamanKelas />}/>
+					<Route path="/home" element={<Home />}/>
+					<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
 	);
