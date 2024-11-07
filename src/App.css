@@ -127,7 +127,7 @@ body {
 /* ----------kelas------------ */
 .container {
 	max-width: 1000px;
-	margin: 80px auto;
+	margin: 8rem auto 15rem auto;
 	padding: 50px 50px;
 	background-color: white;
 	border-radius: 8px;
@@ -182,6 +182,7 @@ body {
 	border-radius: 15px;
 	width: 100%;
 	margin-right: 20px;
+	display: flex;
 }
 
 .search-bar input[type="text"] {
@@ -627,7 +628,6 @@ p {
 	color: #060807;
 	border: 1px solid #ccc;
 	background: #ccc;
-	padding: 50px 150%;
 	border-radius: 10px;
 	margin-bottom: 20px;
 }
@@ -846,11 +846,10 @@ label {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -1049,5 +1048,9 @@ h1 {
 =======
 }
 
+/* -----------Dashboard----------- */
+#kelas-wrapper{
+	margin-bottom: 15rem;
+}
 
 >>>>>>> 286deed3f7b614b547550febc7828c1f9a0d0535

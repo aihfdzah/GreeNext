@@ -42,7 +42,7 @@ const Profilefoto = () => {
 				<hr />
 				<div className="photo-preview">
 					<p>Pratinjau Gambar</p>
-					<div className="placeholder-icon">
+					<div className="placeholder-icon w-100 d-flex align-items-center justify-content-center p-5">
 						<i className="fa-regular fa-user"></i>
 					</div>
 					<div>
