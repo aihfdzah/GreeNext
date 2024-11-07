@@ -3,29 +3,14 @@ import React from "react";
 const Kelasdetail = () => {
     return (
         <div className="container">
-            <div className="row">
+            <div className="row display-flex flex-wrap-wrap gap-20px">
                 {/* <!-- Course Details --> */}
                 <div className="col-md-8">
                     <h1 className="course-title">Belajar Teknologi Pertanian Modern: Drone untuk Pertanian Cerdas</h1>
                     <p className="course-meta">4.9 (294,203 ratings) | 100 member | Charlie Vetrows</p>
-                    <img src="#" alt="Drone Pertanian" class="course-image"/>
+                    <img src="./detailkelas.jpg" alt="Drone Pertanian" class="course-image"/>
                     <p className="course-description">Pelajari cara memanfaatkan teknologi drone dalam sektor pertanian untuk meningkatkan hasil panen dan efisiensi lahan. Kelas ini dirancang untuk memberikan pengetahuan praktis dalam mengoperasikan drone, memetakan lahan, dan menganalisis data pertanian secara cerdas. Cocok bagi pemula maupun profesional yang ingin mengembangkan keterampilan di era pertanian 4.0.</p>
                     
-                    {/* <!-- Course Pricing and Benefits --> */}
-                <div className="col-md-4" id="col">
-                    <div className="benefits-card">
-                        <div className="price">Rp 129,000</div>
-                        <a href="#" className="btn-orange">Daftar Kelas</a>
-                        <h5>Benefit yang didapatkan</h5>
-                        <ul className="benefit-list">
-                            <li>20 Jam video pembelajaran</li>
-                            <li>Analisis data pertanian secara efektif</li>
-                            <li>20 Artikel pertanian cerdas</li>
-                            <li>Sertifikat kompetensi</li>
-                        </ul>
-                    </div>
-                </div>
-
                     <h4>Materi Kelas</h4>
                     <div className="accordion">
                         <div className="accordion-item">
@@ -51,6 +36,21 @@ const Kelasdetail = () => {
                                 <p>Detail materi untuk Minggu 3 akan tersedia di sini.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* <!-- Course Pricing and Benefits --> */}
+                <div className="col-md-4">
+                    <div className="benefits-card">
+                        <div className="price">Rp 129,000</div>
+                        <a href="#" className="btn-orange">Daftar Kelas</a>
+                        <h5>Benefit yang didapatkan</h5>
+                        <ul className="benefit-list">
+                            <li>20 Jam video pembelajaran</li>
+                            <li>Analisis data pertanian secara efektif</li>
+                            <li>20 Artikel pertanian cerdas</li>
+                            <li>Sertifikat kompetensi</li>
+                        </ul>
                     </div>
                 </div>
                 
