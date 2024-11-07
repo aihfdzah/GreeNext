@@ -6,6 +6,7 @@
 	scroll-behavior: smooth;
 	list-style: none;
 }
+
 :root {
 	--main-color: #17412d;
 	--text-color: #060807;
@@ -15,10 +16,12 @@
 	--h2-font: 2.25rem;
 	--p-font: 0, 9rem;
 }
+
 *::selection {
 	background: var(--main-color);
 	color: #fff;
 }
+
 body {
 	position: relative;
 	display: flex;
@@ -29,6 +32,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 /* header {
     position: fixed;
     top: 0;
@@ -51,6 +55,12 @@ body {
 	justify-content: space-between;
 	align-items: center;
 }
+
+.nav-link.active-link {
+	color: #ef7a53 !important;
+	font-weight: bold;
+}
+
 .navbar .collapse {
 	/*navbar berjarak*/
 	color: white;
@@ -59,19 +69,23 @@ body {
 	margin-right: 30px;
 	text-decoration: none;
 }
+
 .navbar-nav {
 	display: flex;
 }
+
 .nav-link {
 	display: flex;
 	gap: 20px;
 	color: white;
 }
+
 .navbar a:hover {
 	/*tulisan berwarna*/
 	color: var(--text-color2) !important;
 	transition: 0.4s;
 }
+
 /*logo*/
 .logo {
 	position: fixed;
@@ -82,6 +96,7 @@ body {
 	max-width: 40%;
 	margin-bottom: 15px;
 }
+
 /* tombol masuk */
 .masuk {
 	position: fixed;
@@ -93,6 +108,7 @@ body {
 	align-items: flex-end;
 	padding: 30px 50px;
 }
+
 .masuk-btn {
 	background-color: transparent;
 	color: var(--text-color2) !important;
@@ -101,6 +117,7 @@ body {
 	border-radius: 5px;
 	text-decoration: none;
 }
+
 .masuk-btn:hover {
 	background: var(--text-color2) !important;
 	color: white;
@@ -119,12 +136,15 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 }
+
 #profile {
 	flex-direction: row;
 }
+
 #profilefoto {
 	flex-direction: row;
 }
+
 #profileinfo {
 	flex-direction: row;
 }
@@ -136,6 +156,7 @@ body {
 	margin-bottom: 20px;
 	padding: 0 5px;
 }
+
 .button-filter {
 	padding: 8px 12px;
 	margin-right: 40px;
@@ -145,11 +166,13 @@ body {
 	border: 1px solid #ef7a53;
 	cursor: pointer;
 }
+
 .button-filter:hover {
 	background-color: var(--text-color2);
 	color: white;
 	transition: 0.2s;
 }
+
 .search-bar {
 	align-items: center;
 	padding: 10px 20px;
@@ -158,16 +181,19 @@ body {
 	width: 100%;
 	margin-right: 20px;
 }
+
 .search-bar input[type="text"] {
 	flex: 1;
 	padding: 8px;
 	border: none;
 	outline: none;
 }
+
 .header i {
 	margin-right: 10px;
 	color: #ef7a53;
 }
+
 /*h1*/
 h2 {
 	color: #060807;
@@ -182,6 +208,7 @@ h2 {
 	width: 200px;
 	margin-right: 20px;
 }
+
 .filter select {
 	padding: 8px;
 	background: transparent;
@@ -189,10 +216,12 @@ h2 {
 	border-radius: 10px;
 	margin-bottom: 10px;
 }
+
 .filter select:hover {
 	background: var(--text-color2);
 	color: white;
 }
+
 option {
 	background: var(--background-color);
 	color: #060807;
@@ -204,6 +233,7 @@ option {
 	margin-left: 5%;
 	padding: 16px;
 }
+
 .course-item {
 	display: flex;
 	gap: 8px;
@@ -214,17 +244,20 @@ option {
 	flex-direction: column;
 	margin-top: 8px;
 }
+
 .action-section {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 16px;
 }
+
 .content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+
 .course-item img {
 	width: 100px;
 	height: 100px;
@@ -233,43 +266,52 @@ option {
 	margin-right: 15px;
 	margin-bottom: 8px;
 }
+
 .konten-course {
 	flex: 1;
 }
+
 .title-course {
 	font-size: 18px;
 	font-weight: bold;
 	margin: 0;
 	color: #060807;
 }
+
 .deskripsi-course {
 	font-size: 14px;
 	color: #060807;
 	margin: 10px 0 10px;
 	line-height: 1.5;
 }
+
 .deskripsi-course span {
 	color: #ef7a53 !important;
 }
+
 .deskripsi-course a {
 	text-decoration: none;
 	color: #ef7a53 !important;
 }
+
 .deskripsi-course a:hover {
 	color: #ff4000 !important;
 }
+
 .tag-course {
 	font-size: 13px;
 	color: #060807;
 	display: flex;
 	gap: 8px;
 }
+
 .tag-course span {
 	border: 1px solid #116448 !important;
 	padding: 4px 15px;
 	border-radius: 10px;
 	background: transparent;
 }
+
 .button-daftar {
 	padding: 8px 12px;
 	border: 1px solid #ef7a53 !important;
@@ -278,6 +320,7 @@ option {
 	border-radius: 10px;
 	cursor: pointer;
 }
+
 .button-daftar a:hover {
 	background-color: #ef7a53 !important;
 	color: white;
@@ -299,14 +342,17 @@ option {
 	padding: 25px 0;
 	margin-left: 15%;
 }
+
 .pagination .prev.disabled {
 	color: #ccc !important;
 	cursor: default;
 }
+
 .pagination .prev:hover:not(.disabled),
 .pagination .next:hover {
 	color: #116448 !important;
 }
+
 .pagination a,
 .pagination span {
 	text-decoration: none;
@@ -316,18 +362,22 @@ option {
 	border-radius: 5px;
 	transition: background-color 0.3s;
 }
+
 .pagination .page {
 	border: 1px solid #116448 !important;
 	color: #060807;
 }
+
 .pagination .page:hover {
 	background-color: #ef7a53 !important;
 	color: white;
 }
+
 .pagination .dots {
 	color: #060807;
 	padding: 5px;
 }
+
 .pagination .prev,
 .pagination .next {
 	font-weight: bold;
@@ -557,6 +607,7 @@ h1 {
 	font-weight: 700;
 	color: #060807;
 }
+
 p {
 	font-size: 20px;
 	color: var(--text-color);
@@ -754,7 +805,7 @@ h1 {
 	right: 0;
 	width: 100%;
 	flex-direction: column;
-	margin:  0px;
+	margin: 0px 10px;
 }
 
 .footer-content {
@@ -776,7 +827,8 @@ h1 {
 }
 
 .logo-footer {
-	width: 150px; /* Ukuran logo */
+	width: 150px;
+	/* Ukuran logo */
 	margin-bottom: 10px;
 }
 
@@ -813,11 +865,13 @@ h1 {
 	margin: 10px;
 	flex: 1;
 }
+
 .footer-item {
 	display: block;
 	align-items: center;
 	gap: 10px;
 }
+
 .footer-link {
 	list-style-type: none;
 	padding-top: 13px;
@@ -827,8 +881,10 @@ h1 {
 	padding: 0;
 	margin: 0;
 }
+
 .footer-link:hover {
-	color: var(--text-color2) !important; /* Warna oranye saat hover */
+	color: var(--text-color2) !important;
+	/* Warna oranye saat hover */
 }
 
 .footer .down {
