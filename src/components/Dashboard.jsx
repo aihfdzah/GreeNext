@@ -87,7 +87,7 @@ function Dashboard() {
 					</Row>
 				</Col>
 			</Row>
-			<Row className="py-5">
+			<Row className="py-5" id="kelas-wrapper">
 				<Col>
 					<div className="d-flex justify-content-center">
 						<div className="fs-1">
