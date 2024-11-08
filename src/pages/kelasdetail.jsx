@@ -11,31 +11,32 @@ const Kelasdetail = () => {
                     <img src="./detailkelas.jpg" alt="Drone Pertanian" class="course-image"/>
                     <p className="course-description">Pelajari cara memanfaatkan teknologi drone dalam sektor pertanian untuk meningkatkan hasil panen dan efisiensi lahan. Kelas ini dirancang untuk memberikan pengetahuan praktis dalam mengoperasikan drone, memetakan lahan, dan menganalisis data pertanian secara cerdas. Cocok bagi pemula maupun profesional yang ingin mengembangkan keterampilan di era pertanian 4.0.</p>
                     
-                    <h4>Materi Kelas</h4>
+                    
                     <div className="accordion">
-                        <div className="accordion-item">
-                            <div className="accordion-header">Minggu 1 - Pengantar Teknologi Drone untuk Pertanian</div>
-                            <div className="accordion-content">
-                                <p>Pengantar (01:42)</p>
-                                <p>Apa itu drone pertanian? (01:42)</p>
-                                <p>Penggunaan jenis drone untuk memenuhi pertumbuhan tanaman (01:42)</p>
-                                <p>Cara memilih drone yang sesuai untuk kebutuhan pertanian (01:42)</p>
+                        <h4>Materi Kelas</h4>
+                            <div className="accordion-item">
+                                <div className="accordion-header1">Minggu 1 - Pengantar Teknologi Drone untuk Pertanian</div>
+                                <div className="accordion-content">
+                                    <p>Pengantar (01:42)</p>
+                                    <p>Apa itu drone pertanian? (01:42)</p>
+                                    <p>Penggunaan jenis drone untuk memenuhi pertumbuhan tanaman (01:42)</p>
+                                    <p>Cara memilih drone yang sesuai untuk kebutuhan pertanian (01:42)</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="accordion-item">
-                            <div className="accordion-header">Minggu 2 - Teknik Pengoperasian Drone</div>
-                            <div className="accordion-content">
-                                <p>Detail materi untuk Minggu 2 akan tersedia di sini.</p>
+                            <div className="accordion-item">
+                                <div className="accordion-header">Minggu 2 - Teknik Pengoperasian Drone</div>
+                                <div className="accordion-content">
+                                    {/* <p>Detail materi untuk Minggu 2 akan tersedia di sini.</p> */}
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="accordion-item">
-                            <div className="accordion-header">Minggu 3 - Aplikasi Praktis dan Studi Kasus</div>
-                            <div className="accordion-content">
-                                <p>Detail materi untuk Minggu 3 akan tersedia di sini.</p>
+                            <div className="accordion-item">
+                                <div className="accordion-header">Minggu 3 - Aplikasi Praktis dan Studi Kasus</div>
+                                <div className="accordion-content">
+                                    {/* <p>Detail materi untuk Minggu 3 akan tersedia di sini.</p> */}
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
 

@@ -411,16 +411,27 @@ option {
 }
 /* Accordion Section */
 .accordion {
-    margin-top: 20px;
+    margin-top: 40px;
+}
+h4 {
+    font-weight: 600;
 }
 .accordion-item {
     margin-bottom: 10px;
     border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
 .accordion-header {
     padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+.accordion-header1 {
+    padding: 70px;
     cursor: pointer;
     font-weight: bold;
     color: #333;
