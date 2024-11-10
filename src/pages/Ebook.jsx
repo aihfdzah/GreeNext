@@ -19,7 +19,7 @@ const Ebook = () => {
 
                 <div className="book-grid">
                     <div className="book-card"> <img src="./bioteknologi pertanian.jpg" alt="" />
-                        Bioteknologi Pertanian</div>
+                        Bioteknologi Pertania</div>
 
                     <div className="book-card"><img src="./inovasi agribisnis.jpg" alt="" />
                         Inovasi Agribisnis</div>
