@@ -17,7 +17,7 @@ const Detailebook = () => {
                                 <button>&hearts;</button>
                             </div>
                         </div>
-                        
+
                         <div className="author">Lestari Irene Putra, Badriah, Hari Gunawan, Devi Andriani, Mujahiddah Jannah, Indah Fitriati, Siti Sari Pramita Sari, Niqsani Tann, Jumrah, Muhammad Lu’bis</div>
                         <div className="buttons">
                             <button className="read-button">Baca buku</button>
