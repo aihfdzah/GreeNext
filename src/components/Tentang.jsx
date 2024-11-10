@@ -1,8 +1,6 @@
-
-
 const Tentang = () => {
 	return (
-		<div className="container">
+		<div className="container" style={{ marginBottom: "23%" }}>
 			<div className="about-section">
 				<section className="about">
 					<h2>Tentang Saya</h2>

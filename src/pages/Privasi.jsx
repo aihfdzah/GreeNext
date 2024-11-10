@@ -1,15 +1,14 @@
 import Footer from "../components/Footer";
 import NavbarWeb from "../components/NavbarWeb";
-import Profilefoto from "../components/Profilefoto";
-
-function FotoProfile() {
+import Profileprivasi from "../components/Profileprivasi";
+function Privasi() {
 	return (
 		<>
 			<NavbarWeb />
-			<Profilefoto />
+			<Profileprivasi />\
 			<Footer />
 		</>
 	);
 }
 
-export default FotoProfile;
+export default Privasi;

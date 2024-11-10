@@ -1,14 +1,14 @@
 import NavbarWeb from "../components/NavbarWeb";
-import Profile from "../components/Profile";
+import Tentang from "../components/Tentang";
 import Footer from "../components/Footer";
-function HalamanProfile() {
+function Tentangkita() {
 	return (
 		<>
 			<NavbarWeb />
-			<Profile />
+			<Tentang />
 			<Footer />
 		</>
 	);
 }
 
-export default HalamanProfile;
+export default Tentangkita;
