@@ -457,6 +457,22 @@ h4 {
 }
 
 /* -------ebook------------ */
+
+#progress1{
+    width: 5%;
+}
+#progress2{
+    width: 25%;
+}
+
+#progress3{
+    width: 50%;
+}
+
+.book-card img{
+    width: 100px;
+}
+
 main {
     padding: 20px;
     max-width: 800px;

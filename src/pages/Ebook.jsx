@@ -55,7 +55,7 @@ const Ebook = () => {
                         <span className="title">Agronomi</span>
                         <span className="pages">10 hal</span>
                         <div className="progress-bar">
-                            <div className="progress" style="width: 5%;"></div>
+                            <div className="progress" id="progress1"></div>
                         </div>
                         <span className="progress-percentage">5% selesai</span>
                     </div>
@@ -65,7 +65,7 @@ const Ebook = () => {
                         <span className="title">Pemuliaan Tanaman Modern</span>
                         <span className="pages">35 hal</span>
                         <div className="progress-bar">
-                            <div className="progress" style="width: 25%;"></div>
+                            <div className="progress" id="progress2"></div>
                         </div>
                         <span className="progress-percentage">25% selesai</span>
                     </div>
@@ -75,7 +75,7 @@ const Ebook = () => {
                         <span className="title">Pertanian Era Digital</span>
                         <span className="pages">50 hal</span>
                         <div className="progress-bar">
-                            <div className="progress" style="width: 15%;"></div>
+                            <div className="progress" id="progress3"></div>
                         </div>
                         <span className="progress-percentage">15% selesai</span>
                     </div>

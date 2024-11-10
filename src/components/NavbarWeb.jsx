@@ -1,3 +1,4 @@
+// Navbar paling atas warna hijau
 import Profile from "../assets/profile.png";
 import { useState } from "react";
 import {
@@ -33,14 +34,8 @@ const NavbarWeb = () => {
 					</li>
 
 					<li className="nav-item me-5">
-						<a className="nav-link" href="">
+						<a className="nav-link" href="/sumberdaya">
 							Sumber Daya
-						</a>
-					</li>
-
-					<li className="nav-item me-5">
-						<a className="nav-link" href="">
-							Komunitas
 						</a>
 					</li>
 
