@@ -30,7 +30,7 @@ const App = () => {
       <Profilekeamanan />
       <Profilekeluar />
       <Ebook />
-      {/* <Detailebook /> */}
+      <Detailebook />
       <Footer />
     </div>
   );
