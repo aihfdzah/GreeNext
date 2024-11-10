@@ -15,6 +15,8 @@ import Tentangkita from "./pages/Tentangkita";
 import NotFound from "./pages/NotFound";
 import Sumber from "./pages/Sumber";
 import Privasi from "./pages/Privasi";
+import Keamanan from "./pages/Keamanan";
+import Keluar from "./pages/Keluar";
 // const App = () => {
 // 	return (
 // 		<div>
@@ -40,6 +42,8 @@ function App() {
 				<Route path="/home" element={<Home />} />
 				<Route path="/sumberdaya" element={<Sumber />} />
 				<Route path="/tentangkita" element={<Tentangkita />} />
+				<Route path="/keamanan" element={<Keamanan />} />
+				<Route path="/keluar" element={<Keluar />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
