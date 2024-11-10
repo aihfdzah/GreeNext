@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarWeb from '../components/NavbarWeb'
 
+
 const Ebook = () => {
     return (
         <> <NavbarWeb />
@@ -20,35 +21,45 @@ const Ebook = () => {
                 </div>
 
                 <div className="book-grid">
-                    <div className="book-card"> <img src="./bioteknologi pertanian.jpg" alt="" />
-                        Bioteknologi Pertania</div>
+                    <div className="book-card"> <img src="./bioteknologi pertanian.jpg" alt="detail" />
+                        Bioteknologi Pertanian 
+                        <a href="./Detailebook.jsx"></a></div>
 
                     <div className="book-card"><img src="./inovasi agribisnis.jpg" alt="" />
-                        Inovasi Agribisnis</div>
+                        Inovasi Agribisnis 
+                        <a href=""></a></div>
 
                     <div className="book-card"><img src="./manajemen agroindustri.jpg" alt="" />
-                        Manajemen Agroindustri</div>
+                        Manajemen Agroindustri 
+                        <a href=""></a></div>
 
                     <div className="book-card"><img src="./pertanian berkelanjutan.jpg" alt="" />
-                        Pertanian Berkelanjutan</div>
+                        Pertanian Berkelanjutan 
+                        <a href=""></a></div>
 
                     <div className="book-card"><img src="./pertanian masa depan.jpg" alt="" />
-                        Pertanian Masa Depan</div>
+                        Pertanian Masa Depan 
+                        <a href=""></a></div>
 
                     <div className="book-card"><img src="./pertanian postmodern.jpg" alt="" />
-                        Pertanian Postmodern</div>
+                        Pertanian Postmodern 
+                        <a href=""></a></div>
 
                     <div className="book-card"><img src="./produktivitas tanama pertanian.jpg" alt="" />
-                        Produktivitas Tanaman Pertanian</div>
+                        Produktivitas Tanaman Pertanian 
+                        <a href=""></a></div>
 
                     <div className="book-card"><img src="./tanaman modern.jpg" alt="" />
-                        Tanaman Modern</div>
+                        Tanaman Modern 
+                        <a href=""></a></div>
 
                     <div className="book-card"><img src="./teknologi.jpg" alt="" />
-                        Teknologi Pertanian</div>
+                        Teknologi Pertanian 
+                        <a href=""></a></div>
 
                     <div className="book-card"><img src="./pertanian 4.0.jpg" alt="" />
-                        Pertanian 4.0</div>
+                        Pertanian 4.0 
+                        <a href=""></a></div>
                 </div>
 
                 <div className="progress-list">

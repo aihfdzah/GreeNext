@@ -1,7 +1,10 @@
 import React from "react";
+import NavbarWeb from '../components/NavbarWeb'
+import Ebook from '../pages/Ebook'
 
 const Detailebook = () => {
     return (
+        <> <NavbarWeb />
         <div className="container">
             <main className="book-detail">
                 <div className="back-button">
@@ -10,15 +13,17 @@ const Detailebook = () => {
 
                 <div className="content">
                     <div className="left-section">
-                        <h2>Pemuliaan Tanaman Modern</h2>
+                        <h2>Bioteknologi Pertanian</h2>
                         <div className="book-image">
-                            <img src="./bioteknologi pertanian.jpg" alt="Pemuliaan Tanaman Modern"/>
+                            <img src="./bioteknologi pertanian.jpg" alt=""/>
                             <div className="favorite">
                                 <button>&hearts;</button>
                             </div>
                         </div>
 
-                        <div className="author">Lestari Irene Putra, Badriah, Hari Gunawan, Devi Andriani, Mujahiddah Jannah, Indah Fitriati, Siti Sari Pramita Sari, Niqsani Tann, Jumrah, Muhammad Lu’bis</div>
+                        <div className="author">Esna Dilli Novianto, Erma Suryanti, Indriati Husain, Fitri Yulianti, Rosminah, Muhammad Abdul Aziz,
+                                                Silvia Permata Sari, Sri Suryaningsih Djunu, Juniaty Arruan Bulawan, Indah Apriliya, Muhammad Isra, 
+                                                Syamsul Bahri</div>
                         <div className="buttons">
                             <button className="read-button">Baca buku</button>
                             <button className="buy-button">Beli buku</button>
@@ -28,7 +33,12 @@ const Detailebook = () => {
                     <div className="right-section">
                         <h3>Deskripsi Singkat</h3>
                         <p>
-                            Buku <strong>Pemuliaan Tanaman Modern</strong> menjelaskan teknik dan metode pemuliaan tanaman terkini yang dirancang untuk meningkatkan kualitas dan produktivitas tanaman melalui pendekatan ilmiah. Buku ini mencakup dasar-dasar genetika, teknik persilangan, seleksi tanaman, hingga penerapan bioteknologi untuk mencapai hasil yang lebih unggul dan tahan terhadap berbagai kondisi lingkungan.
+                            Buku <strong>Bioteknologi</strong> adalah disiplin ilmu yang merupakan cabang dari biologi, 
+                            yang fokus utamanya adalah pada penerapan teknologi untuk memanfaatkan makhluk hidup—baik itu mikroorganisme, tumbuhan, maupun hewan—dalam berbagai proses 
+                            yang bertujuan untuk menghasilkan produk, baik berupa barang maupun jasa, yang dirancang untuk meningkatkan kualitas hidup manusia secara keseluruhan. 
+                            Cabang ilmu ini tidak hanya mencakup aspek tradisional yang telah digunakan selama berabad-abad, seperti fermentasi dan pemuliaan tanaman, 
+                            tetapi juga telah berkembang pesat dengan masuknya bioteknologi modern yang melibatkan teknik-teknik canggih seperti rekayasa genetika, kultur jaringan, 
+                            dan penggunaan enzim dalam industri. integral dari budaya, kepercayaan, dan kehidupan sehari-hari manusia.
                         </p>
 
                         <div className="progress-section">
@@ -43,6 +53,7 @@ const Detailebook = () => {
             </main>
 
         </div>
+        </>
 
 
     );

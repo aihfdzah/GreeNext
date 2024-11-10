@@ -11,10 +11,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HalamanProfile from "./pages/HalamanProfile";
 import FotoProfile from "./pages/FotoProfile";
 import Pemberitahuan from "./pages/Pemberitahuan";
+import KeamananProfile from "./pages/KeamananProfile";
 import NotFound from "./pages/NotFound";
 import EBook from "./pages/Ebook"
 import Tentang from "./pages/Tentang"
 import Ebook from "./pages/Ebook"
+import Detailebook from "./pages/Detailebook"
+
 // import 
 // const App = () => {
 // 	return (
@@ -37,10 +40,12 @@ function App() {
 					<Route path="/fotoprofile" element={<FotoProfile />}/>
 					<Route path="/sumberdaya" element={<EBook />}/>
 					<Route path="/pemberitahuan" element={<Pemberitahuan />}/>
+					<Route path="/keamananprofile" element={<KeamananProfile />}/>
 					<Route path="/kelas" element={<HalamanKelas />}/>
 					<Route path="/home" element={<Home />}/>
 					<Route path="/tentang" element={<Tentang />}/>
 					<Route path="/ebook" element={<Ebook />}/>
+					<Route path="/ebook" element={<Detailebook />}/>
 					<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
