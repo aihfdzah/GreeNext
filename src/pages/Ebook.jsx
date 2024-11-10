@@ -19,34 +19,34 @@ const Ebook = () => {
 
                 <div className="book-grid">
                     <div className="book-card"> <img src="./bioteknologi pertanian.jpg" alt="" />
-                        Pertanian Era Digital</div>
+                        Bioteknologi Pertanian</div>
 
                     <div className="book-card"><img src="./inovasi agribisnis.jpg" alt="" />
-                        Pengembangan Pertanian Presisi</div>
+                        Inovasi Agribisnis</div>
 
                     <div className="book-card"><img src="./manajemen agroindustri.jpg" alt="" />
-                        Agronomi</div>
+                        Manajemen Agroindustri</div>
 
                     <div className="book-card"><img src="./pertanian berkelanjutan.jpg" alt="" />
-                        Sistem Pertanian Presisi</div>
+                        Pertanian Berkelanjutan</div>
 
                     <div className="book-card"><img src="./pertanian masa depan.jpg" alt="" />
-                        Agroteknologi Modern</div>
+                        Pertanian Masa Depan</div>
 
                     <div className="book-card"><img src="./pertanian postmodern.jpg" alt="" />
-                        Hortikultura</div>
+                        Pertanian Postmodern</div>
 
                     <div className="book-card"><img src="./produktivitas tanama pertanian.jpg" alt="" />
-                        Pemuliaan Tanaman Modern</div>
+                        Produktivitas Tanaman Pertanian</div>
 
                     <div className="book-card"><img src="./tanaman modern.jpg" alt="" />
-                        Inovasi Dalam Agribisnis</div>
+                        Tanaman Modern</div>
 
                     <div className="book-card"><img src="./teknologi.jpg" alt="" />
-                        Pertanian Keberlanjutan</div>
-                        
+                        Teknologi Pertanian</div>
+
                     <div className="book-card"><img src="./pertanian 4.0.jpg" alt="" />
-                        Pertanian Postmodern</div>
+                        Pertanian 4.0</div>
                 </div>
 
                 <div className="progress-list">

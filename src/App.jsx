@@ -11,8 +11,9 @@ import Profileinfo from "./pages/Profileinfo";
 import Profileprivasi from "./pages/Profileprivasi";
 import Profilekeamanan from "./pages/Profilekeamanan";
 import Profilekeluar from "./pages/Profilekeluar";
-import Kelasdetail from "./pages/kelasdetail";
-import Ebook from "./pages/ebook";
+import Kelasdetail from "./pages/Kelasdetail";
+import Ebook from "./pages/Ebook";
+// import Detailebook from "./pages/Detailebook";
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
       <Profilekeamanan />
       <Profilekeluar />
       <Ebook />
+      {/* <Detailebook /> */}
       <Footer />
     </div>
   );
