@@ -40,7 +40,7 @@ const NavbarWeb = () => {
 					</li>
 
 					<li className="nav-item me-5">
-						<a className="nav-link" href="">
+						<a className="nav-link" href="/tentang">
 							Tentang Kita
 						</a>
 					</li>

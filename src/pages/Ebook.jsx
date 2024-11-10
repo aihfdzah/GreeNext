@@ -1,7 +1,9 @@
 import React from "react";
+import NavbarWeb from '../components/NavbarWeb'
 
 const Ebook = () => {
     return (
+        <> <NavbarWeb />
         <div className="container">
             <main>
                 <h1>E-book & Panduan</h1>
@@ -82,7 +84,7 @@ const Ebook = () => {
                 </div>
             </main>
         </div>
-
+        </>
         
     );
 };

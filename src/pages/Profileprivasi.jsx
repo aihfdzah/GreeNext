@@ -1,4 +1,5 @@
 import profile from "../assets/profile.png";
+
 const Profileprivasi = () => {
 	return (
 		<div className="container" id="profileinfo">

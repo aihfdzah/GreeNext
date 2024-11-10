@@ -13,6 +13,8 @@ import FotoProfile from "./pages/FotoProfile";
 import Pemberitahuan from "./pages/Pemberitahuan";
 import NotFound from "./pages/NotFound";
 import EBook from "./pages/Ebook"
+import Tentang from "./pages/Tentang"
+import Ebook from "./pages/Ebook"
 // import 
 // const App = () => {
 // 	return (
@@ -37,6 +39,8 @@ function App() {
 					<Route path="/pemberitahuan" element={<Pemberitahuan />}/>
 					<Route path="/kelas" element={<HalamanKelas />}/>
 					<Route path="/home" element={<Home />}/>
+					<Route path="/tentang" element={<Tentang />}/>
+					<Route path="/ebook" element={<Ebook />}/>
 					<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
