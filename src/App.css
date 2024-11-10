@@ -1,33 +1,33 @@
-* { 
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    list-style: none;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	scroll-behavior: smooth;
+	list-style: none;
 }
 :root {
-    --main-color :#17412D ;
-    --text-color :#060807 ;
-    --background-color:#F5F2ED;
-    --text-color2 :#ef7a53;
-    --big-font : 5rem;
-    --h2-font :2.25rem;
-    --p-font :0,9rem;
+	--main-color: #17412d;
+	--text-color: #060807;
+	--background-color: #f5f2ed;
+	--text-color2: #ef7a53;
+	--big-font: 5rem;
+	--h2-font: 2.25rem;
+	--p-font: 0, 9rem;
 }
 *::selection {
-    background: var(--main-color);
-    color: #fff;
+	background: var(--main-color);
+	color: #fff;
 }
 body {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	background-color: var(--background-color);
+	margin: 0;
+	padding: 0;
 }
 /* header {
     position: fixed;
@@ -41,296 +41,301 @@ body {
     padding: 30px 170px;
     background-color: #17412D;
 } */
-.navbar { /*biat teratur tulisan navbarnyoo*/
-    display: flex;
-    position: fixed;
-    list-style: none;
-    padding: 10px 20px;
-    background-color: var(--main-color) !important;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+	/*biat teratur tulisan navbarnyoo*/
+	display: flex;
+	position: fixed;
+	list-style: none;
+	padding: 10px 20px;
+	background-color: var(--main-color) !important;
+	justify-content: space-between;
+	align-items: center;
 }
-.navbar .collapse  { /*navbar berjarak*/ 
-    color: white; ;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-right: 30px;
-    text-decoration: none;
+.navbar .collapse {
+	/*navbar berjarak*/
+	color: white;
+	font-size: 1rem;
+	font-weight: 500;
+	margin-right: 30px;
+	text-decoration: none;
 }
 .navbar-nav {
-    display: flex;
+	display: flex;
 }
 .nav-link {
-    display: flex;
-    gap: 20px;
-    color: white;
+	display: flex;
+	gap: 20px;
+	color: white;
 }
-.navbar a:hover { /*tulisan berwarna*/
-    color: var(--text-color2) !important;
-    transition: .4s;
+.navbar a:hover {
+	/*tulisan berwarna*/
+	color: var(--text-color2) !important;
+	transition: 0.4s;
 }
-/*logo*/ 
+/*logo*/
 .logo {
-    position: fixed;
-    top: 10px;
-    left: 100px;
-    width: 25px;
-    height: auto;
-    max-width: 30%;
-    margin-bottom: 15px;
+	position: fixed;
+	top: 10px;
+	left: 100px;
+	width: 40px;
+	height: auto;
+	max-width: 40%;
+	margin-bottom: 15px;
 }
 /* tombol masuk */
 .masuk {
-    position: fixed;
-    top: 10;
-    right: 0;
-    display: flex;
-    width: 10px;
-    justify-content: flex-end; 
-    align-items: flex-end;
-    padding: 30px 50px;
+	position: fixed;
+	top: 10;
+	right: 0;
+	display: flex;
+	width: 10px;
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding: 30px 50px;
 }
 .masuk-btn {
-    background-color: transparent; 
-    color: var(--text-color2) !important;               
-    padding: 8px 13px;            
-    border: 2px solid var(--text-color2) !important;    
-    border-radius: 5px;            
-    text-decoration: none;     
+	background-color: transparent;
+	color: var(--text-color2) !important;
+	padding: 8px 13px;
+	border: 2px solid var(--text-color2) !important;
+	border-radius: 5px;
+	text-decoration: none;
 }
 .masuk-btn:hover {
-    background: var(--text-color2) !important;
-    color: white;
-    transition: 2s;
+	background: var(--text-color2) !important;
+	color: white;
+	transition: 2s;
 }
 
 /* ----------kelas------------ */
 .container {
-    max-width: 1000px;
-    margin: 80px auto;
-    padding: 50px 50px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+	max-width: 1000px;
+	margin: 8rem auto 15rem auto;
+	padding: 50px 50px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
 }
-#profile{
-    flex-direction: row;
+#profile {
+	flex-direction: row;
 }
 #profilefoto {
-    flex-direction: row;
+	flex-direction: row;
 }
 #profileinfo {
-    flex-direction: row;
+	flex-direction: row;
 }
 #profilekeamanan {
     flex-direction: row;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 0 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	padding: 0 5px;
 }
 .button-filter {
-    padding: 8px 12px;
-    margin-right: 40px;
-    background: transparent;
-    color: #ef7a53;
-    border-radius: 10px;
-    border: 1px solid #ef7a53;
-    cursor: pointer;
+	padding: 8px 12px;
+	margin-right: 40px;
+	background: transparent;
+	color: #ef7a53;
+	border-radius: 10px;
+	border: 1px solid #ef7a53;
+	cursor: pointer;
 }
 .button-filter:hover {
-    background-color: var(--text-color2);
-    color: white;
-    transition: .2s;
+	background-color: var(--text-color2);
+	color: white;
+	transition: 0.2s;
 }
 .search-bar {
-    align-items: center;
-    padding: 10px 20px;
-    border: 1px solid #ef7a53;
-    border-radius: 15px;
-    width: 100%;
-    margin-right: 20px;
+	align-items: center;
+	padding: 10px 20px;
+	border: 1px solid #ef7a53;
+	border-radius: 15px;
+	width: 100%;
+	margin-right: 20px;
+	display: flex;
 }
 .search-bar input[type="text"] {
-    flex: 1;
-    padding: 8px;
-    border: none;
-    outline: none;
+	flex: 1;
+	padding: 8px;
+	border: none;
+	outline: none;
 }
 .header i {
-    margin-right: 10px;
-    color: #ef7a53;
+	margin-right: 10px;
+	color: #ef7a53;
 }
 /*h1*/
 h2 {
-    color: #060807;
-    margin-bottom: 50px;
-    font-weight: 600;
+	color: #060807;
+	margin-bottom: 50px;
+	font-weight: 600;
 }
 
 /* Filter */
 .filter {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    margin-right: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	margin-right: 20px;
 }
 .filter select {
-    padding: 8px;
-    background: transparent;
-    border: 1px solid #ef7a53;
-    border-radius: 10px;
-    margin-bottom: 10px;
+	padding: 8px;
+	background: transparent;
+	border: 1px solid #ef7a53;
+	border-radius: 10px;
+	margin-bottom: 10px;
 }
 .filter select:hover {
-    background: var(--text-color2);
-    color: white;
+	background: var(--text-color2);
+	color: white;
 }
 option {
-    background: var(--background-color);
-    color: #060807;
+	background: var(--background-color);
+	color: #060807;
 }
-
 
 /* Daftar Kursus */
 .daftar-kursus {
-    gap: 15px;
-    margin-left: 5%;
-    padding: 16px;
+	gap: 15px;
+	margin-left: 5%;
+	padding: 16px;
 }
 .course-item {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid var(--main-color) !important;
-    background-color: #fff;
-    flex-direction: column;
-    margin-top: 8px;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	padding: 15px;
+	border-bottom: 1px solid var(--main-color) !important;
+	background-color: #fff;
+	flex-direction: column;
+	margin-top: 8px;
 }
 .action-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 16px;
 }
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .course-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-right: 15px;
-    margin-bottom: 8px;
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 5px;
+	margin-right: 15px;
+	margin-bottom: 8px;
 }
 .konten-course {
-    flex: 1;
+	flex: 1;
 }
 .title-course {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-    color: #060807;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	color: #060807;
 }
 .deskripsi-course {
-    font-size: 14px;
-    color: #060807;
-    margin: 10px 0 10px;
-    line-height: 1.5;
+	font-size: 14px;
+	color: #060807;
+	margin: 10px 0 10px;
+	line-height: 1.5;
 }
 .deskripsi-course span {
-    color: #ef7a53 !important;
+	color: #ef7a53 !important;
 }
 .deskripsi-course a {
-    text-decoration: none;
-    color: #ef7a53 !important;
+	text-decoration: none;
+	color: #ef7a53 !important;
 }
 .deskripsi-course a:hover {
-    color: #ff4000 !important;
+	color: #ff4000 !important;
 }
 .tag-course {
-    font-size: 13px;
-    color: #060807;
-    display: flex;
-    gap: 8px;
+	font-size: 13px;
+	color: #060807;
+	display: flex;
+	gap: 8px;
 }
 .tag-course span {
-    border: 1px solid #116448 !important;
-    padding: 4px 15px;
-    border-radius: 10px;
-    background: transparent;
+	border: 1px solid #116448 !important;
+	padding: 4px 15px;
+	border-radius: 10px;
+	background: transparent;
 }
 .button-daftar {
-    padding: 8px 12px;
-    border: 1px solid #ef7a53 !important;
-    background: transparent;
-    color: #060807;
-    border-radius: 10px;
-    cursor: pointer;
+	padding: 8px 12px;
+	border: 1px solid #ef7a53 !important;
+	background: transparent;
+	color: #060807;
+	border-radius: 10px;
+	cursor: pointer;
 }
 .button-daftar a:hover {
-    background-color: #ef7a53 !important;
-    color: white;
+	background-color: #ef7a53 !important;
+	color: white;
 }
 
 /* Layout Halaman */
 .main-content {
-    display: flex;
+	display: flex;
 }
 
 /*paginations */
 .pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-    color: #555 !important;
-    font-size: 0.9em;
-    padding: 25px 0;
-    margin-left: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Arial, sans-serif;
+	color: #555 !important;
+	font-size: 0.9em;
+	padding: 25px 0;
+	margin-left: 15%;
 }
 .pagination .prev.disabled {
-    color: #ccc !important;
-    cursor: default;
+	color: #ccc !important;
+	cursor: default;
 }
-.pagination .prev:hover:not(.disabled), .pagination .next:hover {
-    color: #116448 !important;
+.pagination .prev:hover:not(.disabled),
+.pagination .next:hover {
+	color: #116448 !important;
 }
-.pagination a, .pagination span {
-    text-decoration: none;
-    color: #555 !important;
-    padding: 5px 10px;
-    margin: 0 3px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.pagination a,
+.pagination span {
+	text-decoration: none;
+	color: #555 !important;
+	padding: 5px 10px;
+	margin: 0 3px;
+	border-radius: 5px;
+	transition: background-color 0.3s;
 }
 .pagination .page {
-    border: 1px solid #116448 !important;
-    color: #060807;
+	border: 1px solid #116448 !important;
+	color: #060807;
 }
 .pagination .page:hover {
-    background-color: #ef7a53 !important;
-    color: white;
+	background-color: #ef7a53 !important;
+	color: white;
 }
 .pagination .dots {
-    color: #060807;
-    padding: 5px;
+	color: #060807;
+	padding: 5px;
 }
-.pagination .prev, .pagination .next {
-    font-weight: bold;
-    color: #060807;
-    cursor: pointer;
+.pagination .prev,
+.pagination .next {
+	font-weight: bold;
+	color: #060807;
+	cursor: pointer;
 }
 
 /* -------kelas detail         */
@@ -706,214 +711,215 @@ main.book-detail {
 }
 
 /* ----------------Tentang Kita---------------- */
-.about-section, .features-section {
-    margin-bottom: 2rem;
-    padding: 50px 45px;
+.about-section,
+.features-section {
+	margin-bottom: 2rem;
+	padding: 50px 45px;
 }
 
 .about h2 {
-    color: var(--main-color);
-    font-size: 2rem;
-    margin-bottom: 4rem;
+	color: var(--main-color);
+	font-size: 2rem;
+	margin-bottom: 4rem;
 }
 
 .about-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    position: absolute;
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+	position: absolute;
 }
 
 .about-text {
-    flex: 1;
-    padding-right: 60%;
-    z-index: 1;
+	flex: 1;
+	padding-right: 60%;
+	z-index: 1;
 }
 
 .about p {
-    font-size: 18px;
-    margin: 0.5rem 0;
-    color: var(--text-color);
+	font-size: 18px;
+	margin: 0.5rem 0;
+	color: var(--text-color);
 }
 
 .about p strong {
-    color: var(--text-color2);
+	color: var(--text-color2);
 }
 
 .about-image {
-    width: 50%;
-    max-width: 400px;
-    border-radius: 5px;
-    position: relative;
-    top: 71%;
-    left: 50%;
-    height: auto;
-    z-index: 0;
-    margin-right: 15px;
+	width: 50%;
+	max-width: 400px;
+	border-radius: 5px;
+	position: relative;
+	top: 71%;
+	left: 50%;
+	height: auto;
+	z-index: 0;
+	margin-right: 15px;
 }
 
 .features {
-    margin-top: 2rem;
+	margin-top: 2rem;
 }
 
 .features h3 {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
+	font-size: 1.5rem;
+	color: var(--text-color);
+	margin-bottom: 1rem;
 }
 
 .features h3 span {
-    color: var(--text-color2);
-    font-weight: bold;
+	color: var(--text-color2);
+	font-weight: bold;
 }
 
 .feature-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 1rem;
-    flex-direction: column;
-    padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+	margin-top: 1rem;
+	flex-direction: column;
+	padding: 10px;
 }
 
 .feature-item {
-    background-color: #F5F2ED;
-    border: 1px solid var(--text-color) ;
-    padding: 1rem;
-    border-radius: 5px;
-    text-align: left;
-    display: flex;
-    gap: 0.5rem;
+	background-color: #f5f2ed;
+	border: 1px solid var(--text-color);
+	padding: 1rem;
+	border-radius: 5px;
+	text-align: left;
+	display: flex;
+	gap: 0.5rem;
 }
 
 .feature-icon {
-    width: 40px;
-    height: 40px;
+	width: 40px;
+	height: 40px;
 }
 
 .feature-item h4 {
-    color: var(--main-color);
-    font-size: 14px;
-    margin-bottom: 5px;
-    display: flex;
+	color: var(--main-color);
+	font-size: 14px;
+	margin-bottom: 5px;
+	display: flex;
 }
 
 .feature-item p {
-    font-size: 0.9rem;
-    margin: 0;
-    color: #555;
+	font-size: 0.9rem;
+	margin: 0;
+	color: #555;
 }
 
 /* ------------profile-------------- */
 .sidebar {
-    flex: 1;
-    max-width: 200px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+	flex: 1;
+	max-width: 200px;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
 }
 
 .sidebar img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin-bottom: 10px;
 }
 
 .sidebar h3 {
-    margin: 10px 0 5px;
-    font-size: 18px;
+	margin: 10px 0 5px;
+	font-size: 18px;
 }
 
 .sidebar p {
-    color: #888;
-    font-size: 14px;
-    margin-bottom: 20px;
+	color: #888;
+	font-size: 14px;
+	margin-bottom: 20px;
 }
 
 .sidebar button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f87042;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    font-weight: bold;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f87042;
+	color: white;
+	font-size: 14px;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 /* Profile Form Styling */
 .profile-content {
-    flex: 2;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	flex: 2;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profile-content h1 {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 5px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 5px;
 }
 
 .profile-content h2 {
-    font-size: 16px;
-    color: #888;
-    text-align: center;
-    margin-bottom: 20px;
+	font-size: 16px;
+	color: #888;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
 }
 
 .form-group label {
-    font-weight: bold;
-    margin-bottom: 5px;
+	font-weight: bold;
+	margin-bottom: 5px;
 }
 
 .form-group input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 14px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 14px;
 }
 
 .form-group input:focus {
-    outline: none;
-    border-color: #f87042;
+	outline: none;
+	border-color: #f87042;
 }
 
 .form-row {
-    display: flex;
-    gap: 10px;
+	display: flex;
+	gap: 10px;
 }
 
 .btn-save {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #f87042;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
+	display: block;
+	width: 100%;
+	padding: 15px;
+	border-radius: 5px;
+	background-color: #f87042;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	margin-top: 20px;
 }
 
- /* -----------profilefoto----------- */
+/* -----------profilefoto----------- */
 
 .content {
     flex-grow: 1;
@@ -921,31 +927,30 @@ main.book-detail {
 }
 
 h1 {
-    font-size: 40px;
-    font-weight: 700;
-    color: #060807;
+	font-size: 40px;
+	font-weight: 700;
+	color: #060807;
 }
 p {
-    font-size: 20px;
-    color: var(--text-color);
+	font-size: 20px;
+	color: var(--text-color);
 }
 
 .photo-preview {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+	font-size: 20px;
 }
 
 .placeholder-icon {
-    font-size: 100px;
-    color: #060807;
-    border: 1px solid #ccc;
-    background: #ccc;
-    padding: 50px 150%;
-    border-radius: 10px;
-    margin-bottom: 20px;
+	font-size: 100px;
+	color: #060807;
+	border: 1px solid #ccc;
+	background: #ccc;
+	border-radius: 10px;
+	margin-bottom: 20px;
 }
 
 .label {
@@ -968,9 +973,9 @@ p {
 
 .upload-button,
 .save-button {
-    padding: 10px 20px;
-    margin: 10px 0;
-    cursor: pointer;
+	padding: 10px 20px;
+	margin: 10px 0;
+	cursor: pointer;
 }
 /* 
 #upload-button {
@@ -1002,8 +1007,8 @@ p {
 /* ----------profileinfo--------- */
 
 h1 {
-    font-size: 24px;
-    color: #333;
+	font-size: 24px;
+	color: #333;
 }
 
 .tabs {
@@ -1029,55 +1034,55 @@ h1 {
 }
 
 .notifications {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-    padding: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-top: 20px;
+	padding: 40px;
 }
 
 .notification-card {
-    background-color: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+	background-color: #fff;
+	border: 1px solid #eaeaea;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .notification-card h2 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
+	font-size: 18px;
+	color: #333;
+	margin-bottom: 10px;
 }
 
 .notification-card p {
-    color: #666;
-    margin-bottom: 15px;
+	color: #666;
+	margin-bottom: 15px;
 }
 
 .open-button {
-    background-color: var(--text-color2);
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+	background-color: var(--text-color2);
+	color: white;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 /* ---------------profile privasi---------- */
 h1 {
-    font-size: 24px;
-    color: #333;
+	font-size: 24px;
+	color: #333;
 }
 
 .privacy-settings {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .privacy-settings h2 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
+	font-size: 18px;
+	color: #333;
+	margin-bottom: 20px;
 }
 
 .setting-item {
@@ -1092,45 +1097,45 @@ h1 {
 }
 
 .toggle-switch {
-    appearance: none;
-    width: 40px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 10px;
-    position: relative;
-    outline: none;
-    cursor: pointer;
+	appearance: none;
+	width: 40px;
+	height: 20px;
+	background-color: #ccc;
+	border-radius: 10px;
+	position: relative;
+	outline: none;
+	cursor: pointer;
 }
 
 .toggle-switch:checked {
-    background-color: #ffa07a;
+	background-color: #ffa07a;
 }
 
 .toggle-switch:before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-color: white;
-    border-radius: 50%;
-    top: 1px;
-    left: 1px;
-    transition: 0.3s;
+	content: "";
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	background-color: white;
+	border-radius: 50%;
+	top: 1px;
+	left: 1px;
+	transition: 0.3s;
 }
 
 .toggle-switch:checked:before {
-    left: 21px;
+	left: 21px;
 }
 
 .save-button {
-    background-color: var(--text-color2);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
-    text-align: center;
+	background-color: var(--text-color2);
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 20px;
+	text-align: center;
 }
 
 /* -----------profile keamanan----- */
@@ -1162,11 +1167,10 @@ label {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -1256,35 +1260,34 @@ h1 {
     font-size: 14px;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
     bottom: 0;
     right: 0;
     width: 100%;
     flex-direction: column;
-    margin: 10px 10px;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-around; 
-    align-items: flex-start; 
-    flex: 1;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex: 1;
+	flex-wrap: wrap;
 }
 
 /* Mengatur logo dan teks bahasa */
 .footer-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-right: 100px;
-    margin-left: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding-right: 100px;
+	margin-left: 5%;
 }
 
 .logo-footer {
-    width: 150px; /* Ukuran logo */
-    margin-bottom: 10px;
+	width: 150px; /* Ukuran logo */
+	margin-bottom: 10px;
 }
 
 /* .item {
@@ -1295,12 +1298,12 @@ h1 {
     text-decoration: none;
 } */
 .bx {
-    margin-left: 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 10px;
-    margin-top: 50px;
-    line-height: 2;
+	margin-left: 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 10px;
+	margin-top: 50px;
+	line-height: 2;
 }
 
 /* .footer-logo a:hover {
@@ -1309,37 +1312,43 @@ h1 {
 } */
 
 .footer .collapse {
-    display: flex;
+	display: flex;
 }
 
 /* Style untuk setiap bagian link di footer */
 .foooter {
-    margin-bottom: 10px;
-    color: white;
-    min-width: 150px;
-    margin: 10px;
-    flex: 1;
+	margin-bottom: 10px;
+	color: white;
+	min-width: 150px;
+	margin: 10px;
+	flex: 1;
 }
 .footer-item {
-    display: block;
-    align-items: center;
-    gap: 10px;
+	display: block;
+	align-items: center;
+	gap: 10px;
 }
 .footer-link {
-    list-style-type: none;
-    padding-top: 13px;
-    color: white;
-    text-decoration: none;
-    transition: color 0;
-    padding: 0;
-    margin: 0;
+	list-style-type: none;
+	padding-top: 13px;
+	color: white;
+	text-decoration: none;
+	transition: color 0;
+	padding: 0;
+	margin: 0;
 }
 .footer-link:hover {
-    color: var(--text-color2) !important; /* Warna oranye saat hover */
+	color: var(--text-color2) !important; /* Warna oranye saat hover */
 }
 
 .footer .down {
-    padding-top: 40px;
-    align-items: center;
-    display: flexbox;
+	padding-top: 40px;
+	align-items: center;
+	display: flexbox;
 }
+
+/* -----------Dashboard----------- */
+#kelas-wrapper{
+	margin-bottom: 15rem;
+}
+

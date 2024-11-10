@@ -35,7 +35,7 @@ const Navbar = () => {
                 </ul>
 
                 <div className="masuk">
-                    <a className="masuk-btn" href="#">
+                    <a className="masuk-btn" href="/login">
                         Masuk</a>
                 </div>
             </div>
