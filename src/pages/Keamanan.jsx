@@ -1,14 +1,14 @@
 import NavbarWeb from "../components/NavbarWeb";
-import Profile from "../components/Profile";
+import Profilekeamanan from "../components/Profilekeamanan";
 import Footer from "../components/Footer";
-function HalamanProfile() {
+function Keamanan() {
 	return (
 		<>
 			<NavbarWeb />
-			<Profile />
+			<Profilekeamanan />
 			<Footer />
 		</>
 	);
 }
 
-export default HalamanProfile;
+export default Keamanan;

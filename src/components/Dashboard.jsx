@@ -13,7 +13,7 @@ function Dashboard() {
 	};
 
 	return (
-		<Container fluid className="100vh p-lg-4 p-md-0 mt-5">
+		<Container fluid className="p-lg-4 p-md-0 mt-5">
 			<Row className="py-3">
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Dashboard</h1>
@@ -95,7 +95,7 @@ function Dashboard() {
 								<i className="bi bi-book-half"></i>
 							</span>
 						</div>
-						<div className="ms-3 text-center">
+						<div className="ms-3 text-center" style={{ marginBottom: "30%" }}>
 							<h2>Kelas Saya</h2>
 							<p>Tidak ada kelas yang sedang berlangsung</p>
 							<Button

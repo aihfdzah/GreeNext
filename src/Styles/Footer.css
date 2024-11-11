@@ -1,0 +1,16 @@
+.footer-link {
+	color: #f5f2ed; /* Default color */
+	text-decoration: none; /* Remove underline */
+	display: block; /* Make the link occupy the full width */
+	margin-bottom: 0.5rem; /* Space between links */
+}
+
+.footer-link:hover {
+	color: #ef7a53; /* Color on hover */
+	font-weight: bold; /* Bold text on hover */
+}
+
+.footer-link.active {
+	color: #ef7a53; /* Color when active */
+	font-weight: bold; /* Bold text when active */
+}

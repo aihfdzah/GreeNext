@@ -1,5 +1,6 @@
 import Profile from "../assets/profile.png";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import {
 	Dropdown,
 	DropdownToggle,
@@ -9,49 +10,60 @@ import {
 
 const NavbarWeb = () => {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
-
 	const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
+	const location = useLocation();
+
+	// Helper function to determine active link style
+	const getLinkClass = (path) =>
+		location.pathname === path ? "active-link" : "";
+
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-			<img src="./logo2.png" className="logo" alt="logo" />
+		<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top align-items-center">
+			<img src="./logo2.png" className="logo me-3" alt="logo" />
 
-			<div
-				className="collapse navbar-collapse justify-content-center"
-				id="navbarNav">
-				<ul className="navbar-nav">
-					<li className="nav-item me-5">
-						<a className="nav-link" href="/home">
-							Dashboard
-						</a>
-					</li>
+			<div className="collapse navbar-collapse">
+				<div className="mx-auto d-flex justify-content-center align-items-center">
+					<ul className="navbar-nav">
+						<li className="nav-item me-5">
+							<a className={`nav-link ${getLinkClass("/home")}`} href="/home">
+								Dashboard
+							</a>
+						</li>
 
-					<li className="nav-item me-5">
-						<a className="nav-link" href="/kelas">
-							Kelas
-						</a>
-					</li>
+						<li className="nav-item me-5">
+							<a className={`nav-link ${getLinkClass("/kelas")}`} href="/kelas">
+								Kelas
+							</a>
+						</li>
 
-					<li className="nav-item me-5">
-						<a className="nav-link" href="">
-							Sumber Daya
-						</a>
-					</li>
+						<li className="nav-item me-5">
+							<a
+								className={`nav-link ${getLinkClass("/sumberdaya")}`}
+								href="/sumberdaya">
+								Sumber Daya
+							</a>
+						</li>
 
-					<li className="nav-item me-5">
-						<a className="nav-link" href="">
-							Komunitas
-						</a>
-					</li>
+						<li className="nav-item me-5">
+							<a
+								className={`nav-link ${getLinkClass("/komunitas")}`}
+								href="/komunitas">
+								Komunitas
+							</a>
+						</li>
 
-					<li className="nav-item me-5">
-						<a className="nav-link" href="">
-							Tentang Kita
-						</a>
-					</li>
-				</ul>
+						<li className="nav-item me-5">
+							<a
+								className={`nav-link ${getLinkClass("/tentangkita")}`}
+								href="/tentangkita">
+								Tentang Kita
+							</a>
+						</li>
+					</ul>
+				</div>
 
-				<div className="profile">
+				<div className="profile ms-auto">
 					<Dropdown isOpen={dropdownOpen} toggle={toggleDropdown}>
 						<DropdownToggle
 							className="profile-btn d-flex align-items-center"
