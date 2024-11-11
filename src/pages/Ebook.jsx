@@ -1,10 +1,12 @@
 import React from "react";
-import NavbarWeb from '../components/NavbarWeb'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 const Ebook = () => {
     return (
-        <> <NavbarWeb />
+        <> 
+        <Navbar />
         <div className="container">
             <main>
                 <h1>E-book & Panduan</h1>
@@ -21,25 +23,39 @@ const Ebook = () => {
                 </div>
 
                 <div className="book-grid">
-                    <div className="book-card"> <img src="./bioteknologi pertanian.jpg" alt="detail" />
+                    <div className="book-card">
+                        <a href="/detailebook"
+                        >
+                        <img src="./bioteknologi pertanian.jpg" alt="detail" />
                         Bioteknologi Pertanian 
-                        <a href="./Detailebook.jsx"></a></div>
+                        </a>
+                    </div>
 
-                    <div className="book-card"><img src="./inovasi agribisnis.jpg" alt="" />
-                        Inovasi Agribisnis 
-                        <a href=""></a></div>
+                    <div className="book-card">
+                        <a href="/detailebook">
+                            <img src="./inovasi agribisnis.jpg" alt="" />
+                            Inovasi Agribisnis 
+                        </a>
+                    </div>
 
-                    <div className="book-card"><img src="./manajemen agroindustri.jpg" alt="" />
-                        Manajemen Agroindustri 
-                        <a href=""></a></div>
+                    <div className="book-card">
+                        <a href="/detailebook">
+                            <img src="./manajemen agroindustri.jpg" alt="" />
+                            Manajemen Agroindustri 
+                        </a>
+                    </div>
 
-                    <div className="book-card"><img src="./pertanian berkelanjutan.jpg" alt="" />
-                        Pertanian Berkelanjutan 
-                        <a href=""></a></div>
+                    <div className="book-card">
+                        <a href="">
+                            <img src="./manajemen agroindustri.jpg" alt="" />
+                            Pertanian Berkelanjutan 
+                        </a>
+                    </div>
 
                     <div className="book-card"><img src="./pertanian masa depan.jpg" alt="" />
+                        <a href=""></a>    
                         Pertanian Masa Depan 
-                        <a href=""></a></div>
+                    </div>
 
                     <div className="book-card"><img src="./pertanian postmodern.jpg" alt="" />
                         Pertanian Postmodern 
@@ -95,6 +111,7 @@ const Ebook = () => {
                 </div>
             </main>
         </div>
+        <Footer />
         </>
         
     );

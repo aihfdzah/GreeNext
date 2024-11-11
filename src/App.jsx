@@ -13,7 +13,9 @@ import EBook from "./pages/Ebook"
 import Tentang from "./pages/Tentang"
 import Ebook from "./pages/Ebook"
 import Detailebook from "./pages/Detailebook"
-import Detailkls from "./pages/Detailkls";
+import KelasDetail from "./pages/kelasdetail";
+// import Kelasdetail from "./components/Kelasdetail";
+// import Detailkls from "./pages/Detailkls";
 // import Privasi from "./pages/Privasi";
 // import Tentangkita from "./pages/Tentangkita";
 // import NotFound from "./pages/NotFound";
@@ -37,8 +39,8 @@ function App() {
 					<Route path="/home" element={<Home />}/>
 					<Route path="/tentang" element={<Tentang />}/>
 					<Route path="/ebook" element={<Ebook />}/>
-					<Route path="/ebook" element={<Detailebook />}/>
-					<Route path="/detailkls" element={<Detailkls />} />
+					<Route path="/detailebook" element={<Detailebook />}/>
+					<Route path="/detailkls" element={<KelasDetail />} />
 					<Route path="*" element={<NotFound />} />
 					{/* <Route path="/privasi" element={<Privasi />} /> */}
 					{/* <Route path="/sumberdaya" element={<Sumber />} />

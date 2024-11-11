@@ -8,7 +8,7 @@ const Detailebook = () => {
         <div className="container">
             <main className="book-detail">
                 <div className="back-button">
-                    <button>&larr;</button>
+                    <button >&larr;</button>
                 </div>
 
                 <div className="content">
@@ -44,7 +44,7 @@ const Detailebook = () => {
                         <div className="progress-section">
                             <span>0 hal</span>
                             <div className="progress-bar">
-                                <div className="progress" style="width: 1%;"></div>
+                                <div className="progress" style={{width: "1%"}}></div>
                             </div>
                             <span>1% selesai</span>
                         </div>

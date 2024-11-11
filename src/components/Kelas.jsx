@@ -1,5 +1,8 @@
+import Navbar from "./Navbar";
 const Kelas = () => {
 	return (
+		<>
+		<Navbar/>
 		<div className="container" style={{ marginBottom: "20%" }}>
 			<div className="header">
 				<div>
@@ -62,7 +65,7 @@ const Kelas = () => {
 								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
 								mulai dari praktik pertanian tradisional hingga perkembangan
 								teknologi yang diterapkan ...
-								<a href="#" className="next">
+								<a href="/detailkls" className="next">
 									Baca Selengkapnya
 								</a>
 							</p>
@@ -75,7 +78,7 @@ const Kelas = () => {
 						<div className="action-section">
 							<div className="content">
 								<img src="./foto1.jpg" alt="" />
-								<button className="button-daftar">Daftar Sekarang</button>
+								<a href="/detailkls" className="button-daftar">Daftar Sekarang</a>
 							</div>
 						</div>
 					</div>
@@ -89,7 +92,7 @@ const Kelas = () => {
 								Fokus pada konsep dan praktik pertanian berkelanjutan, kursus
 								ini mengajarkan tenang begaimana meminimalkan dampak lingkungan
 								dari aktivitas pertanian ...
-								<a href="#" className="next">
+								<a href="/detailkls" className="next">
 									Baca Selengkapnya
 								</a>
 							</p>
@@ -100,7 +103,7 @@ const Kelas = () => {
 							</div>
 						</div>
 						<img src="./foto2.jpg" alt="" />
-						<button className="button-daftar">Daftar Sekarang</button>
+						<a href="/detailkls" className="button-daftar">Daftar Sekarang</a>
 					</div>
 
 					<div className="course-item">
@@ -110,7 +113,7 @@ const Kelas = () => {
 								Kursus ini mengeksplorasi metode irigasi modern yang cerdas
 								seperti drip irigation, yang dapat mengoptimalkan penggunaan air
 								dalam pertanian ...
-								<a href="#" className="next">
+								<a href="/detailkls" className="next">
 									Baca Selengkapnya
 								</a>
 							</p>
@@ -121,7 +124,7 @@ const Kelas = () => {
 							</div>
 						</div>
 						<img src="./foto3.jpg" alt="" />
-						<button className="button-daftar">Daftar Sekarang</button>
+						<a href="/detailkls" className="button-daftar">Daftar Sekarang</a>
 					</div>
 
 					<div className="course-item">
@@ -220,6 +223,7 @@ const Kelas = () => {
 				</a>
 			</div>
 		</div>
+		</>
 	);
 };
 

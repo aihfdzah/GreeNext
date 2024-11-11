@@ -11,7 +11,7 @@ const Kelasdetail = () => {
 					<p className="course-meta">
 						4.9 (294,203 ratings) | 100 member | Charlie Vetrows
 					</p>
-					<img src={detailkelas} alt="Drone Pertanian" class="course-image" />
+					<img src={detailkelas} alt="Drone Pertanian" className="course-image" />
 					<p className="course-description">
 						Pelajari cara memanfaatkan teknologi drone dalam sektor pertanian
 						untuk meningkatkan hasil panen dan efisiensi lahan. Kelas ini

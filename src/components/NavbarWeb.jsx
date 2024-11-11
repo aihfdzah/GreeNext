@@ -12,7 +12,6 @@ import {
 const NavbarWeb = () => {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
-
 	const location = useLocation();
 
 	// Helper function to determine active link style
