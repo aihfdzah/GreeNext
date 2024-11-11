@@ -1,15 +1,15 @@
 import Footer from "../components/Footer";
+import Kelasdetail from "../components/Kelasdetail";
 import NavbarWeb from "../components/NavbarWeb";
-import Profilefoto from "../components/Profilefoto";
 
-function FotoProfile() {
+function Detailkls() {
 	return (
 		<>
 			<NavbarWeb />
-			<Profilefoto />
+			<Kelasdetail />
 			<Footer />
 		</>
 	);
 }
 
-export default FotoProfile;
+export default Detailkls;

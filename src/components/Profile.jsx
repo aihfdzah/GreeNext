@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import profile from "../assets/profile.png";
-
 const Profile = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container" id="profile">
+		<div className="container" id="profile" style={{ marginBottom: "35%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>

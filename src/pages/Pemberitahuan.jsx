@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import NavbarWeb from "../components/NavbarWeb";
 import Proinfo from "../components/Proinfo";
 function Pemberitahuan() {
@@ -5,6 +6,7 @@ function Pemberitahuan() {
 		<>
 			<NavbarWeb />
 			<Proinfo />
+			<Footer/>
 		</>
 	);
 }

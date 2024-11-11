@@ -5,12 +5,12 @@ const Proinfo = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container" id="profileinfo">
+		<div className="container" id="profileinfo" style={{ marginBottom: "23%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
 				<p>@wahyurojolele123</p>
-				
+
 				<div className="button-sidebar">
 					<button onClick={() => navigate("/profile")}>Profile</button>
 				</div>
@@ -20,7 +20,9 @@ const Proinfo = () => {
 				</div>
 
 				<div className="button-sidebar">
-					<button onClick={() => navigate("/pemberitahuan")}>Pemberitahuan</button>
+					<button onClick={() => navigate("/pemberitahuan")}>
+						Pemberitahuan
+					</button>
 				</div>
 
 				<div className="button-sidebar">

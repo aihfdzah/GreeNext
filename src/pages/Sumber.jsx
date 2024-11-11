@@ -1,15 +1,14 @@
 import Footer from "../components/Footer";
 import NavbarWeb from "../components/NavbarWeb";
-import Profilefoto from "../components/Profilefoto";
-
-function FotoProfile() {
+import Sumberdaya from "../components/Sumberdaya";
+function Sumber() {
 	return (
 		<>
 			<NavbarWeb />
-			<Profilefoto />
+			<Sumberdaya />
 			<Footer />
 		</>
 	);
 }
 
-export default FotoProfile;
+export default Sumber;

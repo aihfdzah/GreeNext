@@ -5,12 +5,12 @@ const Profilefoto = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container" id="profilefoto">
+		<div className="container" id="profilefoto" style={{ marginBottom: "30%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
 				<p>@wahyurojolele123</p>
-				
+
 				<div className="button-sidebar">
 					<button onClick={() => navigate("/profile")}>Profil</button>
 				</div>
@@ -20,7 +20,9 @@ const Profilefoto = () => {
 				</div>
 
 				<div className="button-sidebar">
-					<button onClick={() => navigate("/pemberitahuan")}>Pemberitahuan</button>
+					<button onClick={() => navigate("/pemberitahuan")}>
+						Pemberitahuan
+					</button>
 				</div>
 
 				<div className="button-sidebar">
@@ -47,7 +49,10 @@ const Profilefoto = () => {
 					</div>
 					<div>
 						<label>Tambah atau Ganti Gambar</label>
-						<input type="text" value="Tidak ada gambar yang dipilih" readOnly></input>
+						<input
+							type="text"
+							value="Tidak ada gambar yang dipilih"
+							readOnly></input>
 						{/* <input type="file" id="upload-photo" className="upload-input" /> */}
 					</div>
 					<button className="upload-button">Unggah Gambar</button>

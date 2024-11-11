@@ -4,10 +4,10 @@ import NavbarWeb from '../components/NavbarWeb'
 const Tentang = () => {
 	return ( 
 	<> <NavbarWeb />
-		<div className="container">
+		<div className="container" style={{ marginBottom: "23%" }}>
 			<div className="about-section">
 				<section className="about">
-					<h2>Tentang Saya</h2>
+					<h2>Tentang Kita</h2>
 					<div className="about-content">
 						<div className="about-text">
 							<p>

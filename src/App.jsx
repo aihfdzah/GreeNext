@@ -1,8 +1,4 @@
 import "./App.css";
-// import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
-// import Kelas from "./components/Kelas";
-// import Tentang from "./components/Tentang";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import HalamanKelas from "./pages/HalamanKelas";
@@ -17,18 +13,14 @@ import EBook from "./pages/Ebook"
 import Tentang from "./pages/Tentang"
 import Ebook from "./pages/Ebook"
 import Detailebook from "./pages/Detailebook"
+import Detailkls from "./pages/Detailkls";
+import Privasi from "./pages/Privasi";
+// import Tentangkita from "./pages/Tentangkita";
+// import NotFound from "./pages/NotFound";
+// import Sumber from "./pages/Sumber";
+// import Keamanan from "./pages/Keamanan";
+// import Keluar from "./pages/Keluar";
 
-// import 
-// const App = () => {
-// 	return (
-// 		<div>
-// 			<Navbar />
-// 			<Kelas />
-// 			<Tentang />
-// 			<Footer />
-// 		</div>
-// 	);
-// };
 
 function App() {
 	return (
@@ -46,7 +38,13 @@ function App() {
 					<Route path="/tentang" element={<Tentang />}/>
 					<Route path="/ebook" element={<Ebook />}/>
 					<Route path="/ebook" element={<Detailebook />}/>
+					<Route path="/detailkls" element={<Detailkls />} />
+					<Route path="/privasi" element={<Privasi />} />
 					<Route path="*" element={<NotFound />} />
+					{/* <Route path="/sumberdaya" element={<Sumber />} />
+					<Route path="/tentangkita" element={<Tentangkita />} />
+					<Route path="/keamanan" element={<Keamanan />} />
+					<Route path="/keluar" element={<Keluar />} /> */}
 			</Routes>
 		</BrowserRouter>
 	);

@@ -1,55 +1,61 @@
 import profile from "../assets/profile.png";
+import { useNavigate } from "react-router-dom";
 
 const Profileprivasi = () => {
+	const navigate = useNavigate(); // Menambahkan useNavigate untuk navigasi
+
 	return (
-		<div className="container" id="profileinfo">
+		<div className="container" id="profileinfo" style={{ marginBottom: "24%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
 				<p>@wahyurojolele123</p>
+
 				<div className="button-sidebar">
-					<button>Profil</button>
+					<button onClick={() => navigate("/profile")}>Profil</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Foto</button>
+					<button onClick={() => navigate("/fotoprofile")}>Foto</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Pemberitahuan</button>
+					<button onClick={() => navigate("/pemberitahuan")}>
+						Pemberitahuan
+					</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Privasi</button>
+					<button onClick={() => navigate("/privasi")}>Privasi</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Keamanan</button>
+					<button onClick={() => navigate("/keamanan")}>Keamanan</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Keluar Akun</button>
+					<button onClick={() => navigate("/keluar")}>Keluar Akun</button>
 				</div>
 			</div>
 
-			<main class="content">
-				<h1>Privasii</h1>
+			<main className="content">
+				<h1>Privasi</h1>
 				<p>Ubah pengaturan privasi anda di sini</p>
 				<hr />
 
-				<div class="privacy-settings">
+				<div className="privacy-settings">
 					<h2>Pengaturan halaman profil</h2>
 
-					<div class="setting-item">
-						<input type="checkbox" class="toggle-switch"></input>
+					<div className="setting-item">
+						<input type="checkbox" className="toggle-switch" />
 						<label> Tampilkan profil anda ke pengguna FarmEduZ lainnya</label>
 					</div>
 
-					<div class="setting-item">
-						<input type="checkbox" class="toggle-switch"></input>
+					<div className="setting-item">
+						<input type="checkbox" className="toggle-switch" />
 						<label>Perlihatkan kursus yang anda ikuti di halaman anda</label>
 					</div>
-					<button class="save-button">Simpan Perubahan</button>
+					<button className="save-button">Simpan Perubahan</button>
 				</div>
 			</main>
 		</div>
