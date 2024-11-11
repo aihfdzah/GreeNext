@@ -37,7 +37,7 @@ function Dashboard() {
 						className={`me-5  w-15 button-custom ${
 							activeButton === "sumber" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("sumber", "/sumber")}>
+						onClick={() => handleButtonClick("sumber", "/sumberdaya")}>
 						Sumber Daya
 					</Button>
 					<Button
