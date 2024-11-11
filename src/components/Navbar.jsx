@@ -1,5 +1,4 @@
-
-
+// navbar dibawah navbar hijau
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -19,7 +18,7 @@ const Navbar = () => {
                     </li>
 
                     <li className="nav-item me-5">
-                        <a className="nav-link" href="#sumberdaya">
+                        <a className="nav-link" href="/sumberdaya">
                             Sumber Daya</a>
                     </li>
 

@@ -1,5 +1,9 @@
+import React from 'react';
+import NavbarWeb from '../components/NavbarWeb'
+
 const Tentang = () => {
-	return (
+	return ( 
+	<> <NavbarWeb />
 		<div className="container" style={{ marginBottom: "23%" }}>
 			<div className="about-section">
 				<section className="about">
@@ -72,6 +76,8 @@ const Tentang = () => {
 				</section>
 			</div>
 		</div>
+		</>
+		
 	);
 };
 

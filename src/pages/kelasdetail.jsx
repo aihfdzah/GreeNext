@@ -6,7 +6,7 @@ const Kelasdetail = () => {
             <div className="row display-flex flex-wrap-wrap gap-20px">
                 {/* <!-- Course Details --> */}
                 <div className="col-md-8">
-                    <h1 className="course-title">elajar Teknologi Pertanian Modern: Drone untuk Pertanian Cerdas</h1>
+                    <h1 className="course-title">Belajar Teknologi Pertanian Modern: Drone untuk Pertanian Cerdas</h1>
                     <p className="course-meta">4.9 (294,203 ratings) | 100 member | Charlie Vetrows</p>
                     <img src="./detailkelas.jpg" alt="Drone Pertanian" class="course-image"/>
                     <p className="course-description">Pelajari cara memanfaatkan teknologi drone dalam sektor pertanian untuk meningkatkan hasil panen dan efisiensi lahan. Kelas ini dirancang untuk memberikan pengetahuan praktis dalam mengoperasikan drone, memetakan lahan, dan menganalisis data pertanian secara cerdas. Cocok bagi pemula maupun profesional yang ingin mengembangkan keterampilan di era pertanian 4.0.</p>
