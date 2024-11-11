@@ -1,8 +1,4 @@
 import "./App.css";
-// import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
-// import Kelas from "./components/Kelas";
-// import Tentang from "./components/Tentang";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import HalamanKelas from "./pages/HalamanKelas";
@@ -17,16 +13,7 @@ import Sumber from "./pages/Sumber";
 import Privasi from "./pages/Privasi";
 import Keamanan from "./pages/Keamanan";
 import Keluar from "./pages/Keluar";
-// const App = () => {
-// 	return (
-// 		<div>
-// 			<Navbar />
-// 			<Kelas />
-// 			<Tentang />
-// 			<Footer />
-// 		</div>
-// 	);
-// };
+import Detailkls from "./pages/Detailkls";
 
 function App() {
 	return (
@@ -44,6 +31,7 @@ function App() {
 				<Route path="/tentangkita" element={<Tentangkita />} />
 				<Route path="/keamanan" element={<Keamanan />} />
 				<Route path="/keluar" element={<Keluar />} />
+				<Route path="/detailkls" element={<Detailkls />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
