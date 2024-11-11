@@ -24,7 +24,7 @@ const Kelas = () => {
 			</div>
 
 			<div>
-				<h2>62 Hasil Untuk "Pertanian"</h2>
+				<h2 style={{ fontSize: "20pt" }}>62 Hasil Untuk "Pertanian"</h2>
 			</div>
 
 			{/* -------------- Layout Konten Utama -------- */}
