@@ -1,10 +1,10 @@
 import Footer from "../components/Footer";
-import NavbarWeb from "../components/NavbarWeb";
+import Navbar from "../components/Navbar";
 import Proinfo from "../components/Proinfo";
 function Pemberitahuan() {
 	return (
-		<>
-			<NavbarWeb />
+		<>	
+			<Navbar/>
 			<Proinfo />
 			<Footer/>
 		</>

@@ -1,4 +1,4 @@
-import NavbarWeb from "./NavbarWeb";
+import NavbarWeb from "../components/NavbarWeb";
 
 const Detailebook = () => {
 	return (

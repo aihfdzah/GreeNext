@@ -1,10 +1,10 @@
-import NavbarWeb from "../components/NavbarWeb";
+import Navbar from "../components/Navbar";
 
 const Tentang = () => {
 	return (
 		<>
 			{" "}
-			<NavbarWeb />
+			<Navbar />
 			<div className="container" style={{ marginBottom: "23%" }}>
 				<div className="about-section">
 					<section className="about">

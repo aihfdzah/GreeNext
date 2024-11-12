@@ -89,7 +89,7 @@ const NavbarWeb = () => {
 						</ul>
 					<div/>
 	
-					<div className="profile ms-auto">
+					{/* <div className="profile ms-auto">
 						<Dropdown isOpen={dropdownOpen} toggle={toggleDropdown}>
 							<DropdownToggle
 								className="profile-btn d-flex align-items-center"
@@ -112,7 +112,7 @@ const NavbarWeb = () => {
 									<DropdownItem href="/profile">Profile</DropdownItem>
 								</DropdownMenu>
 							</Dropdown>
-						</div>
+						</div> */}
 				</div>
 				</div>
 			</nav>

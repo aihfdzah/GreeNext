@@ -1,10 +1,10 @@
 import Kelas from "../components/Kelas";
 import Footer from "../components/Footer";
-import NavbarWeb from "../components/NavbarWeb";
+import Navbar from "../components/Navbar";
 function HalamanKelas() {
 	return (
 		<>
-			<NavbarWeb />
+			<Navbar />
 			<Kelas />
 			<Footer />
 		</>
