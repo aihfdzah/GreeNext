@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom";
-
-=======
 import Navbar from "./Navbar";
->>>>>>> main
 const Kelas = () => {
 	const navigate = useNavigate();
 
