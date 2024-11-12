@@ -15,16 +15,18 @@ const Ebook = () => {
 	return (
 		<>
 			<Row
-				className="py-3 d-flex"
+				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-490px",
-					marginBottom: "-100px",
+					marginLeft: "-255px",
+					marginBottom: "-90px",
 				}}>
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Sumber Daya</h1>
 				</Col>
-				<Col className="text-end me-auto" style={{ marginRight: "20px" }}>
+				<Col
+					className="text-end me-auto text-left"
+					style={{ marginLeft: "-200px" }}>
 					<Button
 						className={`button-custom ${
 							activeButton === "sumber" ? "active" : ""
@@ -56,7 +58,7 @@ const Ebook = () => {
 				</Col>
 			</Row>
 
-			<div className="container" style={{ marginBottom: "25%" }}>
+			<div className="container text-center" style={{ marginBottom: "25%" }}>
 				<main>
 					<h1>E-book & Panduan</h1>
 					<div className="search-bar">
