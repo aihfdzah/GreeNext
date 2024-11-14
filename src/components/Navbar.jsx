@@ -1,6 +1,6 @@
 import Profile from "../assets/profile.png";
 import { useState } from "react";
-import { useLocation } from "react-router-dom"; // Import useLocation from react-router-dom
+import { useLocation } from "react-router-dom"; 
 import {
 	Dropdown,
 	DropdownToggle,
@@ -12,7 +12,7 @@ const Navbar = () => {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
-	const location = useLocation(); // Get the current URL path
+	const location = useLocation(); 
 
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
