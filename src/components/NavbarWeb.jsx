@@ -21,7 +21,7 @@ const NavbarWeb = () => {
 		return (
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top align-items-center">
 				<img src="./logo2.png" className="logo me-3" alt="logo" />
-	
+
 				<div className="collapse navbar-collapse">
 					<div className="mx-auto d-flex justify-content-center align-items-center">
 						<ul className="navbar-nav">
@@ -30,43 +30,45 @@ const NavbarWeb = () => {
 									Dashboard
 								</a>
 							</li>
-	
+
 							<li className="nav-item me-5">
-								<a className={`nav-link ${getLinkClass("/kelas")}`} href="/kelas">
+								<a
+									className={`nav-link ${getLinkClass("/kelas")}`}
+									href="/kelas">
 									Kelas
 								</a>
 							</li>
-	
-						<li className="nav-item me-5">
-							<a className="nav-link" href="/sumberdaya">
-								Sumber Daya
-							</a>
-						</li>
-	
-						<li className="nav-item me-5">
-							<a className="nav-link" href="/tentang">
-								Tentang Kita
-							</a>
-						</li>
-	
-						<li className="nav-item me-5">
+
+							<li className="nav-item me-5">
+								<a className="nav-link" href="/sumberdaya">
+									Sumber Daya
+								</a>
+							</li>
+
+							<li className="nav-item me-5">
+								<a className="nav-link" href="/tentang">
+									Tentang Kita
+								</a>
+							</li>
+
+							<li className="nav-item me-5">
 								<a
 									className={`nav-link ${getLinkClass("/komunitas")}`}
 									href="/komunitas">
 									Komunitas
 								</a>
-						</li>
-	
-						{/* punya ali */}
-	
-						{/* <li className="nav-item me-5">
+							</li>
+
+							{/* punya ali */}
+
+							{/* <li className="nav-item me-5">
 								<a
 									className={`nav-link ${getLinkClass("/sumberdaya")}`}
 									href="/sumberdaya">
 									Sumber Daya
 								</a>
 						</li> */}
-	
+
 							{/* <li className="nav-item me-5">
 								<a
 									className={`nav-link ${getLinkClass("/sumberdaya")}`}
@@ -84,40 +86,38 @@ const NavbarWeb = () => {
 									Tentang Kita
 								</a>
 							</li> */}
-	
-	
 						</ul>
-					<div/>
-	
-					{/* <div className="profile ms-auto">
-						<Dropdown isOpen={dropdownOpen} toggle={toggleDropdown}>
-							<DropdownToggle
-								className="profile-btn d-flex align-items-center"
-								style={{
-									backgroundColor: "#17412d",
-									border: "none",
-									marginLeft: "4px",
-								}}
-								caret>
-								<img
-									src={Profile}
-									alt="Profile"
-									className="rounded-circle me-2"
-									style={{ width: "30px", height: "30px" }}
-								/>
-								Profile
-							</DropdownToggle>
+						<div />
+
+						<div className="profile ms-auto">
+							<Dropdown isOpen={dropdownOpen} toggle={toggleDropdown}>
+								<DropdownToggle
+									className="profile-btn d-flex align-items-center"
+									style={{
+										backgroundColor: "#17412d",
+										border: "none",
+										marginLeft: "4px",
+									}}
+									caret>
+									<img
+										src={Profile}
+										alt="Profile"
+										className="rounded-circle me-2"
+										style={{ width: "30px", height: "30px" }}
+									/>
+									Profile
+								</DropdownToggle>
 								<DropdownMenu>
 									<DropdownItem href="/">Log Out</DropdownItem>
 									<DropdownItem href="/profile">Profile</DropdownItem>
 								</DropdownMenu>
 							</Dropdown>
-						</div> */}
-				</div>
+						</div>
+					</div>
 				</div>
 			</nav>
 		);
-	}
-}
+	};
+};
 
 export default NavbarWeb;
