@@ -1,6 +1,6 @@
 import Profile from "../components/Profile";
 import Footer from "../components/Footer";
-import { Navbar } from "reactstrap";
+import Navbar from "../components/Navbar";
 function HalamanProfile() {
 	return (
 		<>

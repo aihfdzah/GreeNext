@@ -1,10 +1,64 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { useState } from "react";
+import { Row, Col, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Ebook = () => {
+	const [activeButton, setActiveButton] = useState("home"); // Initialize activeButton state
+	const navigate = useNavigate(); // Initialize navigation
+
+	const handleButtonClick = (buttonName, path) => {
+		setActiveButton(buttonName);
+		navigate(path);
+	};
+
 	return (
 		<>
 			<Navbar />
+			<Row
+				className="py-3 d-flex text-left"
+				style={{
+					marginTop: "70px",
+					marginLeft: "-255px",
+					marginBottom: "-90px",
+				}}>
+				<Col>
+					<h1 style={{ color: "#17412d" }}>Sumber Daya</h1>
+				</Col>
+				<Col
+					className="text-end me-auto text-left"
+					style={{ marginLeft: "-200px" }}>
+					<Button
+						className={`button-custom ${
+							activeButton === "sumber" ? "active" : ""
+						}`}
+						onClick={() => handleButtonClick("sumber", "/sumberdaya")}>
+						E-Book
+					</Button>
+					<Button
+						className={`button-custom ${
+							activeButton === "sertifikat" ? "active" : ""
+						}`}
+						onClick={() => handleButtonClick("sertifikat", "/sertifikat")}>
+						Webinar & Seminar
+					</Button>
+					<Button
+						className={`button-custom ${
+							activeButton === "studikasus" ? "active" : ""
+						}`}
+						onClick={() => handleButtonClick("studikasus", "/studikasus")}>
+						Studi Kasus
+					</Button>
+					<Button
+						className={`button-custom ${
+							activeButton === "histori" ? "active" : ""
+						}`}
+						onClick={() => handleButtonClick("histori", "/histori")}>
+						Katalog teknologi
+					</Button>
+				</Col>
+			</Row>
 			<div className="container">
 				<main>
 					<h1 className="text-center">E-book & Panduan</h1>
