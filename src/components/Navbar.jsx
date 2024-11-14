@@ -1,6 +1,6 @@
-// navbar dibawah navbar hijau
 import Profile from "../assets/profile.png";
 import { useState } from "react";
+import { useLocation } from "react-router-dom"; // Import useLocation from react-router-dom
 import {
 	Dropdown,
 	DropdownToggle,
@@ -10,8 +10,9 @@ import {
 
 const Navbar = () => {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
-
 	const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+
+	const location = useLocation(); // Get the current URL path
 
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -22,30 +23,41 @@ const Navbar = () => {
 				id="navbarNav">
 				<ul className="navbar-nav">
 					<li className="nav-item me-5">
-						<a className="nav-link" href="/home">
+						<a
+							className={`nav-link ${
+								location.pathname === "/home" ? "active-link" : ""
+							}`}
+							href="/home">
 							Dashboard
 						</a>
 					</li>
 
 					<li className="nav-item me-5">
-						<a className="nav-link" href="/kelas">
+						<a
+							className={`nav-link ${
+								location.pathname === "/kelas" ? "active-link" : ""
+							}`}
+							href="/kelas">
 							Kelas
 						</a>
 					</li>
 
 					<li className="nav-item me-5">
-						<a className="nav-link" href="/sumberdaya">
+						<a
+							className={`nav-link ${
+								location.pathname === "/sumberdaya" ? "active-link" : ""
+							}`}
+							href="/sumberdaya">
 							Sumber Daya
 						</a>
 					</li>
 
-					{/* <li className="nav-item me-5">
-                        <a className="nav-link" href="/komunitas">
-                            Komunitas</a>
-                    </li>   
-                     */}
 					<li className="nav-item me-5">
-						<a className="nav-link" href="/tentang">
+						<a
+							className={`nav-link ${
+								location.pathname === "/tentang" ? "active-link" : ""
+							}`}
+							href="/tentang">
 							Tentang Kita
 						</a>
 					</li>
