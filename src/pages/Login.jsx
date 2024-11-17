@@ -3,7 +3,7 @@ import S from "../assets/S.png";
 import Logo from "../assets/logo.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaEye, FaEyeSlash, FaLock, FaRegEnvelope } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaLock, FaEnvelope } from "react-icons/fa";
 
 function Login() {
 	const [showPassword, setShowPassword] = useState(false);
@@ -72,7 +72,7 @@ function Login() {
 
 					<div className="input-group mb-3">
 						<span className="input-group-text bg-white">
-							<FaRegEnvelope />
+							<FaEnvelope />
 						</span>
 						<input type="email" placeholder="Email" className="form-control" />
 					</div>
