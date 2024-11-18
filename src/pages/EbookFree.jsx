@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const Detailebook = () => {
+const EbookFree = () => {
     return (
         <> <NavbarWeb />
         <div class="container">
@@ -28,3 +28,5 @@ const Detailebook = () => {
         </>
     );
 };
+
+export default EbookFree;
