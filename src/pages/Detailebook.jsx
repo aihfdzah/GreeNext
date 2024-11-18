@@ -4,7 +4,8 @@ import Ebook from '../pages/Ebook'
 
 const Detailebook = () => {
     return (
-        <> <NavbarWeb />
+        <> 
+        <NavbarWeb />
         <div className="container">
             <main className="book-detail">
                 <div className="back-button">

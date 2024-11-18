@@ -769,6 +769,256 @@ main.book-detail {
     background-color: #f57224;
 }
 
+/* --------Ebook Free----------- */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cover {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.cover img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.authors {
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.pagination {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-icon {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.nav-icon:hover {
+    background-color: #ddd;
+}
+
+/* -----------ebook lock-------------- */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cover {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.cover img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.overlay .lock-icon {
+    font-size: 40px;
+    color: #ff7043;
+    margin-bottom: 10px;
+}
+
+.overlay .message {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.overlay .button {
+    background-color: #ff7043;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-icon {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.nav-icon:hover {
+    background-color: #ddd;
+}
+
+.pagination {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* --------------ebook payment----------- */
+.form-section, .summary-section {
+    padding: 30px;
+    width: 50%;
+}
+
+.form-section {
+    border-right: 1px solid #eee;
+}
+
+.summary-section {
+    background-color: #f9f7f5;
+}
+
+.form-section h2, .summary-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.payment-options {
+    margin-bottom: 20px;
+}
+
+.payment-options label {
+    margin-right: 15px;
+    color: #555;
+    font-size: 14px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.save-card {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.save-card input {
+    margin-right: 5px;
+}
+
+.summary-section h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.price-detail {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.price-detail span {
+    float: right;
+}
+
+.total {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.total span {
+    float: right;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7043;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #e4633a;
+}
+
+.info-text {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+
 /* ----------------Tentang Kita---------------- */
 .about-section,
 .features-section {
