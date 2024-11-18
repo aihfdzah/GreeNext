@@ -43,6 +43,7 @@ function App() {
 					<Route path="/tentang" element={<Tentang />}/>
 					<Route path="/ebook" element={<Ebook />}/>
 					<Route path="/detailebook" element={<Detailebook />}/>
+					{/* <Route path="/ebookgrts" element={<EbookFree />}/> */}
 					<Route path="/detailkls" element={<KelasDetail />} />
 					<Route path="*" element={<NotFound />} />
 					{/* <Route path="/privasi" element={<Privasi />} /> */}
