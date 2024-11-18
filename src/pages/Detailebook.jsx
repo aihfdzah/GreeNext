@@ -1,15 +1,14 @@
 import NavbarWeb from "../components/NavbarWeb";
 
 const Detailebook = () => {
-	return (
-		<>
-			{" "}
-			<NavbarWeb />
-			<div className="container">
-				<main className="book-detail">
-					<div className="back-button">
-						<button>&larr;</button>
-					</div>
+    return (
+        <> 
+        <NavbarWeb />
+        <div className="container">
+            <main className="book-detail">
+                <div className="back-button">
+                    <button >&larr;</button>
+                </div>
 
 					<div className="content">
 						<div className="left-section">
