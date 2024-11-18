@@ -1,10 +1,13 @@
-import NavbarWeb from "../components/NavbarWeb";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import Profilekeamanan from "../components/Profilekeamanan";
 function KeamananProfile() {
 	return (
 		<>
-			<NavbarWeb />
+			{" "}
+			<Navbar />
 			<Profilekeamanan />
+			<Footer />
 		</>
 	);
 }

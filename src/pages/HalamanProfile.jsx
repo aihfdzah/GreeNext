@@ -1,10 +1,10 @@
-import NavbarWeb from "../components/NavbarWeb";
 import Profile from "../components/Profile";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 function HalamanProfile() {
 	return (
 		<>
-			<NavbarWeb />
+			<Navbar />
 			<Profile />
 			<Footer />
 		</>

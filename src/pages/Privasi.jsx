@@ -1,10 +1,10 @@
 import Footer from "../components/Footer";
-import NavbarWeb from "../components/NavbarWeb";
+import Navbar from "../components/Navbar";
 import Profileprivasi from "../components/Profileprivasi";
 function Privasi() {
 	return (
 		<>
-			<NavbarWeb />
+			<Navbar />
 			<Profileprivasi />\
 			<Footer />
 		</>

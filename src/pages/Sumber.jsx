@@ -1,11 +1,11 @@
+import Ebook from "../components/Ebook";
 import Footer from "../components/Footer";
-import NavbarWeb from "../components/NavbarWeb";
-import Sumberdaya from "../components/Sumberdaya";
+import Navbar from "../components/Navbar";
 function Sumber() {
 	return (
 		<>
-			<NavbarWeb />
-			<Sumberdaya />
+			<Navbar />
+			<Ebook />
 			<Footer />
 		</>
 	);
