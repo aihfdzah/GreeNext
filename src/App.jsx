@@ -9,12 +9,13 @@ import FotoProfile from "./pages/FotoProfile";
 import Pemberitahuan from "./pages/Pemberitahuan";
 import KeamananProfile from "./pages/KeamananProfile";
 import NotFound from "./pages/NotFound";
-import EBook from "./pages/Ebook"
-import Tentang from "./pages/Tentang"
-import Ebook from "./pages/Ebook"
-import Detailebook from "./pages/Detailebook"
-import EbookFree from "./pages/EbookFree"
-import EbookLock from "./pages/EbookLock"
+import EBook from "./pages/Ebook";
+import Tentang from "./pages/Tentang";
+import Ebook from "./pages/Ebook";
+import Detailebook from "./pages/Detailebook";
+import EbookFree from "./pages/EbookFree";
+import EbookLock from "./pages/EbookLock";
+import EbookPayment from "./pages/EbookPayment";
 import KelasDetail from "./pages/kelasdetail";
 // import Kelasdetail from "./components/Kelasdetail";
 // import Detailkls from "./pages/Detailkls";

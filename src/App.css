@@ -906,6 +906,118 @@ main.book-detail {
     margin-top: 20px;
 }
 
+/* --------------ebook payment----------- */
+.form-section, .summary-section {
+    padding: 30px;
+    width: 50%;
+}
+
+.form-section {
+    border-right: 1px solid #eee;
+}
+
+.summary-section {
+    background-color: #f9f7f5;
+}
+
+.form-section h2, .summary-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.payment-options {
+    margin-bottom: 20px;
+}
+
+.payment-options label {
+    margin-right: 15px;
+    color: #555;
+    font-size: 14px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.save-card {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.save-card input {
+    margin-right: 5px;
+}
+
+.summary-section h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.price-detail {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.price-detail span {
+    float: right;
+}
+
+.total {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.total span {
+    float: right;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7043;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #e4633a;
+}
+
+.info-text {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
 
 /* ----------------Tentang Kita---------------- */
 .about-section,
