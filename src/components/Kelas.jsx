@@ -1,7 +1,7 @@
 const Kelas = () => {
 	return (
 		<>
-			<div className="container" style={{ marginBottom: "20%" }}>
+			<div className="container" style={{ marginBottom: "23%" }}>
 				<div className="header">
 					<div>
 						<button className="button-filter justify-content-center align-items-center">
