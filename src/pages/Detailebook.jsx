@@ -1,9 +1,9 @@
-import NavbarWeb from "../components/NavbarWeb";
+import Navbar from "../components/Navbar";
 
 const Detailebook = () => {
     return (
         <> 
-        <NavbarWeb />
+        <Navbar/>
         <div className="container">
             <main className="book-detail">
                 <div className="back-button">
