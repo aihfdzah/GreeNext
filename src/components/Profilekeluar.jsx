@@ -31,7 +31,7 @@ const Profilekeluar = () => {
 				</div>
 
 				<div className="button-sidebar">
-					<button onClick={() => navigate("/keamanan")}>Keamanan</button>
+					<button onClick={() => navigate("/keamananprofile")}>Keamanan</button>
 				</div>
 
 				<div className="button-sidebar">
@@ -50,7 +50,9 @@ const Profilekeluar = () => {
 					<p>Kami akan menunggu Anda kembali ke FarmEduZ!</p>
 					<div className="button-group">
 						<button className="cancel-button">Batal</button>
-						<button className="logout-button">Keluar</button>
+						<button className="logout-button">
+						<a href="/" >Keluar</a>
+							</button>
 					</div>
 				</div>
 			</main>

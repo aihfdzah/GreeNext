@@ -29,7 +29,7 @@ const Profile = () => {
 				</div>
 
 				<div className="button-sidebar">
-					<button onClick={() => navigate("/keamanan")}>Keamanan</button>
+					<button onClick={() => navigate("/keamananprofile")}>Keamanan</button>
 				</div>
 
 				<div className="button-sidebar">

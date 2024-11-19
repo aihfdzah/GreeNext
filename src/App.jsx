@@ -19,12 +19,12 @@ import EbookPayment from "./pages/EbookPayment";
 import KelasDetail from "./pages/kelasdetail";
 // import Kelasdetail from "./components/Kelasdetail";
 // import Detailkls from "./pages/Detailkls";
-// import Privasi from "./pages/Privasi";
+import Privasi from "./pages/Privasi";
 // import Tentangkita from "./pages/Tentangkita";
 // import NotFound from "./pages/NotFound";
 // import Sumber from "./pages/Sumber";
 // import Keamanan from "./pages/Keamanan";
-// import Keluar from "./pages/Keluar";
+import Keluar from "./pages/Keluar";
 
 
 function App() {
@@ -46,11 +46,11 @@ function App() {
 					{/* <Route path="/ebookgrts" element={<EbookFree />}/> */}
 					<Route path="/detailkls" element={<KelasDetail />} />
 					<Route path="*" element={<NotFound />} />
-					{/* <Route path="/privasi" element={<Privasi />} /> */}
+					<Route path="/privasi" element={<Privasi />} />
 					{/* <Route path="/sumberdaya" element={<Sumber />} />
 					<Route path="/tentangkita" element={<Tentangkita />} />
-					<Route path="/keamanan" element={<Keamanan />} />
-					<Route path="/keluar" element={<Keluar />} /> */}
+					<Route path="/keamanan" element={<Keamanan />} /> */}
+					<Route path="/keluar" element={<Keluar />} />
 			</Routes>
 		</BrowserRouter>
 	);
