@@ -1,6 +1,7 @@
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import PanahImg from "../assets/Panah.svg";
 
 const EbookFree = () => {
 	return (
@@ -12,7 +13,10 @@ const EbookFree = () => {
 				<div className="cover">
 					<img src="./inovasi agribisnis.jpg" alt="Book Cover" />
 					<div className="navigation">
-						<span className="nav-icon">&#8592;</span>
+						<button className="nav-icon">
+							<a href="/ebooklock">
+							
+							&#8592;</a></button>
 						<span className="nav-icon">&#8594;</span>
 					</div>
 				</div>
@@ -24,6 +28,7 @@ const EbookFree = () => {
 				</div>
 
 				<div className="pagination">1 of 189</div>
+
 			</div>
 			<Footer />
 		</>
