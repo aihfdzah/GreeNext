@@ -28,7 +28,9 @@ const Detailebook = () => {
 							</div>
 							<div className="buttons">
 								<button className="read-button">Baca buku</button>
-								<button className="buy-button">Beli buku</button>
+								<button className="buy-button">
+									<a href="/ebookfree">Beli buku</a>
+									</button>
 							</div>
 						</div>
 
