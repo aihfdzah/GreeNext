@@ -8,30 +8,33 @@ const Profilekeamanan = () => {
 		<div className="container" id="profilekeamanan">
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
-				<h3>Wahyu Redioko</h3>
-				<p>@wahyuredioko123</p>
+				<h3>Wahyu Rojolele</h3>
+				<p>@wahyurojolele123</p>
+
 				<div className="button-sidebar">
-					<button>Profil</button>
+					<button onClick={() => navigate("/profile")}>Profil</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Foto</button>
+					<button onClick={() => navigate("/fotoprofile")}>Foto</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Pemberitahuan</button>
+					<button onClick={() => navigate("/pemberitahuan")}>
+						Pemberitahuan
+					</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Privasi</button>
+					<button onClick={() => navigate("/privasi")}>Privasi</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Keamanan</button>
+					<button onClick={() => navigate("/keamananprofile")}>Keamanan</button>
 				</div>
 
 				<div className="button-sidebar">
-					<button>Keluar Akun</button>
+					<button onClick={() => navigate("/keluar")}>Keluar Akun</button>
 				</div>
 			</div>
 

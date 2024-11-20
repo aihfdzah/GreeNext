@@ -1,6 +1,7 @@
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+// import PanahImg from "../assets/Panah.svg";
 
 const EbookFree = () => {
 	return (
@@ -9,11 +10,15 @@ const EbookFree = () => {
 			<div className="container">
 				<div className="title">Pemuliaan Tanaman Modern</div>
 
+			<div className="container_inside">
 				<div className="cover">
 					<img src="./inovasi agribisnis.jpg" alt="Book Cover" />
 					<div className="navigation">
-						<span className="nav-icon">&#8592;</span>
-						<span className="nav-icon">&#8594;</span>
+						<button className="nav-icon">
+							{/* <a href="/ebooklock"></a> */}
+							
+							&#8592;</button>
+						<button className="nav-icon">&#8594;</button>
 					</div>
 				</div>
 
@@ -22,8 +27,11 @@ const EbookFree = () => {
 					Jamil, Indriani Husain, Silva Peniata Sari, Maysari Yamin, Jumiarah,
 					Muhaiman Lubis
 				</div>
+			</div>
+				
 
 				<div className="pagination">1 of 189</div>
+
 			</div>
 			<Footer />
 		</>

@@ -1,16 +1,26 @@
 import Navbar from "../components/Navbar";
+<<<<<<< HEAD
+=======
+import Footer from "../components/Footer";
+
+>>>>>>> main
 
 const Detailebook = () => {
     return (
         <> 
+<<<<<<< HEAD
         <Navbar/>
         <div className="container">
+=======
+        <Navbar />
+        <div className="container" id="detailebook">
+>>>>>>> main
             <main className="book-detail">
                 <div className="back-button">
                     <button >&larr;</button>
                 </div>
 
-					<div className="content">
+					<div className="content" id="detailebook">
 						<div className="left-section">
 							<h2>Bioteknologi Pertanian</h2>
 							<div className="book-image">
@@ -28,7 +38,9 @@ const Detailebook = () => {
 							</div>
 							<div className="buttons">
 								<button className="read-button">Baca buku</button>
-								<button className="buy-button">Beli buku</button>
+								<button className="buy-button">
+									<a href="/ebookfree">Beli buku</a>
+									</button>
 							</div>
 						</div>
 
@@ -37,8 +49,8 @@ const Detailebook = () => {
 							<p>
 								Buku <strong>Bioteknologi</strong> adalah disiplin ilmu yang
 								merupakan cabang dari biologi, yang fokus utamanya adalah pada
-								penerapan teknologi untuk memanfaatkan makhluk hidup—baik itu
-								mikroorganisme, tumbuhan, maupun hewan—dalam berbagai proses
+								penerapan teknologi untuk memanfaatkan makhluk hidup baik itu
+								mikroorganisme, tumbuhan, maupun hewan dalam berbagai proses
 								yang bertujuan untuk menghasilkan produk, baik berupa barang
 								maupun jasa, yang dirancang untuk meningkatkan kualitas hidup
 								manusia secara keseluruhan. Cabang ilmu ini tidak hanya mencakup
@@ -61,6 +73,7 @@ const Detailebook = () => {
 					</div>
 				</main>
 			</div>
+			<Footer />
 		</>
 	);
 };
