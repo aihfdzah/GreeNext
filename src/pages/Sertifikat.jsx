@@ -1,65 +1,88 @@
 import { Card, Container, Row, Col } from "react-bootstrap";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useState } from "react";
+
 const sertifikatList = [
 	{
 		id: 1,
 		title: "Pengantar Pertanian Modern",
-		description:
-			"Sertifikat ini diberikan setelah menyelesaikan pelatihan dasar tentang teknologi terbaru.",
 		image: "sertifikat1.png", // Ganti dengan path gambar yang sesuai
 	},
 	{
 		id: 2,
 		title: "Pertanian Berkelanjutan",
-		description:
-			"Sertifikat ini mengapresiasi fokus pada praktik ramah lingkungan dan ekosistem berkelanjutan.",
 		image: "sertifikat2.png",
 	},
 	{
 		id: 3,
 		title: "Teknik Irigasi Cerdas",
-		description:
-			"Pelatihan ini berfokus pada manajemen irigasi modern dengan teknologi.",
 		image: "sertifikat3.png",
 	},
 	{
 		id: 4,
-		title: "Konsep Panduan Pertanian Presisi",
-		description:
-			"Menyediakan teknik pertanian presisi berbasis data yang akurat.",
+		title: "Konsep Panduan Pertanian Presisi.",
 		image: "sertifikat4.png",
 	},
 	{
 		id: 5,
-		title: "Pemanfaatan Teknologi IoT",
-		description: "IoT untuk pengawasan hasil pertanian secara real-time.",
+		title: "Pemanfaatan Teknologi IoT.",
 		image: "sertifikat5.png",
 	},
 	{
 		id: 6,
-		title: "Pemanfaatan Big Data & AI",
-		description: "Meningkatkan produktivitas dengan analisis data.",
+		title: "Pemanfaatan Big Data & AI.",
 		image: "sertifikat6.png",
 	},
 ];
 
 const Sertifikat = () => {
+	// State untuk melacak tautan yang aktif
+	const [activeLink, setActiveLink] = useState("sertifikat");
+
 	return (
 		<>
 			<Navbar />
 			<Container style={{ marginBottom: "23%" }}>
-				<h1>Pelatihanku</h1>
+				<h1 >Pelatihanku</h1>
 				<h1
-					style={{ textAlign: "center", marginBottom: "5%", color: "#17412d" }}>
+					style={{
+						textAlign: "center",
+						marginBottom: "5%",
+						color: "#17412d",
+					}}>
 					<a
 						href="/kelas"
-						style={{ marginRight: "50px", textDecoration: "none" }}>
+						onClick={() => setActiveLink("kelas")}
+						style={{
+							marginRight: "50px",
+							textDecoration: "none",
+							color: activeLink === "kelas" ? "#EF7A53" : "#17412D",
+							fontWeight: activeLink === "kelas" ? "bold" : "normal",
+							transition: "0.3s",
+						}}
+						onMouseEnter={(e) => (e.target.style.color = "#EF7A53")}
+						onMouseLeave={(e) =>
+							(e.target.style.color =
+								activeLink === "kelas" ? "#EF7A53" : "#17412D")
+						}>
 						Kelas
 					</a>
 					<a
 						href="/sertifikat"
-						style={{ marginRight: "50px", textDecoration: "none" }}>
+						onClick={() => setActiveLink("sertifikat")}
+						style={{
+							marginRight: "50px",
+							textDecoration: "none",
+							color: activeLink === "sertifikat" ? "#EF7A53" : "#17412D",
+							fontWeight: activeLink === "sertifikat" ? "bold" : "normal",
+							transition: "0.3s",
+						}}
+						onMouseEnter={(e) => (e.target.style.color = "#EF7A53")}
+						onMouseLeave={(e) =>
+							(e.target.style.color =
+								activeLink === "sertifikat" ? "#EF7A53" : "#17412D")
+						}>
 						Sertifikat
 					</a>
 				</h1>
@@ -70,14 +93,14 @@ const Sertifikat = () => {
 					{sertifikatList.map((cert) => (
 						<Col key={cert.id} md={4} style={{ marginTop: "15px" }}>
 							<Card>
-								{" "}
 								<Card.Img variant="top" src={cert.image} alt={cert.title} />
 								<Card.Body
-									style={{ backgroundColor: "#17412D", color: "white" }}>
+									style={{
+										backgroundColor: "#17412D",
+										color: "white",
+									}}>
 									<Card.Title>{cert.title}</Card.Title>
-									<Card.Text style={{ color: "white" }}>
-										{cert.description}
-									</Card.Text>
+									<Card.Text>{cert.description}</Card.Text>
 								</Card.Body>
 							</Card>
 						</Col>
