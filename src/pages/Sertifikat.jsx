@@ -50,7 +50,8 @@ const Sertifikat = () => {
 			<Navbar />
 			<Container style={{ marginBottom: "23%" }}>
 				<h1>Pelatihanku</h1>
-				<h1 style={{ textAlign: "center", marginBottom: "5%" }}>
+				<h1
+					style={{ textAlign: "center", marginBottom: "5%", color: "#17412d" }}>
 					<a
 						href="/kelas"
 						style={{ marginRight: "50px", textDecoration: "none" }}>
@@ -69,6 +70,7 @@ const Sertifikat = () => {
 					{sertifikatList.map((cert) => (
 						<Col key={cert.id} md={4} style={{ marginTop: "15px" }}>
 							<Card>
+								{" "}
 								<Card.Img variant="top" src={cert.image} alt={cert.title} />
 								<Card.Body
 									style={{ backgroundColor: "#17412D", color: "white" }}>

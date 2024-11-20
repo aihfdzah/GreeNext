@@ -71,7 +71,41 @@ const Kelas = () => {
 								</div>
 							</div>
 							<div className="image-button-container">
-								<img src="./foto1.jpg" alt="Course" className="course-image" />
+								<img src="./foto2.jpg" alt="Course" className="course-image" />
+								<a
+									href="/detailkls"
+									className="button-daftar"
+									style={{
+										borderRadius: "20px",
+										width: "200px",
+										marginTop: "10px",
+									}}>
+									Daftar Sekarang
+								</a>
+							</div>
+						</div>
+
+						<div className="course-item-horizontal">
+							<div className="konten-course-horizontal">
+								<p className="title-course">
+									Pertanian Berkelanjutan dan Agroekologi
+								</p>
+								<p className="deskripsi-course">
+									Fokus pada konsep dan praktik pertanian berkelanjutan, kursus
+									ini mengajarkan tentang bagaimana meminimalkan dampak
+									lingkungan dari aktivitas pertanian ...
+									<a href="/detailkls" className="next">
+										Baca Selengkapnya
+									</a>
+								</p>
+								<div className="tag-course">
+									<span>Menengah</span>
+									<span>4.8/5</span>
+									<span>Gratis</span>
+								</div>
+							</div>
+							<div className="image-button-container">
+								<img src="./foto3.jpg" alt="Course" className="course-image" />
 								<a
 									href="/detailkls"
 									className="button-daftar"
@@ -103,7 +137,7 @@ const Kelas = () => {
 								</div>
 							</div>
 							<div className="image-button-container">
-								<img src="./foto1.jpg" alt="Course" className="course-image" />
+								<img src="./foto4.jpg" alt="Course" className="course-image" />
 								<a
 									href="/detailkls"
 									className="button-daftar"
@@ -135,7 +169,7 @@ const Kelas = () => {
 								</div>
 							</div>
 							<div className="image-button-container">
-								<img src="./foto1.jpg" alt="Course" className="course-image" />
+								<img src="./foto5.jpg" alt="Course" className="course-image" />
 								<a
 									href="/detailkls"
 									className="button-daftar"
@@ -167,39 +201,7 @@ const Kelas = () => {
 								</div>
 							</div>
 							<div className="image-button-container">
-								<img src="./foto1.jpg" alt="Course" className="course-image" />
-								<a
-									href="/detailkls"
-									className="button-daftar"
-									style={{
-										borderRadius: "20px",
-										width: "200px",
-										marginTop: "10px",
-									}}>
-									Daftar Sekarang
-								</a>
-							</div>
-						</div>
-
-						<div className="course-item-horizontal">
-							<div className="konten-course-horizontal">
-								<p className="title-course">Pengantar Pertanian Modern</p>
-								<p className="deskripsi-course">
-									Kursus ini memberikan pemahaman dasar tentang pertanian
-									modern, mulai dari praktik pertanian tradisional hingga
-									perkembangan teknologi yang diterapkan ...
-									<a href="/detailkls" className="next">
-										Baca Selengkapnya
-									</a>
-								</p>
-								<div className="tag-course">
-									<span>Menengah</span>
-									<span>4.8/5</span>
-									<span>Gratis</span>
-								</div>
-							</div>
-							<div className="image-button-container">
-								<img src="./foto1.jpg" alt="Course" className="course-image" />
+								<img src="./foto6.jpg" alt="Course" className="course-image" />
 								<a
 									href="/detailkls"
 									className="button-daftar"
