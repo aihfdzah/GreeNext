@@ -684,6 +684,10 @@ main.book-detail {
 	gap: 30px;
 }
 
+#detailebook {
+	flex-direction: row;
+}
+
 .left-section {
 	flex: 1;
 	text-align: center;
@@ -1071,6 +1075,15 @@ main.book-detail {
     margin-bottom: 20px;
 }
 
+.container_inside {
+	display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
 .cover {
     width: 100%;
     position: relative;
@@ -1078,8 +1091,11 @@ main.book-detail {
 }
 
 .cover img {
-    width: 100%;
-    border-radius: 5px;
+	max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
 }
 
 .authors {

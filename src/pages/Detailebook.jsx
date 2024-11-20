@@ -4,13 +4,13 @@ const Detailebook = () => {
     return (
         <> 
         <NavbarWeb />
-        <div className="container">
+        <div className="container" id="detailebook">
             <main className="book-detail">
                 <div className="back-button">
                     <button >&larr;</button>
                 </div>
 
-					<div className="content">
+					<div className="content" id="detailebook">
 						<div className="left-section">
 							<h2>Bioteknologi Pertanian</h2>
 							<div className="book-image">
