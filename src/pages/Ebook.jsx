@@ -90,53 +90,59 @@ const Ebook = () => {
 						</div>
 
 						<div className="book-card">
-							<a href="/detailebook">
+							<a href="/ebooklock">
 								<img src="./manajemen agroindustri.jpg" alt="" />
 								Manajemen Agroindustri
 							</a>
 						</div>
 
 						<div className="book-card">
-							<a href="">
+							<a href="/ebooklock">
 								<img src="./manajemen agroindustri.jpg" alt="" />
 								Pertanian Berkelanjutan
 							</a>
 						</div>
 
 						<div className="book-card">
-							<img src="./pertanian masa depan.jpg" alt="" />
-							<a href=""></a>
-							Pertanian Masa Depan
+							<a href="/ebooklock">
+								<img src="./pertanian masa depan.jpg" alt="" />
+								Pertanian Masa Depan
+							</a>
 						</div>
 
 						<div className="book-card">
-							<img src="./pertanian postmodern.jpg" alt="" />
-							Pertanian Postmodern
-							<a href=""></a>
+							<a href="/ebooklock">
+								<img src="./pertanian postmodern.jpg" alt="" />
+								Pertanian Postmodern
+							</a>
 						</div>
 
 						<div className="book-card">
-							<img src="./produktivitas tanama pertanian.jpg" alt="" />
-							Produktivitas Tanaman Pertanian
-							<a href=""></a>
+							<a href="/ebooklock">
+								<img src="./produktivitas tanama pertanian.jpg" alt="" />
+								Produktivitas Tanaman Pertanian
+							</a>
 						</div>
 
 						<div className="book-card">
-							<img src="./tanaman modern.jpg" alt="" />
-							Tanaman Modern
-							<a href=""></a>
+							<a href="/ebooklock">
+								<img src="./tanaman modern.jpg" alt="" />
+								Tanaman Modern
+							</a>
 						</div>
 
 						<div className="book-card">
-							<img src="./teknologi.jpg" alt="" />
-							Teknologi Pertanian
-							<a href=""></a>
+							<a href="/ebooklock">
+								<img src="./teknologi.jpg" alt="" />
+								Teknologi Pertanian
+							</a>
 						</div>
 
 						<div className="book-card">
-							<img src="./pertanian 4.0.jpg" alt="" />
-							Pertanian 4.0
-							<a href=""></a>
+							<a href="/ebooklock">
+								<img src="./pertanian 4.0.jpg" alt="" />
+								Pertanian 4.0
+							</a>
 						</div>
 					</div>
 
