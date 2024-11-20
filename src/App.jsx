@@ -20,7 +20,7 @@ import KelasDetail from "./pages/kelasdetail";
 import Sertifikat from "./pages/Sertifikat";
 // import Kelasdetail from "./components/Kelasdetail";
 // import Detailkls from "./pages/Detailkls";
-import Privasi from "./pages/Privasi";
+// import Privasi from "./pages/Privasi";
 // import Tentangkita from "./pages/Tentangkita";
 // import NotFound from "./pages/NotFound";
 // import Sumber from "./pages/Sumber";
@@ -31,7 +31,6 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
-<<<<<<< HEAD
 				<Route path="/" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/profile" element={<HalamanProfile />} />
@@ -50,26 +49,6 @@ function App() {
 				<Route path="*" element={<NotFound />} />
 				{/* <Route path="/privasi" element={<Privasi />} /> */}
 				{/* <Route path="/sumberdaya" element={<Sumber />} />
-=======
-					<Route path="/" element={<Login />} />
-					<Route path="/register" element={<Register />}/>
-					<Route path="/profile" element={<HalamanProfile />}/>
-					<Route path="/fotoprofile" element={<FotoProfile />}/>
-					<Route path="/sumberdaya" element={<EBook />}/>
-					<Route path="/pemberitahuan" element={<Pemberitahuan />}/>
-					<Route path="/keamananprofile" element={<KeamananProfile />}/>
-					<Route path="/kelas" element={<HalamanKelas />}/>
-					<Route path="/home" element={<Home />}/>
-					<Route path="/tentang" element={<Tentang />}/>
-					<Route path="/ebook" element={<Ebook />}/>
-					<Route path="/detailebook" element={<Detailebook />}/>
-					<Route path="/ebookfree" element={<EbookFree />}/>
-					<Route path="/ebooklock" element={<EbookLock />}/>
-					<Route path="/detailkls" element={<KelasDetail />} />
-					<Route path="*" element={<NotFound />} />
-					<Route path="/privasi" element={<Privasi />} />
-					{/* <Route path="/sumberdaya" element={<Sumber />} />
->>>>>>> main
 					<Route path="/tentangkita" element={<Tentangkita />} />
 					<Route path="/keamanan" element={<Keamanan />} /> */}
 					<Route path="/keluar" element={<Keluar />} />
