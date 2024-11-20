@@ -1,7 +1,7 @@
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import PanahImg from "../assets/Panah.svg";
+// import PanahImg from "../assets/Panah.svg";
 
 const EbookFree = () => {
 	return (
