@@ -46,9 +46,9 @@ function App() {
 					<Route path="/ebook" element={<Ebook />}/>
 					<Route path="/detailebook" element={<Detailebook />}/>
 					<Route path="/ebookfree" element={<EbookFree />}/>
+					<Route path="/ebookpayment" element={<EbookPayment />} />
 					<Route path="/ebooklock" element={<EbookLock />}/>
 					<Route path="/carousel" element={<Carousel />} />
-					<Route path="/ebookpayment" element={<EbookPayment />} />
 					<Route path="*" element={<NotFound />} />
 					<Route path="/privasi" element={<Privasi />} />
 					{/* <Route path="/sumberdaya" element={<Sumber />} />

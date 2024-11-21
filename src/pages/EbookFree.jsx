@@ -8,7 +8,7 @@ const EbookFree = () => {
 		<>
 			<Navbar />
 			<div className="container">
-				<div className="title">Pemuliaan Tanaman Modern</div>
+				<div className="title">Pemuliaan yang mulia Tanaman Modern</div>
 
 			<div className="container_inside">
 				<div className="cover">
