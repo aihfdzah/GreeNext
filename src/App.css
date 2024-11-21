@@ -1085,7 +1085,7 @@ main.book-detail {
   }
   
   .product-container {
-    padding: 0 2vw;
+    padding: 0;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
