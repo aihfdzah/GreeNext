@@ -56,7 +56,7 @@ const Carousel = () => {
                             <div className="product-image">
                                 <span className="discount-tag">LOCKED</span>
                                 <a href="/ebookpayment">
-                                <img src="./manajemen agroindustri.jpg" class="product-thumb" alt=""/>
+                                <img src="./manajemen agroindustri.jpg" className="product-thumb" alt=""/>
                                 <button className="card-btn">buy</button>
                                 </a>
                             </div>
