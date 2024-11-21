@@ -8,7 +8,7 @@ const EbookPayment = () => {
 			<div className="container">
 				{/* <-- Payment Form Section --> */}
 				<div className="form-section">
-					<h2>Pembyrran E-book</h2>
+					<h2>Pembayaran E-book</h2>
 					<div className="payment-options">
 						<label>
 							<input type="radio" name="payment" checked>

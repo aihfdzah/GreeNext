@@ -51,7 +51,7 @@ const Carousel = () => {
 								<span className="discount-tag">LOCKED</span>
 								<a href="/ebookpayment">
 									<img
-										src="./pertanian keberlanjutan.jpg"
+										src="./pertanian berkelanjut.jpg"
 										classsName="product-thumb"
 										alt=""
 									/>
