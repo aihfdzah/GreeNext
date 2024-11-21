@@ -59,7 +59,7 @@ const Ebook = () => {
 					</Button>
 				</Col>
 			</Row>
-			
+
 			<div className="container">
 				<main>
 					<h1 className="text-center">E-book & Panduan</h1>
@@ -99,7 +99,7 @@ const Ebook = () => {
 
 						<div className="book-card">
 							<a href="/ebooklock">
-								<img src="./manajemen agroindustri.jpg" alt="" />
+								<img src="./pertanian keberlanjutan.jpg" alt="" />
 								Pertanian Berkelanjutan
 							</a>
 						</div>

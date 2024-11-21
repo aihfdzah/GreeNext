@@ -14,8 +14,8 @@ import Tentang from "./pages/Tentang";
 import Ebook from "./pages/Ebook";
 import Detailebook from "./pages/Detailebook";
 // import EbookFree from "./pages/EbookFree";
-// import EbookLock from "./pages/EbookLock";
-// import EbookPayment from "./pages/EbookPayment";
+import EbookLock from "./pages/EbookLock";
+import EbookPayment from "./pages/EbookPayment";
 import KelasDetail from "./pages/kelasdetail";
 import Sertifikat from "./pages/Sertifikat";
 // import Kelasdetail from "./components/Kelasdetail";
@@ -44,6 +44,8 @@ function App() {
 				<Route path="/ebook" element={<Ebook />} />
 				<Route path="/detailebook" element={<Detailebook />} />
 				{/* <Route path="/ebookgrts" element={<EbookFree />}/> */}
+				<Route path="/ebooklock" element={<EbookLock />} />
+				<Route path="/ebookpay" element={<EbookPayment />} />
 				<Route path="/detailkls" element={<KelasDetail />} />
 				<Route path="/sertifikat" element={<Sertifikat />} />
 				<Route path="*" element={<NotFound />} />
@@ -51,7 +53,7 @@ function App() {
 				{/* <Route path="/sumberdaya" element={<Sumber />} />
 					<Route path="/tentangkita" element={<Tentangkita />} />
 					<Route path="/keamanan" element={<Keamanan />} /> */}
-					<Route path="/keluar" element={<Keluar />} />
+				<Route path="/keluar" element={<Keluar />} />
 			</Routes>
 		</BrowserRouter>
 	);
