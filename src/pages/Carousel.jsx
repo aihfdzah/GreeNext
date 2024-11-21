@@ -17,105 +17,122 @@ const Carousel = () => {
                                 <span class="discount-tag">FREE</span>
                                 <img src="./bioteknologi pertanian.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">open</button>
-                                <a href="/ebookfree"></a>
+                                {/* <a href="/ebookfree"></a> */}
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
                             </div>
                         </div>
+
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">FREE</span>
                                 <img src="./inovasi agribisnis.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">open</button>
-                                <a href="/ebookfree"></a>
+                                {/* <a href="/ebookfree"></a> */}
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
                             </div>
                         </div>
+
                         <div class="product-card">
                             <div class="product-image">
-                                <span class="discount-tag">LOCK</span>
+                                <span class="discount-tag">LOCKED</span>
                                 <img src="./manajemen agroindustri.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
+                                {/* <a href="/ebookpayment"></a> */}
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
                                 <span class="price">$10</span><span class="actual-price">$30</span>
                             </div>
                         </div>
+
                         <div class="product-card">
                             <div class="product-image">
-                                <span class="discount-tag">LOCK</span>
+                                <span class="discount-tag">LOCKED</span>
                                 <img src="./manajemen agroindustri.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
+                                {/* <a href="/ebookpayment"></a> */}
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
                                 <span class="price">$10</span><span class="actual-price">$30</span>
                             </div>
                         </div>
+
                         <div class="product-card">
                             <div class="product-image">
-                                <span class="discount-tag">LOCK</span>
+                                <span class="discount-tag">LOCKED</span>
                                 <img src="./pertanian masa depan.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
+                                {/* <a href="/ebookpayment"></a> */}
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
                                 <span class="price">$15</span><span class="actual-price">$30</span>
                             </div>
                         </div>
+
                         <div class="product-card">
                             <div class="product-image">
-                                <span class="discount-tag">LOCK</span>
+                                <span class="discount-tag">LOCKED</span>
                                 <img src="./pertanian postmodern.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
+                                {/* <a href="/ebookpayment"></a> */}
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
                                 <span class="price">$15</span><span class="actual-price">$30</span>
                             </div>
                         </div>
+
                         <div class="product-card">
                             <div class="product-image">
-                                <span class="discount-tag">LOCK</span>
+                                <span class="discount-tag">LOCKED</span>
                                 <img src="./produktivitas tanama pertanian.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
+                                {/* <a href="/ebookpayment"></a> */}
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
                                 <span class="price">$10</span><span class="actual-price">$30</span>
                             </div>
                         </div>
+
                         <div class="product-card">
                             <div class="product-image">
-                                <span class="discount-tag">LOCK</span>
+                                <span class="discount-tag">LOCKED</span>
                                 <img src="./tanaman modern.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
+                                {/* <a href="/ebookpayment"></a> */}
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
                                 <span class="price">$20</span><span class="actual-price">$40</span>
                             </div>
                         </div>
+
                         <div class="product-card">
                             <div class="product-image">
-                                <span class="discount-tag">LOCK</span>
+                                <span class="discount-tag">LOCKED</span>
                                 <img src="./teknologi.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
+                                {/* <a href="/ebookpayment"></a> */}
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
                                 <span class="price">$25</span><span class="actual-price">$45</span>
                             </div>
                         </div>
+                        
                         <div class="product-card">
                             <div class="product-image">
-                                <span class="discount-tag">LOCK</span>
+                                <span class="discount-tag">LOCKED</span>
                                 <img src="./pertanian 4.0.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
+                                {/* <a href="/ebookpayment"></a> */}
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>

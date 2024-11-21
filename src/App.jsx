@@ -40,14 +40,15 @@ function App() {
 					<Route path="/pemberitahuan" element={<Pemberitahuan />}/>
 					<Route path="/keamananprofile" element={<KeamananProfile />}/>
 					<Route path="/kelas" element={<HalamanKelas />}/>
+					<Route path="/detailkls" element={<KelasDetail />} />
 					<Route path="/home" element={<Home />}/>
 					<Route path="/tentang" element={<Tentang />}/>
 					<Route path="/ebook" element={<Ebook />}/>
 					<Route path="/detailebook" element={<Detailebook />}/>
 					<Route path="/ebookfree" element={<EbookFree />}/>
 					<Route path="/ebooklock" element={<EbookLock />}/>
-					<Route path="/detailkls" element={<KelasDetail />} />
 					<Route path="/carousel" element={<Carousel />} />
+					<Route path="/ebookpayment" element={<EbookPayment />} />
 					<Route path="*" element={<NotFound />} />
 					<Route path="/privasi" element={<Privasi />} />
 					{/* <Route path="/sumberdaya" element={<Sumber />} />
