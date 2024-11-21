@@ -59,6 +59,7 @@ const Ebook = () => {
 					</Button>
 				</Col>
 			</Row>
+			
 			<div className="container">
 				<main>
 					<h1 className="text-center">E-book & Panduan</h1>

@@ -1,11 +1,11 @@
 import Footer from "../components/Footer";
-import NavbarWeb from "../components/NavbarWeb";
+import Navbar from "../components/Navbar";
 import Profilefoto from "../components/Profilefoto";
 
 function FotoProfile() {
 	return (
 		<>
-			<NavbarWeb />
+			<Navbar />
 			<Profilefoto />
 			<Footer />
 		</>

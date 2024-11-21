@@ -1,11 +1,11 @@
 import Footer from "../components/Footer";
 import Kelasdetail from "../components/Kelasdetail";
-import NavbarWeb from "../components/NavbarWeb";
+import Navbar from "../components/Navbar";
 
 function Detailkls() {
 	return (
 		<>
-			<NavbarWeb />
+			<Navbar />
 			<Kelasdetail />
 			<Footer />
 		</>
