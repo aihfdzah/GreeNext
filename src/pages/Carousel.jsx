@@ -16,7 +16,8 @@ const Carousel = () => {
                             <div class="product-image">
                                 <span class="discount-tag">50% off</span>
                                 <img src="./bioteknologi pertanian.jpg" class="product-thumb" alt=""/>
-                                <button class="card-btn">buy</button>
+                                <button class="card-btn">open</button>
+                                <a href="/ebookfree"></a>
                             </div>
                             <div class="product-info">
                                 <h2 class="product-brand">buku</h2>
@@ -28,7 +29,8 @@ const Carousel = () => {
                             <div class="product-image">
                                 <span class="discount-tag">50% off</span>
                                 <img src="./inovasi agribisnis.jpg" class="product-thumb" alt=""/>
-                                <button class="card-btn">buy</button>
+                                <button class="card-btn">open</button>
+                                <a href="/ebookfree"></a>
                             </div>
                             <div class="product-info">
                                 <h2 class="product-brand">buku</h2>
