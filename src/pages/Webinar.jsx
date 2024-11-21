@@ -43,7 +43,7 @@ const Webinar = () => {
                         <div className="event-card">
                             <img src="./foto1.jpg" alt="Event Thumbnail"/>
                             <div className="event-info">
-                                <h3>Pengenalan Sistem Pertanian Presisi</h3>
+                                <h3>Pengenalan Sistem Pertanian </h3>
                                 <p>Lokasi: Lembang, Kabupaten Bandung, Jawa Barat</p>
                                 <p>Tanggal: 24-25 Jan 2025</p>
                             </div>
@@ -53,16 +53,13 @@ const Webinar = () => {
                         <div className="event-card">
                             <img src="./foto5.jpg" alt="Event Thumbnail"/>
                             <div className="event-info">
-                                <h3>Pengenalan Sistem Pertanian Presisi</h3>
+                                <h3>Pengenalan Sistem Pertanian</h3>
                                 <p>Lokasi: Lembang, Kabupaten Bandung, Jawa Barat</p>
                                 <p>Tanggal: 24-26 Jan 2025</p>
                             </div>
                             <button className="btn-status">Offline</button>
                         </div>
                     </div>
-
-
-
 
 
 
