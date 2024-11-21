@@ -21,7 +21,7 @@ const Carousel = () => {
                                 </a>
                             </div>
                             <div class="product-info">
-                                <p class="product-short-description">a short line about the cloth..</p>
+                                <p class="product-short-description">awokawaok</p>
                             </div>
                         </div>
 
@@ -34,7 +34,7 @@ const Carousel = () => {
                                 </a>
                             </div>
                             <div class="product-info">
-                                <p class="product-short-description">a short line about the cloth..</p>
+                                <p class="product-short-description">awokawok</p>
                             </div>
                         </div>
 

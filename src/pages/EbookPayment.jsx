@@ -19,7 +19,7 @@ const EbookPayment = () => {
 						<label>
 							<input type="radio" name="payment">
 								{" "}
-								Transfer Bank
+								Transfer Bank 
 							</input>
 						</label>
 					</div>
