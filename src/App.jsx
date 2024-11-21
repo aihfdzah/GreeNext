@@ -17,6 +17,7 @@ import EbookFree from "./pages/EbookFree";
 import EbookLock from "./pages/EbookLock";
 import EbookPayment from "./pages/EbookPayment";
 import KelasDetail from "./pages/kelasdetail";
+import Carousel from "./pages/Carousel";
 // import Kelasdetail from "./components/Kelasdetail";
 // import Detailkls from "./pages/Detailkls";
 import Privasi from "./pages/Privasi";
@@ -46,6 +47,7 @@ function App() {
 					<Route path="/ebookfree" element={<EbookFree />}/>
 					<Route path="/ebooklock" element={<EbookLock />}/>
 					<Route path="/detailkls" element={<KelasDetail />} />
+					<Route path="/carousel" element={<Carousel />} />
 					<Route path="*" element={<NotFound />} />
 					<Route path="/privasi" element={<Privasi />} />
 					{/* <Route path="/sumberdaya" element={<Sumber />} />
