@@ -1079,13 +1079,13 @@ main.book-detail {
   .product-category {
     text-align: center;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 40px;
     text-transform: capitalize;
   }
   
   .product-container {
-    padding: 0 5vw;
+    padding: 0 8vw;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -1159,10 +1159,6 @@ main.book-detail {
     padding-top: 10px;
   }
 
-  .product-info h2 {
-	font-size: 18px;
-	margin-bottom: 10px;
-  }
   
   .product-brand {
     text-transform: uppercase;

@@ -20,7 +20,6 @@ const Carousel = () => {
                                 <a href="/ebookfree"></a>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">buku</h2>
                                 <p class="product-short-description">a short line about the cloth..</p>
                             </div>
                         </div>
@@ -32,7 +31,6 @@ const Carousel = () => {
                                 <a href="/ebookfree"></a>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">buku</h2>
                                 <p class="product-short-description">a short line about the cloth..</p>
                             </div>
                         </div>
@@ -43,9 +41,8 @@ const Carousel = () => {
                                 <button class="card-btn">buy</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">buku</h2>
                                 <p class="product-short-description">a short line about the cloth..</p>
-                                <span class="price">$20</span><span class="actual-price">$50</span>
+                                <span class="price">$10</span><span class="actual-price">$30</span>
                             </div>
                         </div>
                         <div class="product-card">
@@ -55,9 +52,8 @@ const Carousel = () => {
                                 <button class="card-btn">buy</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">buku</h2>
                                 <p class="product-short-description">a short line about the cloth..</p>
-                                <span class="price">$20</span><span class="actual-price">$50</span>
+                                <span class="price">$10</span><span class="actual-price">$30</span>
                             </div>
                         </div>
                         <div class="product-card">
@@ -67,9 +63,8 @@ const Carousel = () => {
                                 <button class="card-btn">buy</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">buku</h2>
                                 <p class="product-short-description">a short line about the cloth..</p>
-                                <span class="price">$20</span><span class="actual-price">$50</span>
+                                <span class="price">$15</span><span class="actual-price">$30</span>
                             </div>
                         </div>
                         <div class="product-card">
@@ -79,9 +74,8 @@ const Carousel = () => {
                                 <button class="card-btn">buy</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">buku</h2>
                                 <p class="product-short-description">a short line about the cloth..</p>
-                                <span class="price">$35</span><span class="actual-price">$55</span>
+                                <span class="price">$15</span><span class="actual-price">$30</span>
                             </div>
                         </div>
                         <div class="product-card">
@@ -91,9 +85,8 @@ const Carousel = () => {
                                 <button class="card-btn">buy</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">buku</h2>
                                 <p class="product-short-description">a short line about the cloth..</p>
-                                <span class="price">$25</span><span class="actual-price">$40</span>
+                                <span class="price">$10</span><span class="actual-price">$30</span>
                             </div>
                         </div>
                         <div class="product-card">
@@ -103,9 +96,8 @@ const Carousel = () => {
                                 <button class="card-btn">buy</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">buku</h2>
                                 <p class="product-short-description">a short line about the cloth..</p>
-                                <span class="price">$40</span><span class="actual-price">$70</span>
+                                <span class="price">$20</span><span class="actual-price">$40</span>
                             </div>
                         </div>
                         <div class="product-card">
@@ -115,9 +107,8 @@ const Carousel = () => {
                                 <button class="card-btn">buy</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">buku</h2>
                                 <p class="product-short-description">a short line about the cloth..</p>
-                                <span class="price">$45</span><span class="actual-price">$75</span>
+                                <span class="price">$25</span><span class="actual-price">$45</span>
                             </div>
                         </div>
                         <div class="product-card">
@@ -127,9 +118,8 @@ const Carousel = () => {
                                 <button class="card-btn">buy</button>
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">buku</h2>
                                 <p class="product-short-description">a short line about the cloth..</p>
-                                <span class="price">$45</span><span class="actual-price">$75</span>
+                                <span class="price">$25</span><span class="actual-price">$45</span>
                             </div>
                         </div>
                     </div>
