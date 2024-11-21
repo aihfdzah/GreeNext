@@ -15,9 +15,10 @@ const Carousel = () => {
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">FREE</span>
+                                <a href="/ebookfree">
                                 <img src="./bioteknologi pertanian.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">open</button>
-                                {/* <a href="/ebookfree"></a> */}
+                                </a>
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
@@ -27,9 +28,10 @@ const Carousel = () => {
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">FREE</span>
+                                <a href="/ebookfree">
                                 <img src="./inovasi agribisnis.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">open</button>
-                                {/* <a href="/ebookfree"></a> */}
+                                </a>
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
@@ -39,9 +41,10 @@ const Carousel = () => {
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">LOCKED</span>
+                                <a href="/ebookpayment">
                                 <img src="./manajemen agroindustri.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
-                                {/* <a href="/ebookpayment"></a> */}
+                                </a>
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
@@ -52,9 +55,10 @@ const Carousel = () => {
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">LOCKED</span>
+                                <a href="/ebookpayment">
                                 <img src="./manajemen agroindustri.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
-                                {/* <a href="/ebookpayment"></a> */}
+                                </a>
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
@@ -65,9 +69,10 @@ const Carousel = () => {
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">LOCKED</span>
+                                <a href="/ebookpayment">
                                 <img src="./pertanian masa depan.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
-                                {/* <a href="/ebookpayment"></a> */}
+                                </a>
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
@@ -78,9 +83,10 @@ const Carousel = () => {
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">LOCKED</span>
+                                <a href="/ebookpayment">
                                 <img src="./pertanian postmodern.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
-                                {/* <a href="/ebookpayment"></a> */}
+                                </a>
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
@@ -91,9 +97,10 @@ const Carousel = () => {
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">LOCKED</span>
+                                <a href="/ebookpayment">
                                 <img src="./produktivitas tanama pertanian.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
-                                {/* <a href="/ebookpayment"></a> */}
+                                </a>
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
@@ -104,9 +111,10 @@ const Carousel = () => {
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">LOCKED</span>
+                                <a href="/ebookpayment">
                                 <img src="./tanaman modern.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
-                                {/* <a href="/ebookpayment"></a> */}
+                                </a>
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
@@ -117,9 +125,10 @@ const Carousel = () => {
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">LOCKED</span>
+                                <a href="/ebookpayment">
                                 <img src="./teknologi.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
-                                {/* <a href="/ebookpayment"></a> */}
+                                </a>
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
@@ -130,9 +139,10 @@ const Carousel = () => {
                         <div class="product-card">
                             <div class="product-image">
                                 <span class="discount-tag">LOCKED</span>
+                                <a href="/ebookpayment">
                                 <img src="./pertanian 4.0.jpg" class="product-thumb" alt=""/>
                                 <button class="card-btn">buy</button>
-                                {/* <a href="/ebookpayment"></a> */}
+                                </a>
                             </div>
                             <div class="product-info">
                                 <p class="product-short-description">a short line about the cloth..</p>
