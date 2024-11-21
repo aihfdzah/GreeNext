@@ -5,7 +5,7 @@ const Webinar = () => {
 	return (
 		<>
 			<Navbar />
-            {/* <div className="container" style={{ marginBottom: "20%" }}>
+            <div className="container" style={{ marginBottom: "20%" }}>
 				<div className="header">
 					<div>
 						<button className="button-filter justify-content-center align-items-center">
@@ -22,22 +22,23 @@ const Webinar = () => {
 
 				<div>
 					<h2 style={{ fontSize: "20pt" }}>62 Hasil Untuk "Pertanian"</h2>
-				</div> */}
+				</div>
 
-            <div clasclassNames="container">
-                    <div className="header">
-                        <input type="text" placeholder="Search" className="search-bar" value="pertanian"/>
-                        <p className="result-count">62 hasil untuk “pertanian”</p>
-                    </div>
-                    
-                    <div className="highlighted-event">
-                        <img src="./foto3.jpg" alt="Highlight Event"/>
-                        <div className="highlight-content">
-                            <h2>Pengenalan Sistem Pertanian Presisi</h2>
-                            <p>Lokasi: Lembang, Kabupaten Bandung, Jawa Barat</p>
-                            <p>24-25 Jan 2025</p>
+                {/* <div clasclassNames="container">
+                        <div className="header">
+                            <input type="text" placeholder="Search" className="search-bar" value="pertanian"/>
+                            <p className="result-count">62 hasil untuk “pertanian”</p>
+                        </div> */}
+                        
+                        <div className="highlighted-event">
+                            <img src="./foto3.jpg" alt="Highlight Event"/>
+                            <div className="highlight-content">
+                                <h2>Pengenalan Sistem Pertanian Presisi</h2>
+                                <p>Lokasi: Lembang, Kabupaten Bandung, Jawa Barat</p>
+                                <p>24-25 Jan 2025</p>
+                            </div>
                         </div>
-                    </div>
+                {/* </div> */}
 
                     <div className="event-list">
                         <div className="event-card">
@@ -70,8 +71,6 @@ const Webinar = () => {
                             <button className="btn-status">Offline</button>
                         </div>
                     </div>
-
-
 
             </div>
             
