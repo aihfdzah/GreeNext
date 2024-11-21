@@ -1074,11 +1074,10 @@ main.book-detail {
 .product {
     position: relative;
     overflow: hidden;
-    padding: 20px;
   }
   
   .product-category {
-    padding: 0 10vw;
+    text-align: center;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 40px;
@@ -1086,7 +1085,7 @@ main.book-detail {
   }
   
   .product-container {
-    padding: 0 10vw;
+    padding: 0 5vw;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -1118,13 +1117,14 @@ main.book-detail {
   
   .discount-tag {
     position: absolute;
-    background: #fff;
+    background: var(--text-color2);
     padding: 5px;
     border-radius: 5px;
-    color: #ff7d7d;
+    color: var(--main-color);
     right: 10px;
     top: 10px;
     text-transform: capitalize;
+	font-size: 12px;
   }
   
   .card-btn {
@@ -1149,14 +1149,19 @@ main.book-detail {
   }
   
   .card-btn:hover {
-    background: #ff7d7d;
-    color: #fff;
+    background: var(--text-color2);
+    color: var(--text-color);
   }
   
   .product-info {
     width: 100%;
     height: 100px;
     padding-top: 10px;
+  }
+
+  .product-info h2 {
+	font-size: 18px;
+	margin-bottom: 10px;
   }
   
   .product-brand {
@@ -1184,6 +1189,7 @@ main.book-detail {
     text-decoration: line-through;
   }
   
+  
   .pre-btn,
   .nxt-btn {
     border: none;
@@ -1194,7 +1200,7 @@ main.book-detail {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    background: linear-gradient(90deg, rgba(211, 24, 24, 0) 0%, #fff 100%);
     cursor: pointer;
     z-index: 8;
   }
@@ -1218,7 +1224,7 @@ main.book-detail {
     opacity: 1;
   }
   
-  .collection-container {
+  /* .collection-container {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1249,7 +1255,7 @@ main.book-detail {
   .collection:nth-child(3) {
     grid-column: span 2;
     margin-bottom: 10px;
-  }
+  } */
 
 
 /* --------Ebook Free----------- */
