@@ -1085,7 +1085,7 @@ main.book-detail {
   }
   
   .product-container {
-    padding: 0 8vw;
+    padding: 0 2vw;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -1159,7 +1159,6 @@ main.book-detail {
     padding-top: 10px;
   }
 
-  
   .product-brand {
     text-transform: uppercase;
   }
@@ -1186,7 +1185,7 @@ main.book-detail {
   }
   
   
-  .pre-btn,
+  /* .pre-btn,
   .nxt-btn {
     border: none;
     width: 10vw;
@@ -1218,7 +1217,7 @@ main.book-detail {
   .pre-btn:hover img,
   .nxt-btn:hover img {
     opacity: 1;
-  }
+  } */
   
   /* .collection-container {
     width: 100%;

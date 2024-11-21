@@ -8,8 +8,8 @@ const Carousel = () => {
             <div className="container">
                 <section class="product"> 
                     <h2 class="product-category">Best Ebook</h2>
-                    <button class="pre-btn"><img src="arrow.png" alt=""/></button>
-                    <button class="nxt-btn"><img src="arrow.png" alt=""/></button>
+                    {/* <button class="pre-btn"><img src="arrow.png" alt=""/></button>
+                    <button class="nxt-btn"><img src="arrow.png" alt=""/></button> */}
                     
                     <div class="product-container">
                         <div class="product-card">
