@@ -38,9 +38,9 @@ const Ebook = () => {
 					</Button>
 					<Button
 						className={`button-custom ${
-							activeButton === "sertifikat" ? "active" : ""
+							activeButton === "webinar" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("sertifikat", "/sertifikat")}>
+						onClick={() => handleButtonClick("webinar", "/webinar")}>
 						Webinar & Seminar
 					</Button>
 					<Button
@@ -149,7 +149,7 @@ const Ebook = () => {
 
 					<div className="progress-list">
 						<div className="progress-item">
-							<img src="agronomi-icon.png" className="icon" />
+							<img src="Agronomi.png" className="icon" />
 							<span className="title">Agronomi</span>
 							<span className="pages">10 hal</span>
 							<div className="progress-bar">
@@ -159,7 +159,7 @@ const Ebook = () => {
 						</div>
 
 						<div className="progress-item">
-							<img src="pemuliaan-icon.png" className="icon" />
+							<img src="Pemulian Tanaman.png" className="icon" />
 							<span className="title">Pemuliaan Tanaman Modern</span>
 							<span className="pages">35 hal</span>
 							<div className="progress-bar">
