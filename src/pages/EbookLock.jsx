@@ -30,7 +30,7 @@ const EbookLock = () => {
 
 			<Footer />
 		</>
-	);
+	); 
 };
 
 export default EbookLock;

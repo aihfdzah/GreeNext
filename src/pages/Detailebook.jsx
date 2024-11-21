@@ -1,16 +1,14 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
+import Navbar from "../components/Navbar"; import Footer from "../components/Footer";
 
 const Detailebook = () => {
-    return (
-        <> 
-        <Navbar />
-        <div className="container" id="detailebook">
-            <main className="book-detail">
-                <div className="back-button">
-                    <button >&larr;</button>
-                </div>
+	return (
+		<>
+			<Navbar />
+			<div className="container" id="detailebook">
+				<main className="book-detail">
+					<div className="back-button">
+						<button>&larr;</button>
+					</div>
 
 					<div className="content" id="detailebook">
 						<div className="left-section">
@@ -32,7 +30,7 @@ const Detailebook = () => {
 								<button className="read-button">Baca buku</button>
 								<button className="buy-button">
 									<a href="/ebookfree">Beli buku</a>
-									</button>
+								</button>
 							</div>
 						</div>
 

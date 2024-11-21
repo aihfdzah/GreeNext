@@ -1,7 +1,8 @@
+import "../Styles/Kelas.css";
 const Kelas = () => {
 	return (
 		<>
-			<div className="container" style={{ marginBottom: "20%" }}>
+			<div className="container" style={{ marginBottom: "23%" }}>
 				<div className="header">
 					<div>
 						<button className="button-filter justify-content-center align-items-center">
@@ -14,10 +15,6 @@ const Kelas = () => {
 					</div>
 					<i className="fa-regular fa-heart"></i>
 					<i className="fa-solid fa-cart-shopping"></i>
-				</div>
-
-				<div>
-					<h2 style={{ fontSize: "20pt" }}>62 Hasil Untuk "Pertanian"</h2>
 				</div>
 
 				{/* -------------- Layout Konten Utama -------- */}
@@ -55,9 +52,9 @@ const Kelas = () => {
 
 					{/* ---------------- Daftar Kursus ------------- */}
 					<div className="daftar-kursus display-flex flex-direction-column">
-						{/* <!-- Kursus 1 --> */}
-						<div className="course-item">
-							<div className="konten-course">
+						{/* Example Horizontal Course Card */}
+						<div className="course-item-horizontal">
+							<div className="konten-course-horizontal">
 								<p className="title-course">Pengantar Pertanian Modern</p>
 								<p className="deskripsi-course">
 									Kursus ini memberikan pemahaman dasar tentang pertanian
@@ -73,25 +70,29 @@ const Kelas = () => {
 									<span>Gratis</span>
 								</div>
 							</div>
-							<div className="action-section">
-								<div className="content">
-									<img src="./foto1.jpg" alt="" />
-									<a href="/detailkls" className="button-daftar">
-										Daftar Sekarang
-									</a>
-								</div>
+							<div className="image-button-container">
+								<img src="./foto2.jpg" alt="Course" className="course-image" />
+								<a
+									href="/detailkls"
+									className="button-daftar"
+									style={{
+										borderRadius: "20px",
+										width: "200px",
+										marginTop: "10px",
+									}}>
+									Daftar Sekarang
+								</a>
 							</div>
 						</div>
 
-						{/* Add onClick to other buttons similarly */}
-						<div className="course-item">
-							<div className="konten-course">
+						<div className="course-item-horizontal">
+							<div className="konten-course-horizontal">
 								<p className="title-course">
-									Pertanian Berkelanjutan dan Agreokologi
+									Pertanian Berkelanjutan dan Agroekologi
 								</p>
 								<p className="deskripsi-course">
 									Fokus pada konsep dan praktik pertanian berkelanjutan, kursus
-									ini mengajarkan tenang bagaimana meminimalkan dampak
+									ini mengajarkan tentang bagaimana meminimalkan dampak
 									lingkungan dari aktivitas pertanian ...
 									<a href="/detailkls" className="next">
 										Baca Selengkapnya
@@ -103,19 +104,28 @@ const Kelas = () => {
 									<span>Gratis</span>
 								</div>
 							</div>
-							<img src="./foto2.jpg" alt="" />
-							<a href="/detailkls" className="button-daftar">
-								Daftar Sekarang
-							</a>
+							<div className="image-button-container">
+								<img src="./foto3.jpg" alt="Course" className="course-image" />
+								<a
+									href="/detailkls"
+									className="button-daftar"
+									style={{
+										borderRadius: "20px",
+										width: "200px",
+										marginTop: "10px",
+									}}>
+									Daftar Sekarang
+								</a>
+							</div>
 						</div>
 
-						<div className="course-item">
-							<div className="konten-course">
-								<p className="title-course">Teknik irigasi Cerdas</p>
+						<div className="course-item-horizontal">
+							<div className="konten-course-horizontal">
+								<p className="title-course">Pengantar Pertanian Modern</p>
 								<p className="deskripsi-course">
-									Kursus ini mengeksplorasi metode irigasi modern yang cerdas
-									seperti drip irigation, yang dapat mengoptimalkan penggunaan
-									air dalam pertanian ...
+									Kursus ini memberikan pemahaman dasar tentang pertanian
+									modern, mulai dari praktik pertanian tradisional hingga
+									perkembangan teknologi yang diterapkan ...
 									<a href="/detailkls" className="next">
 										Baca Selengkapnya
 									</a>
@@ -126,20 +136,29 @@ const Kelas = () => {
 									<span>Gratis</span>
 								</div>
 							</div>
-							<img src="./foto3.jpg" alt="" />
-							<a href="/detailkls" className="button-daftar">
-								Daftar Sekarang
-							</a>
+							<div className="image-button-container">
+								<img src="./foto4.jpg" alt="Course" className="course-image" />
+								<a
+									href="/detailkls"
+									className="button-daftar"
+									style={{
+										borderRadius: "20px",
+										width: "200px",
+										marginTop: "10px",
+									}}>
+									Daftar Sekarang
+								</a>
+							</div>
 						</div>
 
-						<div className="course-item">
-							<div className="konten-course">
-								<p className="title-course">Konsep Panduan Pertanian Presisi</p>
+						<div className="course-item-horizontal">
+							<div className="konten-course-horizontal">
+								<p className="title-course">Pengantar Pertanian Modern</p>
 								<p className="deskripsi-course">
-									Kursus ini secara komprehensif memperkenalkan sistem panduan
-									otomatis yang penting untuk pertanian modern ini. dimulai
-									dengan gambaran umum tentang ...
-									<a href="#" className="next">
+									Kursus ini memberikan pemahaman dasar tentang pertanian
+									modern, mulai dari praktik pertanian tradisional hingga
+									perkembangan teknologi yang diterapkan ...
+									<a href="/detailkls" className="next">
 										Baca Selengkapnya
 									</a>
 								</p>
@@ -149,20 +168,29 @@ const Kelas = () => {
 									<span>Gratis</span>
 								</div>
 							</div>
-							<img src="./foto4.jpg" alt="" />
-							<button className="button-daftar">Daftar Sekarang</button>
+							<div className="image-button-container">
+								<img src="./foto5.jpg" alt="Course" className="course-image" />
+								<a
+									href="/detailkls"
+									className="button-daftar"
+									style={{
+										borderRadius: "20px",
+										width: "200px",
+										marginTop: "10px",
+									}}>
+									Daftar Sekarang
+								</a>
+							</div>
 						</div>
 
-						<div className="course-item">
-							<div className="konten-course">
-								<p className="title-course">
-									Pemanfaatan Teknologi IoT dalam Pertanian
-								</p>
+						<div className="course-item-horizontal">
+							<div className="konten-course-horizontal">
+								<p className="title-course">Pengantar Pertanian Modern</p>
 								<p className="deskripsi-course">
-									Kursus ini membahas bagaimana Internet of Things (Iot) daat
-									diterapkan untukmeningkatkan efisiensi dan produktivitas
-									pertanian. peserta akan belajar tentang ...
-									<a href="#" className="next">
+									Kursus ini memberikan pemahaman dasar tentang pertanian
+									modern, mulai dari praktik pertanian tradisional hingga
+									perkembangan teknologi yang diterapkan ...
+									<a href="/detailkls" className="next">
 										Baca Selengkapnya
 									</a>
 								</p>
@@ -172,20 +200,29 @@ const Kelas = () => {
 									<span>Gratis</span>
 								</div>
 							</div>
-							<img src="./foto5.jpg" alt="" />
-							<button className="button-daftar">Daftar Sekarang</button>
+							<div className="image-button-container">
+								<img src="./foto6.jpg" alt="Course" className="course-image" />
+								<a
+									href="/detailkls"
+									className="button-daftar"
+									style={{
+										borderRadius: "20px",
+										width: "200px",
+										marginTop: "10px",
+									}}>
+									Daftar Sekarang
+								</a>
+							</div>
 						</div>
 
-						<div className="course-item">
-							<div className="konten-course">
-								<p className="title-course">
-									Pemanfaatan Big data dan AI untuk Pertanian
-								</p>
+						<div className="course-item-horizontal">
+							<div className="konten-course-horizontal">
+								<p className="title-course">Pengantar Pertanian Modern</p>
 								<p className="deskripsi-course">
-									Di era digital, penggunaan Big Data dan kecerdasan buatan AI
-									dapat membantu meningkatkan hasil pertanian dan mengurangi
-									risiko. Kursus ini menjelaskna ...
-									<a href="#" className="next">
+									Kursus ini memberikan pemahaman dasar tentang pertanian
+									modern, mulai dari praktik pertanian tradisional hingga
+									perkembangan teknologi yang diterapkan ...
+									<a href="/detailkls" className="next">
 										Baca Selengkapnya
 									</a>
 								</p>
@@ -195,9 +232,22 @@ const Kelas = () => {
 									<span>Gratis</span>
 								</div>
 							</div>
-							<img src="./foto6.jpg" alt="" />
-							<button className="button-daftar">Daftar Sekarang</button>
+							<div className="image-button-container">
+								<img src="./foto1.jpg" alt="Course" className="course-image" />
+								<a
+									href="/detailkls"
+									className="button-daftar"
+									style={{
+										borderRadius: "20px",
+										width: "200px",
+										marginTop: "10px",
+									}}>
+									Daftar Sekarang
+								</a>
+							</div>
 						</div>
+
+						{/* Tambahkan lebih banyak course-item-horizontal serupa */}
 					</div>
 				</div>
 
