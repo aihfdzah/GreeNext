@@ -27,6 +27,7 @@ import Privasi from "./pages/Privasi";
 // import Sumber from "./pages/Sumber";
 // import Keamanan from "./pages/Keamanan";
 import Keluar from "./pages/Keluar";
+import Webinar from "./pages/Webinar";
 
 function App() {
 	return (
@@ -43,10 +44,11 @@ function App() {
 				<Route path="/home" element={<Home />} />
 				<Route path="/tentang" element={<Tentang />} />
 				<Route path="/ebook" element={<Ebook />} />
+				<Route path="/webinar" element={<Webinar />} />
 				<Route path="/detailebook" element={<Detailebook />} />
 				<Route path="/ebookfree" element={<EbookFree />} />
 				<Route path="/ebooklock" element={<EbookLock />} />
-				<Route path="/ebookpayment" element={<EbookPayment />} />
+				<Route path="/ebookpay" element={<EbookPayment />} />
 				<Route path="/carousel" element={<Carousel />} />
 				{/* <Route path="/ebookgrts" element={<EbookFree />}/> */}
 				<Route path="/detailkls" element={<KelasDetail />} />
