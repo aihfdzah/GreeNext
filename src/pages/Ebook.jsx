@@ -38,9 +38,9 @@ const Ebook = () => {
 					</Button>
 					<Button
 						className={`button-custom ${
-							activeButton === "sertifikat" ? "active" : ""
+							activeButton === "webinar" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("sertifikat", "/sertifikat")}>
+						onClick={() => handleButtonClick("webinar", "/webinar")}>
 						Webinar & Seminar
 					</Button>
 					<Button

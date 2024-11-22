@@ -19,6 +19,7 @@ import EbookPayment from "./pages/EbookPayment";
 import Carousel from "./pages/Carousel";
 import KelasDetail from "./pages/kelasdetail";
 import Sertifikat from "./pages/Sertifikat";
+import Webinar from "./pages/Webinar";
 // import Kelasdetail from "./components/Kelasdetail";
 // import Detailkls from "./pages/Detailkls";
 import Privasi from "./pages/Privasi";
@@ -27,7 +28,6 @@ import Privasi from "./pages/Privasi";
 // import Sumber from "./pages/Sumber";
 // import Keamanan from "./pages/Keamanan";
 import Keluar from "./pages/Keluar";
-import Webinar from "./pages/Webinar";
 
 function App() {
 	return (
