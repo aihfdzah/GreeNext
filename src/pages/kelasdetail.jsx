@@ -17,6 +17,7 @@ const Kelasdetail = () => {
 						</p>
 						<img
 							src="./detailkelas.jpg"
+							id="detailkelas"
 							alt="Drone Pertanian"
 							className="course-image"
 						/>
@@ -72,7 +73,7 @@ const Kelasdetail = () => {
 					{/* <!-- Course Pricing and Benefits --> */}
 					<div className="col-md-4">
 						<div className="benefits-card">
-							<div className="price">Rp 129,000</div>
+							<div className="price">Rp129,000</div>
 							<a href="#" className="btn-orange">
 								Daftar Kelas
 							</a>

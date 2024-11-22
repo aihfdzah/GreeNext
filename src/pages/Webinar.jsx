@@ -107,7 +107,10 @@ const Webinar = () => {
 							<p>📍Lembang, <br /> Kabupaten Bandung, Jawa Barat</p>
 							<p>Tanggal: 28 - 29 Februari 2025</p>
 						</div>
-						<button className="btn-status">Offline</button>
+                            <a href="./WebinarDetail">
+						        <button className="btn-status">Daftar</button>
+                            </a>
+                        
 					</div>
 
 					<div className="event-card">
@@ -118,7 +121,9 @@ const Webinar = () => {
 							<p>📍Lembang, <br /> Kabupaten Bandung, Jawa Barat</p>
 							<p>Tanggal: 15 - 16 April 2025</p>
 						</div>
-						<button className="btn-status">Offline</button>
+						    <a href="./WebinarDetail">
+						        <button className="btn-status">Daftar</button>
+                            </a>
 					</div>
 
 					<div className="event-card">
@@ -129,7 +134,9 @@ const Webinar = () => {
 					        <p> ⛓️‍💥Via Zoom </p>
 							<p>Tanggal: 20 Juli 2025</p>
 						</div>
-						<button className="btn-status">Online</button>
+						    <a href="./WebinarDetail">
+						        <button className="btn-status">Daftar</button>
+                            </a>
 					</div>
 
 					<div className="event-card">
@@ -140,7 +147,9 @@ const Webinar = () => {
 							<p> ⛓️‍💥Via Zoom </p>
 							<p>Tanggal: 01 Oktober 2025</p>
 						</div>
-						<button className="btn-status">Online</button>
+						    <a href="./WebinarDetail">
+						        <button className="btn-status">Daftar</button>
+                            </a>
 					</div>
 				</div>
 			</div>

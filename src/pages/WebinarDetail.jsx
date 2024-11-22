@@ -9,14 +9,15 @@ const WebinarDetail = () => {
 				<div className="row display-flex flex-wrap-wrap gap-20px">
 					{/* <!-- Course Details --> */}
 					<div className="col-md-8">
-						{/* <h1 className="course-title">
-							Belajar Teknologi Pertanian Modern: Drone untuk Pertanian Cerdas
+						<h1 className="course-title">
+							Webinar Pengenalan Sistem Pertanian Presisi
 						</h1>
 						<p className="course-meta">
-							4.9 (294,203 ratings) | 100 member | Charlie Vetrows
-						</p> */}
+					        👥 Kuota | 🗣️ Pemateri
+						</p>
 						<img
-							src="./detailkelas.jpg"
+							src="./foto3.jpg"
+                            id="webinar"
 							alt="Drone Pertanian"
 							className="course-image"
 						/>
@@ -30,58 +31,31 @@ const WebinarDetail = () => {
 						</p>
 
 						<div className="accordion">
-							<h4>Materi Kelas</h4>
+							<h5>Jadwal Pelaksanaan</h5>
 							<div className="accordion-item">
-								<div className="accordion-header1">
-									Minggu 1 - Pengantar Teknologi Drone untuk Pertanian
+								<div className="accordion-header">
+                                    <span className="date">24 Januari 2025</span><br />
+                                    <span className="location"> Lembang, Kota Bandung, Jawa Barat 📍</span>
 								</div>
 								<div className="accordion-content">
-									<p>Pengantar (01:42)</p>
-									<p>Apa itu drone pertanian? (01:42)</p>
-									<p>
-										Penggunaan jenis drone untuk memenuhi pertumbuhan tanaman
-										(01:42)
-									</p>
-									<p>
-										Cara memilih drone yang sesuai untuk kebutuhan pertanian
-										(01:42)
-									</p>
+									{/* <p>Detail materi untuk Minggu 2 akan tersedia di sini.</p> */}
 								</div>
 							</div>
-
-							{/* <div className="accordion-item">
-								<div className="accordion-header">
-									Minggu 2 - Teknik Pengoperasian Drone
-								</div>
-								<div className="accordion-content">
-									{/* <p>Detail materi untuk Minggu 2 akan tersedia di sini.</p> 
-								</div>
-							</div> */}
-
-							{/* <div className="accordion-item">
-								<div className="accordion-header">
-									Minggu 3 - Aplikasi Praktis dan Studi Kasus
-								</div>
-								<div className="accordion-content">
-									{/* <p>Detail materi untuk Minggu 3 akan tersedia di sini.</p> 
-								</div>
-							</div> */}
 						</div>
 					</div>
 
 					{/* <!-- Course Pricing and Benefits --> */}
 					<div className="col-md-4">
 						<div className="benefits-card">
-							<div className="price">Rp 129,000</div>
-							<a href="#" className="btn-orange">
+							<div className="price">Rp50,000</div>
+							<a href="/webinarpayment" className="btn-orange">
 								Daftar Kelas
 							</a>
 							<h5>Benefit yang didapatkan</h5>
 							<ul className="benefit-list">
-								<li>20 Jam video pembelajaran</li>
-								<li>Analisis data pertanian secara efektif</li>
-								<li>20 Artikel pertanian cerdas</li>
-								<li>Sertifikat kompetensi</li>
+								<li>🔐 Relasi</li>
+								<li>🎓 Ilmu yang bermanfaat</li>
+								<li>🪪 Sertifikat</li>
 							</ul>
 						</div>
 					</div>
