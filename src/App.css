@@ -415,7 +415,6 @@ option {
 
 .course-image {
 	width: 100%;
-	height: auto;
 	border-radius: 8px;
 	margin-bottom: 20px;
 }
@@ -1569,7 +1568,10 @@ main.book-detail {
 	font-size: 15px;
 	font-style: italic;
 	margin-top: 20px;
+}
 
+.highlighted-event .down {
+    font-size: 15px;
 }
 
 /* Event List */

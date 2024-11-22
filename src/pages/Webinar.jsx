@@ -94,6 +94,7 @@ const Webinar = () => {
                         <span className="date">24 Januari 2025</span>
                         <p className="location">Lembang, Kota Bandung, Jawa Barat</p>
 					</div>
+                        <p className="down">Up Coming Event</p>
 				</div>
 				{/* </div> */}
 
