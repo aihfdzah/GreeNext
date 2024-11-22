@@ -24,7 +24,7 @@ const Webinar = () => {
 					marginBottom: "-90px",
 				}}>
 				<Col>
-					<h1 style={{ color: "#17412d" }}>Sumber Daya</h1>
+					<h1 style={{ color: "#17412d" }}>Webinar & Seminar</h1>
 				</Col>
 				<Col
 					className="text-end me-auto text-left"
@@ -54,7 +54,7 @@ const Webinar = () => {
 						className={`button-custom ${
 							activeButton === "histori" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("histori", "/histori")}>
+						onClick={() => handleButtonClick("katalogteknologi", "/katalogteknologi")}>
 						Katalog teknologi
 					</Button>
 				</Col>

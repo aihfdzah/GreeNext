@@ -54,7 +54,7 @@ const Ebook = () => {
 						className={`button-custom ${
 							activeButton === "histori" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("histori", "/histori")}>
+						onClick={() => handleButtonClick("katalogteknologi", "/katalogteknologi")}>
 						Katalog teknologi
 					</Button>
 				</Col>
