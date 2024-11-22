@@ -32,27 +32,22 @@ const WebinarPayment = () => {
 							placeholder="Nama di kartu"></input>
 					</div>
 
+                    <div className="input-group">
+						<label for="expiry-date">Nama Depan</label>
+						<input type="text" id="expiry-date" placeholder="nama depan"></input>
+					</div>
+
 					<div className="input-group">
-						<label for="card-number">Nomor Kartu</label>
+						<label for="cvv">Nama Belakang</label>
+						<input type="text" id="cvv" placeholder="nama belakang"></input>
+					</div>
+                    
+					<div className="input-group">
+						<label for="card-number">Alamat Email</label>
 						<input
 							type="text"
 							id="card-number"
-							placeholder="1234 5678 9011 1213"></input>
-					</div>
-
-					<div className="input-group">
-						<label for="expiry-date">Tanggal Kedaluwarsa</label>
-						<input type="text" id="expiry-date" placeholder="MM/YY"></input>
-					</div>
-
-					<div className="input-group">
-						<label for="cvv">CVC / CVV</label>
-						<input type="text" id="cvv" placeholder="123"></input>
-					</div>
-
-					<div className="save-card">
-						<input type="checkbox" id="save-card"></input>
-						<label for="save-card">Simpan Detail Kartu</label>
+							placeholder="example@gmail.com"></input>
 					</div>
 				</div>
 
