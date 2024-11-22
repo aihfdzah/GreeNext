@@ -74,7 +74,7 @@ const StudiKasus = () => {
 								<p className="title-course">Penerapan Pertanian Presisi (Presisi Agriculture)</p>
 								
 								<div className="tag-course">
-									<span>isi icon sukai</span>
+									<span>isi icon sukai/love</span>
 									<span>isi icon download</span>
 									<span>isi icon simpan</span>
 								</div>
