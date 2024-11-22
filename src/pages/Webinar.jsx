@@ -86,7 +86,7 @@ const Webinar = () => {
                         </div> */}
 
 				<div className="highlighted-event">
-					<img src="./foto3.jpg" alt="Highlight Event"  />
+					<img src="./foto2.jpg" alt="Highlight Event"  />
 					<div className="highlight-content">
 						<h2>Pengenalan Sistem Pertanian Presisi</h2>
                         <p>Inovasi pertanian menjadi kunci untuk meningkatkan produktivitas, efisiensi, 
@@ -100,7 +100,7 @@ const Webinar = () => {
 
 				<div className="event-list">
 					<div className="event-card">
-						<img src="./foto5.jpg" alt="Event Thumbnail" />
+						<img src="./foto6.jpg" alt="Event Thumbnail" />
 						<div className="event-info">
 							<h3>Dinamika Pertanian Konvesional </h3>
                             <p>108 orang mengikuti seminar ini</p>
@@ -127,7 +127,7 @@ const Webinar = () => {
 					</div>
 
 					<div className="event-card">
-						<img src="./foto5.jpg" alt="Event Thumbnail" />
+						<img src="./foto4.jpg" alt="Event Thumbnail" />
 						<div className="event-info">
 							<h3>Manajemen Pertanian</h3>
                             <p>100 orang mengikuti seminar ini</p>
@@ -140,7 +140,7 @@ const Webinar = () => {
 					</div>
 
 					<div className="event-card">
-						<img src="./foto5.jpg" alt="Event Thumbnail" />
+						<img src="./foto9.jpg" alt="Event Thumbnail" />
 						<div className="event-info">
 							<h3>Inovasi Pertanian Hemat Air</h3>
                             <p>122 orang mengikuti seminar ini</p>
