@@ -1515,55 +1515,61 @@ main.book-detail {
 }
 
 /* -------------------webinar------------- */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.search-bar {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.result-count {
-    font-size: 14px;
-    color: #555;
-}
 
 /* Highlighted Event */
 .highlighted-event {
     position: relative;
+	bottom: 30px;
     margin-bottom: 30px;
 }
 
 .highlighted-event img {
-    width: 100%;
-    border-radius: 10px;
+	width: 100%;
+	border-radius: 10px;
+	filter: brightness(70%);
 }
 
 .highlight-content {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 10%;
+    left: 2px;
+    background-color: transparent;
     padding: 15px;
     border-radius: 5px;
+	text-align: center;
 }
 
 .highlight-content h2 {
-    font-size: 20px;
+    font-size: 25px;
+	font-weight: 800;
     margin: 0 0 10px 0;
+	color: var(--background-color);
 }
 
 .highlight-content p {
     margin: 0;
-    font-size: 14px;
+	margin-bottom: 5%;
+    font-size: 15px;
+	text-align: center;
+	color: var(--background-color);
+}
+
+.highlight-content .date {
+	background: transparent;
+	color: var(--background-color);
+	border: 1px solid white;
+	border-radius: 20px;
+	padding: 5px 15px;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 15px 0;
+}
+
+.highlight-content .location {
+	font-size: 15px;
+	font-style: italic;
+	margin-top: 20px;
+
 }
 
 /* Event List */
@@ -1583,7 +1589,7 @@ header {
 }
 
 .event-card img {
-    width: 120px;
+    width: 50%;
     height: auto;
 }
 
