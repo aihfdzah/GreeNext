@@ -1883,26 +1883,37 @@ h2 {
     text-align: center;
   } */
   
-h2 {
+  .card-container h2 {
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 10px;
 	text-align: center;
   }
   
-hr {
+  .card-container hr {
     border: none;
     border-top: 2px solid var(--main-color);
     margin: 10px 0 20px;
   }
   
-.card-content {
-    display: flex;
+  .card-content {
+    /* display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
     align-items: center;
-    text-align: left;
-  }
+    text-align: left; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* Tinggi penuh layar */
+	margin: 0;
+	text-align: center;
+}
+
+.content-left {
+	text-align: center;
+	flex: 1; /* Bagi ruang secara proporsional */
+}
 
   .card-content img {
     width: 100%;
@@ -1911,14 +1922,21 @@ hr {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .card-text {
-    display: flex;
+  .card-text-right {
+    /* display: flex;
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
     text-align: left;
 	margin-left: auto;
     background-color: #D9D9D9;
+	 */
+	flex: 2; /* Lebih lebar dibandingkan bagian kiri */
+	background-color: #D9D9D9;
+	text-align: left;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional: Bayangan */
   }
 
 #text {
@@ -1970,13 +1988,21 @@ hr {
   }
   
   .discussion-button {
-    background-color: #FF5733;
+    /* background-color: #FF5733;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.9rem; */
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #ff5733;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
   }
   
   .discussion-button:hover {
