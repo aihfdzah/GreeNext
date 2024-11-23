@@ -60,112 +60,97 @@ const StudiKasus = () => {
 				</Col>
 			</Row>
 
-            <div className="container" style={{ marginBottom: "23%" }}>
+            <div className="container" id="studikasus" style={{ marginBottom: "23%" }}>
                 <div className="header">
                     <div className="search-bar display-flex background-transparent">
                         <i className="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Cari kursus..." />
+                        <input type="text" placeholder="Pertanian" />
                     </div>
                         {/* <i className="fa-regular fa-heart"></i>
                         <i className="fa-solid fa-cart-shopping"></i> */}
 
                         <div className="course-item-horizontal">
-							<div className="konten-course-horizontal">
-								<p className="title-course">Penerapan Pertanian Presisi (Presisi Agriculture)</p>
-								
-								<div className="tag-course">
-									<span>isi icon sukai/love</span>
-									<span>isi icon download</span>
-									<span>isi icon simpan</span>
+							<a href="/studikasusdetail">
+								<div className="konten-course-horizontal">
+									<p className="title-course">Penerapan Pertanian Presisi (Presisi Agriculture)</p>
+									
+									<div className="tag-course">
+										<span>isi icon sukai/love</span>
+										<span>isi icon download</span>
+										<span>isi icon simpan</span>
+									</div>
 								</div>
-							</div>
+							</a>
+							
 							<div className="image-button-container">
 								<img src="./foto2.jpg" alt="Course" className="course-image" />
-								<a
-									href="/detailkls"
-									className="button-daftar"
-									style={{
-										borderRadius: "20px",
-										width: "200px",
-										marginTop: "10px",
-									}}>
-									Daftar Sekarang
-								</a>
+								<div className="tag-course">
+									<span>isi icon mata/tlh dibaca</span>
+									<span>isi icon panah kanan/tlh teruskan</span>
+								</div>
 							</div>
 						</div>
                         
                         <div className="course-item-horizontal">
-							<div className="konten-course-horizontal">
-								<p className="title-course">Penerapan Pertanian Presisi (Presisi Agriculture)</p>
-								
-								<div className="tag-course">
-									<span>icon sukai</span>
-									<span>icon download</span>
-									<span>icon simpan</span>
+							<a href="/studikasusdetail">
+								<div className="konten-course-horizontal">
+									<p className="title-course">Penerapan Pertanian Presisi (Presisi Agriculture)</p>
+									
+									<div className="tag-course">
+										<span>isi icon sukai/love</span>
+										<span>isi icon download</span>
+										<span>isi icon simpan</span>
+									</div>
 								</div>
-							</div>
+							</a>
 							<div className="image-button-container">
 								<img src="./foto2.jpg" alt="Course" className="course-image" />
-								<a
-									href="/detailkls"
-									className="button-daftar"
-									style={{
-										borderRadius: "20px",
-										width: "200px",
-										marginTop: "10px",
-									}}>
-									Daftar Sekarang
-								</a>
+								<div className="tag-course">
+									<span>isi icon mata/tlh dibaca</span>
+									<span>isi icon panah kanan/tlh teruskan</span>
+								</div>
 							</div>
 						</div>
 
                         <div className="course-item-horizontal">
-							<div className="konten-course-horizontal">
-								<p className="title-course">Penerapan Pertanian Presisi (Presisi Agriculture)</p>
-								
-								<div className="tag-course">
-									<span>icon sukai</span>
-									<span>icon download</span>
-									<span>icon simpan</span>
+							<a href="/studikasusdetail">
+								<div className="konten-course-horizontal">
+									<p className="title-course">Penerapan Pertanian Presisi (Presisi Agriculture)</p>
+									
+									<div className="tag-course">
+										<span>isi icon sukai/love</span>
+										<span>isi icon download</span>
+										<span>isi icon simpan</span>
+									</div>
 								</div>
-							</div>
+							</a>
 							<div className="image-button-container">
 								<img src="./foto2.jpg" alt="Course" className="course-image" />
-								<a
-									href="/detailkls"
-									className="button-daftar"
-									style={{
-										borderRadius: "20px",
-										width: "200px",
-										marginTop: "10px",
-									}}>
-									Daftar Sekarang
-								</a>
+								<div className="tag-course">
+									<span>isi icon mata/tlh dibaca</span>
+									<span>isi icon panah kanan/tlh teruskan</span>
+								</div>
 							</div>
 						</div>
 
                         <div className="course-item-horizontal">
-							<div className="konten-course-horizontal">
-								<p className="title-course">Penerapan Pertanian Presisi (Presisi Agriculture)</p>
-								
-								<div className="tag-course">
-									<span>icon sukai</span>
-									<span>icon download</span>
-									<span>icon simpan</span>
+							<a href="/studikasusdetail">
+								<div className="konten-course-horizontal">
+									<p className="title-course">Penerapan Pertanian Presisi (Presisi Agriculture)</p>
+									
+									<div className="tag-course">
+										<span>isi icon sukai/love</span>
+										<span>isi icon download</span>
+										<span>isi icon simpan</span>
+									</div>
 								</div>
-							</div>
+							</a>
 							<div className="image-button-container">
 								<img src="./foto2.jpg" alt="Course" className="course-image" />
-								<a
-									href="/detailkls"
-									className="button-daftar"
-									style={{
-										borderRadius: "20px",
-										width: "200px",
-										marginTop: "10px",
-									}}>
-									Daftar Sekarang
-								</a>
+								<div className="tag-course">
+									<span>isi icon mata/tlh dibaca</span>
+									<span>isi icon panah kanan/tlh teruskan</span>
+								</div>
 							</div>
 						</div>
 
