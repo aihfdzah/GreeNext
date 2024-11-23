@@ -77,14 +77,14 @@ const Ebook = () => {
 
 					<div className="book-grid">
 						<div className="book-card">
-							<a href="/carousel">
+							<a href="/detailebook">
 								<img src="./bioteknologi pertanian.jpg" alt="detail" />
 								Bioteknologi Pertanian
 							</a>
 						</div>
 
 						<div className="book-card">
-							<a href="/carousel">
+							<a href="/detailebook">
 								<img src="./inovasi agribisnis.jpg" alt="" />
 								Inovasi Agribisnis
 							</a>

@@ -23,6 +23,7 @@ import Webinar from "./pages/Webinar";
 import WebinarDetail from "./pages/WebinarDetail";
 import WebinarPayment from "./pages/WebinarPayment";
 import StudiKasus from "./pages/StudiKasus";
+import StudiKasusDetail from "./pages/StudiKasusDetail";
 // import Kelasdetail from "./components/Kelasdetail";
 // import Detailkls from "./pages/Detailkls";
 import Privasi from "./pages/Privasi";
@@ -56,6 +57,7 @@ function App() {
 				<Route path="/webinardetail" element={<WebinarDetail />} />
 				<Route path="/webinarpayment" element={<WebinarPayment />} />
 				<Route path="/studikasus" element={<StudiKasus />} />
+				<Route path="/studikasusdetail" element={<StudiKasusDetail />} />
 				{/* <Route path="/ebookgrts" element={<EbookFree />}/> */}
 				<Route path="/detailkls" element={<KelasDetail />} />
 				<Route path="/sertifikat" element={<Sertifikat />} />
