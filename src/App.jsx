@@ -13,20 +13,25 @@ import EBook from "./pages/Ebook";
 import Tentang from "./pages/Tentang";
 import Ebook from "./pages/Ebook";
 import Detailebook from "./pages/Detailebook";
-// import EbookFree from "./pages/EbookFree";
+import EbookFree from "./pages/EbookFree";
 import EbookLock from "./pages/EbookLock";
 import EbookPayment from "./pages/EbookPayment";
+import Carousel from "./pages/Carousel";
 import KelasDetail from "./pages/kelasdetail";
 import Sertifikat from "./pages/Sertifikat";
+import Webinar from "./pages/Webinar";
+import WebinarDetail from "./pages/WebinarDetail";
+import WebinarPayment from "./pages/WebinarPayment";
+import StudiKasus from "./pages/StudiKasus";
+import StudiKasusDetail from "./pages/StudiKasusDetail";
 // import Kelasdetail from "./components/Kelasdetail";
 // import Detailkls from "./pages/Detailkls";
-// import Privasi from "./pages/Privasi";
+import Privasi from "./pages/Privasi";
 // import Tentangkita from "./pages/Tentangkita";
 // import NotFound from "./pages/NotFound";
 // import Sumber from "./pages/Sumber";
 // import Keamanan from "./pages/Keamanan";
 import Keluar from "./pages/Keluar";
-import Webinar from "./pages/Webinar";
 
 function App() {
 	return (
@@ -43,15 +48,21 @@ function App() {
 				<Route path="/home" element={<Home />} />
 				<Route path="/tentang" element={<Tentang />} />
 				<Route path="/ebook" element={<Ebook />} />
-				<Route path="/webinar" element={<Webinar />} />
 				<Route path="/detailebook" element={<Detailebook />} />
-				{/* <Route path="/ebookgrts" element={<EbookFree />}/> */}
+				<Route path="/ebookfree" element={<EbookFree />} />
 				<Route path="/ebooklock" element={<EbookLock />} />
 				<Route path="/ebookpay" element={<EbookPayment />} />
+				<Route path="/carousel" element={<Carousel />} />
+				<Route path="/webinar" element={<Webinar />} />
+				<Route path="/webinardetail" element={<WebinarDetail />} />
+				<Route path="/webinarpayment" element={<WebinarPayment />} />
+				<Route path="/studikasus" element={<StudiKasus />} />
+				<Route path="/studikasusdetail" element={<StudiKasusDetail />} />
+				{/* <Route path="/ebookgrts" element={<EbookFree />}/> */}
 				<Route path="/detailkls" element={<KelasDetail />} />
 				<Route path="/sertifikat" element={<Sertifikat />} />
 				<Route path="*" element={<NotFound />} />
-				{/* <Route path="/privasi" element={<Privasi />} /> */}
+				<Route path="/privasi" element={<Privasi />} />
 				{/* <Route path="/sumberdaya" element={<Sumber />} />
 					<Route path="/tentangkita" element={<Tentangkita />} />
 					<Route path="/keamanan" element={<Keamanan />} /> */}

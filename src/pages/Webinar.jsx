@@ -15,7 +15,6 @@ const Webinar = () => {
 	return (
 		<>
 			<Navbar />
-
 			<Row
 				className="py-3 d-flex text-left"
 				style={{
@@ -24,7 +23,7 @@ const Webinar = () => {
 					marginBottom: "-90px",
 				}}>
 				<Col>
-					<h1 style={{ color: "#17412d" }}>Sumber Daya</h1>
+					<h1 style={{ color: "#17412d" }}>Webinar & Seminar</h1>
 				</Col>
 				<Col
 					className="text-end me-auto text-left"
@@ -54,7 +53,9 @@ const Webinar = () => {
 						className={`button-custom ${
 							activeButton === "histori" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("histori", "/histori")}>
+						onClick={() =>
+							handleButtonClick("katalogteknologi", "/katalogteknologi")
+						}>
 						Katalog teknologi
 					</Button>
 				</Col>
@@ -86,44 +87,75 @@ const Webinar = () => {
                         </div> */}
 
 				<div className="highlighted-event">
-					<img src="./foto3.jpg" alt="Highlight Event" />
+					<img src="./foto2.jpg" alt="Highlight Event" />
 					<div className="highlight-content">
 						<h2>Pengenalan Sistem Pertanian Presisi</h2>
-						<p>Lokasi: Lembang, Kabupaten Bandung, Jawa Barat</p>
-						<p>24-25 Jan 2025</p>
+						<p>
+							Inovasi pertanian menjadi kunci untuk meningkatkan produktivitas,
+							efisiensi, dan keberlanjutan sektor pertanian di Indonesia.
+						</p>
+						<span className="date">24 Januari 2025</span>
+						<p className="location">Lembang, Kota Bandung, Jawa Barat</p>
 					</div>
+					<p className="down">Up Coming Event</p>
 				</div>
 				{/* </div> */}
 
 				<div className="event-list">
 					<div className="event-card">
-						<img src="./foto5.jpg" alt="Event Thumbnail" />
+						<img src="./foto6.jpg" alt="Event Thumbnail" />
 						<div className="event-info">
-							<h3>Pengenalan Sistem Pertanian </h3>
-							<p>Lokasi: Lembang, Kabupaten Bandung, Jawa Barat</p>
-							<p>Tanggal: 24-25 Jan 2025</p>
+							<h3>Dinamika Pertanian Konvesional </h3>
+							<p>108 orang mengikuti seminar ini</p>
+							<p>
+								📍Lembang, <br /> Kabupaten Bandung, Jawa Barat
+							</p>
+							<p>Tanggal: 28 - 29 Februari 2025</p>
 						</div>
-						<button className="btn-status">Offline</button>
+						<a href="./WebinarDetail">
+							<button className="btn-status">Daftar</button>
+						</a>
 					</div>
 
 					<div className="event-card">
 						<img src="./foto5.jpg" alt="Event Thumbnail" />
 						<div className="event-info">
-							<h3>Pengenalan Sistem Pertanian</h3>
-							<p>Lokasi: Lembang, Kabupaten Bandung, Jawa Barat</p>
-							<p>Tanggal: 24-26 Jan 2025</p>
+							<h3>Sistem Teknologi Pertanian</h3>
+							<p>192 orang mengikuti seminar ini</p>
+							<p>
+								📍Lembang, <br /> Kabupaten Bandung, Jawa Barat
+							</p>
+							<p>Tanggal: 15 - 16 April 2025</p>
 						</div>
-						<button className="btn-status">Offline</button>
+						<a href="./WebinarDetail">
+							<button className="btn-status">Daftar</button>
+						</a>
 					</div>
 
 					<div className="event-card">
-						<img src="./foto5.jpg" alt="Event Thumbnail" />
+						<img src="./foto4.jpg" alt="Event Thumbnail" />
 						<div className="event-info">
-							<h3>Pengenalan Sistem Pertanian</h3>
-							<p>Lokasi: Lembang, Kabupaten Bandung, Jawa Barat</p>
-							<p>Tanggal: 24-26 Jan 2025</p>
+							<h3>Manajemen Pertanian</h3>
+							<p>100 orang mengikuti seminar ini</p>
+							<p> ⛓️‍💥Via Zoom </p>
+							<p>Tanggal: 20 Juli 2025</p>
 						</div>
-						<button className="btn-status">Offline</button>
+						<a href="./WebinarDetail">
+							<button className="btn-status">Daftar</button>
+						</a>
+					</div>
+
+					<div className="event-card">
+						<img src="./foto9.jpg" alt="Event Thumbnail" />
+						<div className="event-info">
+							<h3>Inovasi Pertanian Hemat Air</h3>
+							<p>122 orang mengikuti seminar ini</p>
+							<p> ⛓️‍💥Via Zoom </p>
+							<p>Tanggal: 01 Oktober 2025</p>
+						</div>
+						<a href="./WebinarDetail">
+							<button className="btn-status">Daftar</button>
+						</a>
 					</div>
 				</div>
 			</div>

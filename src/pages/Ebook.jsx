@@ -24,7 +24,7 @@ const Ebook = () => {
 					marginBottom: "-90px",
 				}}>
 				<Col>
-					<h1 style={{ color: "#17412d" }}>Sumber Daya</h1>
+					<h1 style={{ color: "#17412d" }}>Ebook</h1>
 				</Col>
 				<Col
 					className="text-end me-auto text-left"
@@ -54,7 +54,7 @@ const Ebook = () => {
 						className={`button-custom ${
 							activeButton === "histori" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("histori", "/histori")}>
+						onClick={() => handleButtonClick("katalogteknologi", "/katalogteknologi")}>
 						Katalog teknologi
 					</Button>
 				</Col>
@@ -91,56 +91,56 @@ const Ebook = () => {
 						</div>
 
 						<div className="book-card">
-							<a href="/ebooklock">
+							<a href="/carousel">
 								<img src="./manajemen agroindustri.jpg" alt="" />
 								Manajemen Agroindustri
 							</a>
 						</div>
 
 						<div className="book-card">
-							<a href="/ebooklock">
-								<img src="./pertanian keberlanjutan.jpg" alt="" />
+							<a href="/carousel">
+								<img src="./manajemen agroindustri.jpg" alt="" />
 								Pertanian Berkelanjutan
 							</a>
 						</div>
 
 						<div className="book-card">
-							<a href="/ebooklock">
+							<a href="/carousel">
 								<img src="./pertanian masa depan.jpg" alt="" />
 								Pertanian Masa Depan
 							</a>
 						</div>
 
 						<div className="book-card">
-							<a href="/ebooklock">
+							<a href="/carousel">
 								<img src="./pertanian postmodern.jpg" alt="" />
 								Pertanian Postmodern
 							</a>
 						</div>
 
 						<div className="book-card">
-							<a href="/ebooklock">
+							<a href="/carousel">
 								<img src="./produktivitas tanama pertanian.jpg" alt="" />
 								Produktivitas Tanaman Pertanian
 							</a>
 						</div>
 
 						<div className="book-card">
-							<a href="/ebooklock">
+							<a href="/carousel">
 								<img src="./tanaman modern.jpg" alt="" />
 								Tanaman Modern
 							</a>
 						</div>
 
 						<div className="book-card">
-							<a href="/ebooklock">
+							<a href="/carousel">
 								<img src="./teknologi.jpg" alt="" />
 								Teknologi Pertanian
 							</a>
 						</div>
 
 						<div className="book-card">
-							<a href="/ebooklock">
+							<a href="/carousel">
 								<img src="./pertanian 4.0.jpg" alt="" />
 								Pertanian 4.0
 							</a>
