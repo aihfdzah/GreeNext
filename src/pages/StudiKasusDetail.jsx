@@ -23,13 +23,15 @@ const StudiKasusDetail = () => {
                                 sembari menghemat sumber daya. Dengan memanfaatkan sensor, GPS, drone, dll., petani dapat memahami kondisi
                                 spesifik lahan dan menyesuaikan tindakan secara efektif.
                                 </p>
+
+                                <h3>Teknologi Kunci</h3>
                                 <ul>
                                 <li>1. Sensor tanah dan tanaman - Mengukur kelembapan, nutrisi, dan pH tanah.</li>
                                 <li>2. GPS dan drone - Memantau tanaman secara real-time untuk mengidentifikasi kebutuhan lahan spesifik.</li>
                                 <li>3. Data dan IoT - Memungkinkan analisis mendalam untuk efisiensi.</li>
                                 <li>4. Internet of Things (IoT) - Mendukung integrasi untuk berbagi data secara real-time.</li>
                                 </ul>
-                                <a href="#" class="read-more">Jelajahi selengkapnya</a>
+                                {/* <a href="#" class="read-more">Jelajahi selengkapnya</a> */}
                             </div>
                         </div>
                     </div>
