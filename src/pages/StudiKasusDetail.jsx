@@ -6,12 +6,16 @@ const StudiKasusDetail = () => {
 		<>
 			<Navbar />
 			<div className="container">
+                <div class="card-container">
                     <h2>PENERAPAN PERTANIAN PRESISI <br/> (PRECISION AGRICULTURE)</h2>
                     <hr/>
                     <div class="card-content">
-                        <img src="./foto2.jpg" alt="Gambar Pertanian"/>
+                        <div className="left">
+                            <img src="./foto2.jpg" alt="Gambar Pertanian"/>
+                            <button class="discussion-button">Ruang diskusi</button>
+                        </div>
                         
-                        <div class="card-text" id="text">
+                        <div class="card-text-right" id="text">
                             <div class="text-content">
                                 <h3>Bagaimana Penerapan Pertanian Presisi (Precision Agriculture)?</h3>
                                 <p>
@@ -30,13 +34,17 @@ const StudiKasusDetail = () => {
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="discussion-button">Ruang diskusi</button>
-                        <div class="social-icons">
-                            <span class="icon">👍</span>
-                            <span>87</span>
-                            <span class="icon">💬</span>
+                        
+                        <div class="tag-course">
+                            <span>isi icon save</span>
+							<span>isi icon teruskan</span>
+                        </div>
+                        <div class="tag-course">
+                            <span>isi icon save</span>
+							<span>isi icon teruskan</span>
                         </div>
                     </div>
+                </div>
 
             </div>
 
