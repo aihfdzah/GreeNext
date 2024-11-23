@@ -12,7 +12,9 @@ const StudiKasusDetail = () => {
                     <div class="card-content">
                         <div className="left">
                             <img src="./foto2.jpg" alt="Gambar Pertanian"/>
+                            <a href="/ruangdiskusi">
                             <button class="discussion-button">Ruang diskusi</button>
+                            </a>
                         </div>
                         
                         <div class="card-text-right" id="text">
