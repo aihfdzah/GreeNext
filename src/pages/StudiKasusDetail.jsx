@@ -6,7 +6,6 @@ const StudiKasusDetail = () => {
 		<>
 			<Navbar />
 			<div className="container">
-                <div class="card-container">
                     <h2>PENERAPAN PERTANIAN PRESISI <br/> (PRECISION AGRICULTURE)</h2>
                     <hr/>
                     <div class="card-content">
@@ -38,7 +37,6 @@ const StudiKasusDetail = () => {
                             <span class="icon">💬</span>
                         </div>
                     </div>
-                </div>
 
             </div>
 
