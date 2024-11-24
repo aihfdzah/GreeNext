@@ -2211,7 +2211,7 @@ h2 {
 }
 
 .form-row {
-	display: flex;
+	/* display: flex; */
 	gap: 10px;
 }
 
