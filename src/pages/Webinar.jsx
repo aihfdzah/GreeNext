@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 const Webinar = () => {
-	const [activeButton, setActiveButton] = useState("home"); // Initialize activeButton state
+	const [activeButton, setActiveButton] = useState("webinar"); // Initialize activeButton state
 	const navigate = useNavigate(); // Initialize navigation
 
 	const handleButtonClick = (buttonName, path) => {

@@ -12,12 +12,10 @@ const WebinarDetail = () => {
 						<h1 className="course-title">
 							Webinar Pengenalan Sistem Pertanian Presisi
 						</h1>
-						<p className="course-meta">
-					        👥 Kuota | 🗣️ Pemateri
-						</p>
+						<p className="course-meta">👥 Kuota | 🗣️ Pemateri</p>
 						<img
 							src="./foto3.jpg"
-                            id="webinar"
+							id="webinar"
 							alt="Drone Pertanian"
 							className="course-image"
 						/>
@@ -34,8 +32,12 @@ const WebinarDetail = () => {
 							<h5>Jadwal Pelaksanaan</h5>
 							<div className="accordion-item">
 								<div className="accordion-header">
-                                    <span className="date">24 Januari 2025</span><br />
-                                    <span className="location"> Lembang, Kota Bandung, Jawa Barat 📍</span>
+									<span className="date">24 Januari 2025</span>
+									<br />
+									<span className="location">
+										{" "}
+										Lembang, Kota Bandung, Jawa Barat 📍
+									</span>
 								</div>
 								<div className="accordion-content">
 									{/* <p>Detail materi untuk Minggu 2 akan tersedia di sini.</p> */}
@@ -48,7 +50,7 @@ const WebinarDetail = () => {
 					<div className="col-md-4">
 						<div className="benefits-card">
 							<div className="price">Rp50,000</div>
-							<a href="/webinarpayment" className="btn-orange">
+							<a href="/webinarpay" className="btn-orange">
 								Daftar Kelas
 							</a>
 							<h5>Benefit yang didapatkan</h5>

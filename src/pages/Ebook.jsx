@@ -5,7 +5,7 @@ import { Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Ebook = () => {
-	const [activeButton, setActiveButton] = useState("home"); // Initialize activeButton state
+	const [activeButton, setActiveButton] = useState("sumber"); // Initialize activeButton state
 	const navigate = useNavigate(); // Initialize navigation
 
 	const handleButtonClick = (buttonName, path) => {
@@ -54,7 +54,9 @@ const Ebook = () => {
 						className={`button-custom ${
 							activeButton === "histori" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("katalogteknologi", "/katalogteknologi")}>
+						onClick={() =>
+							handleButtonClick("katalogteknologi", "/katalogteknologi")
+						}>
 						Katalog teknologi
 					</Button>
 				</Col>

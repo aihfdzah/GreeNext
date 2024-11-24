@@ -49,7 +49,7 @@ function App() {
 				<Route path="/carousel" element={<Carousel />} />
 				<Route path="/webinar" element={<Webinar />} />
 				<Route path="/webinardetail" element={<WebinarDetail />} />
-				<Route path="/webinarpayment" element={<WebinarPayment />} />
+				<Route path="/webinarpay" element={<WebinarPayment />} />
 				<Route path="/studikasus" element={<StudiKasus />} />
 				<Route path="/studikasusdetail" element={<StudiKasusDetail />} />
 				<Route path="/detailkls" element={<KelasDetail />} />
