@@ -24,13 +24,7 @@ import WebinarDetail from "./pages/WebinarDetail";
 import WebinarPayment from "./pages/WebinarPayment";
 import StudiKasus from "./pages/StudiKasus";
 import StudiKasusDetail from "./pages/StudiKasusDetail";
-// import Kelasdetail from "./components/Kelasdetail";
-// import Detailkls from "./pages/Detailkls";
 import Privasi from "./pages/Privasi";
-// import Tentangkita from "./pages/Tentangkita";
-// import NotFound from "./pages/NotFound";
-// import Sumber from "./pages/Sumber";
-// import Keamanan from "./pages/Keamanan";
 import Keluar from "./pages/Keluar";
 
 function App() {
@@ -58,14 +52,10 @@ function App() {
 				<Route path="/webinarpayment" element={<WebinarPayment />} />
 				<Route path="/studikasus" element={<StudiKasus />} />
 				<Route path="/studikasusdetail" element={<StudiKasusDetail />} />
-				{/* <Route path="/ebookgrts" element={<EbookFree />}/> */}
 				<Route path="/detailkls" element={<KelasDetail />} />
 				<Route path="/sertifikat" element={<Sertifikat />} />
 				<Route path="*" element={<NotFound />} />
 				<Route path="/privasi" element={<Privasi />} />
-				{/* <Route path="/sumberdaya" element={<Sumber />} />
-					<Route path="/tentangkita" element={<Tentangkita />} />
-					<Route path="/keamanan" element={<Keamanan />} /> */}
 				<Route path="/keluar" element={<Keluar />} />
 			</Routes>
 		</BrowserRouter>
