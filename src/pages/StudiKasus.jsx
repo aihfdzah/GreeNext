@@ -97,11 +97,13 @@ const StudiKasus = () => {
 			{/* Kontainer Studi Kasus */}
 			<div className="container" id="studikasus">
 				{/* Search Bar */}
-				<div className="search-bar d-flex bg-light align-items-center mb-4 p-2 rounded">
-					<i className="fa-solid fa-magnifying-glass me-3"></i>
+				<div className="search-bar d-flex align-items-center bg-light mb-4 p-2 rounded">
+					<i
+						className="fa-solid fa-magnifying-glass me-3"
+						style={{ marginLeft: "10px" }}></i>
 					<input
 						type="text"
-						className="w-100 border-0"
+						className="w-100 border-0 ms-2"
 						placeholder="Cari Studi Kasus..."
 						value={searchQuery}
 						onChange={(e) => setSearchQuery(e.target.value)}
@@ -122,7 +124,11 @@ const StudiKasus = () => {
 								<i className="fa-regular fa-eye me-2"></i>
 								<span className="me-4">{study.views}</span>
 								<i className="fa-regular fa-thumbs-up me-2"></i>
-								<span>{study.likes}</span>
+								<span className="me-4">{study.likes}</span>
+								<i className="fa-solid fa-download me-2"></i>
+								<span className="me-4">Unduh</span>
+								<i className="fa-regular fa-heart me-2"></i>
+								<span>Tandai</span>
 							</div>
 						</div>
 						{/* Gambar */}
