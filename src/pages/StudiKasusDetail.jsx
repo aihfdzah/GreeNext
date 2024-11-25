@@ -13,7 +13,7 @@ const StudiKasusDetail = () => {
                         <div className="left">
                             <img src="./foto2.jpg" alt="Gambar Pertanian"/>
                             <a href="/ruangdiskusi">
-                            <button class="discussion-button">Ruang diskusi</button>
+                                <button class="discussion-button">Ruang diskusi</button>
                             </a>
                         </div>
                         
