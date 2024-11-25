@@ -15,7 +15,7 @@ const EbookLock = () => {
 						<div className="message">
 							Anda harus membeli e-book terlebih dahulu untuk membaca!
 						</div>
-						<a href="#" className="button">
+						<a href="/ebookpay" className="button">
 							Beli Sekarang!
 						</a>
 					</div>
@@ -30,7 +30,7 @@ const EbookLock = () => {
 
 			<Footer />
 		</>
-	); 
+	);
 };
 
 export default EbookLock;

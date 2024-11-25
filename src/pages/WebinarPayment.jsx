@@ -1,57 +1,110 @@
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const WebinarPayment = () => {
+	// State untuk menyimpan data input
+	const [paymentMethod, setPaymentMethod] = useState("kartu");
+	const [formData, setFormData] = useState({
+		cardName: "",
+		firstName: "",
+		lastName: "",
+		email: "",
+	});
+
+	// Fungsi untuk menangani perubahan input
+	const handleInputChange = (e) => {
+		const { id, value } = e.target;
+		setFormData({ ...formData, [id]: value });
+	};
+
+	// Fungsi untuk menangani metode pembayaran
+	const handlePaymentChange = (e) => {
+		setPaymentMethod(e.target.value);
+	};
+
+	// Fungsi untuk submit data
+	const handleSubmit = () => {
+		// Tambahkan logika submit data
+		alert("Pembayaran berhasil!");
+	};
+
 	return (
 		<>
 			<Navbar />
 			<div className="container">
-				{/* <-- Payment Form Section --> */}
+				{/* Payment Form Section */}
 				<div className="form-section">
 					<h2>Pembayaran Pendaftaran Webinar</h2>
 					<div className="payment-options">
 						<label>
-							<input type="radio" name="payment" checked>
-								{" "}
-								Kartu
-							</input>
+							<input
+								type="radio"
+								name="payment"
+								value="kartu"
+								checked={paymentMethod === "kartu"}
+								onChange={handlePaymentChange}
+							/>
+							Kartu
 						</label>
 						<label>
-							<input type="radio" name="payment">
-								{" "}
-								Transfer Bank 
-							</input>
+							<input
+								type="radio"
+								name="payment"
+								value="transfer"
+								checked={paymentMethod === "transfer"}
+								onChange={handlePaymentChange}
+							/>
+							Transfer Bank
 						</label>
 					</div>
 
 					<div className="input-group">
-						<label for="card-name">Nama Kartu</label>
+						<label htmlFor="cardName">Nama Kartu</label>
 						<input
 							type="text"
-							id="card-name"
-							placeholder="Nama di kartu"></input>
-					</div>
-
-                    <div className="input-group">
-						<label for="expiry-date">Nama Depan</label>
-						<input type="text" id="expiry-date" placeholder="nama depan"></input>
+							id="cardName"
+							placeholder="Nama di kartu"
+							value={formData.cardName}
+							onChange={handleInputChange}
+						/>
 					</div>
 
 					<div className="input-group">
-						<label for="cvv">Nama Belakang</label>
-						<input type="text" id="cvv" placeholder="nama belakang"></input>
-					</div>
-                    
-					<div className="input-group">
-						<label for="card-number">Alamat Email</label>
+						<label htmlFor="firstName">Nama Depan</label>
 						<input
 							type="text"
-							id="card-number"
-							placeholder="example@gmail.com"></input>
+							id="firstName"
+							placeholder="Nama depan"
+							value={formData.firstName}
+							onChange={handleInputChange}
+						/>
+					</div>
+
+					<div className="input-group">
+						<label htmlFor="lastName">Nama Belakang</label>
+						<input
+							type="text"
+							id="lastName"
+							placeholder="Nama belakang"
+							value={formData.lastName}
+							onChange={handleInputChange}
+						/>
+					</div>
+
+					<div className="input-group">
+						<label htmlFor="email">Alamat Email</label>
+						<input
+							type="email"
+							id="email"
+							placeholder="example@gmail.com"
+							value={formData.email}
+							onChange={handleInputChange}
+						/>
 					</div>
 				</div>
 
-				{/* -- Order Summary Section -- */}
+				{/* Order Summary Section */}
 				<div className="summary-section">
 					<h2>Ringkasan Pesanan</h2>
 					<div className="price-detail">
@@ -63,7 +116,9 @@ const WebinarPayment = () => {
 					<div className="total">
 						TOTAL <span>Rp 50.000</span>
 					</div>
-					<button className="button">Lanjutkan</button>
+					<button className="button" onClick={handleSubmit}>
+						Lanjutkan
+					</button>
 					<div className="info-text">
 						Data pribadi Anda akan digunakan untuk memproses pesanan Anda,
 						mendukung pengalaman Anda di situs ini, dan untuk tujuan lain yang

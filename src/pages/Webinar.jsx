@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 const Webinar = () => {
-	const [activeButton, setActiveButton] = useState("home"); // Initialize activeButton state
+	const [activeButton, setActiveButton] = useState("webinar"); // Initialize activeButton state
 	const navigate = useNavigate(); // Initialize navigation
 
 	const handleButtonClick = (buttonName, path) => {
@@ -15,7 +15,6 @@ const Webinar = () => {
 	return (
 		<>
 			<Navbar />
-
 			<Row
 				className="py-3 d-flex text-left"
 				style={{
@@ -54,7 +53,9 @@ const Webinar = () => {
 						className={`button-custom ${
 							activeButton === "histori" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("katalogteknologi", "/katalogteknologi")}>
+						onClick={() =>
+							handleButtonClick("katalogteknologi", "/katalogteknologi")
+						}>
 						Katalog teknologi
 					</Button>
 				</Col>
@@ -86,15 +87,17 @@ const Webinar = () => {
                         </div> */}
 
 				<div className="highlighted-event">
-					<img src="./foto2.jpg" alt="Highlight Event"  />
+					<img src="./foto2.jpg" alt="Highlight Event" />
 					<div className="highlight-content">
 						<h2>Pengenalan Sistem Pertanian Presisi</h2>
-                        <p>Inovasi pertanian menjadi kunci untuk meningkatkan produktivitas, efisiensi, 
-                            dan keberlanjutan sektor pertanian di Indonesia.</p>
-                        <span className="date">24 Januari 2025</span>
-                        <p className="location">Lembang, Kota Bandung, Jawa Barat</p>
+						<p>
+							Inovasi pertanian menjadi kunci untuk meningkatkan produktivitas,
+							efisiensi, dan keberlanjutan sektor pertanian di Indonesia.
+						</p>
+						<span className="date">24 Januari 2025</span>
+						<p className="location">Lembang, Kota Bandung, Jawa Barat</p>
 					</div>
-                        <p className="down">Up Coming Event</p>
+					<p className="down">Up Coming Event</p>
 				</div>
 				{/* </div> */}
 
@@ -103,53 +106,56 @@ const Webinar = () => {
 						<img src="./foto6.jpg" alt="Event Thumbnail" />
 						<div className="event-info">
 							<h3>Dinamika Pertanian Konvesional </h3>
-                            <p>108 orang mengikuti seminar ini</p>
-							<p>📍Lembang, <br /> Kabupaten Bandung, Jawa Barat</p>
+							<p>108 orang mengikuti seminar ini</p>
+							<p>
+								📍Lembang, <br /> Kabupaten Bandung, Jawa Barat
+							</p>
 							<p>Tanggal: 28 - 29 Februari 2025</p>
 						</div>
-                            <a href="./WebinarDetail">
-						        <button className="btn-status">Daftar</button>
-                            </a>
-                        
+						<a href="./WebinarDetail">
+							<button className="btn-status">Daftar</button>
+						</a>
 					</div>
 
 					<div className="event-card">
 						<img src="./foto5.jpg" alt="Event Thumbnail" />
 						<div className="event-info">
 							<h3>Sistem Teknologi Pertanian</h3>
-                            <p>192 orang mengikuti seminar ini</p>
-							<p>📍Lembang, <br /> Kabupaten Bandung, Jawa Barat</p>
+							<p>192 orang mengikuti seminar ini</p>
+							<p>
+								📍Lembang, <br /> Kabupaten Bandung, Jawa Barat
+							</p>
 							<p>Tanggal: 15 - 16 April 2025</p>
 						</div>
-						    <a href="./WebinarDetail">
-						        <button className="btn-status">Daftar</button>
-                            </a>
+						<a href="./WebinarDetail">
+							<button className="btn-status">Daftar</button>
+						</a>
 					</div>
 
 					<div className="event-card">
 						<img src="./foto4.jpg" alt="Event Thumbnail" />
 						<div className="event-info">
 							<h3>Manajemen Pertanian</h3>
-                            <p>100 orang mengikuti seminar ini</p>
-					        <p> ⛓️‍💥Via Zoom </p>
+							<p>100 orang mengikuti seminar ini</p>
+							<p> ⛓️‍💥Via Zoom </p>
 							<p>Tanggal: 20 Juli 2025</p>
 						</div>
-						    <a href="./WebinarDetail">
-						        <button className="btn-status">Daftar</button>
-                            </a>
+						<a href="./WebinarDetail">
+							<button className="btn-status">Daftar</button>
+						</a>
 					</div>
 
 					<div className="event-card">
 						<img src="./foto9.jpg" alt="Event Thumbnail" />
 						<div className="event-info">
 							<h3>Inovasi Pertanian Hemat Air</h3>
-                            <p>122 orang mengikuti seminar ini</p>
+							<p>122 orang mengikuti seminar ini</p>
 							<p> ⛓️‍💥Via Zoom </p>
 							<p>Tanggal: 01 Oktober 2025</p>
 						</div>
-						    <a href="./WebinarDetail">
-						        <button className="btn-status">Daftar</button>
-                            </a>
+						<a href="./WebinarDetail">
+							<button className="btn-status">Daftar</button>
+						</a>
 					</div>
 				</div>
 			</div>

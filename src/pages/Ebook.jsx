@@ -5,7 +5,7 @@ import { Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Ebook = () => {
-	const [activeButton, setActiveButton] = useState("home"); // Initialize activeButton state
+	const [activeButton, setActiveButton] = useState("sumber"); // Initialize activeButton state
 	const navigate = useNavigate(); // Initialize navigation
 
 	const handleButtonClick = (buttonName, path) => {
@@ -54,12 +54,14 @@ const Ebook = () => {
 						className={`button-custom ${
 							activeButton === "histori" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("katalogteknologi", "/katalogteknologi")}>
+						onClick={() =>
+							handleButtonClick("katalogteknologi", "/katalogteknologi")
+						}>
 						Katalog teknologi
 					</Button>
 				</Col>
 			</Row>
-			
+
 			<div className="container">
 				<main>
 					<h1 className="text-center">E-book & Panduan</h1>
@@ -149,7 +151,7 @@ const Ebook = () => {
 
 					<div className="progress-list">
 						<div className="progress-item">
-							<img src="agronomi-icon.png" className="icon" />
+							<img src="Agronomi.png" className="icon" />
 							<span className="title">Agronomi</span>
 							<span className="pages">10 hal</span>
 							<div className="progress-bar">
@@ -159,7 +161,7 @@ const Ebook = () => {
 						</div>
 
 						<div className="progress-item">
-							<img src="pemuliaan-icon.png" className="icon" />
+							<img src="Pemulian Tanaman.png" className="icon" />
 							<span className="title">Pemuliaan Tanaman Modern</span>
 							<span className="pages">35 hal</span>
 							<div className="progress-bar">
