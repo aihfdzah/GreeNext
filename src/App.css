@@ -2148,6 +2148,97 @@ h1 {
     color: #333;
   }
 
+  /* ------ruang diskusi detail -------- */
+  .comment-section {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 20px;
+  }
+  
+  .comment-input {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #333;
+  }
+  
+  .comment-input::placeholder {
+	color: #aaa;
+  }
+  
+  .comment-button {
+	padding: 10px 15px;
+	background-color: var(--text-color2);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  .comment-button:hover {
+	background-color: #FF5733;
+  }
+  
+/* -----------katalog--------------- */
+.list-item {
+	display: flex; /* Tata letak horizontal */
+	align-items: center; /* Vertikal sejajar */
+	justify-content: space-between; /* Elemen kiri dan kanan berjauhan */
+	padding: 15px 20px; /* Spasi dalam */
+	margin-bottom: 10px; /* Jarak antar item */
+	border-radius: 10px; /* Sudut melengkung */
+	background-color: #f8f8f8; /* Warna latar belakang */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+  }
+  
+  .item-content {
+	display: flex; /* Tata letak untuk gambar dan teks */
+	align-items: center;
+	gap: 15px; /* Jarak antara gambar dan teks */
+  }
+  
+  .item-image {
+	width: 60px; /* Ukuran gambar */
+	height: 60px;
+	border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+	object-fit: cover; /* Menjaga proporsi gambar */
+  }
+  
+  .item-text {
+	max-width: 70%; /* Batas lebar teks */
+  }
+  
+  .item-title {
+	font-size: 16px; /* Ukuran teks judul */
+	font-weight: bold;
+	color: #333; /* Warna teks */
+	margin: 0 0 5px;
+  }
+  
+  .item-desc {
+	font-size: 14px; /* Ukuran teks deskripsi */
+	color: #666; /* Warna teks */
+	margin: 0;
+  }
+  
+  .item-action {
+	display: flex; /* Aksi ditempatkan secara horizontal */
+	align-items: center;
+	gap: 10px; /* Jarak antara ikon dan teks */
+	font-size: 14px;
+	color: #007bff; /* Warna link */
+	cursor: pointer;
+  }
+  
+  .item-action:hover {
+	text-decoration: underline; /* Efek hover */
+  }
+
 /* ----------------Tentang Kita---------------- */
 .about-section,
 .features-section {
