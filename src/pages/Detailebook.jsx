@@ -1,5 +1,6 @@
-import Navbar from "../components/Navbar"; import Footer from "../components/Footer";
-
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "../Styles/Detailebook.css";
 const Detailebook = () => {
 	return (
 		<>
@@ -28,8 +29,8 @@ const Detailebook = () => {
 							</div>
 							<div className="buttons">
 								<button className="read-button">Baca buku</button>
-								<button className="buy-button">
-									<a href="/ebookpayment">Beli buku</a>
+								<button className="buy-button" style={{color:""}}>
+									<a href="/ebookpay">Beli buku</a>
 								</button>
 							</div>
 						</div>

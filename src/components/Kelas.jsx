@@ -3,18 +3,51 @@ const Kelas = () => {
 	return (
 		<>
 			<div className="container" style={{ marginBottom: "23%" }}>
-				<div className="header">
-					<div>
-						<button className="button-filter justify-content-center align-items-center">
-							Filter
-						</button>
+				<div
+					className="d-flex align-items-center justify-content-between py-2 border-bottom"
+					style={{ marginBottom: "10%" }}>
+					{/* Search Bar */}
+					<div
+						className="input-group mx-3 flex-grow-1"
+						style={{ maxWidth: "100%", position: "relative", width: "100%" }}>
+						<i
+							className="fa-solid fa-magnifying-glass"
+							style={{
+								color: "#ef7a53",
+								position: "absolute",
+								left: "15px",
+								top: "50%",
+								transform: "translateY(-50%)",
+							}}></i>
+						<input
+							type="text"
+							className="form-control bg-transparent"
+							style={{
+								borderColor: "#ef7a53",
+								borderRadius: "20px",
+								paddingLeft: "40px",
+							}}
+							placeholder="Cari Kursus..."
+						/>
 					</div>
-					<div className="search-bar display-flex background-transparent">
-						<i className="fa-solid fa-magnifying-glass"></i>
-						<input type="text" placeholder="Cari kursus..." />
+
+					{/* Icon Group */}
+					<div className="d-flex align-items-center">
+						<i
+							className="fa-regular fa-heart mx-2"
+							style={{
+								fontSize: "20px",
+								cursor: "pointer",
+								color: "#ef7a53",
+							}}></i>
+						<i
+							className="fa-solid fa-cart-shopping mx-2"
+							style={{
+								fontSize: "20px",
+								cursor: "pointer",
+								color: "#ef7a53",
+							}}></i>
 					</div>
-					<i className="fa-regular fa-heart"></i>
-					<i className="fa-solid fa-cart-shopping"></i>
 				</div>
 
 				{/* -------------- Layout Konten Utama -------- */}
@@ -53,7 +86,9 @@ const Kelas = () => {
 					{/* ---------------- Daftar Kursus ------------- */}
 					<div className="daftar-kursus display-flex flex-direction-column">
 						{/* Example Horizontal Course Card */}
-						<div className="course-item-horizontal">
+						<div
+							className="course-item-horizontal  border-0 border-bottom"
+							style={{ borderBottomColor: " #17412d" }}>
 							<div className="konten-course-horizontal">
 								<p className="title-course">Pengantar Pertanian Modern</p>
 								<p className="deskripsi-course">
@@ -85,7 +120,7 @@ const Kelas = () => {
 							</div>
 						</div>
 
-						<div className="course-item-horizontal">
+						<div className="course-item-horizontal  border-0 border-bottom">
 							<div className="konten-course-horizontal">
 								<p className="title-course">
 									Pertanian Berkelanjutan dan Agroekologi
@@ -119,7 +154,7 @@ const Kelas = () => {
 							</div>
 						</div>
 
-						<div className="course-item-horizontal">
+						<div className="course-item-horizontal  border-0 border-bottom">
 							<div className="konten-course-horizontal">
 								<p className="title-course">Pengantar Pertanian Modern</p>
 								<p className="deskripsi-course">
@@ -151,7 +186,7 @@ const Kelas = () => {
 							</div>
 						</div>
 
-						<div className="course-item-horizontal">
+						<div className="course-item-horizontal  border-0 border-bottom">
 							<div className="konten-course-horizontal">
 								<p className="title-course">Pengantar Pertanian Modern</p>
 								<p className="deskripsi-course">
@@ -183,7 +218,7 @@ const Kelas = () => {
 							</div>
 						</div>
 
-						<div className="course-item-horizontal">
+						<div className="course-item-horizontal  border-0 border-bottom">
 							<div className="konten-course-horizontal">
 								<p className="title-course">Pengantar Pertanian Modern</p>
 								<p className="deskripsi-course">
@@ -215,7 +250,7 @@ const Kelas = () => {
 							</div>
 						</div>
 
-						<div className="course-item-horizontal">
+						<div className="course-item-horizontal  border-0 border-bottom">
 							<div className="konten-course-horizontal">
 								<p className="title-course">Pengantar Pertanian Modern</p>
 								<p className="deskripsi-course">
@@ -252,7 +287,7 @@ const Kelas = () => {
 				</div>
 
 				<div className="pagination">
-					<a href="#" className="prev disabled">
+					<a href="#" className="prev">
 						← Sebelumnya
 					</a>
 					<span className="page-numbers">
@@ -265,12 +300,12 @@ const Kelas = () => {
 						<a href="#" className="page">
 							3
 						</a>
-						<span className="dots">...</span>
+						{/* <span className="dots">...</span> */}
 						<a href="#" className="page">
-							12
+							4
 						</a>
 						<a href="#" className="page">
-							13
+							5
 						</a>
 					</span>
 					<a href="#" className="next">

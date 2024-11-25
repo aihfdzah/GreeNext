@@ -1,0 +1,141 @@
+/* -----detailebook--------- */
+
+main.book-detail {
+	max-width: 900px;
+	margin: auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.back-button {
+	margin-bottom: 20px;
+}
+
+.back-button button {
+	font-size: 24px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #333;
+}
+
+.content {
+	display: flex;
+	gap: 30px;
+}
+
+#detailebook {
+	flex-direction: row;
+}
+
+.left-section {
+	flex: 1;
+	text-align: center;
+}
+
+.left-section h2 {
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+
+.book-image {
+	position: relative;
+	width: 100%;
+	max-width: 300px;
+	margin: auto;
+}
+
+.book-image img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.favorite {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.favorite button {
+	background: none;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+	color: #f57224;
+}
+
+.author {
+	font-size: 12px;
+	color: #666;
+	margin-top: 10px;
+}
+
+.buttons {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.read-button,
+.buy-button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.read-button {
+	background-color: #4caf50;
+	color: #fff;
+}
+
+.buy-button {
+	background-color: #f57224;
+	color: #fff;
+}
+
+.right-section {
+	flex: 1;
+}
+
+.right-section h3 {
+	font-size: 20px;
+	margin-top: 10%;
+}
+
+.right-section p {
+	font-size: 14px;
+	color: #333;
+	line-height: 1.6;
+	margin-top: 20px;
+	margin-bottom: 50%;
+}
+
+.progress-section {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 20%;
+}
+
+.progress-section span {
+	font-size: 12px;
+	color: #666;
+}
+
+.progress-bar {
+	flex: 1;
+	height: 8px;
+	background-color: #ddd;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 0 5px;
+}
+
+.progress {
+	height: 100%;
+	background-color: #f57224;
+}

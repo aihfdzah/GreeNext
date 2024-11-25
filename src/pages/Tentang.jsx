@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 const Tentang = () => {
 	return (
 		<>
-			{" "}
 			<Navbar />
 			<div className="container" style={{ marginBottom: "23%" }}>
 				<div className="about-section">
@@ -29,7 +28,11 @@ const Tentang = () => {
 							</div>
 						</div>
 						<div>
-							<img src="./about.jpg" className="about-image" />
+							<img
+								src="./about.jpg"
+								className="about-image"
+								style={{ marginLeft: "30px" }}
+							/>
 						</div>
 					</section>
 				</div>
@@ -41,7 +44,7 @@ const Tentang = () => {
 						</h3>
 						<div className="feature-list">
 							<div className="feature-item">
-								<img src="#" className="feature-icon" />
+								<img src="image.png" className="feature-icon" />
 								<h4>Sertifikasi</h4>
 								<p>
 									Setiap kali berhasil menyelesaikan sebuah kelas, kamu akan
@@ -50,7 +53,7 @@ const Tentang = () => {
 							</div>
 
 							<div className="feature-item">
-								<img src="#" className="feature-icon" />
+								<img src="image2.png" className="feature-icon" />
 								<h4>Proses Pembelajaran Personalisasi</h4>
 								<p>
 									Kamu bebas memilih spesialisasi yang diinginkan agar dapat
@@ -59,7 +62,7 @@ const Tentang = () => {
 							</div>
 
 							<div className="feature-item">
-								<img src="#" className="feature-icon" />
+								<img src="image3.png" className="feature-icon" />
 								<h4>Pembelajaran Berbasis Video</h4>
 								<p>
 									Materi secara praktis melalui sesi video, tutorial langkah
@@ -68,7 +71,7 @@ const Tentang = () => {
 							</div>
 
 							<div className="feature-item">
-								<img src="#" className="feature-icon" />
+								<img src="image4.png" className="feature-icon" />
 								<h4>Berdasarkan Kebutuhan Pertanian</h4>
 								<p>
 									Hemat waktu dan biaya! Materi FarmEduz dibuat agar lebih mudah

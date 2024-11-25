@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import "../Styles/Ebook.css";
 import { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
@@ -20,7 +21,7 @@ const Ebook = () => {
 				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-255px",
+					marginLeft: "-275px",
 					marginBottom: "-90px",
 				}}>
 				<Col>
@@ -65,8 +66,29 @@ const Ebook = () => {
 			<div className="container">
 				<main>
 					<h1 className="text-center">E-book & Panduan</h1>
-					<div className="search-bar">
-						<input type="text" placeholder="Cari e-book..."></input>
+					{/* Search Bar */}
+					<div
+						className="input-group mx-3 flex-grow-1"
+						style={{ maxWidth: "600px", position: "relative" }}>
+						<i
+							className="fa-solid fa-magnifying-glass"
+							style={{
+								color: "#ef7a53",
+								position: "absolute",
+								left: "15px",
+								top: "50%",
+								transform: "translateY(-50%)",
+							}}></i>
+						<input
+							type="text"
+							className="form-control bg-transparent"
+							style={{
+								borderColor: "#ef7a53",
+								borderRadius: "20px",
+								paddingLeft: "40px",
+							}}
+							placeholder="Cari E-book..."
+						/>
 					</div>
 
 					<div className="tabs">
@@ -152,7 +174,11 @@ const Ebook = () => {
 					<div className="progress-list">
 						<div className="progress-item">
 							<img src="Agronomi.png" className="icon" />
-							<span className="title">Agronomi</span>
+							<span
+								className="title"
+								style={{ fontSize: "10pt", paddingTop: "13px" }}>
+								Agronomi
+							</span>
 							<span className="pages">10 hal</span>
 							<div className="progress-bar">
 								<div className="progress" id="progress1"></div>
@@ -162,7 +188,11 @@ const Ebook = () => {
 
 						<div className="progress-item">
 							<img src="Pemulian Tanaman.png" className="icon" />
-							<span className="title">Pemuliaan Tanaman Modern</span>
+							<span
+								className="title"
+								style={{ fontSize: "10pt", paddingTop: "13px" }}>
+								Pemuliaan Tanaman Modern
+							</span>
 							<span className="pages">35 hal</span>
 							<div className="progress-bar">
 								<div className="progress" id="progress2"></div>
@@ -171,8 +201,12 @@ const Ebook = () => {
 						</div>
 
 						<div className="progress-item">
-							<img src="pertanian-icon.png" className="icon" />
-							<span className="title">Pertanian Era Digital</span>
+							<img src="Pertanian era digital.png" className="icon" />
+							<span
+								className="title"
+								style={{ fontSize: "10pt", paddingTop: "13px" }}>
+								Pertanian Era Digital
+							</span>
 							<span className="pages">50 hal</span>
 							<div className="progress-bar">
 								<div className="progress" id="progress3"></div>
