@@ -1,20 +1,21 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import RuangDiskusi from "./RuangDiskusi";
 
-const StudiKasusDetail = () => {
+const RuangDiskusiDetail = () => {
 	return (
 		<>
 			<Navbar />
 			<div className="container">
-                <div class="discussion-room">
-                    <div class="header">
+                <div className="discussion-room">
+                    <div className="header">
                         <img src="foto2.jpg" alt="Pertanian Presisi"/>
 
-                        <div class="header-content">
+                        <div className="header-content">
                             <h1>PENERAPAN PERTANIAN PRESISI</h1>
                             <p>(PRECISION AGRICULTURE)</p>
 
-                            <div class="stats">
+                            <div className="stats">
                                 <span>253 Disukai</span>
                                 <span>3 Komentar</span>
                                 <span>87 Dibagikan</span>
@@ -22,9 +23,9 @@ const StudiKasusDetail = () => {
                         </div>
                     </div>
 
-                    <div class="comments">
-                        <div class="comment">
-                            <p class="username">@AgriTech_Santoso</p>
+                    <div className="comments">
+                        <div className="comment">
+                            <p className="username">@AgriTech_Santoso</p>
                             <p>
                             Menurut saya, pertanian presisi bisa jadi solusi ideal untuk
                             meningkatkan lahan kecil dengan produktivitas tinggi. Namun,
@@ -34,13 +35,13 @@ const StudiKasusDetail = () => {
                             </p>
                         </div>
 
-                        <div class="comment-section">
+                        <div className="comment-section">
                                 <input
                                     type="text"
-                                    class="comment-input"
+                                    className="comment-input"
                                     placeholder="Tuliskan Balasan Komentar Anda Disini ..."
                                 />
-                                <button class="comment-button">Kirim</button>
+                                <button className="comment-button">Kirim</button>
                             </div>
 
                     </div>
@@ -51,4 +52,4 @@ const StudiKasusDetail = () => {
 	);
 };
 
-export default StudiKasusDetail;
+export default RuangDiskusiDetail;
