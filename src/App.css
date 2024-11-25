@@ -2148,6 +2148,44 @@ h1 {
     color: #333;
   }
 
+  /* ------ruang diskusi detail -------- */
+  .comment-section {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 20px;
+  }
+  
+  .comment-input {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #333;
+  }
+  
+  .comment-input::placeholder {
+	color: #aaa;
+  }
+  
+  .comment-button {
+	padding: 10px 15px;
+	background-color: var(--text-color2);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  .comment-button:hover {
+	background-color: #FF5733;
+  }
+  
+
+
 /* ----------------Tentang Kita---------------- */
 .about-section,
 .features-section {

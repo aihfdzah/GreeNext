@@ -25,6 +25,7 @@ import WebinarPayment from "./pages/WebinarPayment";
 import StudiKasus from "./pages/StudiKasus";
 import StudiKasusDetail from "./pages/StudiKasusDetail";
 import RuangDiskusi from "./pages/RuangDiskusi";
+import RuangDiskusiDetail from "./pages/RuangDiskusiDetail";
 import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
 
@@ -54,6 +55,7 @@ function App() {
 				<Route path="/studikasus" element={<StudiKasus />} />
 				<Route path="/studikasusdetail" element={<StudiKasusDetail />} />
 				<Route path="/ruangdiskusi" element={<RuangDiskusi />} />
+				<Route path="/ruangdiskusidetail" element={<RuangDiskusiDetail />} />
 				<Route path="/detailkls" element={<KelasDetail />} />
 				<Route path="/sertifikat" element={<Sertifikat />} />
 				<Route path="*" element={<NotFound />} />

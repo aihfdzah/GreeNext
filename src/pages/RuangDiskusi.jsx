@@ -31,7 +31,9 @@ const StudiKasusDetail = () => {
                             cukup tinggi. Mungkin kita bisa mulai dengan sensor sederhana
                             dulu?
                             </p>
-                            <button class="reply-btn">Balas Komentar</button>
+                            <a href="/ruangdiskusidetail">
+                                <button class="reply-btn">Balas Komentar</button>
+                            </a>
                             <button class="close-btn">×</button>
                         </div>
                         <div class="comment">
@@ -42,7 +44,9 @@ const StudiKasusDetail = () => {
                             tidak ada edukasi. Semoga format/fasilitas bisa bantu menyebarkan
                             pengetahuan ini ke komunitas!
                             </p>
-                            <button class="reply-btn">Balas Komentar</button>
+                            <a href="/ruangdiskusidetail">
+                                <button class="reply-btn">Balas Komentar</button>
+                            </a>
                             <button class="close-btn">×</button>
                         </div>
                         <div class="comment">
@@ -52,7 +56,9 @@ const StudiKasusDetail = () => {
                             butuh dukungan akses yang merata. Bagaimana menurut teman-teman,
                             apa cukup dengan sensor saja atau juga perlu alat lainnya?
                             </p>
-                            <button class="reply-btn">Balas Komentar</button>
+                            <a href="/ruangdiskusidetail">
+                                <button class="reply-btn">Balas Komentar</button>
+                            </a>
                             <button class="close-btn">×</button>
                         </div>
                     </div>
