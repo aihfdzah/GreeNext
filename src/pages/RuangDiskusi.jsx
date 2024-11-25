@@ -7,10 +7,10 @@ const StudiKasusDetail = () => {
 			<Navbar />
 			<div className="container">
                 <div class="discussion-room">
-                    <div class="header-left">
-                        <img src="foto3.jpg" alt="Pertanian Presisi"/>
+                    <div class="header">
+                        <img src="foto2.jpg" alt="Pertanian Presisi"/>
 
-                        <div class="header-content-right">
+                        <div class="header-content">
                             <h1>PENERAPAN PERTANIAN PRESISI</h1>
                             <p>(PRECISION AGRICULTURE)</p>
 
