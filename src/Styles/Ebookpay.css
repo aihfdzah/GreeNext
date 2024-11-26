@@ -1,0 +1,14 @@
+.payment-form input,
+.order-summary input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.payment-options label {
+  margin-right: 15px;
+}
+
+.order-summary {
+  background-color: #fafafa;
+}

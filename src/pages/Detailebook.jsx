@@ -1,21 +1,35 @@
+import { useNavigate } from "react-router-dom"; // Import untuk navigasi
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../Styles/Detailebook.css";
+
 const Detailebook = () => {
+	const navigate = useNavigate(); // Hook untuk navigasi
+
 	return (
 		<>
 			<Navbar />
 			<div className="container" id="detailebook">
 				<main className="book-detail">
-					<div className="back-button">
-						<button>&larr;</button>
+					{/* Tombol Kembali */}
+					<div className="back-button mb-3">
+						<button
+							className="btn btn-light d-flex align-items-center gap-2"
+							onClick={() => navigate("/sumberdaya")}>
+							<i className="fa fa-arrow-left"></i> {/* Ikon panah */}
+							Kembali
+						</button>
 					</div>
 
+					{/* Konten Buku */}
 					<div className="content" id="detailebook">
 						<div className="left-section">
 							<h2>Bioteknologi Pertanian</h2>
 							<div className="book-image">
-								<img src="./bioteknologi pertanian.jpg" alt="" />
+								<img
+									src="./bioteknologi pertanian.jpg"
+									alt="Bioteknologi Pertanian"
+								/>
 								<div className="favorite">
 									<button>&hearts;</button>
 								</div>
@@ -29,7 +43,7 @@ const Detailebook = () => {
 							</div>
 							<div className="buttons">
 								<button className="read-button">Baca buku</button>
-								<button className="buy-button" style={{color:""}}>
+								<button className="buy-button">
 									<a href="/ebookpay">Beli buku</a>
 								</button>
 							</div>

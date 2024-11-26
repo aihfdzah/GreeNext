@@ -1,11 +1,24 @@
+import { useNavigate } from "react-router-dom"; // Import untuk navigasi
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const Kelasdetail = () => {
+	const navigate = useNavigate(); // Hook untuk navigasi
+
 	return (
 		<>
 			<Navbar />
-			<div className="container">
+			<div className="container mt-4">
+				{/* Tombol Kembali */}
+				<div className="back-button mb-3">
+					<button
+						className="btn btn-transparant d-flex align-items-center gap-2"
+						onClick={() => navigate("/kelas")}>
+						<i className="fa fa-arrow-left"></i> {/* Ikon panah kiri */}
+						Kembali
+					</button>
+				</div>
+
 				<div className="row display-flex flex-wrap-wrap gap-20px">
 					{/* <!-- Course Details --> */}
 					<div className="col-md-8">
