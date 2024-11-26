@@ -13,7 +13,7 @@ const StudiKasusDetail = () => {
 					<hr />
 					<div class="card-content">
 						<div className="left">
-							<img src="./image 13.png" alt="Gambar Pertanian" />
+							<img src="./foto2.jpg" alt="Gambar Pertanian" />
 							<a href="/ruangdiskusi">
 								<button class="discussion-button">Ruang diskusi</button>
 							</a>
