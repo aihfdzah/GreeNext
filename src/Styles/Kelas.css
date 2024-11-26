@@ -3,10 +3,9 @@
 	justify-content: space-between;
 	gap: 16px;
 	padding: 16px;
-	border: 1px solid #ddd;
-	border-radius: 8px;
+	border-bottom: 50px solid  #17412d;
 	margin-bottom: 16px;
-	background-color: #fff;
+	background-color: #f5f2ed;
 }
 
 .konten-course-horizontal {
@@ -45,3 +44,4 @@
 .button-daftar:hover {
 	background-color: #17412d;
 }
+

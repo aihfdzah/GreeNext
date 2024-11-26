@@ -62,29 +62,53 @@ const Webinar = () => {
 			</Row>
 
 			<div className="container" style={{ marginBottom: "35%" }}>
-				<div className="header">
-					<div>
-						<button className="button-filter justify-content-center align-items-center">
-							Filter
-						</button>
+				<h1 className="text-center">Webinar & Seminar</h1>
+				<div
+					className="d-flex align-items-center justify-content-between py-2 border-bottom"
+					style={{ marginBottom: "10%" }}>
+					{/* Search Bar */}
+					<div
+						className="input-group mx-3 flex-grow-1"
+						style={{ maxWidth: "600px", position: "relative" }}>
+						<i
+							className="fa-solid fa-magnifying-glass"
+							style={{
+								color: "#ef7a53",
+								position: "absolute",
+								left: "15px",
+								top: "50%",
+								transform: "translateY(-50%)",
+							}}></i>
+						<input
+							type="text"
+							className="form-control bg-transparent"
+							style={{
+								borderColor: "#ef7a53",
+								borderRadius: "20px",
+								paddingLeft: "40px",
+							}}
+							placeholder="Cari Webinar..."
+						/>
 					</div>
-					<div className="search-bar display-flex background-transparent">
-						<i className="fa-solid fa-magnifying-glass"></i>
-						<input type="text" placeholder="Cari kursus..." />
+
+					{/* Icon Group */}
+					<div className="d-flex align-items-center">
+						<i
+							className="fa-regular fa-heart mx-2"
+							style={{
+								fontSize: "20px",
+								cursor: "pointer",
+								color: "#ef7a53",
+							}}></i>
+						<i
+							className="fa-solid fa-cart-shopping mx-2"
+							style={{
+								fontSize: "20px",
+								cursor: "pointer",
+								color: "#ef7a53",
+							}}></i>
 					</div>
-					<i className="fa-regular fa-heart"></i>
-					<i className="fa-solid fa-cart-shopping"></i>
 				</div>
-
-				<div>
-					<h2 style={{ fontSize: "20pt" }}>62 Hasil Untuk "Pertanian"</h2>
-				</div>
-
-				{/* <div clasclassNames="container">
-                        <div className="header">
-                            <input type="text" placeholder="Search" className="search-bar" value="pertanian"/>
-                            <p className="result-count">62 hasil untuk “pertanian”</p>
-                        </div> */}
 
 				<div className="highlighted-event">
 					<img src="./foto2.jpg" alt="Highlight Event" />
@@ -97,9 +121,8 @@ const Webinar = () => {
 						<span className="date">24 Januari 2025</span>
 						<p className="location">Lembang, Kota Bandung, Jawa Barat</p>
 					</div>
-					<p className="down">Up Coming Event</p>
+					<p className="down mt-2">Up Coming Event</p>
 				</div>
-				{/* </div> */}
 
 				<div className="event-list">
 					<div className="event-card">

@@ -1,62 +1,128 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Tambahkan useNavigate
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const EbookPayment = () => {
+const WebinarPayment = () => {
+	// State untuk menyimpan data input
+	const [paymentMethod, setPaymentMethod] = useState("kartu");
+	const [formData, setFormData] = useState({
+		cardName: "",
+		firstName: "",
+		lastName: "",
+		email: "",
+	});
+
+	// Inisialisasi fungsi navigate
+	const navigate = useNavigate();
+
+	// Fungsi untuk menangani perubahan input
+	const handleInputChange = (e) => {
+		const { id, value } = e.target;
+		setFormData({ ...formData, [id]: value });
+	};
+
+	// Fungsi untuk menangani metode pembayaran
+	const handlePaymentChange = (e) => {
+		setPaymentMethod(e.target.value);
+	};
+
+	// Fungsi untuk submit data
+	const handleSubmit = () => {
+		alert("Pembayaran berhasil!");
+	};
+
+	// Fungsi untuk kembali ke halaman sumberdaya
+	const handleBack = () => {
+		navigate("/sumberdaya");
+	};
+
 	return (
 		<>
 			<Navbar />
 			<div className="container">
-				{/* <-- Payment Form Section --> */}
-				<div className="form-section">
-					<h2>Pembayaran E-book</h2>
+				{/* Back Button */}
+				<div className="back-button mt-3">
+					<button
+						onClick={handleBack}
+						className="btn btn-light d-flex align-items-center"
+					>
+						<i className="fa-solid fa-arrow-left me-2"></i> Kembali
+					</button>
+				</div>
+
+				{/* Payment Form Section */}
+				<div className="form-section mt-4">
+					<h2>Pembayaran Pendaftaran Webinar</h2>
 					<div className="payment-options">
 						<label>
-							<input type="radio" name="payment" checked>
-								{" "}
-								Kartu
-							</input>
+							<input
+								type="radio"
+								name="payment"
+								value="kartu"
+								checked={paymentMethod === "kartu"}
+								onChange={handlePaymentChange}
+							/>
+							Kartu
 						</label>
 						<label>
-							<input type="radio" name="payment">
-								{" "}
-								Transfer Bank
-							</input>
+							<input
+								type="radio"
+								name="payment"
+								value="transfer"
+								checked={paymentMethod === "transfer"}
+								onChange={handlePaymentChange}
+							/>
+							Transfer Bank
 						</label>
 					</div>
 
 					<div className="input-group">
-						<label for="card-name">Nama Kartu</label>
+						<label htmlFor="cardName">Nama Kartu</label>
 						<input
 							type="text"
-							id="card-name"
-							placeholder="Nama di kartu"></input>
+							id="cardName"
+							placeholder="Nama di kartu"
+							value={formData.cardName}
+							onChange={handleInputChange}
+						/>
 					</div>
 
 					<div className="input-group">
-						<label for="card-number">Nomor Kartu</label>
+						<label htmlFor="firstName">Nama Depan</label>
 						<input
 							type="text"
-							id="card-number"
-							placeholder="1234 5678 9011 1213"></input>
+							id="firstName"
+							placeholder="Nama depan"
+							value={formData.firstName}
+							onChange={handleInputChange}
+						/>
 					</div>
 
 					<div className="input-group">
-						<label for="expiry-date">Tanggal Kedaluwarsa</label>
-						<input type="text" id="expiry-date" placeholder="MM/YY"></input>
+						<label htmlFor="lastName">Nama Belakang</label>
+						<input
+							type="text"
+							id="lastName"
+							placeholder="Nama belakang"
+							value={formData.lastName}
+							onChange={handleInputChange}
+						/>
 					</div>
 
 					<div className="input-group">
-						<label for="cvv">CVC / CVV</label>
-						<input type="text" id="cvv" placeholder="123"></input>
-					</div>
-
-					<div className="save-card">
-						<input type="checkbox" id="save-card"></input>
-						<label for="save-card">Simpan Detail Kartu</label>
+						<label htmlFor="email">Alamat Email</label>
+						<input
+							type="email"
+							id="email"
+							placeholder="example@gmail.com"
+							value={formData.email}
+							onChange={handleInputChange}
+						/>
 					</div>
 				</div>
 
-				{/* -- Order Summary Section -- */}
+				{/* Order Summary Section */}
 				<div className="summary-section">
 					<h2>Ringkasan Pesanan</h2>
 					<div className="price-detail">
@@ -68,7 +134,9 @@ const EbookPayment = () => {
 					<div className="total">
 						TOTAL <span>Rp 50.000</span>
 					</div>
-					<button className="button">Lanjutkan</button>
+					<button className="button" onClick={handleSubmit}>
+						Lanjutkan
+					</button>
 					<div className="info-text">
 						Data pribadi Anda akan digunakan untuk memproses pesanan Anda,
 						mendukung pengalaman Anda di situs ini, dan untuk tujuan lain yang
@@ -81,4 +149,4 @@ const EbookPayment = () => {
 	);
 };
 
-export default EbookPayment;
+export default WebinarPayment;

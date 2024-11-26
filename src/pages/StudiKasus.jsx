@@ -97,13 +97,30 @@ const StudiKasus = () => {
 			{/* Kontainer Studi Kasus */}
 			<div className="container" id="studikasus">
 				{/* Search Bar */}
-				<div className="search-bar d-flex align-items-center bg-light mb-4 p-2 rounded">
+				{/* Search Bar */}
+				<div
+					className="input-group mx-3 flex-grow-1"
+					style={{
+						maxWidth: "100%",
+						position: "relative",
+					}}>
 					<i
-						className="fa-solid fa-magnifying-glass me-3"
-						style={{ marginLeft: "10px" }}></i>
+						className="fa-solid fa-magnifying-glass"
+						style={{
+							color: "#ef7a53",
+							position: "absolute",
+							left: "15px",
+							top: "50%",
+							transform: "translateY(-50%)",
+						}}></i>
 					<input
 						type="text"
-						className="w-100 border-0 ms-2"
+						className="form-control bg-transparent"
+						style={{
+							borderColor: "#ef7a53",
+							borderRadius: "20px",
+							paddingLeft: "40px",
+						}}
 						placeholder="Cari Studi Kasus..."
 						value={searchQuery}
 						onChange={(e) => setSearchQuery(e.target.value)}
