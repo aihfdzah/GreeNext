@@ -7,11 +7,16 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Ebook = () => {
 	const [activeButton, setActiveButton] = useState("sumber"); // Initialize activeButton state
+	const [activeTab, setActiveTab] = useState("populer"); // State for active tab
 	const navigate = useNavigate(); // Initialize navigation
 
 	const handleButtonClick = (buttonName, path) => {
 		setActiveButton(buttonName);
 		navigate(path);
+	};
+
+	const handleTabClick = (tabName) => {
+		setActiveTab(tabName);
 	};
 
 	return (
@@ -69,7 +74,7 @@ const Ebook = () => {
 					{/* Search Bar */}
 					<div
 						className="input-group mx-3 flex-grow-1"
-						style={{ maxWidth: "95%", position: "relative" }}>
+						style={{ maxWidth: "95	%", position: "relative" }}>
 						<i
 							className="fa-solid fa-magnifying-glass"
 							style={{
@@ -92,11 +97,31 @@ const Ebook = () => {
 					</div>
 
 					<div className="tabs">
-						<button className="tab active">Populer</button>
-						<button className="tab">Penjualan Teratas</button>
-						<button className="tab">Mengikuti</button>
-						<button className="tab">Baru</button>
-						<button className="tab">Next</button>
+						<button
+							className={`tab ${activeTab === "populer" ? "active" : ""}`}
+							onClick={() => handleTabClick("populer")}>
+							Populer
+						</button>
+						<button
+							className={`tab ${activeTab === "penjualan" ? "active" : ""}`}
+							onClick={() => handleTabClick("penjualan")}>
+							Penjualan Teratas
+						</button>
+						<button
+							className={`tab ${activeTab === "mengikuti" ? "active" : ""}`}
+							onClick={() => handleTabClick("mengikuti")}>
+							Mengikuti
+						</button>
+						<button
+							className={`tab ${activeTab === "baru" ? "active" : ""}`}
+							onClick={() => handleTabClick("baru")}>
+							Baru
+						</button>
+						<button
+							className={`tab ${activeTab === "next" ? "active" : ""}`}
+							onClick={() => handleTabClick("next")}>
+							Next
+						</button>
 					</div>
 
 					<div className="book-grid">
