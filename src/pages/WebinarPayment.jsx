@@ -1,128 +1,171 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Untuk navigasi
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import "../Styles/Ebookpay.css";
 
 const WebinarPayment = () => {
-	// State untuk menyimpan data input
 	const [paymentMethod, setPaymentMethod] = useState("kartu");
 	const [formData, setFormData] = useState({
 		cardName: "",
-		firstName: "",
-		lastName: "",
-		email: "",
+		cardNumber: "",
+		expiryDate: "",
+		cvc: "",
 	});
 
-	// Fungsi untuk menangani perubahan input
+	const navigate = useNavigate(); // Hook untuk navigasi
+
 	const handleInputChange = (e) => {
 		const { id, value } = e.target;
 		setFormData({ ...formData, [id]: value });
 	};
 
-	// Fungsi untuk menangani metode pembayaran
 	const handlePaymentChange = (e) => {
 		setPaymentMethod(e.target.value);
 	};
 
-	// Fungsi untuk submit data
 	const handleSubmit = () => {
-		// Tambahkan logika submit data
 		alert("Pembayaran berhasil!");
 	};
 
 	return (
 		<>
 			<Navbar />
-			<div className="container">
-				{/* Payment Form Section */}
-				<div className="form-section">
-					<h2>Pembayaran Pendaftaran Webinar</h2>
-					<div className="payment-options">
-						<label>
-							<input
-								type="radio"
-								name="payment"
-								value="kartu"
-								checked={paymentMethod === "kartu"}
-								onChange={handlePaymentChange}
-							/>
-							Kartu
-						</label>
-						<label>
-							<input
-								type="radio"
-								name="payment"
-								value="transfer"
-								checked={paymentMethod === "transfer"}
-								onChange={handlePaymentChange}
-							/>
-							Transfer Bank
-						</label>
-					</div>
-
-					<div className="input-group">
-						<label htmlFor="cardName">Nama Kartu</label>
-						<input
-							type="text"
-							id="cardName"
-							placeholder="Nama di kartu"
-							value={formData.cardName}
-							onChange={handleInputChange}
-						/>
-					</div>
-
-					<div className="input-group">
-						<label htmlFor="firstName">Nama Depan</label>
-						<input
-							type="text"
-							id="firstName"
-							placeholder="Nama depan"
-							value={formData.firstName}
-							onChange={handleInputChange}
-						/>
-					</div>
-
-					<div className="input-group">
-						<label htmlFor="lastName">Nama Belakang</label>
-						<input
-							type="text"
-							id="lastName"
-							placeholder="Nama belakang"
-							value={formData.lastName}
-							onChange={handleInputChange}
-						/>
-					</div>
-
-					<div className="input-group">
-						<label htmlFor="email">Alamat Email</label>
-						<input
-							type="email"
-							id="email"
-							placeholder="example@gmail.com"
-							value={formData.email}
-							onChange={handleInputChange}
-						/>
-					</div>
+			<div className="container mt-5">
+				{/* Tombol Kembali */}
+				<div className="mb-4">
+					<button
+						className="btn btn-trasparant d-flex align-items-center gap-2"
+						onClick={() => navigate("/WebinarDetail")}>
+						<i className="fa fa-arrow-left"></i> {/* Ikon Back */}
+						Kembali
+					</button>
 				</div>
 
-				{/* Order Summary Section */}
-				<div className="summary-section">
-					<h2>Ringkasan Pesanan</h2>
-					<div className="price-detail">
-						Harga Asli: <span>Rp 100.000</span>
+				<div className="row">
+					{/* Form Pembayaran */}
+					<div className="col-lg-7">
+						<div className="form-container p-4 border rounded">
+							<h2 className="mb-4">Pembayaran Webinar</h2>
+							<div className="payment-options mb-3">
+								<label className="me-3">
+									<input
+										type="radio"
+										name="payment"
+										value="kartu"
+										checked={paymentMethod === "kartu"}
+										onChange={handlePaymentChange}
+									/>{" "}
+									Kartu
+								</label>
+								<label>
+									<input
+										type="radio"
+										name="payment"
+										value="transfer"
+										checked={paymentMethod === "transfer"}
+										onChange={handlePaymentChange}
+									/>{" "}
+									Transfer Bank
+								</label>
+							</div>
+							<div className="mb-3">
+								<label htmlFor="cardName" className="form-label">
+									Nama Kartu
+								</label>
+								<input
+									type="text"
+									id="cardName"
+									placeholder="Nama di kartu"
+									value={formData.cardName}
+									onChange={handleInputChange}
+									className="form-control"
+								/>
+							</div>
+							<div className="mb-3">
+								<label htmlFor="cardNumber" className="form-label">
+									Nomor Kartu
+								</label>
+								<input
+									type="text"
+									id="cardNumber"
+									placeholder="1234 5678 9101 1121"
+									value={formData.cardNumber}
+									onChange={handleInputChange}
+									className="form-control"
+								/>
+							</div>
+							<div className="row">
+								<div className="col-6 mb-3">
+									<label htmlFor="expiryDate" className="form-label">
+										Tanggal Kadaluarsa
+									</label>
+									<input
+										type="text"
+										id="expiryDate"
+										placeholder="BB/TT"
+										value={formData.expiryDate}
+										onChange={handleInputChange}
+										className="form-control"
+									/>
+								</div>
+								<div className="col-6 mb-3">
+									<label htmlFor="cvc" className="form-label">
+										CVC / CVV
+									</label>
+									<input
+										type="text"
+										id="cvc"
+										placeholder="123"
+										value={formData.cvc}
+										onChange={handleInputChange}
+										className="form-control"
+									/>
+								</div>
+							</div>
+							<div className="form-check mb-3">
+								<input
+									type="checkbox"
+									id="saveDetails"
+									className="form-check-input"
+								/>
+								<label htmlFor="saveDetails" className="form-check-label">
+									Simpan Detail Kartu
+								</label>
+							</div>
+						</div>
 					</div>
-					<div className="price-detail">
-						Diskon: <span>-Rp 50.000</span>
-					</div>
-					<div className="total">
-						TOTAL <span>Rp 50.000</span>
-					</div>
-					<button className="button" onClick={handleSubmit}>
-						Lanjutkan
-					</button>
-					<div className="info-text">
-						Data pribadi Anda akan digunakan untuk memproses pesanan Anda,
-						mendukung pengalaman Anda di situs ini, dan untuk tujuan lain yang
-						dijelaskan dalam kebijakan privasi kami. Dana yang kembali 30 hari.
+
+					{/* Ringkasan Pesanan */}
+					<div className="col-lg-5">
+						<div className="order-summary p-4 border rounded">
+							<h2 className="mb-4">Ringkasan Pesanan</h2>
+							<div className="d-flex justify-content-between mb-2">
+								<span>Harga Asli:</span>
+								<span>Rp 100.000</span>
+							</div>
+							<div className="d-flex justify-content-between mb-2">
+								<span>Diskon:</span>
+								<span>-Rp 50.000</span>
+							</div>
+							<hr />
+							<div className="d-flex justify-content-between fw-bold mb-4">
+								<span>TOTAL</span>
+								<span>Rp 50.000</span>
+							</div>
+							<button
+								className="btn w-100"
+								onClick={handleSubmit}
+								style={{ backgroundColor: "#ef7a53", color: "#f5f2ed" }}>
+								Lanjutkan
+							</button>
+							<p className="text-muted mt-3">
+								Data pribadi Anda akan digunakan untuk memproses pesanan Anda,
+								mendukung pengalaman Anda di situs ini, dan untuk tujuan lain
+								yang dijelaskan dalam kebijakan privasi kami. Garansi uang
+								kembali 30 hari.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

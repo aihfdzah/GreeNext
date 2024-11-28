@@ -19,6 +19,12 @@ a {
 
 .book-card img {
 	width: 100px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 main {
@@ -56,7 +62,7 @@ h1 {
 
 .tab.active {
 	background-color: #ef7a53;
-	color: #fff;
+	color: #f5f2ed;
 }
 
 .book-grid {
@@ -74,7 +80,13 @@ h1 {
 	font-size: 14px;
 	padding: 10px;
 	background-color: #f5f2ed;
-	border-radius: 8px;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	display: flex;
+	flex-direction: column;
 }
 
 .progress-list {
@@ -99,7 +111,7 @@ h1 {
 
 .progress-item .icon {
 	width: 40px;
-	height: 40px;
+	height: 50px;
 	margin-right: 10px;
 }
 

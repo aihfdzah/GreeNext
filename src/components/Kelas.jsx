@@ -2,7 +2,7 @@ import "../Styles/Kelas.css";
 const Kelas = () => {
 	return (
 		<>
-			<div className="container" style={{ marginBottom: "23%" }}>
+			<div className="container mt-4">
 				<div
 					className="d-flex align-items-center justify-content-between py-2 border-bottom"
 					style={{ marginBottom: "10%" }}>
