@@ -85,8 +85,6 @@ h1 {
 	-moz-border-radius: 50px;
 	-ms-border-radius: 50px;
 	-o-border-radius: 50px;
-	display: flex;
-	flex-direction: column;
 }
 
 .progress-list {
