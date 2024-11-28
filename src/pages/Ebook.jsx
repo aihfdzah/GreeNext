@@ -21,7 +21,7 @@ const Ebook = () => {
 				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-275px",
+					marginLeft: "-200px",
 					marginBottom: "-90px",
 				}}>
 				<Col>
@@ -69,7 +69,7 @@ const Ebook = () => {
 					{/* Search Bar */}
 					<div
 						className="input-group mx-3 flex-grow-1"
-						style={{ maxWidth: "600px", position: "relative" }}>
+						style={{ maxWidth: "95%", position: "relative" }}>
 						<i
 							className="fa-solid fa-magnifying-glass"
 							style={{
