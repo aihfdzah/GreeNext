@@ -95,8 +95,8 @@ const StudiKasus = () => {
 			</Row>
 
 			{/* Kontainer Studi Kasus */}
-			<div className="container" id="studikasus">
-				{/* Search Bar */}
+			<div className="container mt-5" id="studikasus">
+				<h1 className="text-center">Studi Kasus</h1>
 				{/* Search Bar */}
 				<div
 					className="input-group mx-3 flex-grow-1"

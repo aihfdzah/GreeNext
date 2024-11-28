@@ -63,7 +63,7 @@ const Ebook = () => {
 				</Col>
 			</Row>
 
-			<div className="container">
+			<div className="container mt-3">
 				<main>
 					<h1 className="text-center">E-book & Panduan</h1>
 					{/* Search Bar */}

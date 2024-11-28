@@ -1,0 +1,198 @@
+/* Container utama untuk kartu studi kasus */
+.card-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    text-align: center;
+    overflow: hidden; /* Mencegah konten keluar */
+}
+
+/* Judul */
+.card-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.card-container hr {
+    border: none;
+    border-top: 3px solid #FF5733; /* Warna utama */
+    width: 50%; /* Batas lebar untuk kesan minimalis */
+    margin: 15px auto; /* Centered */
+}
+
+/* Bagian konten */
+.card-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between; /* Rata kiri dan kanan */
+    text-align: left;
+}
+
+/* Kolom kiri (gambar) */
+.content-left {
+    flex: 1;
+    max-width: 280px;
+    text-align: center;
+}
+
+.card-content img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Spasi bawah */
+}
+
+/* Tombol diskusi */
+.discussion-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.discussion-button i {
+    margin-right: 8px; /* Spasi antara ikon dan teks */
+}
+
+.discussion-button:hover {
+    background-color: #e04e2e;
+}
+
+/* Kolom kanan (konten teks) */
+.card-text-right {
+    flex: 2;
+    background-color: #F9F9F9; /* Warna abu-abu muda */
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-text-right h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-text-right p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.card-text-right ul {
+    margin: 15px 0;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.card-text-right ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.card-text-right ul li i {
+    margin-right: 10px; /* Spasi antara ikon dan teks */
+    color: #FF5733; /* Warna ikon */
+}
+
+.card-text-right a.read-more {
+    display: inline-block;
+    color: #FF5733;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card-text-right a.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Footer untuk ikon sosial */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons .icon {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    color: #FF5733; /* Warna ketika hover */
+}
+
+/* Tombol ikon di footer */
+.card-footer span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.card-footer span:hover {
+    color: #FF5733;
+}
+
+.card-footer span i {
+    font-size: 1.2rem; /* Ukuran ikon */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .card-content {
+        flex-direction: column; /* Susunan vertikal */
+        align-items: center;
+    }
+
+    .content-left,
+    .card-text-right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .card-text-right ul li {
+        justify-content: center; /* Centered */
+    }
+
+    .card-footer {
+        flex-direction: column;
+        gap: 10px; /* Spasi antar elemen */
+    }
+}
