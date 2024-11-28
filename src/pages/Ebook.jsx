@@ -123,7 +123,7 @@ const Ebook = () => {
 
 						<div className="book-card">
 							<a href="/carousel">
-								<img src="./manajemen agroindustri.jpg" alt="" />
+								<img src="./pertanian keberlanjutan.jpg" alt="" />
 								Pertanian Berkelanjutan
 							</a>
 						</div>

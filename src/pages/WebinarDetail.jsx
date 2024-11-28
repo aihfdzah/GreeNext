@@ -1,11 +1,22 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-
+import { useNavigate } from "react-router-dom"; // Untuk navigasi
 const WebinarDetail = () => {
+	const navigate = useNavigate(); // Hook untuk navigasi
 	return (
 		<>
 			<Navbar />
+			{/* Tombol Kembali */}
+
 			<div className="container">
+				<div>
+					<button
+						className="btn btn-trasparant d-flex align-items-center gap-2"
+						onClick={() => navigate("/Webinar")}>
+						<i className="fa fa-arrow-left"></i> {/* Ikon Back */}
+						Kembali
+					</button>
+				</div>
 				<div className="row display-flex flex-wrap-wrap gap-20px">
 					{/* <!-- Course Details --> */}
 					<div className="col-md-8">

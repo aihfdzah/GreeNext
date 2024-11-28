@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import "../Styles/Webinar.css";
 import { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
@@ -61,11 +62,9 @@ const Webinar = () => {
 				</Col>
 			</Row>
 
-			<div className="container" style={{ marginBottom: "35%" }}>
+			<div className="container mt-5" style={{ marginBottom: "30%" }}>
 				<h1 className="text-center">Webinar & Seminar</h1>
-				<div
-					className="d-flex align-items-center justify-content-between py-2 border-bottom"
-					style={{ marginBottom: "10%" }}>
+				<div className="d-flex align-items-center justify-content-between py-2 border-bottom mt-1 mb-3">
 					{/* Search Bar */}
 					<div
 						className="input-group mx-3 flex-grow-1"
@@ -110,18 +109,84 @@ const Webinar = () => {
 					</div>
 				</div>
 
-				<div className="highlighted-event">
-					<img src="./foto2.jpg" alt="Highlight Event" />
-					<div className="highlight-content">
-						<h2>Pengenalan Sistem Pertanian Presisi</h2>
-						<p>
-							Inovasi pertanian menjadi kunci untuk meningkatkan produktivitas,
-							efisiensi, dan keberlanjutan sektor pertanian di Indonesia.
-						</p>
-						<span className="date">24 Januari 2025</span>
-						<p className="location">Lembang, Kota Bandung, Jawa Barat</p>
+				<div
+					id="highlightedEventCarousel"
+					className="carousel slide mt-0"
+					data-bs-ride="carousel">
+					<div className="carousel-inner">
+						<div className="carousel-item active mb-3">
+							<img
+								src="./foto2.jpg"
+								className="d-block w-100"
+								style={{ borderRadius: "10px" }}
+								alt="Highlight Event 1"
+							/>
+							<div className="carousel-caption">
+								<h2>Pengenalan Sistem Pertanian Presisi</h2>
+								<p>
+									Inovasi pertanian menjadi kunci untuk meningkatkan
+									produktivitas, efisiensi, dan keberlanjutan sektor pertanian
+									di Indonesia.
+								</p>
+								<span className="date">24 Januari 2025</span>
+								<p className="location">Lembang, Kota Bandung, Jawa Barat</p>
+							</div>
+						</div>
+						<div className="carousel-item">
+							<img
+								src="./foto5.jpg"
+								className="d-block w-100"
+								style={{ borderRadius: "10px" }}
+								alt="Highlight Event 2"
+							/>
+							<div className="carousel-caption">
+								<h2>Sistem Teknologi Pertanian</h2>
+								<p>
+									Menyoroti bagaimana teknologi meningkatkan efisiensi pertanian
+									modern.
+								</p>
+								<span className="date">15 - 16 April 2025</span>
+								<p className="location">Kabupaten Bandung, Jawa Barat</p>
+							</div>
+						</div>
+						<div className="carousel-item">
+							<img
+								src="./foto6.jpg"
+								className="d-block w-100"
+								style={{ borderRadius: "10px" }}
+								alt="Highlight Event 3"
+							/>
+							<div className="carousel-caption">
+								<h2>Manajemen Pertanian Berkelanjutan</h2>
+								<p>
+									Fokus pada strategi untuk menjaga keberlanjutan sektor
+									pertanian.
+								</p>
+								<span className="date">20 Juli 2025</span>
+								<p className="location">Via Zoom</p>
+							</div>
+						</div>
 					</div>
-					<p className="down mt-2">Up Coming Event</p>
+					<button
+						className="carousel-control-prev"
+						type="button"
+						data-bs-target="#highlightedEventCarousel"
+						data-bs-slide="prev">
+						<span
+							className="carousel-control-prev-icon"
+							aria-hidden="true"></span>
+						<span className="visually-hidden">Previous</span>
+					</button>
+					<button
+						className="carousel-control-next"
+						type="button"
+						data-bs-target="#highlightedEventCarousel"
+						data-bs-slide="next">
+						<span
+							className="carousel-control-next-icon"
+							aria-hidden="true"></span>
+						<span className="visually-hidden">Next</span>
+					</button>
 				</div>
 
 				<div className="event-list">
@@ -135,8 +200,13 @@ const Webinar = () => {
 							</p>
 							<p>Tanggal: 28 - 29 Februari 2025</p>
 						</div>
+						{/* Tombol Daftar di bawah */}
 						<a href="./WebinarDetail">
-							<button className="btn-status">Daftar</button>
+							<button
+								className="btn-status"
+								style={{ display: "block", margin: "10px auto" }}>
+								Daftar
+							</button>
 						</a>
 					</div>
 
