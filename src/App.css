@@ -1602,6 +1602,66 @@ h1 {
 	background-color: #FF5733;
   }
   
+/* ---------Katalog Tekno detail------------- */
+.text-room {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+	text-align: center;
+  }
+
+  .headerr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(245, 244, 244);
+	border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+  
+  .headerr img {
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.headerr a {
+	text-decoration: none;
+}
+.headerr button {
+	display: block;
+    width: 100%;
+    padding: 5px 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--text-color2);
+    color: white;
+    cursor: pointer;
+}
+
+.headerr button:hover {
+    background-color: #ff5733;
+}
+
+  .textt {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); */
+    position: relative;
+  }
+
+  .textt p {
+    font-size: 0.9em;
+    color: var(--text-color);
+  }
 
 
 /* ----------------Tentang Kita---------------- */

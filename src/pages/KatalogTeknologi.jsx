@@ -112,7 +112,7 @@ const KatalogTeknologi = () => {
 
 					<div class="item-action">
 						<i className="fa fa-eye"></i>
-						<a href="#">Lihat detail</a>
+						<a href="/katalogteknodetail">Lihat detail</a>
 					</div>
 				</div>
 
