@@ -10,7 +10,6 @@ const Carousel = () => {
 					<h2 className="product-category">Ebook Populer</h2>
 					{/* <button class="pre-btn"><img src="arrow.png" alt=""/></button>
                     <button class="nxt-btn"><img src="arrow.png" alt=""/></button> */}
-
 					<div className="product-container">
 						<div className="product-card">
 							<div className="product-image">
