@@ -45,7 +45,7 @@ const Carousel = () => {
 								<a href="/ebookpayment">
 									<img
 										src="./pertanian berkelanju.jpg"
-										classsName="product-thumb"
+										className="product-thumb"
 										alt=""
 									/>
 									<button className="card-btn">Beli</button>

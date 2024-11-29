@@ -20,7 +20,7 @@ const Webinar = () => {
 				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-255px",
+					marginLeft: "-245px",
 					marginBottom: "-90px",
 				}}>
 				<Col>
