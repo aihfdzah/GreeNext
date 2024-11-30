@@ -5,7 +5,7 @@ const Tentang = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="container" style={{ marginBottom: "23%" }}>
+			<div className="container mt-0">
 				<div className="about-section">
 					<section className="about">
 						<h2>Tentang Kita</h2>
