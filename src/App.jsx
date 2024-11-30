@@ -27,6 +27,7 @@ import StudiKasusDetail from "./pages/StudiKasusDetail";
 import RuangDiskusi from "./pages/RuangDiskusi";
 import RuangDiskusiDetail from "./pages/RuangDiskusiDetail";
 import KatalogTeknologi from "./pages/KatalogTeknologi";
+import KatalogTeknoDetail from "./pages/KatalogTeknoDetail";
 import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
 
@@ -58,6 +59,7 @@ function App() {
 				<Route path="/ruangdiskusi" element={<RuangDiskusi />} />
 				<Route path="/ruangdiskusidetail" element={<RuangDiskusiDetail />} />
 				<Route path="/katalogteknologi" element={<KatalogTeknologi />} />
+				<Route path="/katalogteknodetail" element={<KatalogTeknoDetail />} />
 				<Route path="/detailkls" element={<KelasDetail />} />
 				<Route path="/sertifikat" element={<Sertifikat />} />
 				<Route path="*" element={<NotFound />} />
