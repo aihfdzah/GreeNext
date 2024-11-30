@@ -15,7 +15,7 @@ const Detailebook = () => {
 					<div className="back-button mb-3">
 						<button
 							className="btn btn-light d-flex align-items-center gap-2"
-							onClick={() => navigate("/sumberdaya")}>
+							onClick={() => navigate("/carousel")}>
 							<i className="fa fa-arrow-left"></i> {/* Ikon panah */}
 							Kembali
 						</button>
