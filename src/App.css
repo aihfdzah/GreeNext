@@ -683,6 +683,7 @@ main.book-detail {
   .product-container {
     padding: 0;
     display: flex;
+	max-width: 100%;
     overflow-x: auto;
     scroll-behavior: smooth;
   }
@@ -700,7 +701,7 @@ main.book-detail {
   
   .product-image {
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 350px;
     overflow: hidden;
   }
