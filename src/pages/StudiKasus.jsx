@@ -52,7 +52,7 @@ const StudiKasus = () => {
 				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-155px",
+					marginLeft: "-115px",
 					marginBottom: "-90px",
 				}}>
 				<Col>
