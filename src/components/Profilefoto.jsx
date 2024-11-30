@@ -48,10 +48,11 @@ const Profilefoto = () => {
 						<i className="fa-regular fa-user"></i>
 					</div>
 					<div>
-						<label>Tambah atau Ganti Gambar</label>
+						<label className="upload-label">Tambah atau Ganti Gambar</label>
 						<input
+							className="upload-input"
 							type="text"
-							value="Tidak ada gambar yang dipilih"
+							value="Tidak ada gambar dipilih"
 							readOnly></input>
 						{/* <input type="file" id="upload-photo" className="upload-input" /> */}
 					</div>
