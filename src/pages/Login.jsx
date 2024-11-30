@@ -36,8 +36,13 @@ function Login() {
 				</div>
 				<div className="text-left text-white">
 					<h1
-						className="h4"
-						style={{ fontSize: "16pt", color: "#ef7a53", fontWeight: "bold" }}>
+						className="judul"
+						style={{
+							fontSize: "16pt",
+							color: "#ef7a53",
+							fontWeight: "bold",
+							textAlign: "left",
+						}}>
 						Konsep Panduan Pertanian Presisi
 					</h1>
 					<p className="mt-3" style={{ color: "#F5F2ED" }}>
