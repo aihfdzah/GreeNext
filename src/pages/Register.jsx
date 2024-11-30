@@ -29,7 +29,7 @@ function Register() {
 				<div className="text-left text-white">
 					<h1
 						className="h4"
-						style={{ fontSize: "16pt", color: "#ef7a53", fontWeight: "bold" }}>
+						style={{ fontSize: "16pt", color: "#ef7a53", fontWeight: "bold", textAlign:"left" }}>
 						Pemanfaatan Big Data dan AI untuk Pertanian
 					</h1>
 					<p className="mt-3" style={{ color: "#F5F2ED" }}>
