@@ -5,7 +5,7 @@ const Carousel = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="container">
+			<div className="container-carousel">
 				<section className="product">
 					<h2 className="product-category">Ebook Populer</h2>
 					{/* <button class="pre-btn"><img src="arrow.png" alt=""/></button>
