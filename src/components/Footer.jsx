@@ -18,7 +18,7 @@ const Footer = () => {
 			<div className="footer-content">
 				<div className="footer-logo">
 					<img src="./logo.png" className="logo-footer" alt="FarmEduZ Logo" />
-					<i className="bx fa-solid fa-globe">
+					<i className="bx fa-solid fa-globe d-flex flex">
 						<br />
 						Bahasa Indonesia
 					</i>
@@ -58,7 +58,7 @@ const Footer = () => {
 								Sumber Daya
 							</a>
 						</li>
-						<li className="footer-item">
+						{/* <li className="footer-item">
 							<a
 								className={`footer-link ${
 									activeLink === "/komunitas" ? "active-link" : ""
@@ -67,7 +67,7 @@ const Footer = () => {
 								onClick={() => handleLinkClick("/komunitas")}>
 								Komunitas
 							</a>
-						</li>
+						</li> */}
 						<li className="footer-item">
 							<a
 								className={`footer-link ${

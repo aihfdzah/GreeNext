@@ -1464,8 +1464,6 @@ h1 {
 	color: white;
 }
 
-
-
   /* -----------ruang diskusi------------- */
   .discussion-room {
     max-width: 800px;
@@ -1707,8 +1705,8 @@ h1 {
 /* ------------profile-------------- */
 .sidebar {
 	flex: 1;
-	max-width: 200px;
-	background-color: #fff;
+	max-width: 100%;
+	background-color: #f5f2ed;
 	border-radius: 10px;
 	padding: 20px;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -1781,6 +1779,7 @@ h1 {
 .form-group label {
 	font-weight: bold;
 	margin-bottom: 5px;
+	max-width: 100%;
 }
 
 .form-group input {
@@ -1796,7 +1795,6 @@ h1 {
 }
 
 .form-row {
-	/* display: flex; */
 	gap: 10px;
 }
 

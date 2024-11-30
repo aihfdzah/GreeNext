@@ -38,7 +38,7 @@ const Profileprivasi = () => {
 				</div>
 			</div>
 
-			<main className="content">
+			<main className="content" style={{ maxWidth: "100%" }}>
 				<h1>Privasi</h1>
 				<p>Ubah pengaturan privasi anda di sini</p>
 				<hr />
