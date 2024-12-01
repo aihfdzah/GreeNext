@@ -87,7 +87,7 @@ const Kelasdetail = () => {
 					<div className="col-md-4">
 						<div className="benefits-card">
 							<div className="price">Rp129,000</div>
-							<a href="#" className="btn-orange">
+							<a href="/cokartu" className="btn-orange">
 								Daftar Kelas
 							</a>
 							<h5>Benefit yang didapatkan</h5>

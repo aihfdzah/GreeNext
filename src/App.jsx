@@ -28,6 +28,12 @@ import RuangDiskusi from "./pages/RuangDiskusi";
 import RuangDiskusiDetail from "./pages/RuangDiskusiDetail";
 import KatalogTeknologi from "./pages/KatalogTeknologi";
 import KatalogTeknoDetail from "./pages/KatalogTeknoDetail";
+import COKartu from "./pages/COKartu";
+import COKartuPass from "./pages/COKartuPass";
+import COKartuEror from "./pages/COKartuEror";
+import COKartuGagal from "./pages/COKartuGagal";
+import COBank from "./pages/COBank";
+import COBankDetail from "./pages/COBankDetail";
 import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
 
@@ -62,6 +68,12 @@ function App() {
 				<Route path="/katalogteknodetail" element={<KatalogTeknoDetail />} />
 				<Route path="/detailkls" element={<KelasDetail />} />
 				<Route path="/sertifikat" element={<Sertifikat />} />
+				<Route path="/cokartu" element={<COKartu />} />
+				<Route path="/cokartupass" element={<COKartuPass />} />
+				<Route path="/cokartueror" element={<COKartuEror />} />
+				<Route path="/cokartugagal" element={<COKartuGagal />} />
+				<Route path="/cobank" element={<COBank />} />
+				<Route path="/cobankdetail" element={<COBankDEtail />} />
 				<Route path="*" element={<NotFound />} />
 				<Route path="/privasi" element={<Privasi />} />
 				<Route path="/keluar" element={<Keluar />} />
