@@ -1,15 +1,23 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import { useNavigate } from "react-router-dom";
 const Carousel = () => {
+	const navigate = useNavigate();
 	return (
 		<>
 			<Navbar />
-			<div className="container">
+			<div className="container-carousel">
 				<section className="product">
+					{/* Tombol Kembali */}
+					<div className="back-button mb-3">
+						<button
+							className="btn btn-light d-flex align-items-center gap-2"
+							onClick={() => navigate("/sumberdaya")}>
+							<i className="fa fa-arrow-left"></i> {/* Ikon panah */}
+							Kembali
+						</button>
+					</div>
 					<h2 className="product-category">Ebook Populer</h2>
-					{/* <button class="pre-btn"><img src="arrow.png" alt=""/></button>
-                    <button class="nxt-btn"><img src="arrow.png" alt=""/></button> */}
 					<div className="product-container">
 						<div className="product-card">
 							<div className="product-image">
