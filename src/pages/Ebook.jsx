@@ -26,7 +26,7 @@ const Ebook = () => {
 				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-200px",
+					marginLeft: "-100px",
 					marginBottom: "-90px",
 				}}>
 				<Col>
