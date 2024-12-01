@@ -5,7 +5,10 @@ const Profileprivasi = () => {
 	const navigate = useNavigate(); // Menambahkan useNavigate untuk navigasi
 
 	return (
-		<div className="container" id="profileinfo" style={{ marginBottom: "24%" }}>
+		<div
+			className="container"
+			id="profileprivasi"
+			style={{ marginBottom: "24%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
@@ -38,7 +41,7 @@ const Profileprivasi = () => {
 				</div>
 			</div>
 
-			<main className="content" style={{ maxWidth: "100%" }}>
+			<div className="content-privasi">
 				<h1>Privasi</h1>
 				<p>Ubah pengaturan privasi anda di sini</p>
 				<hr />
@@ -57,7 +60,7 @@ const Profileprivasi = () => {
 					</div>
 					<button className="save-button">Simpan Perubahan</button>
 				</div>
-			</main>
+			</div>
 		</div>
 	);
 };

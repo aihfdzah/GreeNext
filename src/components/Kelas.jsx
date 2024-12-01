@@ -5,7 +5,7 @@ const Kelas = () => {
 			<div className="container mt-4">
 				<div
 					className="d-flex align-items-center justify-content-between py-2 border-bottom"
-					style={{ marginBottom: "10%" }}>
+					style={{ marginBottom: "5%" }}>
 					{/* Search Bar */}
 					<div
 						className="input-group mx-3 flex-grow-1"
@@ -51,7 +51,7 @@ const Kelas = () => {
 				</div>
 
 				{/* -------------- Layout Konten Utama -------- */}
-				<div className="main-content">
+				<div className="main-content mt-0">
 					{/* ---------- Sidebar Filter --> */}
 					<div className="filter">
 						<select>
