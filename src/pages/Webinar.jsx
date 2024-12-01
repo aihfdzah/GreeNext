@@ -52,7 +52,7 @@ const Webinar = () => {
 					</Button>
 					<Button
 						className={`button-custom ${
-							activeButton === "histori" ? "active" : ""
+							activeButton === "katalogteknologi" ? "active" : ""
 						}`}
 						onClick={() =>
 							handleButtonClick("katalogteknologi", "/katalogteknologi")

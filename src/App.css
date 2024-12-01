@@ -1579,7 +1579,7 @@ h1 {
 
 .about-image {
 	width: 50%;
-	max-width: 400px;
+	max-width: 100%;
 	border-radius: 5px;
 	position: relative;
 	top: 71%;
