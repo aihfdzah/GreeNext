@@ -73,7 +73,7 @@ function App() {
 				<Route path="/cokartueror" element={<COKartuEror />} />
 				<Route path="/cokartugagal" element={<COKartuGagal />} />
 				<Route path="/cobank" element={<COBank />} />
-				<Route path="/cobankdetail" element={<COBankDEtail />} />
+				<Route path="/cobankdetail" element={<COBankDetail />} />
 				<Route path="*" element={<NotFound />} />
 				<Route path="/privasi" element={<Privasi />} />
 				<Route path="/keluar" element={<Keluar />} />
