@@ -34,6 +34,8 @@ import COKartuEror from "./pages/COKartuEror";
 import COKartuGagal from "./pages/COKartuGagal";
 import COBank from "./pages/COBank";
 import COBankDetail from "./pages/COBankDetail";
+import COBankNext from "./pages/COBankNext";
+import COBerhasil from "./pages/COBerhasil";
 import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
 
@@ -73,7 +75,9 @@ function App() {
 				<Route path="/cokartueror" element={<COKartuEror />} />
 				<Route path="/cokartugagal" element={<COKartuGagal />} />
 				<Route path="/cobank" element={<COBank />} />
-				<Route path="/cobankdetail" element={<COBankDEtail />} />
+				<Route path="/cobankdetail" element={<COBankDetail />} />
+				<Route path="/cobanknext" element={<COBankNext />} />
+				<Route path="/coberhasil" element={<COBerhasil />} />
 				<Route path="*" element={<NotFound />} />
 				<Route path="/privasi" element={<Privasi />} />
 				<Route path="/keluar" element={<Keluar />} />

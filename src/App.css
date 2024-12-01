@@ -1625,11 +1625,50 @@ option {
 	font-weight: normal;
 }
 
+.col-6 {
+	margin-top: 20px;
+}
+
+/* ------checkout bank next---------- */
+
+.error-icon img {
+	width: 120px;
+}
+
+.des {
+	font-size: 15px;
+}
+
+.payment-info p, .order-details p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.order-details {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.error-icon2 {
+	font-size: 100px;
+    margin: 20px 0;
+	text-align: center;
+	color: var(--main-color);
+}
+
 /* ----------------Tentang Kita---------------- */
 .about-section,
 .features-section {
 	margin-bottom: 2rem;
 	padding: 50px 45px;
+	color: var();
 }
 
 .about h2 {

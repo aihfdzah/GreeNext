@@ -75,8 +75,8 @@ const COBank = () => {
                                     <label for="bank">Pilih Metode Pembayaran</label>
                                         <select className="option" id="bank" name="bank">
                                             <option value="">Pilih Bank</option>
-                                            <option value="bri">BRI</option>
-                                            <option value="bca">BCA</option>
+                                            <option value="bri">BCA</option>
+                                            <option value="bca">BRI</option>
                                             <option value="mandiri">Mandiri</option>
                                         </select>
                                 </form>
@@ -102,7 +102,7 @@ const COBank = () => {
 								<span>TOTAL</span>
 								<span>Rp 50.000</span>
 							</div>
-                                <a href="/cokartupass">
+                                <a href="/cobankdetail">
 							        <button
                                         className="btn w-100"
                                         onClick={handleSubmit}
