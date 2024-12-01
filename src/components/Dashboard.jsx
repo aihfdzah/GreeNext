@@ -49,7 +49,7 @@ function Dashboard() {
 					</Button>
 				</Col>
 			</Row>
-			<Row className="py-4">
+			<Row className="py-5">
 				<Col md={6}>
 					<h2>
 						Selamat Datang Kembali,{" "}
@@ -59,8 +59,8 @@ function Dashboard() {
 					<h3>Lanjutkan kelasnya yuk!</h3>
 				</Col>
 				<Col md={6}>
-					<Row>
-						<Col md={4}>
+					<Row style={{ marginTop: "-90px" }}>
+						<Col md={4} style={{ marginTop: "90px" }}>
 							<div className="card" style={{ backgroundColor: "#F5F2ED" }}>
 								<div className="card-body">
 									<h5 className="card-title">0</h5>
@@ -68,7 +68,7 @@ function Dashboard() {
 								</div>
 							</div>
 						</Col>
-						<Col md={4}>
+						<Col md={4} style={{ marginTop: "90px" }}>
 							<div className="card" style={{ backgroundColor: "#F5F2ED" }}>
 								<div className="card-body">
 									<h5 className="card-title">0</h5>
@@ -76,7 +76,7 @@ function Dashboard() {
 								</div>
 							</div>
 						</Col>
-						<Col md={4}>
+						<Col md={4} style={{ marginTop: "90px" }}>
 							<div className="card" style={{ backgroundColor: "#F5F2ED" }}>
 								<div className="card-body">
 									<h5 className="card-title">0</h5>
