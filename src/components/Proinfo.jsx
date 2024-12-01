@@ -38,7 +38,7 @@ const Proinfo = () => {
 				</div>
 			</div>
 
-			<main className="content">
+			<div className="content">
 				<h1>Pemberitahuan</h1>
 				<p>Kelola pesan notifikasi yang Anda terima</p>
 				<hr />
@@ -77,7 +77,7 @@ const Proinfo = () => {
 						<button className="open-button">Buka</button>
 					</div>
 				</div>
-			</main>
+			</div>
 		</div>
 	);
 };

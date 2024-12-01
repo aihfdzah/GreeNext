@@ -43,8 +43,8 @@ const Sertifikat = () => {
 	return (
 		<>
 			<Navbar />
-			<Container style={{ marginBottom: "23%" }}>
-				<h1 >Pelatihanku</h1>
+			<Container className="mt-5" style={{ marginBottom: "23%" }}>
+				<h1>Pelatihanku</h1>
 				<h1
 					style={{
 						textAlign: "center",
