@@ -52,6 +52,7 @@ const StudiKasus = () => {
 				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
+					marginLeft: "-30px",
 					marginBottom: "-90px",
 				}}>
 				<Col>
@@ -83,7 +84,7 @@ const StudiKasus = () => {
 					</Button>
 					<Button
 						className={`button-custom ${
-							activeButton === "histori" ? "active" : ""
+							activeButton === "katalogteknologi" ? "active" : ""
 						}`}
 						onClick={() =>
 							handleButtonClick("katalogteknologi", "/katalogteknologi")

@@ -28,11 +28,7 @@ const Tentang = () => {
 							</div>
 						</div>
 						<div>
-							<img
-								src="./about.jpg"
-								className="about-image"
-								style={{ marginLeft: "30px" }}
-							/>
+							<img src="./about.jpg" className="about-image" />
 						</div>
 					</section>
 				</div>
