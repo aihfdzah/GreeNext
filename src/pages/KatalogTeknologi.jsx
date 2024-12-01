@@ -21,7 +21,7 @@ const KatalogTeknologi = () => {
 				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-155px",
+					marginLeft: "-80px",
 					marginBottom: "-90px",
 				}}>
 				<Col>
