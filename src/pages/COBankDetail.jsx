@@ -146,7 +146,7 @@ const COBankDetail = () => {
 								<span>TOTAL</span>
 								<span>Rp 50.000</span>
 							</div>
-                                <a href="/cokartupass">
+                                <a href="/cobanknext">
 							        <button
                                         className="btn w-100"
                                         onClick={handleSubmit}
