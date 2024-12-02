@@ -50,7 +50,7 @@ const COBerhasil = () => {
                     <p className="desc"> Pesanan #12345678924681097 Terkonfirmasi</p>
                     
 
-                    <a href="/cokartupass">
+                    <a href="/home">
                         <button
                             className="btn w-100"
                             onClick={handleSubmit}
