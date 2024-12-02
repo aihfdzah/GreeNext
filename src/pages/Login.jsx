@@ -1,24 +1,42 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import S from "../assets/S.png";
 import Logo from "../assets/logo.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaLock, FaEnvelope } from "react-icons/fa";
+import axios from "axios";
 
 function Login() {
 	const [showPassword, setShowPassword] = useState(false);
+	// Axios Awal login
+	const [users, setUsers] = useState([]);
+	const [error, setError] = useState(null);
 	const navigate = useNavigate();
 
 	const togglePasswordVisibility = () => {
 		setShowPassword(!showPassword);
 	};
 
+	// Fetch users data with Axios
+	useEffect(() => {
+		const fetchUsers = async () => {
+			try {
+				const response = await axios.get("https://your-api-endpoint.com/users");
+				setUsers(response.data);
+			} catch (err) {
+				console.error("Failed to fetch users:", err);
+				setError("Gagal mengambil data pengguna.");
+			}
+		};
+		fetchUsers();
+	}, []);
+
 	const handleLogin = (e) => {
 		e.preventDefault();
-
+		// Redirect to home on login (add user validation if needed)
 		navigate("/home");
 	};
-
+	//   Axios Akhir Login
 	return (
 		<div className="input-container vh-100 d-flex flex-column flex-lg-row">
 			{/* Left Section */}
@@ -98,6 +116,8 @@ function Login() {
 							{showPassword ? <FaEye /> : <FaEyeSlash />}
 						</span>
 					</div>
+
+					{error && <p className="text-danger small text-left">{error}</p>}
 
 					<p className="text-left small" style={{ color: "#17412d" }}>
 						Dengan membuat akun, Anda menyetujui{" "}
