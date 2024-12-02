@@ -25,7 +25,7 @@ const COKartuGagal = () => {
 	};
 
 	const handleSubmit = () => {
-		alert("Pembayaran berhasil!");
+		alert("Pembayaran gagal!");
 	};
 
 	return (
