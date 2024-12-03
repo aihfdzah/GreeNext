@@ -21,8 +21,9 @@ function Login() {
 	useEffect(() => {
 		const fetchUsers = async () => {
 			try {
-				const response = await axios.get("https://your-api-endpoint.com/users");
-				setUsers(response.data);
+				const response = await axios.get("http://localhost:5000/api/v1/user");
+				setUsers(response.data.data);
+				console.log(users)
 			} catch (err) {
 				console.error("Failed to fetch users:", err);
 				setError("Gagal mengambil data pengguna.");
