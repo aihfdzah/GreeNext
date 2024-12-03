@@ -101,7 +101,7 @@ const StudiKasus = () => {
 				<div
 					className="input-group mx-3 flex-grow-1"
 					style={{
-						maxWidth: "100%",
+						maxWidth: "96%",
 						position: "relative",
 					}}>
 					<i

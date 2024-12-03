@@ -74,7 +74,7 @@ const Ebook = () => {
 					{/* Search Bar */}
 					<div
 						className="input-group mx-3 flex-grow-1"
-						style={{ maxWidth: "95	%", position: "relative" }}>
+						style={{ maxWidth: "95%", position: "relative" }}>
 						<i
 							className="fa-solid fa-magnifying-glass"
 							style={{
@@ -94,6 +94,50 @@ const Ebook = () => {
 							}}
 							placeholder="Cari E-book..."
 						/>
+					</div>
+
+					<div className="progress-list">
+						<div className="progress-item">
+							<img src="Agronomi.png" className="icon" />
+							<span
+								className="title"
+								style={{ fontSize: "10pt", paddingTop: "13px" }}>
+								Agronomi
+							</span>
+							<span className="pages">10 hal</span>
+							<div className="progress-bar">
+								<div className="progress" id="progress1"></div>
+							</div>
+							<span className="progress-percentage">5% selesai</span>
+						</div>
+
+						<div className="progress-item">
+							<img src="Pemulian Tanaman.png" className="icon" />
+							<span
+								className="title"
+								style={{ fontSize: "10pt", paddingTop: "13px" }}>
+								Pemuliaan Tanaman Modern
+							</span>
+							<span className="pages">35 hal</span>
+							<div className="progress-bar">
+								<div className="progress" id="progress2"></div>
+							</div>
+							<span className="progress-percentage">25% selesai</span>
+						</div>
+
+						<div className="progress-item">
+							<img src="Pertanian era digital.png" className="icon" />
+							<span
+								className="title"
+								style={{ fontSize: "10pt", paddingTop: "13px" }}>
+								Pertanian Era Digital
+							</span>
+							<span className="pages">50 hal</span>
+							<div className="progress-bar">
+								<div className="progress" id="progress3"></div>
+							</div>
+							<span className="progress-percentage">15% selesai</span>
+						</div>
 					</div>
 
 					<div className="tabs">
@@ -193,50 +237,6 @@ const Ebook = () => {
 								<img src="./pertanian 4.0.jpg" alt="" />
 								Pertanian 4.0
 							</a>
-						</div>
-					</div>
-
-					<div className="progress-list">
-						<div className="progress-item">
-							<img src="Agronomi.png" className="icon" />
-							<span
-								className="title"
-								style={{ fontSize: "10pt", paddingTop: "13px" }}>
-								Agronomi
-							</span>
-							<span className="pages">10 hal</span>
-							<div className="progress-bar">
-								<div className="progress" id="progress1"></div>
-							</div>
-							<span className="progress-percentage">5% selesai</span>
-						</div>
-
-						<div className="progress-item">
-							<img src="Pemulian Tanaman.png" className="icon" />
-							<span
-								className="title"
-								style={{ fontSize: "10pt", paddingTop: "13px" }}>
-								Pemuliaan Tanaman Modern
-							</span>
-							<span className="pages">35 hal</span>
-							<div className="progress-bar">
-								<div className="progress" id="progress2"></div>
-							</div>
-							<span className="progress-percentage">25% selesai</span>
-						</div>
-
-						<div className="progress-item">
-							<img src="Pertanian era digital.png" className="icon" />
-							<span
-								className="title"
-								style={{ fontSize: "10pt", paddingTop: "13px" }}>
-								Pertanian Era Digital
-							</span>
-							<span className="pages">50 hal</span>
-							<div className="progress-bar">
-								<div className="progress" id="progress3"></div>
-							</div>
-							<span className="progress-percentage">15% selesai</span>
 						</div>
 					</div>
 				</main>
