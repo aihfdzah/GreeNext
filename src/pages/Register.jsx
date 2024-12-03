@@ -31,7 +31,7 @@ function Register() {
 		e.preventDefault();
 		try {
 			const response = await axios.post(
-				"https://your-api-endpoint.com/register",
+				"http://localhost:5173/api/v1/users",
 				formData
 			);
 			alert("Pendaftaran berhasil!");
