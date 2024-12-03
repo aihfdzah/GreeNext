@@ -22,7 +22,7 @@ const StudiKasusDetail = () => {
 				</div>
 
 				{/* Kontainer utama */}
-				<div className="card-container">
+				<div className="card-container mt-2">
 					{/* Judul */}
 					<h2>
 						PENERAPAN PERTANIAN PRESISI <br /> (PRECISION AGRICULTURE)
