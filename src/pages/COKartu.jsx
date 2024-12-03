@@ -46,7 +46,7 @@ const COKartu = () => {
 					{/* Form Pembayaran */}
 					<div className="col-lg-7">
 						<div className="form-container p-4 border rounded">
-							<h2 className="mb-4">Pembayaran Ebook</h2>
+							<h2 className="mb-4">Pembayaran Kelas</h2>
 							<div className="payment-options mb-3">
 								<label className="me-3">
 									<input

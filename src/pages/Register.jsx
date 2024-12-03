@@ -2,13 +2,44 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import W from "../assets/W.png";
 import Logo from "../assets/logo.png";
 import { useState } from "react";
+import axios from "axios";
 import { FaEye, FaEyeSlash, FaLock, FaEnvelope } from "react-icons/fa";
 
 function Register() {
 	const [showPassword, setShowPassword] = useState(false);
+	const [formData, setFormData] = useState({
+		username: "",
+		email: "",
+		password: "",
+	});
 
 	const togglePasswordVisibility = () => {
 		setShowPassword(!showPassword);
+	};
+
+	// Handle form input changes
+	const handleInputChange = (e) => {
+		const { name, value } = e.target;
+		setFormData((prevData) => ({
+			...prevData,
+			[name]: value,
+		}));
+	};
+
+	// Handle form submission
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		try {
+			const response = await axios.post(
+				"https://your-api-endpoint.com/register",
+				formData
+			);
+			alert("Pendaftaran berhasil!");
+			console.log("Response:", response.data);
+		} catch (error) {
+			console.error("Error during registration:", error);
+			alert("Pendaftaran gagal. Silakan coba lagi.");
+		}
 	};
 
 	return (
@@ -29,7 +60,12 @@ function Register() {
 				<div className="text-left text-white">
 					<h1
 						className="h4"
-						style={{ fontSize: "16pt", color: "#ef7a53", fontWeight: "bold", textAlign:"left" }}>
+						style={{
+							fontSize: "16pt",
+							color: "#ef7a53",
+							fontWeight: "bold",
+							textAlign: "left",
+						}}>
 						Pemanfaatan Big Data dan AI untuk Pertanian
 					</h1>
 					<p className="mt-3" style={{ color: "#F5F2ED" }}>
@@ -53,11 +89,14 @@ function Register() {
 						Bergabung bersama kami dan wujudkan sektor pertanian maju.
 					</p>
 				</div>
-				<form className="w-75">
+				<form className="w-75" onSubmit={handleSubmit}>
 					<div className="mb-3">
 						<input
 							type="text"
+							name="username"
 							placeholder="Username"
+							value={formData.username}
+							onChange={handleInputChange}
 							className="form-control"
 						/>
 					</div>
@@ -66,7 +105,14 @@ function Register() {
 						<span className="input-group-text bg-white">
 							<FaEnvelope />
 						</span>
-						<input type="email" placeholder="Email" className="form-control" />
+						<input
+							type="email"
+							name="email"
+							placeholder="Email"
+							value={formData.email}
+							onChange={handleInputChange}
+							className="form-control"
+						/>
 					</div>
 
 					<div className="input-group mb-3">
@@ -75,7 +121,10 @@ function Register() {
 						</span>
 						<input
 							type={showPassword ? "text" : "password"}
+							name="password"
 							placeholder="Password"
+							value={formData.password}
+							onChange={handleInputChange}
 							className="form-control"
 						/>
 						<span
@@ -104,6 +153,7 @@ function Register() {
 					</p>
 
 					<button
+						type="submit"
 						className="btn w-100"
 						style={{
 							backgroundColor: "#ef7a53",
@@ -129,7 +179,7 @@ function Register() {
 						<hr className="flex-grow-1" />
 						<span
 							className="mx-2"
-							style={{ fontSize: " 8pt", color: "#17412d" }}>
+							style={{ fontSize: "8pt", color: "#17412d" }}>
 							Atau menggunakan email & facebook
 						</span>
 						<hr className="flex-grow-1" />
