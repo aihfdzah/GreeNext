@@ -1,47 +1,83 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import axios from "axios"; // Tambahkan import axios
 import "../styles/Dashboard.css";
 
 function Dashboard() {
 	const [activeButton, setActiveButton] = useState(null); // State untuk melacak tombol aktif
+	const [username, setUsername] = useState("User"); // State untuk username
 	const navigate = useNavigate();
+
+	// Penambahan kode untuk mengambil data username dari API
+	useEffect(() => {
+		const fetchUsername = async () => {
+			try {
+				const token = localStorage.getItem("token"); // Ambil token dari localStorage
+				if (token) {
+					const response = await axios.get(
+						"http://localhost:5173/api/v1/user", // Endpoint API
+						{
+							headers: {
+								Authorization: `Bearer ${token}`, // Kirim token sebagai header
+							},
+						}
+					);
+					if (response.data && response.data.username) {
+						setUsername(response.data.username); // Set username dari respons API
+					}
+				} else {
+					console.error("Token tidak ditemukan. User belum login.");
+				}
+			} catch (error) {
+				console.error("Gagal mengambil data user:", error);
+			}
+		};
+		fetchUsername(); // Panggil fungsi fetchUsername
+	}, []);
 
 	const handleButtonClick = (buttonName, path) => {
 		setActiveButton(buttonName); // Perbarui tombol aktif
 		navigate(path); // Navigasi ke path yang ditentukan
 	};
-
 	return (
-		<Container fluid className="p-lg-4 p-md-0 mt-5">
-			<Row className="py-3">
+		<Container fluid className="p-lg-3 p-md-0 mt-0">
+			<Row
+				className="py-3 d-flex text-left mb-1"
+				style={{
+					marginTop: "40px",
+					marginLeft: "-5px",
+					marginBottom: "-90px",
+				}}>
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Dashboard</h1>
 				</Col>
-				<Col className="text-end me-auto">
+				<Col
+					className="text-end me-auto text-left"
+					style={{ marginLeft: "-200px" }}>
 					<Button
-						className={`me-5 w-15 button-custom ${
+						className={`button-custom ${
 							activeButton === "home" ? "active" : ""
 						}`}
 						onClick={() => handleButtonClick("home", "/home")}>
 						Home
 					</Button>
 					<Button
-						className={` p-0 me-5 w-15 button-custom ${
-							activeButton === "sertifikat" ? "active" : ""
+						className={`button-custom ${
+							activeButton === "kelas" ? "active" : ""
 						}`}
-						onClick={() => handleButtonClick("sertifikat", "/sertifikat")}>
-						Sertifikat
+						onClick={() => handleButtonClick("kelas", "/kelas")}>
+						Kelas
 					</Button>
 					<Button
-						className={`me-5  w-15 button-custom ${
+						className={`button-custom ${
 							activeButton === "sumber" ? "active" : ""
 						}`}
 						onClick={() => handleButtonClick("sumber", "/sumberdaya")}>
 						Sumber Daya
 					</Button>
 					<Button
-						className={`me-5 w-15 button-custom ${
+						className={`button-custom ${
 							activeButton === "histori" ? "active" : ""
 						}`}
 						onClick={() => handleButtonClick("histori", "/histori")}>
@@ -51,9 +87,9 @@ function Dashboard() {
 			</Row>
 			<Row className="py-5">
 				<Col md={6}>
-					<h2>
+					<h2 style={{ color: "#17412d", marginRight: "200px", marginLeft:"" }}>
 						Selamat Datang Kembali,{" "}
-						<span style={{ color: "#ef7a53" }}>Wahyu Rojolele!</span>
+						<span style={{ color: "#ef7a53" }}>{username}!</span>
 					</h2>
 					<p>Ayo lanjutkan kelasnya sampai tuntas!</p>
 					<h3>Lanjutkan kelasnya yuk!</h3>
