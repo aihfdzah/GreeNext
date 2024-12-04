@@ -30,7 +30,26 @@ function Login() {
 		setShowPassword(!showPassword);
 	};
 
+<<<<<<< HEAD
+	// Fetch users data with Axios
+	useEffect(() => {
+		const fetchUsers = async () => {
+			try {
+				const response = await axios.get("http://localhost:5000/api/v1/user");
+				setUsers(response.data.data);
+				console.log(users);
+			} catch (err) {
+				console.error("Failed to fetch users:", err);
+				setError("Gagal mengambil data pengguna.");
+			}
+		};
+		fetchUsers();
+	}, []);
+
+	const handleLogin = (e) => {
+=======
 	const handleLogin = async (e) => {
+>>>>>>> main
 		e.preventDefault();
 		setError('');
 		console.log(formData.email, formData.password)

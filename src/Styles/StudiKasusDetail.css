@@ -2,7 +2,7 @@
 .card-container {
     max-width: 800px;
     margin: 50px auto;
-    background: white;
+    background: #f5f2ed;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px 30px;
@@ -22,7 +22,7 @@
 
 .card-container hr {
     border: none;
-    border-top: 3px solid #FF5733; /* Warna utama */
+    border-top: 3px solid #ef7a53; /* Warna utama */
     width: 50%; /* Batas lebar untuk kesan minimalis */
     margin: 15px auto; /* Centered */
 }
@@ -57,8 +57,8 @@
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #FF5733;
-    color: white;
+    background-color: #ef7a53;
+    color: #f5f2ed;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -73,13 +73,13 @@
 }
 
 .discussion-button:hover {
-    background-color: #e04e2e;
+    background-color: #ef7a53;
 }
 
 /* Kolom kanan (konten teks) */
 .card-text-right {
     flex: 2;
-    background-color: #F9F9F9; /* Warna abu-abu muda */
+    background-color: #f5f2ed; /* Warna abu-abu muda */
     text-align: left;
     padding: 20px;
     border-radius: 10px;
@@ -116,12 +116,12 @@
 
 .card-text-right ul li i {
     margin-right: 10px; /* Spasi antara ikon dan teks */
-    color: #FF5733; /* Warna ikon */
+    color: #ef7a53; /* Warna ikon */
 }
 
 .card-text-right a.read-more {
     display: inline-block;
-    color: #FF5733;
+    color: #ef7a53;
     text-decoration: none;
     font-weight: bold;
     margin-top: 10px;
@@ -153,7 +153,7 @@
 }
 
 .social-icons .icon:hover {
-    color: #FF5733; /* Warna ketika hover */
+    color: #ef7a53; /* Warna ketika hover */
 }
 
 /* Tombol ikon di footer */
@@ -167,7 +167,7 @@
 }
 
 .card-footer span:hover {
-    color: #FF5733;
+    color: #ef7a53;
 }
 
 .card-footer span i {

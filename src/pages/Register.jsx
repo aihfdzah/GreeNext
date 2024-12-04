@@ -35,6 +35,14 @@ function Register() {
 		setError('')
 		console.log(formData.username, formData.password, formData.email)
 		try {
+<<<<<<< HEAD
+			const response = await axios.post(
+				"http://localhost:5173/api/v1/users",
+				formData
+			);
+			alert("Pendaftaran berhasil!");
+			console.log("Response:", response.data);
+=======
 			const response = await axios.post('http://localhost:5000/api/v1/auth/register', {
 				username : formData.username, 
 				password: formData.password, 
@@ -50,6 +58,7 @@ function Register() {
 				alert('Berhasil registrasi, Silahkan login terlebih dahulu!s');
 				navigate('/')
 			}
+>>>>>>> main
 		} catch (error) {
 			setError(error.response.data.message)
 			console.error("Error Registering user", error.message);

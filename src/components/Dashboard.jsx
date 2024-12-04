@@ -4,12 +4,12 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import "../styles/Dashboard.css";
 
 function Dashboard() {
-	const [activeButton, setActiveButton] = useState(null); // State to track the active button
+	const [activeButton, setActiveButton] = useState(null); // State untuk melacak tombol aktif
 	const navigate = useNavigate();
 
 	const handleButtonClick = (buttonName, path) => {
-		setActiveButton(buttonName); // Update the active button state
-		navigate(path); // Navigate to the specified path
+		setActiveButton(buttonName); // Perbarui tombol aktif
+		navigate(path); // Navigasi ke path yang ditentukan
 	};
 
 	return (

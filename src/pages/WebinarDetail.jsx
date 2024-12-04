@@ -6,9 +6,8 @@ const WebinarDetail = () => {
 	return (
 		<>
 			<Navbar />
-			{/* Tombol Kembali */}
-
-			<div className="container">
+			<div className="container mt-3">
+				{/* Tombol Kembali */}
 				<div>
 					<button
 						className="btn btn-trasparant d-flex align-items-center gap-2"

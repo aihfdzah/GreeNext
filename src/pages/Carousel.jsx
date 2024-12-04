@@ -6,7 +6,7 @@ const Carousel = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="container-carousel">
+			<div className="container-carousel mt-3">
 				<section className="product">
 					{/* Tombol Kembali */}
 					<div className="back-button mb-3">
