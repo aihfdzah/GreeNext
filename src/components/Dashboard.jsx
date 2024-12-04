@@ -6,7 +6,7 @@ import "../styles/Dashboard.css";
 
 function Dashboard() {
 	const [activeButton, setActiveButton] = useState(null); // State untuk melacak tombol aktif
-	const [username, setUsername] = useState("User"); // State untuk username
+	const [username, setUsername] = useState("user"); // State untuk username
 	const navigate = useNavigate();
 
 	// Penambahan kode untuk mengambil data username dari API
@@ -87,7 +87,8 @@ function Dashboard() {
 			</Row>
 			<Row className="py-5">
 				<Col md={6}>
-					<h2 style={{ color: "#17412d", marginRight: "200px", marginLeft:"" }}>
+					<h2
+						style={{ color: "#17412d", marginRight: "200px", marginLeft: "" }}>
 						Selamat Datang Kembali,{" "}
 						<span style={{ color: "#ef7a53" }}>{username}!</span>
 					</h2>
