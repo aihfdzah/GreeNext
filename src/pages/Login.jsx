@@ -43,7 +43,7 @@ function Login() {
 					"Content-Type": "application/json"
 				}
 			})
-			console.log('response : ', response)
+			console.log('response : ', response.data)
 			if (response.status == 200){
 				alert('Berhasil Login!')
 				navigate('/home')

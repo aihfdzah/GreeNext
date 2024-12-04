@@ -47,7 +47,7 @@ function Register() {
 			});
 			console.log(response.data)
 			if (response.status == 201){
-				alert('Berhasil registrasi, Silahkan login terlebih dahulu!s');
+				alert('Berhasil registrasi, Silahkan login terlebih dahulu!');
 				navigate('/')
 			}
 		} catch (error) {
