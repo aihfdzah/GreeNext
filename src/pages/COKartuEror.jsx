@@ -41,7 +41,6 @@ const COKartuEror = () => {
 						Kembali
 					</button>
 				</div> */}
-
 				<div className="row">
 					{/* Form Pembayaran */}
 					<div className="col-lg-7">
@@ -70,24 +69,26 @@ const COKartuEror = () => {
 								</label>
 							</div>
 
-                            <p className="input-pin">Masukkan pin kartu 4 digit Anda untuk pembayaran ini</p>
-                                <div class="pin-input">
-                                    <input type="password" maxlength="1"/>
-                                    <input type="password" maxlength="1"/>
-                                    <input type="password" maxlength="1"/>
-                                    <input type="password" maxlength="1"/>
-                                </div>
+							<p className="input-pin">
+								Masukkan pin kartu 4 digit Anda untuk pembayaran ini
+							</p>
+							<div class="pin-input">
+								<input type="password" maxlength="1" />
+								<input type="password" maxlength="1" />
+								<input type="password" maxlength="1" />
+								<input type="password" maxlength="1" />
+							</div>
 
-                                <p className="eror">Pin Salah. Kamu Memiliki 2 Kesempatan Lagi</p>
+							<p className="eror">Pin Salah. Kamu Memiliki 2 Kesempatan Lagi</p>
 
-                            <a href="/cokartugagal">
-							        <button
-                                        className="btn w-100"
-                                        onClick={handleSubmit}
-                                        style={{ backgroundColor: "#ef7a53", color: "#f5f2ed" }}>
-                                        Selesaikan Pembayaran
-							        </button>
-                                </a>
+							<a href="/cokartugagal">
+								<button
+									className="btn w-100"
+									onClick={handleSubmit}
+									style={{ backgroundColor: "#ef7a53", color: "#f5f2ed" }}>
+									Selesaikan Pembayaran
+								</button>
+							</a>
 							<p className="text-muted mt-3">
 								Data pribadi Anda akan digunakan untuk memproses pesanan Anda,
 								mendukung pengalaman Anda di situs ini, dan untuk tujuan lain
@@ -179,7 +180,6 @@ const COKartuEror = () => {
 								<span>TOTAL</span>
 								<span>Rp 50.000</span>
 							</div>
-							
 						</div>
 					</div>
 				</div>
