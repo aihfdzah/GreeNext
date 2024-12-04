@@ -1,5 +1,4 @@
 import "../Styles/Spinner.css"; // Pastikan path file benar
-
 const Spinner = () => {
 	return (
 		<div
