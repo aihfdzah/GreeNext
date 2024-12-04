@@ -6,7 +6,7 @@ import "../styles/Dashboard.css";
 
 function Dashboard() {
 	const [activeButton, setActiveButton] = useState(null); // State untuk melacak tombol aktif
-	const [username, setUsername] = useState("user"); // State untuk username
+	const [username, setUsername] = useState("Putra Ali"); // State untuk username
 	const navigate = useNavigate();
 
 	// Penambahan kode untuk mengambil data username dari API
@@ -23,7 +23,7 @@ function Dashboard() {
 							},
 						}
 					);
-					if (response.data && response.data.username) {
+					if (response.data && response.data.user) {
 						setUsername(response.data.username); // Set username dari respons API
 					}
 				} else {
@@ -41,7 +41,7 @@ function Dashboard() {
 		navigate(path); // Navigasi ke path yang ditentukan
 	};
 	return (
-		<Container fluid className="p-lg-3 p-md-0 mt-0">
+		<Container fluid className=" container p-lg-3 p-md-0 mt-0">
 			<Row
 				className="py-3 d-flex text-left mb-1"
 				style={{
@@ -88,11 +88,7 @@ function Dashboard() {
 			<Row className="mt-5">
 				<Col
 					md={6}
-					style={{
-						maxWidth: "100%",
-						paddingRight: "180px",
-						paddingLeft: "20px",
-					}}>
+					style={{ maxWidth: "100%", paddingRight: "160px", }}>
 					<h2 style={{ color: "#17412d" }}>
 						Selamat Datang Kembali,{" "}
 						<span style={{ color: "#ef7a53" }}>{username}!</span>
