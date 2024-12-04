@@ -85,10 +85,15 @@ function Dashboard() {
 					</Button>
 				</Col>
 			</Row>
-			<Row className="py-5">
-				<Col md={6}>
-					<h2
-						style={{ color: "#17412d", marginRight: "200px", marginLeft: "" }}>
+			<Row className="mt-5">
+				<Col
+					md={6}
+					style={{
+						maxWidth: "100%",
+						paddingRight: "180px",
+						paddingLeft: "20px",
+					}}>
+					<h2 style={{ color: "#17412d" }}>
 						Selamat Datang Kembali,{" "}
 						<span style={{ color: "#ef7a53" }}>{username}!</span>
 					</h2>
