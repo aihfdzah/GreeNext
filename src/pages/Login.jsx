@@ -11,12 +11,26 @@ function Login() {
 	// Axios Awal login
 	const [users, setUsers] = useState([]);
 	const [error, setError] = useState(null);
+	const [formData, setFormData] = useState({
+		email : '',
+		password: ''
+	})
 	const navigate = useNavigate();
+
+	// Handle form input changes
+	const handleInputChange = (e) => {
+		const { name, value } = e.target;
+		setFormData((prevData) => ({
+			...prevData,
+			[name]: value,
+		}));
+	};
 
 	const togglePasswordVisibility = () => {
 		setShowPassword(!showPassword);
 	};
 
+<<<<<<< HEAD
 	// Fetch users data with Axios
 	useEffect(() => {
 		const fetchUsers = async () => {
@@ -33,9 +47,37 @@ function Login() {
 	}, []);
 
 	const handleLogin = (e) => {
+=======
+	const handleLogin = async (e) => {
+>>>>>>> main
 		e.preventDefault();
+		setError('');
+		console.log(formData.email, formData.password)
+		try {
+			const response = await axios.post('http://localhost:5000/api/v1/auth/login', {
+				email: formData.email, 
+				password:formData.password
+			}, {
+				headers : {
+					"Content-Type": "application/json"
+				}
+			})
+			console.log('response : ', response)
+			if (response.status == 200){
+				alert('Berhasil Login!')
+				navigate('/home')
+			} 
+		} catch (error) {
+			// console.log(error.response.data.message)
+			setError(error.response.data.message)
+			// if (error.response?.status){
+			// 	setError(response.data.message)
+			// }
+			console.error('Error login', error.message)
+		}
+
 		// Redirect to home on login (add user validation if needed)
-		navigate("/home");
+		// navigate("/home");
 	};
 	//   Axios Akhir Login
 	return (
@@ -86,19 +128,19 @@ function Login() {
 					</p>
 				</div>
 				<form className="w-75" onSubmit={handleLogin}>
-					<div className="mb-3">
+					{/* <div className="mb-3">
 						<input
 							type="text"
 							placeholder="Username"
 							className="form-control"
 						/>
-					</div>
+					</div> */}
 
 					<div className="input-group mb-3">
 						<span className="input-group-text bg-white">
 							<FaEnvelope />
 						</span>
-						<input type="email" placeholder="Email" className="form-control" />
+						<input type="email" name="email" placeholder="Email" className="form-control" value={formData.email} onChange={handleInputChange} />
 					</div>
 
 					<div className="input-group mb-3">
@@ -107,8 +149,11 @@ function Login() {
 						</span>
 						<input
 							type={showPassword ? "text" : "password"}
+							name="password"
 							placeholder="Password"
 							className="form-control"
+							value={formData.password}
+							onChange={handleInputChange}
 						/>
 						<span
 							className="input-group-text bg-white"
@@ -118,7 +163,7 @@ function Login() {
 						</span>
 					</div>
 
-					{error && <p className="text-danger small text-left">{error}</p>}
+					{error && <p className={`text-danger small text-left shake`}>{error}</p>}
 
 					<p className="text-left small" style={{ color: "#17412d" }}>
 						Dengan membuat akun, Anda menyetujui{" "}
@@ -139,7 +184,7 @@ function Login() {
 
 					<button
 						type="submit"
-						className="btn w-100"
+						className="btn active w-100 bt login-button"
 						style={{
 							backgroundColor: "#ef7a53",
 							borderColor: "#ef7a53",

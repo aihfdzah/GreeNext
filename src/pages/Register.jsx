@@ -4,14 +4,17 @@ import Logo from "../assets/logo.png";
 import { useState } from "react";
 import axios from "axios";
 import { FaEye, FaEyeSlash, FaLock, FaEnvelope } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
+	const navigate = useNavigate()
 	const [showPassword, setShowPassword] = useState(false);
 	const [formData, setFormData] = useState({
 		username: "",
 		email: "",
 		password: "",
 	});
+	const [error, setError] = useState('')
 
 	const togglePasswordVisibility = () => {
 		setShowPassword(!showPassword);
@@ -29,16 +32,36 @@ function Register() {
 	// Handle form submission
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		setError('')
+		console.log(formData.username, formData.password, formData.email)
 		try {
+<<<<<<< HEAD
 			const response = await axios.post(
 				"http://localhost:5173/api/v1/users",
 				formData
 			);
 			alert("Pendaftaran berhasil!");
 			console.log("Response:", response.data);
+=======
+			const response = await axios.post('http://localhost:5000/api/v1/auth/register', {
+				username : formData.username, 
+				password: formData.password, 
+				email: formData.email
+			}, 
+			{
+				headers : {
+					"Content-Type": "application/json	"
+				}
+			});
+			console.log(response.data)
+			if (response.status == 201){
+				alert('Berhasil registrasi, Silahkan login terlebih dahulu!s');
+				navigate('/')
+			}
+>>>>>>> main
 		} catch (error) {
-			console.error("Error during registration:", error);
-			alert("Pendaftaran gagal. Silakan coba lagi.");
+			setError(error.response.data.message)
+			console.error("Error Registering user", error.message);
 		}
 	};
 
@@ -134,6 +157,8 @@ function Register() {
 							{showPassword ? <FaEye /> : <FaEyeSlash />}
 						</span>
 					</div>
+
+					{error && <p className="text-danger small text-left shake">{error}</p>}
 
 					<p className="text-left small" style={{ color: "#17412d" }}>
 						Dengan membuat akun, Anda menyetujui{" "}
