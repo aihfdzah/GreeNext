@@ -7,14 +7,14 @@ import { FaEye, FaEyeSlash, FaLock, FaEnvelope } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 function Register() {
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 	const [showPassword, setShowPassword] = useState(false);
 	const [formData, setFormData] = useState({
 		username: "",
 		email: "",
 		password: "",
 	});
-	const [error, setError] = useState('')
+	const [error, setError] = useState("");
 
 	const togglePasswordVisibility = () => {
 		setShowPassword(!showPassword);
@@ -32,35 +32,29 @@ function Register() {
 	// Handle form submission
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		setError('')
-		console.log(formData.username, formData.password, formData.email)
+		setError("");
+		console.log(formData.username, formData.password, formData.email);
 		try {
-<<<<<<< HEAD
 			const response = await axios.post(
-				"http://localhost:5173/api/v1/users",
-				formData
-			);
-			alert("Pendaftaran berhasil!");
-			console.log("Response:", response.data);
-=======
-			const response = await axios.post('http://localhost:5000/api/v1/auth/register', {
-				username : formData.username, 
-				password: formData.password, 
-				email: formData.email
-			}, 
-			{
-				headers : {
-					"Content-Type": "application/json	"
+				"http://localhost:5000/api/v1/auth/register",
+				{
+					username: formData.username,
+					password: formData.password,
+					email: formData.email,
+				},
+				{
+					headers: {
+						"Content-Type": "application/json	",
+					},
 				}
-			});
-			console.log(response.data)
-			if (response.status == 201){
-				alert('Berhasil registrasi, Silahkan login terlebih dahulu!s');
-				navigate('/')
+			);
+			console.log(response.data);
+			if (response.status == 201) {
+				alert("Berhasil registrasi, Silahkan login terlebih dahulu!s");
+				navigate("/");
 			}
->>>>>>> main
 		} catch (error) {
-			setError(error.response.data.message)
+			setError(error.response.data.message);
 			console.error("Error Registering user", error.message);
 		}
 	};
@@ -105,7 +99,7 @@ function Register() {
 				<div className="ml-3 w-75">
 					<h1
 						className="text-left d-flex mb-2"
-						style={{ fontSize: "24pt", color: "#ef7a53", fontWeight: "bold" }}>
+						style={{ fontSize: "20pt", color: "#ef7a53", fontWeight: "bold" }}>
 						Mari Bersama Majukan Sektor Pertanian Indonesia
 					</h1>
 					<p style={{ color: "#17412d", fontSize: "10pt" }} className="mb-2">
@@ -158,7 +152,9 @@ function Register() {
 						</span>
 					</div>
 
-					{error && <p className="text-danger small text-left shake">{error}</p>}
+					{error && (
+						<p className="text-danger small text-left shake">{error}</p>
+					)}
 
 					<p className="text-left small" style={{ color: "#17412d" }}>
 						Dengan membuat akun, Anda menyetujui{" "}
@@ -199,7 +195,7 @@ function Register() {
 					</a>
 				</p>
 
-				<div className="w-75 mt-2">
+				<div className="w-75 mt-1">
 					<div className="d-flex align-items-center">
 						<hr className="flex-grow-1" />
 						<span
@@ -209,7 +205,7 @@ function Register() {
 						</span>
 						<hr className="flex-grow-1" />
 					</div>
-					<div className="d-flex justify-content-between mt-2">
+					<div className="d-flex justify-content-between mt-3">
 						<button
 							className="btn w-45 h-25"
 							style={{
