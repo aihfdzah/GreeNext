@@ -2,6 +2,8 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../Styles/Ebook.css";
 import { useState } from "react";
+import { useEffect } from "react";
+import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 import { Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
@@ -9,6 +11,7 @@ const Ebook = () => {
 	const [activeButton, setActiveButton] = useState("sumber"); // Initialize activeButton state
 	const [activeTab, setActiveTab] = useState("populer"); // State for active tab
 	const navigate = useNavigate(); // Initialize navigation
+	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
 
 	const handleButtonClick = (buttonName, path) => {
 		setActiveButton(buttonName);
@@ -18,6 +21,19 @@ const Ebook = () => {
 	const handleTabClick = (tabName) => {
 		setActiveTab(tabName);
 	};
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoading(false);
+		}, 3000); // Simulasikan loading selama 3 detik
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	// Jika sedang loading, tampilkan spinner
+	if (loading) {
+		return <Spinner />;
+	}
 
 	return (
 		<>

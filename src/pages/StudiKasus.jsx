@@ -3,17 +3,31 @@ import Navbar from "../components/Navbar";
 import { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
+import { useEffect } from "react";
+import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 const StudiKasus = () => {
 	const [activeButton, setActiveButton] = useState("studikasus");
 	const [searchQuery, setSearchQuery] = useState(""); // Untuk menangani pencarian
 	const navigate = useNavigate();
+	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
 
 	const handleButtonClick = (buttonName, path) => {
 		setActiveButton(buttonName);
 		navigate(path);
 	};
 
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoading(false);
+		}, 3000); // Simulasikan loading selama 3 detik
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	// Jika sedang loading, tampilkan spinner
+	if (loading) {
+		return <Spinner />;
+	}
 	const caseStudies = [
 		{
 			title: "Penerapan Pertanian Presisi (Presisi Agriculture)",
