@@ -1,6 +1,8 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../Styles/Webinar.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
