@@ -50,7 +50,7 @@ const EbookPayment = () => {
 				<div className="mb-4">
 					<button
 						className="btn btn-trasparant d-flex align-items-center gap-2"
-						onClick={() => navigate("/detailebook")}>
+						onClick={() => navigate("/carousel")}>
 						<i className="fa fa-arrow-left"></i> {/* Ikon Back */}
 						Kembali
 					</button>
