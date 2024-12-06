@@ -5,7 +5,7 @@ const Proinfo = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container" id="profileinfo" style={{ marginBottom: "23%" }}>
+		<div className="container" id="profileinfo" style={{ marginBottom: "23%", marginTop: "10%"}}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
@@ -38,10 +38,11 @@ const Proinfo = () => {
 				</div>
 			</div>
 
-			<div className="profile-content">
+			<div className="profile-content" id="infoo">
 				<h1>Pemberitahuan</h1>
-				<p>Kelola pesan notifikasi yang Anda terima</p>
+				<h2>Kelola pesan notifikasi yang Anda terima</h2>
 				<hr />
+
 				<div className="tabs">
 					<button className="tab active">Belum Dibaca</button>
 					<button className="tab">Sudah Dibaca</button>

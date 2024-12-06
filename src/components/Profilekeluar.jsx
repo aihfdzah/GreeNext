@@ -6,7 +6,7 @@ const Profilekeluar = () => {
 		<div
 			className="container"
 			id="profilekeamanan"
-			style={{ marginBottom: "25%" }}>
+			style={{ marginBottom: "25%" , marginTop: "10%"}}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
