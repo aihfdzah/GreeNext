@@ -208,7 +208,7 @@ const Webinar = () => {
 
 				<div className="event-list">
 					<div className="event-card">
-						<img src="./foto6.jpg" alt="Event Thumbnail" />
+						<img src="./foto6.jpg" alt="Event Thumbnail" style={{ width: "55%" }} />
 						<div className="event-info">
 							<h3>Dinamika Pertanian Konvesional </h3>
 							<p>108 orang mengikuti seminar ini</p>
