@@ -1807,6 +1807,42 @@ option {
 }
 
 /* ------------profile-------------- */
+.container {
+	max-width: 100%;
+	margin: 8rem 0 20rem auto;
+	padding: 50px 50px;
+	background-color: #f5f2ed;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+#profile {
+	flex-direction: row;
+	
+}
+
+#profilefoto {
+	flex-direction: row;
+}
+
+#profileinfo {
+	flex-direction: row;
+	display: flex;
+    /* gap: 2px; */
+    max-width: 800px;
+    width: 100%;
+	margin-top: 10%;
+}
+
+#profilekeamanan {
+	flex-direction: row;
+}
+
+#profileprivasi {
+	flex-direction: row;
+}
+
 .sidebar {
 	flex: 1;
 	max-width: 100%;
@@ -1917,13 +1953,7 @@ option {
 	margin-top: 20px;
 } */
 
-.container {
-    display: flex;
-    /* gap: 2px; */
-    max-width: 900px;
-    width: 100%;
-	margin-top: 10%;
-}
+
 
 /* Sidebar Styling */
 .sidebar {
@@ -1973,9 +2003,10 @@ option {
     flex: 2;
     background-color: #fff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 50px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .profile-content h1 {
     font-size: 24px;
@@ -2140,18 +2171,13 @@ font-size: 10px;
 }
 
 /* ----------profileinfo--------- */
-
-
-h1 {
-	font-size: 24px;
-	color: #333;
-}
-
 .tabs {
 	display: flex;
 	margin-top: 20px;
 	flex-direction: row;
-	/* gap: 20px; */
+	border-radius: 8px;
+	gap: 10px;
+	justify-content: center;
 }
 
 .tab {
@@ -2159,22 +2185,20 @@ h1 {
 	cursor: pointer;
 	background-color: var(--text-color2);
 	color: var(--background-color);
-	border-radius: 8px;
 }
 
 .tab.active {
 	background-color: #eaeaea;
 	color: var(--text-color);
 	pointer-events: none;
-	border-radius: 8px;
 }
 
 .notifications {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
-	margin-top: 20px;
-	padding: 40px;
+	margin-top: 10px;
+	padding: 10px;
 }
 
 .notification-card {
@@ -2186,20 +2210,19 @@ h1 {
 }
 
 .notification-card h2 {
-	font-size: 18px;
 	color: #333;
 	margin-bottom: 10px;
 }
 
 .notification-card p {
 	color: #666;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .open-button {
 	background-color: var(--text-color2);
 	color: white;
-	padding: 8px 16px;
+	padding: 5px 10px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
