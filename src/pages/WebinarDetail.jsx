@@ -40,7 +40,7 @@ const WebinarDetail = () => {
 						</h1>
 						<p className="course-meta">👥 Kuota | 🗣️ Pemateri</p>
 						<img
-							src="./foto3.jpg"
+							src="./dtailwbnar.jpg"
 							id="webinar"
 							alt="Drone Pertanian"
 							className="course-image"

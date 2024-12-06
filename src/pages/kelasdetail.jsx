@@ -43,7 +43,7 @@ const Kelasdetail = () => {
 							4.9 (294,203 ratings) | 100 member | Charlie Vetrows
 						</p>
 						<img
-							src="./detailkelas.jpg"
+							src="./dtailkls.jpg"
 							id="detailkelas"
 							alt="Drone Pertanian"
 							className="course-image"
