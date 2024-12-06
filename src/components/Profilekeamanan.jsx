@@ -38,7 +38,7 @@ const Profilekeamanan = () => {
 				</div>
 			</div>
 
-			<main className="content">
+			<main className="profile-content">
 				<h1>Akun</h1>
 				<p>Edit pengaturan akun dan ubah sandi Anda di sini</p>
 				<hr />

@@ -39,7 +39,7 @@ const Profilekeluar = () => {
 				</div>
 			</div>
 
-			<main className="content">
+			<main className="profile-content">
 				<h1>Keluar Akun</h1>
 				<p>Untuk keluar dari akun yang anda gunakan saat ini</p>
 				<hr />

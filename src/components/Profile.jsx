@@ -108,7 +108,7 @@ const Profile = () => {
 						<input type="text" value="085692777510" readOnly></input>
 					</div>
 
-					<div className="form-group">
+					<div className="form-group" id="socialmedia">
 						<label>Social Media</label>
 						<input type="text" value="http://twitter.com" readOnly></input>
 						<input

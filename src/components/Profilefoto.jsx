@@ -38,7 +38,7 @@ const Profilefoto = () => {
 				</div>
 			</div>
 
-			<main className="content">
+			<main className="profile-content">
 				<h1>Foto</h1>
 				<p>Tambahkan foto Anda yang bagus untuk profil</p>
 				<hr />
