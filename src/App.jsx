@@ -38,12 +38,13 @@ import COBankNext from "./pages/COBankNext";
 import COBerhasil from "./pages/COBerhasil";
 import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
-
+import Admin from "./pages/Admin";
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Login />} />
+				<Route path="/admin" element={<Admin/>}/>
 				<Route path="/register" element={<Register />} />
 				<Route path="/profile" element={<HalamanProfile />} />
 				<Route path="/fotoprofile" element={<FotoProfile />} />
