@@ -2,10 +2,10 @@ import "../Styles/Kelas.css";
 const Kelas = () => {
 	return (
 		<>
-			<div className="container mt-4">
+			<div className="container-kelas mt-5" style={{ marginBottom: "30%" }}>
 				<div
 					className="d-flex align-items-center justify-content-between py-2 border-bottom"
-					style={{ marginBottom: "5%" }}>
+					style={{ marginBottom: "5%", marginTop:"5%" }}>
 					{/* Search Bar */}
 					<div
 						className="input-group mx-3 flex-grow-1"
@@ -53,7 +53,7 @@ const Kelas = () => {
 				{/* -------------- Layout Konten Utama -------- */}
 				<div className="main-content mt-0">
 					{/* ---------- Sidebar Filter --> */}
-					<div className="filter">
+					<div className="filter" style={{marginLeft:"20px"}}>
 						<select>
 							<option>Jenis Teknologi</option>
 							<option>IoT</option>
