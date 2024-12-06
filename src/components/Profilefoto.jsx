@@ -40,25 +40,35 @@ const Profilefoto = () => {
 
 			<main className="profile-content">
 				<h1>Foto</h1>
-				<p>Tambahkan foto Anda yang bagus untuk profil</p>
+				<h2>Tambahkan foto Anda yang bagus untuk profil</h2>
 				<hr />
-				<div className="photo-preview">
-					<p>Pratinjau Gambar</p>
-					<div className="placeholder-icon w-100 d-flex align-items-center justify-content-center p-5">
-						<i className="fa-regular fa-user"></i>
+
+					<div className="form-row">
+						<div className="photo-preview">
+							<p>Pratinjau Gambar</p>
+							<div className="placeholder-icon w-100 d-flex align-items-center justify-content-center p-5">
+								<i className="fa-regular fa-user"></i>
+							</div>
+							
+							<div>
+								<label className="upload-label">Tambah atau Ganti Gambar</label>
+								{/* <input
+									className="upload-input"
+									type="text"
+									value="Tidak ada gambar dipilih" id="input-value"
+									readOnly></input> */}
+								<input 
+								type="file" 
+								id="upload-photo" 
+								className="upload-input" 
+								/>
+							</div>
+
+							<button className="upload-button">Unggah Gambar</button>
+							<button className="save-button">Simpan Perubahan</button>
+							</div>
 					</div>
-					<div>
-						<label className="upload-label">Tambah atau Ganti Gambar</label>
-						<input
-							className="upload-input"
-							type="text"
-							value="Tidak ada gambar dipilih"
-							readOnly></input>
-						{/* <input type="file" id="upload-photo" className="upload-input" /> */}
-					</div>
-					<button className="upload-button">Unggah Gambar</button>
-					<button className="save-button">Simpan Perubahan</button>
-				</div>
+				
 			</main>
 		</div>
 	);
