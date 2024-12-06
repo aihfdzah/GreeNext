@@ -58,16 +58,6 @@ const Footer = () => {
 								Sumber Daya
 							</a>
 						</li>
-						{/* <li className="footer-item">
-							<a
-								className={`footer-link ${
-									activeLink === "/komunitas" ? "active-link" : ""
-								}`}
-								href="/komunitas"
-								onClick={() => handleLinkClick("/komunitas")}>
-								Komunitas
-							</a>
-						</li> */}
 						<li className="footer-item">
 							<a
 								className={`footer-link ${

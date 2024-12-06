@@ -32,35 +32,29 @@ const COBerhasil = () => {
 		<>
 			<Navbar />
 			<div className="container mt-5">
-				{/* Tombol Kembali */}
-				{/* <div className="mb-4">
+				<h1>Terima Kasih Atas Pembayaranmu!</h1>
+				<div className="error-icon2">
+					<i className="fa-solid fa-check"></i>
+				</div>
+
+				<p className="desc"> Pesanan #12345678924681097 Terkonfirmasi</p>
+
+				<a href="/home">
 					<button
-						className="btn btn-trasparant d-flex align-items-center gap-2"
-						onClick={() => navigate("/KelasDetail")}>
-						<i className="fa fa-arrow-left"></i>
-						Kembali
+						className="btn w-100"
+						onClick={handleSubmit}
+						style={{
+							backgroundColor: "#17412d",
+							color: "#f5f2ed",
+							marginTop: "20px",
+						}}>
+						Lacak Pesanan
 					</button>
-				</div> */}
-                
-                <h1>Terima Kasih Atas Pembayaranmu!</h1>
-                    <div className="error-icon2">
-                        <i className="fa-solid fa-check"></i>
-                    </div>
-                    
-                    <p className="desc"> Pesanan #12345678924681097 Terkonfirmasi</p>
-                    
-
-                    <a href="/home">
-                        <button
-                            className="btn w-100"
-                            onClick={handleSubmit}
-                            style={{ backgroundColor: "#17412d", color: "#f5f2ed", marginTop: "20px"}}>
-                            Lacak Pesanan
-						</button>
-                    </a>
-                    <a href="#" className="guide-link">Hasilkan Tanda Terima</a>
-
-                </div>
+				</a>
+				<a href="#" className="guide-link">
+					Hasilkan Tanda Terima
+				</a>
+			</div>
 			<Footer />
 		</>
 	);
