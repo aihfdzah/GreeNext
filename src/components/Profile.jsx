@@ -40,6 +40,7 @@ const Profile = () => {
 			<div className="profile-content">
 				<h1>Profil Publik</h1>
 				<h2>Tambahkan Informasi Tentang Diri Anda</h2>
+				<hr />
 
 				<form>
 					<div className="form-row">
@@ -108,7 +109,7 @@ const Profile = () => {
 						<input type="text" value="085692777510" readOnly></input>
 					</div>
 
-					<div className="form-group">
+					<div className="form-group" id="socialmedia">
 						<label>Social Media</label>
 						<input type="text" value="http://twitter.com" readOnly></input>
 						<input

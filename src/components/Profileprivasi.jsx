@@ -41,7 +41,7 @@ const Profileprivasi = () => {
 				</div>
 			</div>
 
-			<div className="content-privasi">
+			<div className="profile-content">
 				<h1>Privasi</h1>
 				<p>Ubah pengaturan privasi anda di sini</p>
 				<hr />
