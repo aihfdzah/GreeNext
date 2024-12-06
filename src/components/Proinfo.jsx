@@ -38,7 +38,7 @@ const Proinfo = () => {
 				</div>
 			</div>
 
-			<div className="content">
+			<div className="profile-content">
 				<h1>Pemberitahuan</h1>
 				<p>Kelola pesan notifikasi yang Anda terima</p>
 				<hr />
