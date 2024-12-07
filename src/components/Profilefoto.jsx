@@ -63,11 +63,11 @@ const Profilefoto = () => {
 								className="upload-input" 
 								/>
 							</div>
-
 							<button className="upload-button">Unggah Gambar</button>
+						</div>
+
+							
 							<button className="save-button">Simpan Perubahan</button>
-							</div>
-					
 				
 			</main>
 		</div>

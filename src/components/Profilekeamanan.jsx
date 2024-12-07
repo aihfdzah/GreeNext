@@ -5,7 +5,7 @@ const Profilekeamanan = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="containerr" id="profilekeamanan" style={{ marginBottom: "23%", marginTop: "10%" }}>
+		<div className="containerr" id="profilekeamanan" style={{ marginBottom: "20%", marginTop: "10%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
@@ -40,9 +40,10 @@ const Profilekeamanan = () => {
 
 			<main className="profile-content">
 				<h1>Akun</h1>
-				<p>Edit pengaturan akun dan ubah sandi Anda di sini</p>
+				<h2>Edit pengaturan akun dan ubah sandi Anda di sini</h2>
 				<hr />
 
+				
 				<div className="account-settings">
 					<div className="email-section">
 						<label for="email">Email Terdaftar:</label>

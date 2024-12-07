@@ -5,8 +5,8 @@ const Profilekeluar = () => {
 	return (
 		<div
 			className="containerr"
-			id="profilekeamanan"
-			style={{ marginBottom: "25%" , marginTop: "10%"}}>
+			id="profilekeluar"
+			style={{ marginBottom: "20%" , marginTop: "10%"}}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
@@ -41,13 +41,16 @@ const Profilekeluar = () => {
 
 			<main className="profile-content">
 				<h1>Keluar Akun</h1>
-				<p>Untuk keluar dari akun yang anda gunakan saat ini</p>
+				<h2>Untuk keluar dari akun yang anda gunakan saat ini</h2>
 				<hr />
-				<div className="logout-confirmation">
+
+				<div className="logout-confirmation" style={{ padding: "22%" }}>
 					<p>
 						<strong>Apakah Anda yakin untuk keluar dari akun?</strong>
 					</p>
+
 					<p>Kami akan menunggu Anda kembali ke FarmEduZ!</p>
+
 					<div className="button-group">
 						<button className="cancel-button">Batal</button>
 						<button className="logout-button">
