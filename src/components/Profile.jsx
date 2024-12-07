@@ -4,7 +4,7 @@ const Profile = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container" id="profile" style={{ marginBottom: "35%", marginTop: "10%"}}>
+		<div className="containerr" id="profile" style={{ marginBottom: "20%", marginTop: "10%"}}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
@@ -83,7 +83,7 @@ const Profile = () => {
 					<div className="form-row">
 						<div className="form-group">
 							<label>Tanggal Lahir</label>
-							<input type="date" value="1988-07-25" readOnly></input>
+							<input type="date" value="1988-07-25"></input>
 						</div>
 						<div className="form-group">
 							<label>Jenis Kelamin</label>

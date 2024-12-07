@@ -5,7 +5,7 @@ const Profilefoto = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container" id="profilefoto" style={{ marginBottom: "30%", marginTop: "10%" }}>
+		<div className="containerr" id="profilefoto" style={{ marginBottom: "20%", marginTop: "10%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
@@ -43,7 +43,7 @@ const Profilefoto = () => {
 				<h2>Tambahkan foto Anda yang bagus untuk profil</h2>
 				<hr />
 
-					<div className="form-row">
+					
 						<div className="photo-preview">
 							<p>Pratinjau Gambar</p>
 							<div className="placeholder-icon w-100 d-flex align-items-center justify-content-center p-5">
@@ -63,11 +63,11 @@ const Profilefoto = () => {
 								className="upload-input" 
 								/>
 							</div>
-
 							<button className="upload-button">Unggah Gambar</button>
+						</div>
+
+							
 							<button className="save-button">Simpan Perubahan</button>
-							</div>
-					</div>
 				
 			</main>
 		</div>

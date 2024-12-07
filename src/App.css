@@ -121,27 +121,6 @@ body {
 	flex-direction: column;
 }
 
-#profile {
-	flex-direction: row;
-}
-
-#profilefoto {
-	flex-direction: row;
-}
-
-#profileinfo {
-	flex-direction: row;
-}
-
-#profilekeamanan {
-	flex-direction: row;
-}
-
-#profileprivasi {
-	flex-direction: row;
-}
-
-
 .header {
 	display: flex;
 	align-items: center;
@@ -1807,11 +1786,12 @@ option {
 }
 
 /* ------------profile-------------- */
-.container {
-	max-width: 100%;
+.containerr {
+	max-width: 1500px;
+	width: 1200px;
 	margin: 8rem 0 20rem auto;
 	padding: 50px 50px;
-	background-color: #f5f2ed;
+	background-color: var(--background-color);
 	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
@@ -1819,28 +1799,33 @@ option {
 
 #profile {
 	flex-direction: row;
+	padding: 5px;
 	
 }
 
 #profilefoto {
 	flex-direction: row;
+	padding: 5px;
 }
 
 #profileinfo {
 	flex-direction: row;
-	display: flex;
-    /* gap: 2px; */
-    max-width: 800px;
-    width: 100%;
-	margin-top: 10%;
+	padding: 5px;
 }
 
 #profilekeamanan {
 	flex-direction: row;
+	padding: 5px;
 }
 
 #profileprivasi {
 	flex-direction: row;
+	padding: 5px;
+}
+
+#profilekeluar {
+	flex-direction: row;
+	padding: 5px;
 }
 /* 
 .sidebar {
@@ -1955,9 +1940,8 @@ option {
 
 /* Sidebar Styling */
 .sidebar {
-    flex: 1;
-    max-width: 200px;
-    background-color: #fff;
+    width: 200px;
+    background-color: var(--background-color);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -1999,9 +1983,10 @@ option {
 /* Profile Form Styling */
 .profile-content {
     flex: 2;
-    background-color: #fff;
+	margin-left: 20px;
+    background-color: var(--background-color);
     border-radius: 10px;
-    padding: 50px;
+    padding: 20px 80px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -2023,7 +2008,7 @@ option {
 
 .form-row {
     display: flex;
-    gap: 50px;
+    gap: 20px;
 }
 
 .form-group {
@@ -2035,6 +2020,7 @@ option {
 .form-group label {
     font-weight: bold;
     margin-bottom: 5px;
+	
 }
 #socialmedia {
 	gap: 15px;
@@ -2070,7 +2056,6 @@ option {
 
 /* -------------------profilefoto----------- */
 
-
 /* .content {
 	flex-grow: 1;
 	padding: 40px;
@@ -2088,8 +2073,8 @@ h1 {
 	flex-direction: column;
 	align-items: center;
 	margin-top: 10px;
-	font-size: 30px;
-	padding: 0 88px;
+	/* font-size: 30px; */
+	padding: 0 50px;
 }
 
 .photo-preview p {
@@ -2139,13 +2124,13 @@ font-size: 10px;
 .upload-button,
 .save-button {
 	padding: 10px 20px;
-	margin: 10px 0;
+	margin: 15px 0;
 	cursor: pointer;
 }
 
 .upload-button {
 	background-color: #ccc;
-	font-size: 18px;
+	font-size: 16px;
 	border: none;
 	padding: 10px 10px;
 	color: var(--text-color);
@@ -2265,9 +2250,10 @@ h1 {
 
 .setting-item p {
 	font-size: 15px;
+	text-align: center;
 	padding: 10px;
-	justify-content: center;
-	align-items: center;
+	/* justify-content: center;
+	align-items: center; */
 	margin-top: 5px;
 }
 
@@ -2314,25 +2300,68 @@ h1 {
 } */
 
 /* -----------profile keamanan----- */
-.content {
+/* .content {
 	flex-grow: 1;
 	padding: 40px;
 	background-color: #f5f2ed;
 	max-width: 100%;
-}
+} */
 
-h1 {
-	font-size: 24px;
-	color: #333;
+.profile-content {
+    flex: 2;
+	margin-left: 20px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px 80px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .account-settings {
 	margin-top: 20px;
+	display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
 }
 
-.email-section,
+/* .email-section,
 .password-section {
 	margin-bottom: 20px;
+} */
+
+.password-section,
+.email-section {
+	display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+	gap: 10px;
+}
+
+.password-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+	
+}
+/* #sandi {
+	gap: 15px;
+} */
+
+.email-section input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.password-section input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.password-section input:focus {
+    outline: none;
+    border-color: #f87042;
 }
 
 label {
@@ -2372,25 +2401,14 @@ input[type="password"] {
 }
 
 /* -------profile keluar--------- */
-.content {
-	flex-grow: 1;
-	padding: 40px;
-	background-color: #f5f2ed;
-}
-
-h1 {
-	font-size: 24px;
-	color: #333;
-}
 
 .logout-confirmation {
 	border: 1px solid #ccc;
 	border-radius: 8px;
-	padding: 30px;
+	/* padding: 30px; */
 	text-align: center;
-	background-color: #f5f2ed;
 	margin-top: 20px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logout-confirmation p {
