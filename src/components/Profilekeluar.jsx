@@ -4,7 +4,7 @@ const Profilekeluar = () => {
 	const navigate = useNavigate();
 	return (
 		<div
-			className="container"
+			className="containerr"
 			id="profilekeamanan"
 			style={{ marginBottom: "25%" , marginTop: "10%"}}>
 			<div className="sidebar">

@@ -5,7 +5,7 @@ const Profilekeamanan = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container" id="profilekeamanan" style={{ marginBottom: "23%", marginTop: "10%" }}>
+		<div className="containerr" id="profilekeamanan" style={{ marginBottom: "23%", marginTop: "10%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
@@ -49,16 +49,16 @@ const Profilekeamanan = () => {
 						<input
 							type="email"
 							id="email"
-							value="wahyurajabie123@gmail.com"
+							value="wahyurojolele123@gmail.com"
 							disabled></input>
 						<button className="action-button">Ubah Email</button>
 					</div>
 
-					<div className="password-section">
+					<div className="password-section" id="sandi">
 						<label for="current-password">Sandi:</label>
 						<input
 							type="password"
-							id="current-password"
+							id="current-passwordd"
 							placeholder="Masukkan sandi saat ini"></input>
 						<input
 							type="password"
