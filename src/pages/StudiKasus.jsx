@@ -60,13 +60,12 @@ const StudiKasus = () => {
 	return (
 		<>
 			<Navbar />
-
 			{/* Header */}
 			<Row
 				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-100px",
+					marginLeft: "-40px",
 					marginBottom: "-90px",
 				}}>
 				<Col>
