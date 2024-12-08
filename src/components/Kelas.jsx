@@ -51,7 +51,7 @@ const Kelas = () => {
 				</div>
 
 				{/* -------------- Layout Konten Utama -------- */}
-				<div className="main-content mt-0">
+				<div className="main-content mb-5">
 					{/* ---------- Sidebar Filter --> */}
 					<div className="filter" style={{marginLeft:"20px"}}>
 						<select>

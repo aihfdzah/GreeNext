@@ -9,6 +9,7 @@ import axios from "axios";
 function Login() {
 	const [showPassword, setShowPassword] = useState(false);
 	// Axios Awal login
+	const [users, setUsers] = useState([]);
 	const [error, setError] = useState(null);
 	const [formData, setFormData] = useState({
 		email: "",
