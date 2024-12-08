@@ -125,10 +125,11 @@ function Home() {
 									Baca Selengkapnya
 								</a>
 							</p>
-							<div className="tag-course">
-								<span>Menengah</span>
-								<span>4.8/5</span>
-								<span>Gratis</span>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "50%" }} // Ganti nilai ini sesuai persentase
+								></div>
 							</div>
 						</div>
 						<div className="image-button-container">
@@ -141,7 +142,7 @@ function Home() {
 									width: "200px",
 									marginTop: "10px",
 								}}>
-								Daftar Sekarang
+								Lanjutkan Kelas
 							</a>
 						</div>
 					</div>
@@ -159,10 +160,11 @@ function Home() {
 									Baca Selengkapnya
 								</a>
 							</p>
-							<div className="tag-course">
-								<span>Menengah</span>
-								<span>4.8/5</span>
-								<span>Gratis</span>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "20%" }} // Ganti nilai ini sesuai persentase
+								></div>
 							</div>
 						</div>
 						<div className="image-button-container">
@@ -175,7 +177,7 @@ function Home() {
 									width: "200px",
 									marginTop: "10px",
 								}}>
-								Daftar Sekarang
+								Lanjutkan Kelas
 							</a>
 						</div>
 					</div>
@@ -191,10 +193,11 @@ function Home() {
 									Baca Selengkapnya
 								</a>
 							</p>
-							<div className="tag-course">
-								<span>Menengah</span>
-								<span>4.8/5</span>
-								<span>Gratis</span>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "85%" }} // Ganti nilai ini sesuai persentase
+								></div>
 							</div>
 						</div>
 						<div className="image-button-container">
@@ -207,7 +210,7 @@ function Home() {
 									width: "200px",
 									marginTop: "10px",
 								}}>
-								Daftar Sekarang
+								Lanjutkan Kelas
 							</a>
 						</div>
 					</div>
@@ -223,10 +226,11 @@ function Home() {
 									Baca Selengkapnya
 								</a>
 							</p>
-							<div className="tag-course">
-								<span>Menengah</span>
-								<span>4.8/5</span>
-								<span>Gratis</span>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "50%" }} // Ganti nilai ini sesuai persentase
+								></div>
 							</div>
 						</div>
 						<div className="image-button-container">
@@ -239,7 +243,7 @@ function Home() {
 									width: "200px",
 									marginTop: "10px",
 								}}>
-								Daftar Sekarang
+								Lanjutkan Kelas
 							</a>
 						</div>
 					</div>
@@ -255,10 +259,11 @@ function Home() {
 									Baca Selengkapnya
 								</a>
 							</p>
-							<div className="tag-course">
-								<span>Menengah</span>
-								<span>4.8/5</span>
-								<span>Gratis</span>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "60%" }} // Ganti nilai ini sesuai persentase
+								></div>
 							</div>
 						</div>
 						<div className="image-button-container">
@@ -271,7 +276,7 @@ function Home() {
 									width: "200px",
 									marginTop: "10px",
 								}}>
-								Daftar Sekarang
+								Lanjutkan Kelas
 							</a>
 						</div>
 					</div>
@@ -287,10 +292,11 @@ function Home() {
 									Baca Selengkapnya
 								</a>
 							</p>
-							<div className="tag-course">
-								<span>Menengah</span>
-								<span>4.8/5</span>
-								<span>Gratis</span>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "20%" }} // Ganti nilai ini sesuai persentase
+								></div>
 							</div>
 						</div>
 						<div className="image-button-container">
@@ -303,7 +309,7 @@ function Home() {
 									width: "200px",
 									marginTop: "10px",
 								}}>
-								Daftar Sekarang
+								Lanjutkan Kelas
 							</a>
 						</div>
 					</div>
