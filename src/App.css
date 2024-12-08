@@ -23,14 +23,15 @@
 }
 
 body {
-	position: relative;
-	display: flex;
+	position: sticky;
+	/* display: flex; */
 	justify-content: center;
 	align-items: center;
 	height: 100%;
 	background-color: var(--background-color);
 	margin: 0;
-	padding: 0;
+	padding: auto;
+	max-width: 1440px;
 }
 
 .navbar {
@@ -112,13 +113,12 @@ body {
 
 /* ----------kelas------------ */
 .container {
-	max-width: 100%;
-	margin: 8rem 0 20rem auto;
+	max-width: 1440px;
+	/* margin: 8rem 0 20rem auto; */
 	padding: 50px 50px;
 	background-color: #f5f2ed;
 	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 }
 
 .header {
@@ -1827,7 +1827,7 @@ option {
 
 /* ------------profile-------------- */
 .containerr {
-	max-width: 1500px;
+	max-width: 1440px;
 	width: 1200px;
 	margin: 8rem 0 20rem auto;
 	padding: 50px 50px;
@@ -2490,13 +2490,10 @@ input[type="password"] {
 	background-color: var(--main-color) !important;
 	padding: 10px 50px;
 	font-size: 14px;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	right: 0;
-	width: 100%;
-	flex-direction: column;
+	max-width: 1440px;
 }
 
 .footer-content {

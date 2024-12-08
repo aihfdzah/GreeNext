@@ -34,10 +34,7 @@ function Dashboard() {
 		<Navbar/>
 		<Container fluid className="p-lg-4 p-md-0 mt-5">
 			<Row
-				className="py-3 d-flex text-left"
-				style={{
-					marginLeft: "-40px",
-				}}>
+				className="py-3 d-flex text-left">
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Dashboard</h1>
 				</Col>

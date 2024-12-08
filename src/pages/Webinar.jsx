@@ -34,11 +34,8 @@ const Webinar = () => {
 		<>
 			<Navbar />
 			<Row
-				className="py-3 d-flex text-left"
+				className="py-3 d-flex text-left mt-5"
 				style={{
-					marginTop: "70px",
-					marginLeft: "-140px",
-					marginBottom: "-90px",
 				}}>
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Webinar & Seminar</h1>

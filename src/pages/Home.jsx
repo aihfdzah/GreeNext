@@ -32,7 +32,7 @@ function Home() {
 	return (
 		<>
 			<Navbar />
-			<Container className="mt-4">
+			<Container className="mt-5">
 				<Row
 					className="py-3 d-flex text-left"
 					style={{
@@ -82,10 +82,10 @@ function Home() {
 					</Col>
 					<Col md={6}>
 						<Row style={{ marginTop: "-90px" }}>
-							<Col md={4} style={{ marginTop: "90px" }}>
+							<Col md={4} style={{ marginTop: "90px", marginLeft:"100px" }}>
 								<div className="card" style={{ backgroundColor: "#F5F2ED" }}>
 									<div className="card-body">
-										<h5 className="card-title">0</h5>
+										<h5 className="card-title">7</h5>
 										<p className="card-text">Kelas</p>
 									</div>
 								</div>
@@ -95,14 +95,6 @@ function Home() {
 									<div className="card-body">
 										<h5 className="card-title">0</h5>
 										<p className="card-text">Kelas Selesai</p>
-									</div>
-								</div>
-							</Col>
-							<Col md={4} style={{ marginTop: "90px" }}>
-								<div className="card" style={{ backgroundColor: "#F5F2ED" }}>
-									<div className="card-body">
-										<h5 className="card-title">0</h5>
-										<p className="card-text">Sumber Daya</p>
 									</div>
 								</div>
 							</Col>
