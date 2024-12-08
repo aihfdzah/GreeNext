@@ -1,10 +1,21 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../Styles/Webinar.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
+import {
+	FaSeedling,
+	FaUserFriends,
+	FaMapMarkerAlt,
+	FaCalendarAlt,
+	FaSignInAlt,
+	FaCogs,
+	FaLeaf,
+	FaVideo,
+	FaWater,
+} from "react-icons/fa";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { useEffect } from "react";
 import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
@@ -33,16 +44,11 @@ const Webinar = () => {
 	return (
 		<>
 			<Navbar />
-			<Row
-				className="py-3 d-flex text-left mt-5"
-				style={{
-				}}>
+			<Row className="py-3 d-flex text-left mt-5" style={{}}>
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Webinar & Seminar</h1>
 				</Col>
-				<Col
-					className="text-end me-auto text-left"
-					style={{ marginLeft: "-200px" }}>
+				<Col className="text-end me-auto text-left">
 					<Button
 						className={`button-custom ${
 							activeButton === "sumber" ? "active" : ""
@@ -76,13 +82,13 @@ const Webinar = () => {
 				</Col>
 			</Row>
 
-			<div className="container mt-5" style={{ marginBottom: "30%" }}>
+			<div className="container mt-2" style={{ marginBottom: "30%" }}>
 				<h1 className="text-center">Webinar & Seminar</h1>
 				<div className="d-flex align-items-center justify-content-between py-2 border-bottom mt-1 mb-3">
 					{/* Search Bar */}
 					<div
 						className="input-group mx-3 flex-grow-1"
-						style={{ maxWidth: "600px", position: "relative" }}>
+						style={{ maxWidth: "1200px", position: "relative" }}>
 						<i
 							className="fa-solid fa-magnifying-glass"
 							style={{
@@ -205,63 +211,142 @@ const Webinar = () => {
 
 				<div className="event-list">
 					<div className="event-card">
-						<img src="./foto6.jpg" alt="Event Thumbnail" style={{ width: "55%" }} />
+						<img
+							src="./foto6.jpg"
+							alt="Event Thumbnail"
+							style={{ width: "55%" }}
+						/>
 						<div className="event-info">
-							<h3>Dinamika Pertanian Konvesional </h3>
-							<p>108 orang mengikuti seminar ini</p>
-							<p>
-								📍Lembang, <br /> Kabupaten Bandung, Jawa Barat
+							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }}>
+								<FaSeedling className="me-2" />
+								Dinamika Pertanian Konvesional
+							</h3>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaUserFriends className="me-2" />
+								108 orang mengikuti seminar ini
 							</p>
-							<p>Tanggal: 28 - 29 Februari 2025</p>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaMapMarkerAlt className="me-2" />
+								Lembang, <br /> Kabupaten Bandung, Jawa Barat
+							</p>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaCalendarAlt className="me-2" />
+								Tanggal: 28 - 29 Februari 2025
+							</p>
 						</div>
-						{/* Tombol Daftar di bawah */}
 						<a href="./WebinarDetail">
 							<button
 								className="btn-status"
-								style={{ display: "block", margin: "10px auto" }}>
+								style={{
+									display: "block",
+									margin: "10px auto",
+									backgroundColor: "#ef7a53",
+									color: "#fff",
+									borderRadius: "20px",
+									padding: "10px 20px",
+									fontSize: "1rem",
+									border: "none",
+									cursor: "pointer",
+								}}>
+								<FaSignInAlt className="me-2" />
 								Daftar
 							</button>
 						</a>
 					</div>
 
 					<div className="event-card">
-						<img src="./foto5.jpg" alt="Event Thumbnail" />
+						<img
+							src="./foto5.jpg"
+							alt="Event Thumbnail"
+							style={{ width: "55%" }}
+						/>
 						<div className="event-info">
-							<h3>Sistem Teknologi Pertanian</h3>
-							<p>192 orang mengikuti seminar ini</p>
-							<p>
-								📍Lembang, <br /> Kabupaten Bandung, Jawa Barat
+							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }}>
+								<FaCogs className="me-2" />
+								Sistem Teknologi Pertanian
+							</h3>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaUserFriends className="me-2" />
+								192 orang mengikuti seminar ini
 							</p>
-							<p>Tanggal: 15 - 16 April 2025</p>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaMapMarkerAlt className="me-2" />
+								Lembang, <br /> Kabupaten Bandung, Jawa Barat
+							</p>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaCalendarAlt className="me-2" />
+								Tanggal: 15 - 16 April 2025
+							</p>
 						</div>
 						<a href="./WebinarDetail">
-							<button className="btn-status">Daftar</button>
+							<button className="btn-status">
+								<FaSignInAlt className="me-2" />
+								Daftar
+							</button>
 						</a>
 					</div>
 
 					<div className="event-card">
-						<img src="./foto4.jpg" alt="Event Thumbnail" />
+						<img
+							src="./foto4.jpg"
+							alt="Event Thumbnail"
+							style={{ width: "55%" }}
+						/>
 						<div className="event-info">
-							<h3>Manajemen Pertanian</h3>
-							<p>100 orang mengikuti seminar ini</p>
-							<p> ⛓️‍💥Via Zoom </p>
-							<p>Tanggal: 20 Juli 2025</p>
+							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }}>
+								<FaLeaf className="me-2" />
+								Manajemen Pertanian
+							</h3>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaUserFriends className="me-2" />
+								100 orang mengikuti seminar ini
+							</p>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaVideo className="me-2" />
+								Via Zoom
+							</p>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaCalendarAlt className="me-2" />
+								Tanggal: 20 Juli 2025
+							</p>
 						</div>
 						<a href="./WebinarDetail">
-							<button className="btn-status">Daftar</button>
+							<button className="btn-status">
+								<FaSignInAlt className="me-2" />
+								Daftar
+							</button>
 						</a>
 					</div>
 
 					<div className="event-card">
-						<img src="./foto9.jpg" alt="Event Thumbnail" />
+						<img
+							src="./foto9.jpg"
+							alt="Event Thumbnail"
+							style={{ width: "55%" }}
+						/>
 						<div className="event-info">
-							<h3>Inovasi Pertanian Hemat Air</h3>
-							<p>122 orang mengikuti seminar ini</p>
-							<p> ⛓️‍💥Via Zoom </p>
-							<p>Tanggal: 01 Oktober 2025</p>
+							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }}>
+								<FaWater className="me-2" />
+								Inovasi Pertanian Hemat Air
+							</h3>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaUserFriends className="me-2" />
+								122 orang mengikuti seminar ini
+							</p>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaVideo className="me-2" />
+								Via Zoom
+							</p>
+							<p style={{ fontSize: "1rem", color: "#555" }}>
+								<FaCalendarAlt className="me-2" />
+								Tanggal: 01 Oktober 2025
+							</p>
 						</div>
 						<a href="./WebinarDetail">
-							<button className="btn-status">Daftar</button>
+							<button className="btn-status">
+								<FaSignInAlt className="me-2" />
+								Daftar
+							</button>
 						</a>
 					</div>
 				</div>
