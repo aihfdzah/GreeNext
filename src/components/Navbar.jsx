@@ -1,6 +1,6 @@
 import Profile from "../assets/profile.png";
 import { useState } from "react";
-import { useLocation } from "react-router-dom"; 
+import { useLocation } from "react-router-dom";
 import {
 	Dropdown,
 	DropdownToggle,
@@ -12,7 +12,7 @@ const Navbar = () => {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
-	const location = useLocation(); 
+	const location = useLocation();
 
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -25,9 +25,9 @@ const Navbar = () => {
 					<li className="nav-item me-5">
 						<a
 							className={`nav-link ${
-								location.pathname === "/home" ? "active-link" : ""
+								location.pathname === "/dashboard" ? "active-link" : ""
 							}`}
-							href="/home">
+							href="/dashboard">
 							Dashboard
 						</a>
 					</li>
