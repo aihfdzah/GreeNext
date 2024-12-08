@@ -12,9 +12,9 @@ function Login() {
 	const [users, setUsers] = useState([]);
 	const [error, setError] = useState(null);
 	const [formData, setFormData] = useState({
-		email : '',
-		password: ''
-	})
+		email: "",
+		password: "",
+	});
 	const navigate = useNavigate();
 
 	// Handle form input changes
@@ -32,17 +32,21 @@ function Login() {
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
-		setError('');
-		console.log(formData.email, formData.password)
+		setError("");
+		console.log(formData.email, formData.password);
 		try {
-			const response = await axios.post('http://localhost:5000/api/v1/auth/login', {
-				email: formData.email, 
-				password:formData.password
-			}, {
-				headers : {
-					"Content-Type": "application/json"
+			const response = await axios.post(
+				"http://localhost:5000/api/v1/auth/login",
+				{
+					email: formData.email,
+					password: formData.password,
+				},
+				{
+					headers: {
+						"Content-Type": "application/json",
+					},
 				}
-			})
+			)
 			console.log('response : ', response.data)
 			if (response.status == 200){
 				alert('Berhasil Login!')
@@ -50,11 +54,11 @@ function Login() {
 			} 
 		} catch (error) {
 			// console.log(error.response.data.message)
-			setError(error.response.data.message)
+			setError(error.response.data.message);
 			// if (error.response?.status){
 			// 	setError(response.data.message)
 			// }
-			console.error('Error login', error.message)
+			console.error("Error login", error.message);
 		}
 
 		// Redirect to home on login (add user validation if needed)
@@ -101,7 +105,7 @@ function Login() {
 				<div className="ml-3 w-75">
 					<h1
 						className="text-left d-flex mb-2"
-						style={{ fontSize: "24pt", color: "#ef7a53", fontWeight: "bold" }}>
+						style={{ fontSize: "20pt", color: "#ef7a53", fontWeight: "bold" }}>
 						Login Untuk Bergabung Bersama Kami
 					</h1>
 					<p style={{ color: "#17412d", fontSize: "10pt" }} className="mb-2">
@@ -121,7 +125,14 @@ function Login() {
 						<span className="input-group-text bg-white">
 							<FaEnvelope />
 						</span>
-						<input type="email" name="email" placeholder="Email" className="form-control" value={formData.email} onChange={handleInputChange} />
+						<input
+							type="email"
+							name="email"
+							placeholder="Email"
+							className="form-control"
+							value={formData.email}
+							onChange={handleInputChange}
+						/>
 					</div>
 
 					<div className="input-group mb-3">
@@ -144,7 +155,9 @@ function Login() {
 						</span>
 					</div>
 
-					{error && <p className={`text-danger small text-left shake`}>{error}</p>}
+					{error && (
+						<p className={`text-danger small text-left shake`}>{error}</p>
+					)}
 
 					<p className="text-left small" style={{ color: "#17412d" }}>
 						Dengan membuat akun, Anda menyetujui{" "}

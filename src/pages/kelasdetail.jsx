@@ -1,10 +1,24 @@
 import { useNavigate } from "react-router-dom"; // Import untuk navigasi
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-
+import { useState, useEffect } from "react";
+import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 const Kelasdetail = () => {
 	const navigate = useNavigate(); // Hook untuk navigasi
+	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
 
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoading(false);
+		}, 3000); // Simulasikan loading selama 3 detik
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	// Jika sedang loading, tampilkan spinner
+	if (loading) {
+		return <Spinner />;
+	}
 	return (
 		<>
 			<Navbar />
@@ -29,7 +43,7 @@ const Kelasdetail = () => {
 							4.9 (294,203 ratings) | 100 member | Charlie Vetrows
 						</p>
 						<img
-							src="./detailkelas.jpg"
+							src="./detailklss.jpg"
 							id="detailkelas"
 							alt="Drone Pertanian"
 							className="course-image"

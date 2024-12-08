@@ -38,7 +38,6 @@ import COBankNext from "./pages/COBankNext";
 import COBerhasil from "./pages/COBerhasil";
 import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
-
 function App() {
 	return (
 		<BrowserRouter>

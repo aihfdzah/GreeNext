@@ -6,9 +6,9 @@ const Profileprivasi = () => {
 
 	return (
 		<div
-			className="container"
+			className="containerr"
 			id="profileprivasi"
-			style={{ marginBottom: "24%" }}>
+			style={{ marginBottom: "20%", marginTop: "10%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
@@ -41,9 +41,9 @@ const Profileprivasi = () => {
 				</div>
 			</div>
 
-			<div className="content-privasi">
+			<div className="profile-content">
 				<h1>Privasi</h1>
-				<p>Ubah pengaturan privasi anda di sini</p>
+				<h2>Ubah pengaturan privasi anda di sini</h2>
 				<hr />
 
 				<div className="privacy-settings">
@@ -51,12 +51,12 @@ const Profileprivasi = () => {
 
 					<div className="setting-item">
 						<input type="checkbox" className="toggle-switch" />
-						<label> Tampilkan profil anda ke pengguna FarmEduZ lainnya</label>
+						<p> Tampilkan profil anda ke pengguna FarmEduZ lainnya</p>
 					</div>
 
 					<div className="setting-item">
 						<input type="checkbox" className="toggle-switch" />
-						<label>Perlihatkan kursus yang anda ikuti di halaman anda</label>
+						<p>Perlihatkan kursus yang anda ikuti di halaman anda</p>
 					</div>
 					<button className="save-button">Simpan Perubahan</button>
 				</div>

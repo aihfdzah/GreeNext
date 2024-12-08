@@ -121,27 +121,6 @@ body {
 	flex-direction: column;
 }
 
-#profile {
-	flex-direction: row;
-}
-
-#profilefoto {
-	flex-direction: row;
-}
-
-#profileinfo {
-	flex-direction: row;
-}
-
-#profilekeamanan {
-	flex-direction: row;
-}
-
-#profileprivasi {
-	flex-direction: row;
-}
-
-
 .header {
 	display: flex;
 	align-items: center;
@@ -162,7 +141,7 @@ body {
 
 .button-filter:hover {
 	background-color: var(--text-color2);
-	color: white;
+	color: #f5f2ed;
 	transition: 0.2s;
 }
 
@@ -229,7 +208,7 @@ h2 {
 
 .filter select:hover {
 	background: var(--text-color2);
-	color: white;
+	color: #f5f2ed;
 }
 
 option {
@@ -250,7 +229,7 @@ option {
 	align-items: center;
 	padding: 15px;
 	border-bottom: 1px solid var(--main-color) !important;
-	background-color: #fff;
+	background-color: #f5f2ed;
 	flex-direction: column;
 	margin-top: 8px;
 }
@@ -333,7 +312,7 @@ option {
 
 .button-daftar a:hover {
 	background-color: #ef7a53 !important;
-	color: white;
+	color: #f5f2ed;
 }
 
 /* Layout Halaman */
@@ -380,7 +359,7 @@ option {
 
 .pagination .page:hover {
 	background-color: #ef7a53 !important;
-	color: white;
+	color: #f5f2ed;
 }
 
 .pagination .dots {
@@ -457,8 +436,8 @@ option {
 .btn-orange {
 	display: block;
 	width: 100%;
-	background-color: #ff6b00;
-	color: #fff;
+	background-color: #ef7a53;
+	color: #f5f2ed;
 	text-align: center;
 	padding: 12px;
 	border-radius: 8px;
@@ -594,7 +573,7 @@ main.book-detail {
 	border: none;
 	font-size: 20px;
 	cursor: pointer;
-	color: #f57224;
+	color: #ef7a53;
 }
 
 .author {
@@ -621,12 +600,12 @@ main.book-detail {
 
 .read-button {
 	background-color: #4caf50;
-	color: #fff;
+	color: #f5f2ed;
 }
 
 .buy-button {
-	background-color: #f57224;
-	color: #fff;
+	background-color: #ef7a53;
+	color: #f5f2ed;
 }
 
 .right-section {
@@ -667,112 +646,136 @@ main.book-detail {
 
 .progress {
 	height: 100%;
-	background-color: #f57224;
+	background-color: #ef7a53;
 }
 
 /* ----------Carousel -------------------------------- */
 .product {
     position: relative;
     overflow: hidden;
-  }
-  
-  .product-category {
+}
+
+.product-category {
     text-align: center;
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 40px;
     text-transform: capitalize;
-  }
-  
-  .container-carousel {
-	max-width: 1000px;
-	margin: 8rem 0 20rem auto;
-	padding: 50px 50px;
-	background-color: #f5f2ed;
-	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
-  }
-  .product-container {
+}
+
+.container-carousel {
+    max-width: 1000px;
+    margin: 8rem 0 20rem auto;
+    padding: 50px 50px;
+    background-color: #f5f2ed;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-container {
     padding: 0;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-  }
-  
-  .product-container::-webkit-scrollbar {
+}
+
+.product-container::-webkit-scrollbar {
     display: none;
-  }
-  
-  .product-card {
+}
+
+.product-card {
     flex: 0 0 auto;
     width: 250px;
     height: 450px;
     margin-right: 40px;
-  }
-  
-  .product-image {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
     position: relative;
     width: 100%;
     height: 350px;
     overflow: hidden;
-  }
-  
-  .product-thumb {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.product-thumb {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  .discount-tag {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.discount-tag {
     position: absolute;
-    background: var(--text-color2);
+    background: #ef7a53;
     padding: 5px;
     border-radius: 5px;
-    color: var(--main-color);
+    color: #f5f2ed;
     right: 10px;
     top: 10px;
     text-transform: capitalize;
-	font-size: 12px;
-  }
-  
-  .card-btn {
+    font-size: 12px;
+}
+
+.card-btn {
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px;
     width: 90%;
     text-transform: capitalize;
     border: none;
     outline: none;
-    background: #fff;
-    border-radius: 5px;
+    background-color: var(--text-color2);
     transition: 0.5s;
     cursor: pointer;
     opacity: 0;
-  }
-  
-  .product-card:hover .card-btn {
+	margin-top: 10px;
+    padding: 8px 15px;
+    color: #f5f2ed;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card:hover .card-btn {
     opacity: 1;
-  }
-  
-  .card-btn:hover {
-    background: var(--text-color2);
-    color: var(--text-color);
-  }
-  
-  .product-info {
+}
+
+.card-btn:hover {
+    background:var(--main-color);
+    color: #f5f2ed;
+}
+
+.product-info {
     width: 100%;
     height: 100px;
     padding-top: 10px;
-  }
+    text-align: center;
+}
 
-  .product-brand {
+.product-brand {
     text-transform: uppercase;
-  }
-  
-  .product-short-description {
+}
+
+.product-short-description {
     width: 100%;
     height: 20px;
     line-height: 20px;
@@ -780,21 +783,39 @@ main.book-detail {
     opacity: 0.5;
     text-transform: capitalize;
     margin: 5px 0;
-  }
-  
-  .price {
+}
+
+.price {
     font-weight: 900;
     font-size: 20px;
-  }
-  
-  .actual-price {
+    color: var(--text-color2);
+}
+
+.actual-price {
     margin-left: 20px;
     opacity: 0.5;
     text-decoration: line-through;
-  }
-  
-  
+    font-size: 16px;
+}
 
+
+/* Tambahan responsivitas */
+@media (max-width: 768px) {
+    .container-carousel {
+        margin: 4rem 0 10rem auto;
+        padding: 30px 20px;
+    }
+
+    .product-card {
+        width: 200px;
+        height: 400px;
+        margin-right: 20px;
+    }
+
+    .product-thumb {
+        height: 300px;
+    }
+}
 
 /* --------Ebook Free----------- */
 .title {
@@ -889,7 +910,7 @@ main.book-detail {
 
 .overlay .lock-icon {
     font-size: 40px;
-    color: #ff7043;
+    color:  var(--text-color2);
     margin-bottom: 10px;
 }
 
@@ -899,7 +920,7 @@ main.book-detail {
 }
 
 .overlay .button {
-    background-color: #ff7043;
+    background-color:  var(--text-color2);
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -1765,6 +1786,48 @@ option {
 }
 
 /* ------------profile-------------- */
+.containerr {
+	max-width: 1500px;
+	width: 1200px;
+	margin: 8rem 0 20rem auto;
+	padding: 50px 50px;
+	background-color: var(--background-color);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+#profile {
+	flex-direction: row;
+	padding: 5px;
+	
+}
+
+#profilefoto {
+	flex-direction: row;
+	padding: 5px;
+}
+
+#profileinfo {
+	flex-direction: row;
+	padding: 5px;
+}
+
+#profilekeamanan {
+	flex-direction: row;
+	padding: 5px;
+}
+
+#profileprivasi {
+	flex-direction: row;
+	padding: 5px;
+}
+
+#profilekeluar {
+	flex-direction: row;
+	padding: 5px;
+}
+/* 
 .sidebar {
 	flex: 1;
 	max-width: 100%;
@@ -1793,10 +1856,10 @@ option {
 	margin-bottom: 20px;
 }
 
-.sidebar button {
+.button-sidebar {
 	display: block;
 	width: 100%;
-	padding: 10px;
+	padding: 5px;
 	margin-bottom: 10px;
 	border: none;
 	border-radius: 5px;
@@ -1805,9 +1868,9 @@ option {
 	font-size: 14px;
 	cursor: pointer;
 	font-weight: bold;
-}
+} */
 
-/* Profile Form Styling */
+/* Profile Form Styling
 .profile-content {
 	flex: 2;
 	background-color: #f5f2ed;
@@ -1873,38 +1936,154 @@ option {
 	border: none;
 	cursor: pointer;
 	margin-top: 20px;
+} */
+
+/* Sidebar Styling */
+.sidebar {
+    width: 200px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* -----------profilefoto----------- */
+.sidebar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
 
-.content {
+.sidebar h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.sidebar p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f87042;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Profile Form Styling */
+.profile-content {
+    flex: 2;
+	margin-left: 20px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px 80px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.profile-content h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+	color: var(--text-color);
+}
+
+.profile-content h2 {
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+	
+}
+#socialmedia {
+	gap: 15px;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #f87042;
+}
+
+
+.btn-save {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f87042;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* -------------------profilefoto----------- */
+
+/* .content {
 	flex-grow: 1;
 	padding: 40px;
 	max-width: 100%;
-}
-
+} */
+/* 
 h1 {
 	font-size: 40px;
 	font-weight: 700;
 	color: #060807;
-}
-
-p {
-	font-size: 20px;
-	color: var(--text-color);
-}
+} */
 
 .photo-preview {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 20px;
+	margin-top: 10px;
+	/* font-size: 30px; */
+	padding: 0 50px;
+}
+
+.photo-preview p {
 	font-size: 20px;
 }
 
 .placeholder-icon {
 	font-size: 100px;
-	color: #060807;
+	/* color: #060807; */
 	border: 1px solid #ccc;
 	background: #ccc;
 	padding: 50px 150%;
@@ -1912,43 +2091,55 @@ p {
 	margin-bottom: 20px;
 }
 
-.label {
+
+/* .label {
 	text-align: left;
-}
+} */
 
 .upload-label {
 	margin-bottom: 10px;
-	font-size: 20px;
+	font-size: 15px;
+	text-align: center;
 }
-
+/* 
 .upload-control {
 	display: inline-flex;
-}
+} */
 
 .upload-input {
 	display: flex;
-	padding: 10px 40px;
+	padding: 10px 0;
 	border-radius: 8px;
+	font-size: 15px;
 }
+
+.upload-input input[type="file"] {
+    display: none;
+}
+/* 
+#input-value {
+font-size: 10px;
+} */
 
 .upload-button,
 .save-button {
 	padding: 10px 20px;
-	margin: 10px 0;
+	margin: 15px 0;
 	cursor: pointer;
 }
 
-
 .upload-button {
 	background-color: #ccc;
+	font-size: 16px;
 	border: none;
-	padding: 10px 16px;
+	padding: 10px 10px;
 	color: var(--text-color);
 	border-radius: 8px;
 	transition: 2s;
+	margin-bottom: 0;
 }
 
-.upload-input a:hover {
+.upload-button a:hover {
 	background-color: var(--text-color2);
 	color: var(--background-color);
 	transition: 2s;
@@ -1959,20 +2150,17 @@ p {
 	border: none;
 	color: white;
 	border-radius: 8px;
+	font-size: 18px;
 }
 
 /* ----------profileinfo--------- */
-
-h1 {
-	font-size: 24px;
-	color: #333;
-}
-
 .tabs {
 	display: flex;
 	margin-top: 20px;
 	flex-direction: row;
-	gap: 20px;
+	border-radius: 8px;
+	gap: 10px;
+	justify-content: center;
 }
 
 .tab {
@@ -1980,22 +2168,20 @@ h1 {
 	cursor: pointer;
 	background-color: var(--text-color2);
 	color: var(--background-color);
-	border-radius: 8px;
 }
 
 .tab.active {
 	background-color: #eaeaea;
 	color: var(--text-color);
 	pointer-events: none;
-	border-radius: 8px;
 }
 
 .notifications {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
-	margin-top: 20px;
-	padding: 40px;
+	margin-top: 10px;
+	padding: 10px;
 }
 
 .notification-card {
@@ -2007,27 +2193,26 @@ h1 {
 }
 
 .notification-card h2 {
-	font-size: 18px;
 	color: #333;
 	margin-bottom: 10px;
 }
 
 .notification-card p {
 	color: #666;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .open-button {
 	background-color: var(--text-color2);
 	color: white;
-	padding: 8px 16px;
+	padding: 5px 10px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
 }
 
 /* ---------------profile privasi---------- */
-.container-privasi {
+/* .container-privasi {
 	text-align: center;
 	max-width: 100%;
 	margin: 8rem 0 20rem auto;
@@ -2041,14 +2226,13 @@ h1 {
 h1 {
 	font-size: 24px;
 	color: #333;
-}
+} */
 
 .privacy-settings {
 	margin-top: 20px;
 }
 
 .privacy-settings h2 {
-	font-size: 18px;
 	color: #333;
 	margin-bottom: 20px;
 }
@@ -2057,11 +2241,20 @@ h1 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px;
+	padding: 5px;
 	border: 1px solid #555;
 	border-radius: 8px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	background-color: #f5f2ed;
+}
+
+.setting-item p {
+	font-size: 15px;
+	text-align: center;
+	padding: 10px;
+	/* justify-content: center;
+	align-items: center; */
+	margin-top: 5px;
 }
 
 .toggle-switch {
@@ -2094,7 +2287,7 @@ h1 {
 .toggle-switch:checked:before {
 	left: 21px;
 }
-
+/* 
 .save-button {
 	background-color: var(--text-color2);
 	color: white;
@@ -2104,28 +2297,71 @@ h1 {
 	cursor: pointer;
 	margin-top: 20px;
 	text-align: center;
-}
+} */
 
 /* -----------profile keamanan----- */
-.content {
+/* .content {
 	flex-grow: 1;
 	padding: 40px;
 	background-color: #f5f2ed;
 	max-width: 100%;
-}
+} */
 
-h1 {
-	font-size: 24px;
-	color: #333;
+.profile-content {
+    flex: 2;
+	margin-left: 20px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px 80px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .account-settings {
 	margin-top: 20px;
+	display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
 }
 
-.email-section,
+/* .email-section,
 .password-section {
 	margin-bottom: 20px;
+} */
+
+.password-section,
+.email-section {
+	display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+	gap: 10px;
+}
+
+.password-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+	
+}
+/* #sandi {
+	gap: 15px;
+} */
+
+.email-section input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.password-section input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.password-section input:focus {
+    outline: none;
+    border-color: #f87042;
 }
 
 label {
@@ -2154,7 +2390,7 @@ input[type="password"] {
 
 .save-button {
 	background-color: var(--text-color2);
-	color: white;
+	color: #f5f2ed;
 	padding: 10px 20px;
 	border: none;
 	border-radius: 4px;
@@ -2165,25 +2401,14 @@ input[type="password"] {
 }
 
 /* -------profile keluar--------- */
-.content {
-	flex-grow: 1;
-	padding: 40px;
-	background-color: white;
-}
-
-h1 {
-	font-size: 24px;
-	color: #333;
-}
 
 .logout-confirmation {
 	border: 1px solid #ccc;
 	border-radius: 8px;
-	padding: 30px;
+	/* padding: 30px; */
 	text-align: center;
-	background-color: #f9f9f9;
 	margin-top: 20px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logout-confirmation p {
@@ -2217,7 +2442,7 @@ h1 {
 
 .logout-button {
 	background-color: var(--text-color2);
-	color: white;
+	color: #f5f2ed;
 }
 
 /* -----------footer----------- */
@@ -2260,7 +2485,7 @@ h1 {
 
 .bx {
 	margin-left: 10px;
-	color: white;
+	color: #f5f2ed;
 	text-decoration: none;
 	font-size: 10px;
 	margin-top: 50px;
@@ -2274,8 +2499,7 @@ h1 {
 
 /* Style untuk setiap bagian link di footer */
 .foooter {
-	margin-bottom: 10px;
-	color: white;
+	color: #f5f2ed;
 	min-width: 150px;
 	margin: 10px;
 	flex: 1;
@@ -2290,7 +2514,7 @@ h1 {
 .footer-link {
 	list-style-type: none;
 	padding-top: 13px;
-	color: white;
+	color: #f5f2ed;
 	text-decoration: none;
 	transition: color 0;
 	padding: 0;

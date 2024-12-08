@@ -5,7 +5,7 @@ const Profilekeamanan = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container" id="profilekeamanan">
+		<div className="containerr" id="profilekeamanan" style={{ marginBottom: "20%", marginTop: "10%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
@@ -38,27 +38,28 @@ const Profilekeamanan = () => {
 				</div>
 			</div>
 
-			<main className="content">
+			<main className="profile-content">
 				<h1>Akun</h1>
-				<p>Edit pengaturan akun dan ubah sandi Anda di sini</p>
+				<h2>Edit pengaturan akun dan ubah sandi Anda di sini</h2>
 				<hr />
 
+				
 				<div className="account-settings">
 					<div className="email-section">
 						<label for="email">Email Terdaftar:</label>
 						<input
 							type="email"
 							id="email"
-							value="wahyurajabie123@gmail.com"
+							value="wahyurojolele123@gmail.com"
 							disabled></input>
 						<button className="action-button">Ubah Email</button>
 					</div>
 
-					<div className="password-section">
+					<div className="password-section" id="sandi">
 						<label for="current-password">Sandi:</label>
 						<input
 							type="password"
-							id="current-password"
+							id="current-passwordd"
 							placeholder="Masukkan sandi saat ini"></input>
 						<input
 							type="password"

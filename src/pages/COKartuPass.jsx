@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom"; // Untuk navigasi
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../Styles/Ebookpay.css";
-
+import { useEffect } from "react";
+import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 const COKartuPass = () => {
 	const [paymentMethod, setPaymentMethod] = useState("kartu");
 	const [formData, setFormData] = useState({
@@ -28,25 +29,39 @@ const COKartuPass = () => {
 		alert("Pembayaran berhasil!");
 	};
 
+	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoading(false);
+		}, 3000); // Simulasikan loading selama 3 detik
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	// Jika sedang loading, tampilkan spinner
+	if (loading) {
+		return <Spinner />;
+	}
 	return (
 		<>
 			<Navbar />
 			<div className="container mt-5">
 				{/* Tombol Kembali */}
-				{/* <div className="mb-4">
+				<div className="mb-4">
 					<button
 						className="btn btn-trasparant d-flex align-items-center gap-2"
-						onClick={() => navigate("/KelasDetail")}>
+						onClick={() => navigate("/COKartu")}>
 						<i className="fa fa-arrow-left"></i>
 						Kembali
 					</button>
-				</div> */}
+				</div>
 
 				<div className="row">
 					{/* Form Pembayaran */}
 					<div className="col-lg-7">
 						<div className="form-container p-4 border rounded">
-							<h2 className="mb-4">Pembayaran Ebook</h2>
+							<h2 className="mb-4">Pembayaran</h2>
 							<div className="payment-options mb-3">
 								<label className="me-3">
 									<input
@@ -70,22 +85,24 @@ const COKartuPass = () => {
 								</label>
 							</div>
 
-                            <p className="input-pin">Masukkan pin kartu 4 digit Anda untuk pembayaran ini</p>
-                                <div class="pin-input">
-                                    <input type="password" maxlength="1"/>
-                                    <input type="password" maxlength="1"/>
-                                    <input type="password" maxlength="1"/>
-                                    <input type="password" maxlength="1"/>
-                                </div>
+							<p className="input-pin">
+								Masukkan pin kartu 4 digit Anda untuk pembayaran ini
+							</p>
+							<div class="pin-input">
+								<input type="password" maxlength="1" />
+								<input type="password" maxlength="1" />
+								<input type="password" maxlength="1" />
+								<input type="password" maxlength="1" />
+							</div>
 
-                            <a href="/cokartueror">
-							        <button
-                                        className="btn w-100"
-                                        onClick={handleSubmit}
-                                        style={{ backgroundColor: "#ef7a53", color: "#f5f2ed" }}>
-                                        Selesaikan Pembayaran
-							        </button>
-                                </a>
+							<a href="/cokartueror">
+								<button
+									className="btn w-100"
+									onClick={handleSubmit}
+									style={{ backgroundColor: "#ef7a53", color: "#f5f2ed" }}>
+									Selesaikan Pembayaran
+								</button>
+							</a>
 							<p className="text-muted mt-3">
 								Data pribadi Anda akan digunakan untuk memproses pesanan Anda,
 								mendukung pengalaman Anda di situs ini, dan untuk tujuan lain
@@ -177,7 +194,6 @@ const COKartuPass = () => {
 								<span>TOTAL</span>
 								<span>Rp 50.000</span>
 							</div>
-							
 						</div>
 					</div>
 				</div>

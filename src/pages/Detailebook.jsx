@@ -2,14 +2,29 @@ import { useNavigate } from "react-router-dom"; // Import untuk navigasi
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../Styles/Detailebook.css";
-
+import { useState, useEffect } from "react";
+import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 const Detailebook = () => {
 	const navigate = useNavigate(); // Hook untuk navigasi
+	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoading(false);
+		}, 3000); // Simulasikan loading selama 3 detik
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	// Jika sedang loading, tampilkan spinner
+	if (loading) {
+		return <Spinner />;
+	}
 
 	return (
 		<>
 			<Navbar />
-			<div className="container" id="detailebook">
+			<div className="container mt-3" id="detailebook">
 				<main className="book-detail">
 					{/* Tombol Kembali */}
 					<div className="back-button mb-3">

@@ -5,7 +5,7 @@ const Profilefoto = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container" id="profilefoto" style={{ marginBottom: "30%" }}>
+		<div className="containerr" id="profilefoto" style={{ marginBottom: "20%", marginTop: "10%" }}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
@@ -38,27 +38,37 @@ const Profilefoto = () => {
 				</div>
 			</div>
 
-			<main className="content">
+			<main className="profile-content">
 				<h1>Foto</h1>
-				<p>Tambahkan foto Anda yang bagus untuk profil</p>
+				<h2>Tambahkan foto Anda yang bagus untuk profil</h2>
 				<hr />
-				<div className="photo-preview">
-					<p>Pratinjau Gambar</p>
-					<div className="placeholder-icon w-100 d-flex align-items-center justify-content-center p-5">
-						<i className="fa-regular fa-user"></i>
-					</div>
-					<div>
-						<label className="upload-label">Tambah atau Ganti Gambar</label>
-						<input
-							className="upload-input"
-							type="text"
-							value="Tidak ada gambar dipilih"
-							readOnly></input>
-						{/* <input type="file" id="upload-photo" className="upload-input" /> */}
-					</div>
-					<button className="upload-button">Unggah Gambar</button>
-					<button className="save-button">Simpan Perubahan</button>
-				</div>
+
+					
+						<div className="photo-preview">
+							<p>Pratinjau Gambar</p>
+							<div className="placeholder-icon w-100 d-flex align-items-center justify-content-center p-5">
+								<i className="fa-regular fa-user"></i>
+							</div>
+							
+							<div>
+								<label className="upload-label">Tambah atau Ganti Gambar</label>
+								{/* <input
+									className="upload-input"
+									type="text"
+									value="Tidak ada gambar dipilih" id="input-value"
+									readOnly></input> */}
+								<input 
+								type="file" 
+								id="upload-photo" 
+								className="upload-input" 
+								/>
+							</div>
+							<button className="upload-button">Unggah Gambar</button>
+						</div>
+
+							
+							<button className="save-button">Simpan Perubahan</button>
+				
 			</main>
 		</div>
 	);
