@@ -1,12 +1,66 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "../styles/Dashboard.css";
+import axios from "axios";
 
 function Dashboard() {
+	// console.log(user)
 	const [activeButton, setActiveButton] = useState(null); // State to track the active button
+	const [error, setError] = useState(null);
+	const [user, setUser] = useState(null)
 	const navigate = useNavigate();
 
+	useEffect(() => {
+		const fetchUser = async () => {
+			try {
+			const response = await axios.get('http://localhost:5000/api/v1/auth/me', {
+				withCredentials:true
+			})
+				setUser(response.data.user)
+				console.log(user)
+			} catch (error) {  	
+				console.error('Error fetching data user', error.message)
+				setError('Failed to fetch user data')
+			}
+		}
+		fetchUser()
+	}, [])
+
+	// useEffect(() => {
+	// 	const fetchUser = async () => {
+	// 		try {
+	// 			const response = await fetch('http://localhost:5000/api/v1/auth/me', {
+	// 				method: 'GET',
+	// 				credentials: 'include', // Ensures cookies are sent
+	// 			}, {
+	// 				headers : {
+	// 					Cookies : `token=${token}`
+	// 				}
+	// 			});
+	// 			const data = await response.json();
+	// 			if (data.success) {
+	// 				setUser(data.user);
+	// 			} else {
+	// 				setError(data.message);
+	// 			}
+	// 		} catch (error) {
+	// 			console.error('Error fetching data user', error.message);
+	// 			setError('Failed to fetch user data');
+	// 		}
+	// 	};
+	// 	fetchUser();
+	// }, []);
+	
+
+	if (error) {
+    return <div>{error}</div>;
+  }
+
+	if (!user) {
+    return <div>Loading...</div>;
+  }
+	
 	const handleButtonClick = (buttonName, path) => {
 		setActiveButton(buttonName); // Update the active button state
 		navigate(path); // Navigate to the specified path
@@ -58,7 +112,8 @@ function Dashboard() {
 				<Col md={6}>
 					<h2>
 						Selamat Datang Kembali,{" "}
-						<span style={{ color: "#ef7a53" }}>Wahyu Rojolele!</span>
+						<span style={{ color: "#ef7a53" }}>{user.username}</span>
+						<span>{user.email}</span>
 					</h2>
 					<p>Ayo lanjutkan kelasnya sampai tuntas!</p>
 					<h3>Lanjutkan kelasnya yuk!</h3>
