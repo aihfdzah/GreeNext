@@ -46,7 +46,9 @@ const Webinar = () => {
 			<Navbar />
 			<Row className="py-3 d-flex text-left mt-5" style={{}}>
 				<Col>
-					<h1 style={{ color: "#17412d" }}>Webinar & Seminar</h1>
+					<h1 style={{ color: "#17412d", fontSize: "16pt" }}>
+						Webinar & Seminar
+					</h1>
 				</Col>
 				<Col className="text-end me-auto text-left">
 					<Button

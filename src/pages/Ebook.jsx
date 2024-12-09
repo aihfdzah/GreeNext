@@ -42,10 +42,10 @@ const Ebook = () => {
 				className="py-3 d-flex mt-5"
 				style={{
 					marginTop: "70px",
-					marginLeft:"20px"
+					marginLeft: "20px",
 				}}>
 				<Col>
-					<h1 style={{ color: "#17412d" }}>Ebook</h1>
+					<h1 style={{ color: "#17412d", fontSize: "20pt" }}>Ebook</h1>
 				</Col>
 				<Col
 					className="text-end me-auto text-left"
