@@ -23,8 +23,12 @@
 
 body {
 	position: sticky;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 	background-color: var(--background-color);
-	max-width: 1440px;
+	margin: 0;
+	padding: auto;
 }
 
 .navbar {
@@ -177,7 +181,6 @@ body {
 /*h1*/
 h2 {
 	color: #060807;
-	margin-bottom: 50px;
 	font-weight: 600;
 }
 
@@ -210,8 +213,6 @@ option {
 /* Daftar Kursus */
 .daftar-kursus {
 	gap: 15px;
-	margin-left: 5%;
-	padding: 16px;
 }
 
 .course-item {
@@ -258,12 +259,7 @@ option {
 	color: #060807;
 }
 
-.deskripsi-course {
-	font-size: 14px;
-	color: #060807;
-	margin: 10px 0 10px;
-	line-height: 1.5;
-}
+
 
 .deskripsi-course span {
 	color: #ef7a53 !important;
@@ -639,20 +635,6 @@ main.book-detail {
 	color: #333;
 	line-height: 1.6;
 }
-
-.progress-kelas {
-    width: 80%; /* Atur lebar sesuai keinginan */
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    height: 10px; /* Atur tinggi progress bar */
-}
-
-.progress-kelas .progress-fill {
-    height: 100%;
-    background-color: #ef7a53; /* Warna progress */
-    border-radius: 10px;
-}
-
 
 .progress-section {
 	display: flex;
@@ -1409,12 +1391,6 @@ h1 {
 	flex: 1;
 }
 
-.title-course {
-	font-size: 18px;
-	font-weight: bold;
-	margin: 0;
-	color: #060807;
-}
 
 .tag-course {
 	font-size: 13px;
@@ -2310,7 +2286,6 @@ input[type="password"] {
 	position: none;
 	bottom: 0;
 	right: 0;
-	max-width: 1440px;
 }
 
 .footer-content {

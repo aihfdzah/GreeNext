@@ -1,93 +1,66 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { useEffect } from "react";
+import axios from "axios";
 import "../styles/Dashboard.css";
 import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import axios from "axios";
 
 function Dashboard() {
 	// console.log(user)
+	const navigate = useNavigate();
 	const [activeButton, setActiveButton] = useState(null); // State to track the active button
 	const [error, setError] = useState(null);
 	const [user, setUser] = useState(null)
-	const navigate = useNavigate();
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
+	const [hasClass, setHasClass] = useState(true);
 
 	useEffect(() => {
-		const timer = setTimeout(() => {
-			setLoading(false);
-		}, 3000); // Simulasikan loading selama 3 detik
-
-		return () => clearTimeout(timer);
-	}, []);
-
-	// Jika sedang loading, tampilkan spinner
-	if (loading) {
-		return <Spinner />;
-	}
-
-	useEffect(() => {
-		const fetchUser = async () => {
-			try {
-			const response = await axios.get('http://localhost:5000/api/v1/auth/me', {
-				withCredentials:true
-			})
-				setUser(response.data.user)
-				console.log(user)
-			} catch (error) {  	
-				console.error('Error fetching data user', error.message)
-				setError('Failed to fetch user data')
-			}
+	const fetchUser = async () => {
+		try {
+			const response = await axios.get("http://localhost:5000/api/v1/auth/me", {
+				withCredentials: true, // Ensure cookies are sent with the request
+			});
+			setUser(response.data.user); // Update user state
+		} catch (err) {
+			console.error("Error fetching user data:", err.message);
+			setError("Failed to fetch user data");
+		} finally {
+			setLoading(false); // Stop loading
 		}
-		fetchUser()
-	}, [])
+	};
 
-	// useEffect(() => {
-	// 	const fetchUser = async () => {
-	// 		try {
-	// 			const response = await fetch('http://localhost:5000/api/v1/auth/me', {
-	// 				method: 'GET',
-	// 				credentials: 'include', // Ensures cookies are sent
-	// 			}, {
-	// 				headers : {
-	// 					Cookies : `token=${token}`
-	// 				}
-	// 			});
-	// 			const data = await response.json();
-	// 			if (data.success) {
-	// 				setUser(data.user);
-	// 			} else {
-	// 				setError(data.message);
-	// 			}
-	// 		} catch (error) {
-	// 			console.error('Error fetching data user', error.message);
-	// 			setError('Failed to fetch user data');
-	// 		}
-	// 	};
-	// 	fetchUser();
-	// }, []);
-	
+	fetchUser();
+}, []); // Empty dependency array ensures it runs once on mount
 
-	if (error) {
-    return <div>{error}</div>;
-  }
+if (loading) {
+	return <Spinner />; // Show spinner while loading
+}
 
-	if (!user) {
-    return <div>Loading...</div>;
-  }
-	
+if (error) {
+	return <div>{error}</div>; // Show error message
+}
+
+if (!user) {
+	return <div>No user data available</div>; // Handle no user case
+}
+
 	const handleButtonClick = (buttonName, path) => {
 		setActiveButton(buttonName); // Update the active button state
 		navigate(path); // Navigate to the specified path
 	};
 
-	return (
+	const content = loading ? (
+		<Spinner />
+	) : error ? (
+		<div>{error}</div>
+	) : !user ? (
+		<div>No User data available</div>
+	) : (
 		<>
 		<Navbar/>
-		<Container fluid className="p-lg-4 p-md-0 mt-5">
+		<Container fluid className="dashboard-container" style={{paddingRight:"4rem", paddingLeft:"4rem", maxWidth:'1440px'}}>
 			<Row
 				className="py-3 d-flex text-left">
 				<Col>
@@ -132,7 +105,6 @@ function Dashboard() {
 						<span>{user.email}</span>
 					</h2>
 					<p>Ayo lanjutkan kelasnya sampai tuntas!</p>
-					<h3>Lanjutkan kelasnya yuk!</h3>
 				</Col>
 				<Col md={6}>
 					<Row style={{ marginTop: "-90px" }}>
@@ -163,7 +135,216 @@ function Dashboard() {
 					</Row>
 				</Col>
 			</Row>
-			<Row className="py-5" id="kelas-wrapper">
+			<h3 style={{fontSize:"30px", fontWeight:'500', marginBottom:"2rem"}}>Lanjutkan kelasnya yuk!</h3>
+			{
+				hasClass ? 
+				(<div className="daftar-kursus display-flex flex-direction-column">
+					{/* Example Horizontal Course Card */}
+					<div
+						className="course-item-horizontal  border-0 border-bottom"
+						style={{ borderBottomColor: " #17412d" }}>
+						<div className="konten-course-horizontal">
+							<p className="title-course">Pengantar Pertanian Modern</p>
+							<p className="deskripsi-course">
+								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
+								mulai dari praktik pertanian tradisional hingga perkembangan
+								teknologi yang diterapkan ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "50%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto2.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					<div className="course-item-horizontal  border-0 border-bottom">
+						<div className="konten-course-horizontal">
+							<p className="title-course">
+								Pertanian Berkelanjutan dan Agroekologi
+							</p>
+							<p className="deskripsi-course">
+								Fokus pada konsep dan praktik pertanian berkelanjutan, kursus
+								ini mengajarkan tentang bagaimana meminimalkan dampak lingkungan
+								dari aktivitas pertanian ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "20%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto3.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					<div className="course-item-horizontal  border-0 border-bottom">
+						<div className="konten-course-horizontal">
+							<p className="title-course">Pengantar Pertanian Modern</p>
+							<p className="deskripsi-course">
+								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
+								mulai dari praktik pertanian tradisional hingga perkembangan
+								teknologi yang diterapkan ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "85%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto4.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					<div className="course-item-horizontal  border-0 border-bottom">
+						<div className="konten-course-horizontal">
+							<p className="title-course">Pengantar Pertanian Modern</p>
+							<p className="deskripsi-course">
+								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
+								mulai dari praktik pertanian tradisional hingga perkembangan
+								teknologi yang diterapkan ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "50%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto5.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					<div className="course-item-horizontal  border-0 border-bottom">
+						<div className="konten-course-horizontal">
+							<p className="title-course">Pengantar Pertanian Modern</p>
+							<p className="deskripsi-course">
+								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
+								mulai dari praktik pertanian tradisional hingga perkembangan
+								teknologi yang diterapkan ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "60%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto6.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					<div className="course-item-horizontal  border-0 border-bottom">
+						<div className="konten-course-horizontal">
+							<p className="title-course">Pengantar Pertanian Modern</p>
+							<p className="deskripsi-course">
+								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
+								mulai dari praktik pertanian tradisional hingga perkembangan
+								teknologi yang diterapkan ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "20%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto1.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					{/* Tambahkan lebih banyak course-item-horizontal serupa */}
+				</div>) : 
+				(<Row className="py-5" id="kelas-wrapper">
 				<Col>
 					<div className="d-flex justify-content-center">
 						<div className="fs-1">
@@ -187,11 +368,14 @@ function Dashboard() {
 						</div>
 					</div>
 				</Col>
-			</Row>
+			</Row>)
+			}
 		</Container>
 		<Footer/>
 		</>
-	);
+	)
+
+	return content;
 }
 
 export default Dashboard;
