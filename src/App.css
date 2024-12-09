@@ -23,14 +23,15 @@
 }
 
 body {
-	position: relative;
-	display: flex;
+	position: sticky;
+	/* display: flex; */
 	justify-content: center;
 	align-items: center;
 	height: 100%;
 	background-color: var(--background-color);
 	margin: 0;
-	padding: 0;
+	padding: auto;
+	max-width: 1440px;
 }
 
 .navbar {
@@ -112,13 +113,12 @@ body {
 
 /* ----------kelas------------ */
 .container {
-	max-width: 100%;
-	margin: 8rem 0 20rem auto;
+	max-width: 1440px;
+	/* margin: 8rem 0 20rem auto; */
 	padding: 50px 50px;
 	background-color: #f5f2ed;
 	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 }
 
 .header {
@@ -374,6 +374,32 @@ option {
 	cursor: pointer;
 }
 
+/* sertifikat */
+.custom-card-col {
+    margin-bottom: 15px; /* Atur jarak sesuai keinginan */
+}
+
+.custom-button {
+	color: #f5f2ed !important;
+	border-color: #f5f2ed !important;
+	background-color: transparent;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+	background-color: #ef7a53 !important;
+	color: #ffffff !important;
+	border-color: #ef7a53 !important;
+}
+
+.custom-button:active {
+	background-color: #ef7a53 !important;
+	color: #ffffff !important;
+	border-color: #ef7a53 !important;
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+
 /* -------kelas detail         */
 
 .col-md-8 {
@@ -622,6 +648,20 @@ main.book-detail {
 	color: #333;
 	line-height: 1.6;
 }
+
+.progress-kelas {
+    width: 80%; /* Atur lebar sesuai keinginan */
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 10px; /* Atur tinggi progress bar */
+}
+
+.progress-kelas .progress-fill {
+    height: 100%;
+    background-color: #ef7a53; /* Warna progress */
+    border-radius: 10px;
+}
+
 
 .progress-section {
 	display: flex;
@@ -1787,7 +1827,7 @@ option {
 
 /* ------------profile-------------- */
 .containerr {
-	max-width: 1500px;
+	max-width: 1440px;
 	width: 1200px;
 	margin: 8rem 0 20rem auto;
 	padding: 50px 50px;
@@ -2450,13 +2490,10 @@ input[type="password"] {
 	background-color: var(--main-color) !important;
 	padding: 10px 50px;
 	font-size: 14px;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	right: 0;
-	width: 100%;
-	flex-direction: column;
+	max-width: 1440px;
 }
 
 .footer-content {

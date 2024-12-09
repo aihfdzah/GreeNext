@@ -60,14 +60,11 @@ const StudiKasus = () => {
 	return (
 		<>
 			<Navbar />
-
 			{/* Header */}
 			<Row
 				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-100px",
-					marginBottom: "-90px",
 				}}>
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Studi Kasus</h1>
@@ -109,7 +106,7 @@ const StudiKasus = () => {
 			</Row>
 
 			{/* Kontainer Studi Kasus */}
-			<div className="container mt-5" id="studikasus">
+			<div className="container mt-3 mb-5" id="studikasus">
 				<h1 className="text-center">Studi Kasus</h1>
 				{/* Search Bar */}
 				<div

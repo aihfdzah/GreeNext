@@ -38,6 +38,8 @@ import COBankNext from "./pages/COBankNext";
 import COBerhasil from "./pages/COBerhasil";
 import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
+import Histori from "./pages/Histori";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
 	return (
@@ -45,6 +47,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Login />} />
 				<Route path="/register" element={<Register />} />
+				<Route path="/dashboard" element={<Dashboard/>}/>
 				<Route path="/profile" element={<HalamanProfile />} />
 				<Route path="/fotoprofile" element={<FotoProfile />} />
 				<Route path="/sumberdaya" element={<EBook />} />
@@ -53,6 +56,7 @@ function App() {
 				<Route path="/kelas" element={<HalamanKelas />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/tentang" element={<Tentang />} />
+				<Route path="/histori" element={<Histori/>}/>
 				<Route path="/ebook" element={<Ebook />} />
 				<Route path="/detailebook" element={<Detailebook />} />
 				<Route path="/ebookfree" element={<EbookFree />} />

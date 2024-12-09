@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { useEffect } from "react";
 import "../styles/Dashboard.css";
+import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import axios from "axios";
 
 function Dashboard() {
@@ -10,6 +14,20 @@ function Dashboard() {
 	const [error, setError] = useState(null);
 	const [user, setUser] = useState(null)
 	const navigate = useNavigate();
+	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoading(false);
+		}, 3000); // Simulasikan loading selama 3 detik
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	// Jika sedang loading, tampilkan spinner
+	if (loading) {
+		return <Spinner />;
+	}
 
 	useEffect(() => {
 		const fetchUser = async () => {
@@ -67,13 +85,11 @@ function Dashboard() {
 	};
 
 	return (
+		<>
+		<Navbar/>
 		<Container fluid className="p-lg-4 p-md-0 mt-5">
 			<Row
-				className="py-3 d-flex text-left"
-				style={{
-					marginLeft: "-40px",
-					marginBottom: "",
-				}}>
+				className="py-3 d-flex text-left">
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Dashboard</h1>
 				</Col>
@@ -140,7 +156,7 @@ function Dashboard() {
 							<div className="card" style={{ backgroundColor: "#F5F2ED" }}>
 								<div className="card-body">
 									<h5 className="card-title">0</h5>
-									<p className="card-text">Resource</p>
+									<p className="card-text">Sumber Daya</p>
 								</div>
 							</div>
 						</Col>
@@ -173,6 +189,8 @@ function Dashboard() {
 				</Col>
 			</Row>
 		</Container>
+		<Footer/>
+		</>
 	);
 }
 

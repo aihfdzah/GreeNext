@@ -39,11 +39,10 @@ const Ebook = () => {
 		<>
 			<Navbar />
 			<Row
-				className="py-3 d-flex text-left"
+				className="py-3 d-flex mt-5"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-100px",
-					marginBottom: "-90px",
+					marginLeft:"20px"
 				}}>
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Ebook</h1>
@@ -84,7 +83,7 @@ const Ebook = () => {
 				</Col>
 			</Row>
 
-			<div className="container mt-3">
+			<div className="container">
 				<main>
 					<h1 className="text-center">E-book & Panduan</h1>
 					{/* Search Bar */}

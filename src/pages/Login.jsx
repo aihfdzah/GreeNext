@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import S from "../assets/S.png";
 import Logo from "../assets/logo.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaLock, FaEnvelope } from "react-icons/fa";
 import axios from "axios";
@@ -48,12 +48,12 @@ function Login() {
 						"Content-Type": "application/json",
 					},
 				}
-			)
-			console.log('response : ', response.data)
-			if (response.status == 200){
-				alert('Berhasil Login!')
-				navigate('/home')
-			} 
+			);
+			console.log("response : ", response);
+			if (response.status == 200) {
+				alert("Berhasil Login!");
+				navigate("/dashboard");
+			}
 		} catch (error) {
 			// console.log(error.response.data.message)
 			// setError(error.response.data.message);

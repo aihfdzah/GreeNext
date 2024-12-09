@@ -1,14 +1,17 @@
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import { useEffect } from "react";
 import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
+import { FaDownload, FaEye, FaLinkedin } from "react-icons/fa"; // Tambahkan package react-icons
+
 const sertifikatList = [
 	{
 		id: 1,
 		title: "Pengantar Pertanian Modern",
-		image: "sertifikat1.png", // Ganti dengan path gambar yang sesuai
+		image: "sertifikat1.png",
 	},
 	{
 		id: 2,
@@ -22,99 +25,151 @@ const sertifikatList = [
 	},
 	{
 		id: 4,
-		title: "Konsep Panduan Pertanian Presisi.",
+		title: "Konsep Panduan Pertanian Presisi",
 		image: "sertifikat4.png",
 	},
 	{
 		id: 5,
-		title: "Pemanfaatan Teknologi IoT.",
+		title: "Pemanfaatan Teknologi IoT",
 		image: "sertifikat5.png",
 	},
 	{
 		id: 6,
-		title: "Pemanfaatan Big Data & AI.",
+		title: "Pemanfaatan Big Data & AI",
 		image: "sertifikat6.png",
 	},
 ];
 
 const Sertifikat = () => {
-	// State untuk melacak tautan yang aktif
-	const [activeLink, setActiveLink] = useState("sertifikat");
-	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
+	const [activeButton, setActiveButton] = useState("sertifikat"); // Set default button 'home' sebagai aktif
+	const navigate = useNavigate();
+	const [loading, setLoading] = useState(true);
+
+	const handleButtonClick = (buttonName, path) => {
+		setActiveButton(buttonName);
+		navigate(path);
+	};
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setLoading(false);
-		}, 3000); // Simulasikan loading selama 3 detik
-
+		}, 3000);
 		return () => clearTimeout(timer);
 	}, []);
 
-	// Jika sedang loading, tampilkan spinner
 	if (loading) {
 		return <Spinner />;
 	}
+
 	return (
 		<>
 			<Navbar />
-			<Container className="mt-5" style={{ marginBottom: "23%" }}>
-				<h1>Pelatihanku</h1>
-				<h1
+			<Container className="mt-5" style={{ marginBottom: "25%" }}>
+				<Row
+					className="py-3 d-flex text-left"
 					style={{
-						textAlign: "center",
-						marginBottom: "5%",
-						color: "#17412d",
+						marginLeft: "-10px",
 					}}>
-					<a
-						href="/kelas"
-						onClick={() => setActiveLink("kelas")}
-						style={{
-							marginRight: "50px",
-							textDecoration: "none",
-							color: activeLink === "kelas" ? "#EF7A53" : "#17412D",
-							fontWeight: activeLink === "kelas" ? "bold" : "normal",
-							transition: "0.3s",
-						}}
-						onMouseEnter={(e) => (e.target.style.color = "#EF7A53")}
-						onMouseLeave={(e) =>
-							(e.target.style.color =
-								activeLink === "kelas" ? "#EF7A53" : "#17412D")
-						}>
-						Kelas
-					</a>
-					<a
-						href="/sertifikat"
-						onClick={() => setActiveLink("sertifikat")}
-						style={{
-							marginRight: "50px",
-							textDecoration: "none",
-							color: activeLink === "sertifikat" ? "#EF7A53" : "#17412D",
-							fontWeight: activeLink === "sertifikat" ? "bold" : "normal",
-							transition: "0.3s",
-						}}
-						onMouseEnter={(e) => (e.target.style.color = "#EF7A53")}
-						onMouseLeave={(e) =>
-							(e.target.style.color =
-								activeLink === "sertifikat" ? "#EF7A53" : "#17412D")
-						}>
-						Sertifikat
-					</a>
-				</h1>
-				<p style={{ marginBottom: "10%" }}>
-					Selamat Kamu mendapatkan sertifikat dari Course FarmEduZ!
-				</p>
+					<Col>
+						<h1 style={{ color: "#17412d" }}>Sertifikat</h1>
+					</Col>
+					<Col className="text-end me-auto">
+						<Button
+							className={`me-5 w-15 button-custom ${
+								activeButton === "home" ? "active" : ""
+							}`}
+							onClick={() => handleButtonClick("home", "/home")}>
+							Home
+						</Button>
+						<Button
+							className={`p-0 me-5 w-15 button-custom ${
+								activeButton === "sertifikat" ? "active" : ""
+							}`}
+							onClick={() => handleButtonClick("sertifikat", "/sertifikat")}>
+							Sertifikat
+						</Button>
+						<Button
+							className={`me-5 w-15 button-custom ${
+								activeButton === "sumber" ? "active" : ""
+							}`}
+							onClick={() => handleButtonClick("sumber", "/sumberdaya")}>
+							Sumber Daya
+						</Button>
+						<Button
+							className={`me-5 w-15 button-custom ${
+								activeButton === "histori" ? "active" : ""
+							}`}
+							onClick={() => handleButtonClick("histori", "/histori")}>
+							Histori
+						</Button>
+					</Col>
+				</Row>
+				<Row className="py-5">
+				<Col md={6}>
+					<h3>Sertifikat</h3>
+					<p>Sertifikasi pertanian sebagai bukti ketuntasan pembelajaran.</p>
+				</Col>
+				<Col md={6}>
+					<Row style={{ marginTop: "-90px" }}>
+						<Col md={4} style={{ marginLeft: "60%" }}>
+							<div className="card" style={{ backgroundColor: "#F5F2ED" }}>
+								<div className="card-body">
+									<h5 className="card-title">6</h5>
+									<p className="card-text">Sertifikat</p>
+								</div>
+							</div>
+						</Col>
+					</Row>
+				</Col>
+			</Row>
 				<Row>
 					{sertifikatList.map((cert) => (
-						<Col key={cert.id} md={4} style={{ marginTop: "15px" }}>
-							<Card>
-								<Card.Img variant="top" src={cert.image} alt={cert.title} />
-								<Card.Body
-									style={{
-										backgroundColor: "#17412D",
-										color: "white",
-									}}>
-									<Card.Title>{cert.title}</Card.Title>
-									<Card.Text>{cert.description}</Card.Text>
+						<Col key={cert.id} md={4} className="mb-3 mt-5">
+							{" "}
+							{/* Ubah margin bawah menjadi mb-3 */}
+							<Card className="shadow-sm h-100">
+								<Card.Img
+									variant="top"
+									src={cert.image}
+									alt={cert.title}
+									style={{ height: "240px", objectFit: "cover" }}
+								/>
+								<Card.Body style={{ backgroundColor: "#17412D" }}>
+									<Card.Title className="mb-3" style={{ color: "#f5f2ed" }}>
+										{cert.title}
+									</Card.Title>
+									<div className="d-flex justify-content-between">
+										<Button
+											variant="outline"
+											className="me-2 custom-button"
+											style={{
+												color: "#f5f2ed",
+												borderColor: "#f5f2ed",
+											}}>
+											<FaDownload className="me-2" />
+											Download
+										</Button>
+										<Button
+											variant="outline"
+											className="me-2 custom-button"
+											style={{
+												color: "#f5f2ed",
+												borderColor: "#f5f2ed",
+											}}>
+											<FaEye className="me-2" />
+											Lihat
+										</Button>
+										<Button
+											variant="outline"
+											className="custom-button"
+											style={{
+												color: "#f5f2ed",
+												borderColor: "#f5f2ed",
+											}}>
+											<FaLinkedin className="me-2" />
+											LinkedIn
+										</Button>
+									</div>
 								</Card.Body>
 							</Card>
 						</Col>
