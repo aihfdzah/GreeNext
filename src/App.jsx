@@ -40,7 +40,6 @@ import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
 import Histori from "./pages/Histori";
 import Dashboard from "./pages/Dashboard";
-import DashboardAdmin from "./admin/DashboardAdmin";
 function App() {
 	return (
 		<BrowserRouter>
