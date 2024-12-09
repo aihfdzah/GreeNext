@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { useEffect } from "react";
 import "../styles/Dashboard.css";
 import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 import Navbar from "../components/Navbar";
