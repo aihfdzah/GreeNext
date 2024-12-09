@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import axios from "axios";
@@ -6,7 +6,6 @@ import "../styles/Dashboard.css";
 import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
 function Dashboard() {
 	// console.log(user)
 	const navigate = useNavigate();

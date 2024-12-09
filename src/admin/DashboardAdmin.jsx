@@ -36,7 +36,7 @@ function DashboardAdmin() {
           </div>
           <ul className="list-unstyled px-3">
             <li className="mb-3">
-              <a href="#" className="text-white text-decoration-none d-flex align-items-center">
+              <a href="*" className="text-white text-decoration-none d-flex align-items-center">
                 <i className="bi bi-person me-2"></i> Profile
               </a>
             </li>
@@ -80,7 +80,7 @@ function DashboardAdmin() {
       )}
 
       {/* Main Content */}
-      <div className="main-content flex-grow-1">
+      <div className="content-admin flex-grow-1">
         <header className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm" style={{backgroundColor:"#f5f2ed"}}>
           <h5 className="mb-0">Pengguna</h5>
           <div className="d-flex align-items-center">
@@ -148,7 +148,7 @@ function DashboardAdmin() {
           </div>
 
           {/* Table */}
-          <div className="table-responsive">
+          <div className="table-admin">
             <table className="table table-striped">
               <thead>
                 <tr>

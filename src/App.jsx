@@ -41,13 +41,15 @@ import Keluar from "./pages/Keluar";
 import Histori from "./pages/Histori";
 import Dashboard from "./pages/Dashboard";
 import DashboardAdmin from "./admin/DashboardAdmin";
+import Admin from "./admin/admin";
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Login />} />
 				<Route path="/register" element={<Register />} />
-				<Route path="/Admin" element={<DashboardAdmin />} />
+				<Route path="/admin" element={<Admin />} />
+				<Route path="/dashboardadmin" element={<DashboardAdmin />} />
 				<Route path="/dashboard" element={<Dashboard />} />
 				<Route path="/profile" element={<HalamanProfile />} />
 				<Route path="/fotoprofile" element={<FotoProfile />} />
