@@ -12,72 +12,39 @@ function Dashboard() {
 	const [activeButton, setActiveButton] = useState(null); // State to track the active button
 	const [error, setError] = useState(null);
 	const [user, setUser] = useState(null)
-	const navigate = useNavigate();
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
+	const navigate = useNavigate();
 
 	useEffect(() => {
-		const timer = setTimeout(() => {
-			setLoading(false);
-		}, 3000); // Simulasikan loading selama 3 detik
-
-		return () => clearTimeout(timer);
-	}, []);
-
-	// Jika sedang loading, tampilkan spinner
-	if (loading) {
-		return <Spinner />;
-	}
-
-	useEffect(() => {
-		const fetchUser = async () => {
-			try {
-			const response = await axios.get('http://localhost:5000/api/v1/auth/me', {
-				withCredentials:true
-			})
-				setUser(response.data.user)
-				console.log(user)
-			} catch (error) {  	
-				console.error('Error fetching data user', error.message)
-				setError('Failed to fetch user data')
-			}
+	const fetchUser = async () => {
+		try {
+			const response = await axios.get("http://localhost:5000/api/v1/auth/me", {
+				withCredentials: true, // Ensure cookies are sent with the request
+			});
+			setUser(response.data.user); // Update user state
+		} catch (err) {
+			console.error("Error fetching user data:", err.message);
+			setError("Failed to fetch user data");
+		} finally {
+			setLoading(false); // Stop loading
 		}
-		fetchUser()
-	}, [])
+	};
 
-	// useEffect(() => {
-	// 	const fetchUser = async () => {
-	// 		try {
-	// 			const response = await fetch('http://localhost:5000/api/v1/auth/me', {
-	// 				method: 'GET',
-	// 				credentials: 'include', // Ensures cookies are sent
-	// 			}, {
-	// 				headers : {
-	// 					Cookies : `token=${token}`
-	// 				}
-	// 			});
-	// 			const data = await response.json();
-	// 			if (data.success) {
-	// 				setUser(data.user);
-	// 			} else {
-	// 				setError(data.message);
-	// 			}
-	// 		} catch (error) {
-	// 			console.error('Error fetching data user', error.message);
-	// 			setError('Failed to fetch user data');
-	// 		}
-	// 	};
-	// 	fetchUser();
-	// }, []);
-	
+	fetchUser();
+}, []); // Empty dependency array ensures it runs once on mount
 
-	if (error) {
-    return <div>{error}</div>;
-  }
+if (loading) {
+	return <Spinner />; // Show spinner while loading
+}
 
-	if (!user) {
-    return <div>Loading...</div>;
-  }
-	
+if (error) {
+	return <div>{error}</div>; // Show error message
+}
+
+if (!user) {
+	return <div>No user data available</div>; // Handle no user case
+}
+
 	const handleButtonClick = (buttonName, path) => {
 		setActiveButton(buttonName); // Update the active button state
 		navigate(path); // Navigate to the specified path
