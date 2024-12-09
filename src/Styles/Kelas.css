@@ -1,18 +1,45 @@
 .course-item-horizontal {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	gap: 16px;
-	padding: 16px;
 	border-bottom: 50px solid  #17412d;
-	margin-bottom: 16px;
+	margin-bottom: 32px;
+	padding-bottom: 32px;
 	background-color: #f5f2ed;
 }
 
+.deskripsi-course {
+	font-size: 16px;
+	color: #060807;
+	margin: 16px 0;
+	line-height: 1.5;
+}
+
+.title-course {
+	font-size: 24px;
+	font-weight: 600;
+	margin: 0;
+	color: #060807;
+}
+
+.progress-kelas {
+	width: 80%; /* Atur lebar sesuai keinginan */
+	background-color: #e0e0e0;
+	border-radius: 10px;
+	height: 10px; /* Atur tinggi progress bar */
+	margin-top: 2.5rem;
+}
+
+.progress-kelas .progress-fill {
+	height: 100%;
+	background-color: #ef7a53; /* Warna progress */
+	border-radius: 10px;
+}
+
+
 .konten-course-horizontal {
-	flex: 2;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	
 }
 
 .image-button-container {

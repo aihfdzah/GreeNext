@@ -14,6 +14,7 @@ function Dashboard() {
 	const [error, setError] = useState(null);
 	const [user, setUser] = useState(null)
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
+	const [hasClass, setHasClass] = useState(true);
 
 	useEffect(() => {
 	const fetchUser = async () => {
@@ -59,7 +60,7 @@ if (!user) {
 	) : (
 		<>
 		<Navbar/>
-		<Container fluid className="p-lg-4 p-md-0 mt-5">
+		<Container fluid className="dashboard-container" style={{paddingRight:"4rem", paddingLeft:"4rem", maxWidth:'1440px'}}>
 			<Row
 				className="py-3 d-flex text-left">
 				<Col>
@@ -104,7 +105,6 @@ if (!user) {
 						<span>{user.email}</span>
 					</h2>
 					<p>Ayo lanjutkan kelasnya sampai tuntas!</p>
-					<h3>Lanjutkan kelasnya yuk!</h3>
 				</Col>
 				<Col md={6}>
 					<Row style={{ marginTop: "-90px" }}>
@@ -135,7 +135,216 @@ if (!user) {
 					</Row>
 				</Col>
 			</Row>
-			<Row className="py-5" id="kelas-wrapper">
+			<h3 style={{fontSize:"30px", fontWeight:'500', marginBottom:"2rem"}}>Lanjutkan kelasnya yuk!</h3>
+			{
+				hasClass ? 
+				(<div className="daftar-kursus display-flex flex-direction-column">
+					{/* Example Horizontal Course Card */}
+					<div
+						className="course-item-horizontal  border-0 border-bottom"
+						style={{ borderBottomColor: " #17412d" }}>
+						<div className="konten-course-horizontal">
+							<p className="title-course">Pengantar Pertanian Modern</p>
+							<p className="deskripsi-course">
+								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
+								mulai dari praktik pertanian tradisional hingga perkembangan
+								teknologi yang diterapkan ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "50%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto2.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					<div className="course-item-horizontal  border-0 border-bottom">
+						<div className="konten-course-horizontal">
+							<p className="title-course">
+								Pertanian Berkelanjutan dan Agroekologi
+							</p>
+							<p className="deskripsi-course">
+								Fokus pada konsep dan praktik pertanian berkelanjutan, kursus
+								ini mengajarkan tentang bagaimana meminimalkan dampak lingkungan
+								dari aktivitas pertanian ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "20%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto3.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					<div className="course-item-horizontal  border-0 border-bottom">
+						<div className="konten-course-horizontal">
+							<p className="title-course">Pengantar Pertanian Modern</p>
+							<p className="deskripsi-course">
+								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
+								mulai dari praktik pertanian tradisional hingga perkembangan
+								teknologi yang diterapkan ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "85%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto4.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					<div className="course-item-horizontal  border-0 border-bottom">
+						<div className="konten-course-horizontal">
+							<p className="title-course">Pengantar Pertanian Modern</p>
+							<p className="deskripsi-course">
+								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
+								mulai dari praktik pertanian tradisional hingga perkembangan
+								teknologi yang diterapkan ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "50%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto5.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					<div className="course-item-horizontal  border-0 border-bottom">
+						<div className="konten-course-horizontal">
+							<p className="title-course">Pengantar Pertanian Modern</p>
+							<p className="deskripsi-course">
+								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
+								mulai dari praktik pertanian tradisional hingga perkembangan
+								teknologi yang diterapkan ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "60%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto6.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					<div className="course-item-horizontal  border-0 border-bottom">
+						<div className="konten-course-horizontal">
+							<p className="title-course">Pengantar Pertanian Modern</p>
+							<p className="deskripsi-course">
+								Kursus ini memberikan pemahaman dasar tentang pertanian modern,
+								mulai dari praktik pertanian tradisional hingga perkembangan
+								teknologi yang diterapkan ...
+								<a href="/detailkls" className="next">
+									Baca Selengkapnya
+								</a>
+							</p>
+							<div className="progress-kelas">
+								<div
+									className="progress-fill"
+									style={{ width: "20%" }} // Ganti nilai ini sesuai persentase
+								></div>
+							</div>
+						</div>
+						<div className="image-button-container">
+							<img src="./foto1.jpg" alt="Course" className="course-image" />
+							<a
+								href="/detailkls"
+								className="button-daftar"
+								style={{
+									borderRadius: "20px",
+									width: "200px",
+									marginTop: "10px",
+								}}>
+								Lanjutkan Kelas
+							</a>
+						</div>
+					</div>
+
+					{/* Tambahkan lebih banyak course-item-horizontal serupa */}
+				</div>) : 
+				(<Row className="py-5" id="kelas-wrapper">
 				<Col>
 					<div className="d-flex justify-content-center">
 						<div className="fs-1">
@@ -159,7 +368,8 @@ if (!user) {
 						</div>
 					</div>
 				</Col>
-			</Row>
+			</Row>)
+			}
 		</Container>
 		<Footer/>
 		</>
