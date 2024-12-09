@@ -56,7 +56,7 @@ function Login() {
 			}
 		} catch (error) {
 			// console.log(error.response.data.message)
-			// setError(error.response.data.message);
+			setError(error.response.data.message);
 			// if (error.response?.status){
 			// 	setError(response.data.message)
 			// }
