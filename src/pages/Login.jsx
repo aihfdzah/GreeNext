@@ -6,11 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaLock, FaEnvelope } from "react-icons/fa";
 import axios from "axios";
 
-
 function Login() {
 	const [showPassword, setShowPassword] = useState(false);
 	// Axios Awal login
-	const [users, setUsers] = useState([]);
 	const [error, setError] = useState(null);
 	const [formData, setFormData] = useState({
 		email: "",
@@ -43,7 +41,7 @@ function Login() {
 					password: formData.password,
 				},
 				{
-					withCredentials:true,
+					withCredentials: true,
 					headers: {
 						"Content-Type": "application/json",
 					},
