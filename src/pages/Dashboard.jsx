@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import axios from "axios";
 import "../styles/Dashboard.css";
 import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import axios from "axios";
 
 function Dashboard() {
 	// console.log(user)
+	const navigate = useNavigate();
 	const [activeButton, setActiveButton] = useState(null); // State to track the active button
 	const [error, setError] = useState(null);
 	const [user, setUser] = useState(null)
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
-	const navigate = useNavigate();
 
 	useEffect(() => {
 	const fetchUser = async () => {
@@ -50,7 +50,13 @@ if (!user) {
 		navigate(path); // Navigate to the specified path
 	};
 
-	return (
+	const content = loading ? (
+		<Spinner />
+	) : error ? (
+		<div>{error}</div>
+	) : !user ? (
+		<div>No User data available</div>
+	) : (
 		<>
 		<Navbar/>
 		<Container fluid className="p-lg-4 p-md-0 mt-5">
@@ -157,7 +163,9 @@ if (!user) {
 		</Container>
 		<Footer/>
 		</>
-	);
+	)
+
+	return content;
 }
 
 export default Dashboard;
