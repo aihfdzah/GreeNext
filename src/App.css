@@ -24,14 +24,12 @@
 
 body {
 	position: sticky;
-	/* display: flex; */
 	justify-content: center;
 	align-items: center;
 	height: 100%;
 	background-color: var(--background-color);
 	margin: 0;
 	padding: auto;
-	max-width: 1440px;
 }
 
 .navbar {
