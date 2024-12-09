@@ -1,7 +1,6 @@
 * {
 	padding: 0;
 	margin: 0;
-	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 	scroll-behavior: smooth;
 	list-style: none;
@@ -19,18 +18,12 @@
 
 *::selection {
 	background: var(--main-color);
-	color: #fff;
+	color: #f5f2ed;;
 }
 
 body {
 	position: sticky;
-	/* display: flex; */
-	justify-content: center;
-	align-items: center;
-	height: 100%;
 	background-color: var(--background-color);
-	margin: 0;
-	padding: auto;
 	max-width: 1440px;
 }
 
@@ -114,11 +107,9 @@ body {
 /* ----------kelas------------ */
 .container {
 	max-width: 1440px;
-	/* margin: 8rem 0 20rem auto; */
 	padding: 50px 50px;
 	background-color: #f5f2ed;
 	border-radius: 8px;
-	/* flex-direction: column; */
 }
 
 .header {
@@ -704,7 +695,7 @@ main.book-detail {
 }
 
 .container-carousel {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 8rem 0 20rem auto;
     padding: 50px 50px;
     background-color: #f5f2ed;
@@ -1867,116 +1858,6 @@ option {
 	flex-direction: row;
 	padding: 5px;
 }
-/* 
-.sidebar {
-	flex: 1;
-	max-width: 100%;
-	background-color: #f5f2ed;
-	border-radius: 10px;
-	padding: 20px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-	text-align: center;
-}
-
-.sidebar img {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	margin-bottom: 10px;
-}
-
-.sidebar h3 {
-	margin: 10px 0 5px;
-	font-size: 18px;
-}
-
-.sidebar p {
-	color: #888;
-	font-size: 14px;
-	margin-bottom: 20px;
-}
-
-.button-sidebar {
-	display: block;
-	width: 100%;
-	padding: 5px;
-	margin-bottom: 10px;
-	border: none;
-	border-radius: 5px;
-	background-color: #f87042;
-	color: #f5f2ed;
-	font-size: 14px;
-	cursor: pointer;
-	font-weight: bold;
-} */
-
-/* Profile Form Styling
-.profile-content {
-	flex: 2;
-	background-color: #f5f2ed;
-	border-radius: 10px;
-	max-width: 100%;
-	padding: 20px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.profile-content h1 {
-	font-size: 24px;
-	font-weight: bold;
-	text-align: center;
-	margin-bottom: 5px;
-}
-
-.profile-content h2 {
-	font-size: 16px;
-	color: #888;
-	text-align: center;
-	margin-bottom: 20px;
-}
-
-.form-group {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 15px;
-	max-width: 100%;
-}
-
-.form-group label {
-	font-weight: bold;
-	margin-bottom: 5px;
-	max-width: 100%;
-}
-
-.form-group input {
-	padding: 10px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
-	font-size: 14px;
-}
-
-.form-group input:focus {
-	outline: none;
-	border-color: #f87042;
-}
-
-.form-row {
-	gap: 10px;
-}
-
-.btn-save {
-	display: block;
-	width: 100%;
-	padding: 15px;
-	border-radius: 5px;
-	background-color: #f87042;
-	color: white;
-	font-size: 16px;
-	font-weight: bold;
-	text-align: center;
-	border: none;
-	cursor: pointer;
-	margin-top: 20px;
-} */
 
 /* Sidebar Styling */
 .sidebar {
@@ -2096,24 +1977,12 @@ option {
 
 /* -------------------profilefoto----------- */
 
-/* .content {
-	flex-grow: 1;
-	padding: 40px;
-	max-width: 100%;
-} */
-/* 
-h1 {
-	font-size: 40px;
-	font-weight: 700;
-	color: #060807;
-} */
 
 .photo-preview {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 10px;
-	/* font-size: 30px; */
 	padding: 0 50px;
 }
 
@@ -2123,7 +1992,6 @@ h1 {
 
 .placeholder-icon {
 	font-size: 100px;
-	/* color: #060807; */
 	border: 1px solid #ccc;
 	background: #ccc;
 	padding: 50px 150%;
@@ -2132,19 +2000,13 @@ h1 {
 }
 
 
-/* .label {
-	text-align: left;
-} */
 
 .upload-label {
 	margin-bottom: 10px;
 	font-size: 15px;
 	text-align: center;
 }
-/* 
-.upload-control {
-	display: inline-flex;
-} */
+
 
 .upload-input {
 	display: flex;
@@ -2156,10 +2018,7 @@ h1 {
 .upload-input input[type="file"] {
     display: none;
 }
-/* 
-#input-value {
-font-size: 10px;
-} */
+
 
 .upload-button,
 .save-button {
@@ -2252,21 +2111,6 @@ font-size: 10px;
 }
 
 /* ---------------profile privasi---------- */
-/* .container-privasi {
-	text-align: center;
-	max-width: 100%;
-	margin: 8rem 0 20rem auto;
-	padding: 50px 50px;
-	background-color: white;
-	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
-	
-}
-h1 {
-	font-size: 24px;
-	color: #333;
-} */
 
 .privacy-settings {
 	margin-top: 20px;
@@ -2327,25 +2171,8 @@ h1 {
 .toggle-switch:checked:before {
 	left: 21px;
 }
-/* 
-.save-button {
-	background-color: var(--text-color2);
-	color: white;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	margin-top: 20px;
-	text-align: center;
-} */
 
 /* -----------profile keamanan----- */
-/* .content {
-	flex-grow: 1;
-	padding: 40px;
-	background-color: #f5f2ed;
-	max-width: 100%;
-} */
 
 .profile-content {
     flex: 2;
@@ -2363,11 +2190,6 @@ h1 {
     margin-bottom: 8px;
 }
 
-/* .email-section,
-.password-section {
-	margin-bottom: 20px;
-} */
-
 .password-section,
 .email-section {
 	display: flex;
@@ -2381,9 +2203,6 @@ h1 {
     margin-bottom: 5px;
 	
 }
-/* #sandi {
-	gap: 15px;
-} */
 
 .email-section input {
     padding: 10px;
@@ -2445,7 +2264,6 @@ input[type="password"] {
 .logout-confirmation {
 	border: 1px solid #ccc;
 	border-radius: 8px;
-	/* padding: 30px; */
 	text-align: center;
 	margin-top: 20px;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -2488,9 +2306,8 @@ input[type="password"] {
 /* -----------footer----------- */
 .footer {
 	background-color: var(--main-color) !important;
-	padding: 10px 50px;
 	font-size: 14px;
-	position: relative;
+	position: none;
 	bottom: 0;
 	right: 0;
 	max-width: 1440px;
@@ -2516,7 +2333,6 @@ input[type="password"] {
 
 .logo-footer {
 	width: 150px;
-	/* Ukuran logo */
 	margin-bottom: 10px;
 }
 

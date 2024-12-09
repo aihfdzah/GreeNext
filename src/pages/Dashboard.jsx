@@ -83,7 +83,7 @@ function Dashboard() {
 						<Col md={4} style={{ marginTop: "90px" }}>
 							<div className="card" style={{ backgroundColor: "#F5F2ED" }}>
 								<div className="card-body">
-									<h5 className="card-title">0</h5>
+									<h5 className="card-title">7</h5>
 									<p className="card-text">Kelas</p>
 								</div>
 							</div>

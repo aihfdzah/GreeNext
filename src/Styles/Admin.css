@@ -1,17 +1,13 @@
+.sidebar-admin {
+  width: 250px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  color: #f5f2ed;
+  background-color: #17412d ;
+}
 
-  
-  .sidebar-admin {
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-  }
-  
-  .main-content {
-    margin-left: 250px;
-    background: #f8f9fa;
-    min-height: 100vh;
-  }
-  
+.container-admin {
+  padding: 2rem;
+  background-color: #f5f2ed;
+}

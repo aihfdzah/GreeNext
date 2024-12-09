@@ -37,7 +37,6 @@ const KatalogTeknologi = () => {
 				className="py-3 d-flex text-left"
 				style={{
 					marginTop: "70px",
-					marginLeft: "-80px",
 					marginBottom: "-90px",
 				}}>
 				<Col>
@@ -79,7 +78,7 @@ const KatalogTeknologi = () => {
 				</Col>
 			</Row>
 
-			<div className="container mt-4">
+			<div className="container mt-5">
 				<h1 className="text-center">Katalog Teknologi</h1>
 				{/* Search Bar */}
 				<div
