@@ -2256,14 +2256,17 @@ input[type="password"] {
 	position: none;
 	bottom: 0;
 	right: 0;
+	display: flex;
+	justify-content: center;
 }
 
 .footer-content {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: flex-start;
 	flex: 1;
 	flex-wrap: wrap;
+	max-width: 1440px;
 }
 
 /* Mengatur logo dan teks bahasa */
@@ -2272,8 +2275,6 @@ input[type="password"] {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
-	padding-right: 100px;
-	margin-left: 5%;
 }
 
 .logo-footer {
@@ -2325,9 +2326,7 @@ input[type="password"] {
 }
 
 .footer .down {
-	padding-top: 40px;
 	align-items: center;
-	display: flexbox;
 }
 
 /* login */
