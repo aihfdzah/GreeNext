@@ -53,7 +53,7 @@ const Kelas = () => {
 				</div>
 
 				{/* -------------- Layout Konten Utama -------- */}
-				<div className="main-content mb-5" style={{gap:"2rem"}}>
+				<div className="main-content mb-5" style={{gap:"4rem"}}>
 					{/* ---------- Sidebar Filter --> */}
 					<div className="filter" style={{}}>
 						<select>

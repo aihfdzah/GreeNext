@@ -189,26 +189,6 @@ h2 {
 	font-weight: 600;
 }
 
-/* Filter */
-.filter {
-	display: flex;
-	flex-direction: column;
-	width: 200px;
-	margin-right: 20px;
-}
-
-.filter select {
-	padding: 8px;
-	background: transparent;
-	border: 1px solid #ef7a53;
-	border-radius: 10px;
-	margin-bottom: 10px;
-}
-
-.filter select:hover {
-	background: var(--text-color2);
-	color: #f5f2ed;
-}
 
 option {
 	background: var(--background-color);
