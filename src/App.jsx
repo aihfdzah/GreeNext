@@ -40,7 +40,7 @@ import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
 import Histori from "./pages/Histori";
 import Dashboard from "./pages/Dashboard";
-import Admin from "./admin/admin";
+import Admin from "./admin/Admin";
 import User from "./admin/User";
 function App() {
 	return (
@@ -49,7 +49,7 @@ function App() {
 				<Route path="/" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/admin" element={<Admin />} />
-				<Route path="/user" element={<User/>} />
+				<Route path="/user" element={<User />} />
 				<Route path="/dashboard" element={<Dashboard />} />
 				<Route path="/profile" element={<HalamanProfile />} />
 				<Route path="/fotoprofile" element={<FotoProfile />} />
