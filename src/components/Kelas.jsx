@@ -2,13 +2,13 @@ import "../Styles/Kelas.css";
 const Kelas = () => {
 	return (
 		<>
-			<div className="container-kelas mt-5" style={{ marginBottom: "30%" }}>
+			<div className="container-kelas mt-5" style={{ marginBottom:"2rem", maxWidth:"1440px", margin:"auto" }}>
 				<div
-					className="d-flex align-items-center justify-content-between py-2 border-bottom"
-					style={{ marginBottom: "5%", marginTop:"5%" }}>
+					className="d-flex align-items-center justify-content-center py-2 border-bottom"
+					style={{ margin:"4rem 0rem" }}>
 					{/* Search Bar */}
 					<div
-						className="input-group mx-3 flex-grow-1"
+						className="py-3 mx-3 flex-grow-1"
 						style={{ maxWidth: "100%", position: "relative", width: "100%" }}>
 						<i
 							className="fa-solid fa-magnifying-glass"
@@ -26,6 +26,8 @@ const Kelas = () => {
 								borderColor: "#ef7a53",
 								borderRadius: "20px",
 								paddingLeft: "40px",
+								paddingTop: "0.625rem",
+								paddingBottom: "0.625rem"
 							}}
 							placeholder="Cari Kursus..."
 						/>
@@ -51,9 +53,9 @@ const Kelas = () => {
 				</div>
 
 				{/* -------------- Layout Konten Utama -------- */}
-				<div className="main-content mb-5">
+				<div className="main-content mb-5" style={{gap:"2rem"}}>
 					{/* ---------- Sidebar Filter --> */}
-					<div className="filter" style={{marginLeft:"20px"}}>
+					<div className="filter" style={{}}>
 						<select>
 							<option>Jenis Teknologi</option>
 							<option>IoT</option>

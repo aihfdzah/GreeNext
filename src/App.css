@@ -307,7 +307,6 @@ option {
 	color: #555 !important;
 	font-size: 0.9em;
 	padding: 25px 0;
-	margin-left: 15%;
 }
 
 .pagination .prev.disabled {
@@ -845,11 +844,6 @@ main.book-detail {
     line-height: 1.5;
 }
 
-.pagination {
-    font-size: 14px;
-    color: #888;
-    margin-top: 20px;
-}
 
 .navigation {
     position: absolute;
@@ -949,12 +943,6 @@ main.book-detail {
 
 .nav-icon:hover {
     background-color: #ddd;
-}
-
-.pagination {
-    font-size: 14px;
-    color: #888;
-    margin-top: 20px;
 }
 
 /* --------------ebook payment----------- */
