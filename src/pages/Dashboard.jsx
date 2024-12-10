@@ -6,7 +6,6 @@ import "../styles/Dashboard.css";
 import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
 function Dashboard() {
 	// console.log(user)
 	const navigate = useNavigate();
