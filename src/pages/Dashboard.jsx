@@ -10,8 +10,8 @@ function Dashboard() {
 	// console.log(user)
 	const navigate = useNavigate();
 	const [activeButton, setActiveButton] = useState(null); // State to track the active button
-	const [error, setError] = useState(null);
-	const [user, setUser] = useState(null)
+	const [error, setError] = useState(null);  // state untuk menampilkan error
+	const [user, setUser] = useState(null) // state untuk menampilkan user
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
 	const [hasClass, setHasClass] = useState(true); // state untuk mengatur konten dashboard apakah memiliki kelas atau tidak
 
