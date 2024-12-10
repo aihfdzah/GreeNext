@@ -39,17 +39,18 @@ const Ebook = () => {
 		<>
 			<Navbar />
 			<Row
-				className="py-3 d-flex mt-5"
+				className="d-flex mt-5"
 				style={{
-					marginTop: "70px",
-					marginLeft:"20px"
+					maxWidth:"1440px",
+					margin:"auto",
+					padding:"2rem 2rem"
 				}}>
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Ebook</h1>
 				</Col>
 				<Col
 					className="text-end me-auto text-left"
-					style={{ marginLeft: "-200px" }}>
+					style={{}}>
 					<Button
 						className={`button-custom ${
 							activeButton === "sumber" ? "active" : ""

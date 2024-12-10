@@ -39,18 +39,23 @@ body {
 	top: 0;
 	padding: 15px 30px;
 	background-color: var(--main-color) !important;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 	z-index: 1000;
+}
+
+.nav-wrapper{
+	display: flex;
+	justify-content: space-between;
+	min-width: 1440px;
+	padding: 0px 2rem;
 }
 
 .logo {
 	position: relative;
 	width: 40px;
 	height: 40px;
-	margin-left: 10px;
-	margin-right: 50px;
 }
 
 .active-link {
@@ -111,7 +116,6 @@ body {
 /* ----------kelas------------ */
 .container {
 	max-width: 1440px;
-	padding: 50px 50px;
 	background-color: #f5f2ed;
 	border-radius: 8px;
 }
@@ -184,26 +188,6 @@ h2 {
 	font-weight: 600;
 }
 
-/* Filter */
-.filter {
-	display: flex;
-	flex-direction: column;
-	width: 200px;
-	margin-right: 20px;
-}
-
-.filter select {
-	padding: 8px;
-	background: transparent;
-	border: 1px solid #ef7a53;
-	border-radius: 10px;
-	margin-bottom: 10px;
-}
-
-.filter select:hover {
-	background: var(--text-color2);
-	color: #f5f2ed;
-}
 
 option {
 	background: var(--background-color);
@@ -288,20 +272,6 @@ option {
 	background: transparent;
 }
 
-.button-daftar {
-	padding: 8px 12px;
-	border: 1px solid #ef7a53 !important;
-	background: transparent;
-	color: #060807;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-.button-daftar a:hover {
-	background-color: #ef7a53 !important;
-	color: #f5f2ed;
-}
-
 /* Layout Halaman */
 .main-content {
 	display: flex;
@@ -316,7 +286,6 @@ option {
 	color: #555 !important;
 	font-size: 0.9em;
 	padding: 25px 0;
-	margin-left: 15%;
 }
 
 .pagination .prev.disabled {
@@ -414,11 +383,6 @@ option {
 	margin-bottom: 20px;
 }
 
-.course-image {
-	width: 100%;
-	border-radius: 8px;
-	margin-bottom: 20px;
-}
 
 #detailkelas {
 	width: 100%;
@@ -859,11 +823,6 @@ main.book-detail {
     line-height: 1.5;
 }
 
-.pagination {
-    font-size: 14px;
-    color: #888;
-    margin-top: 20px;
-}
 
 .navigation {
     position: absolute;
@@ -963,12 +922,6 @@ main.book-detail {
 
 .nav-icon:hover {
     background-color: #ddd;
-}
-
-.pagination {
-    font-size: 14px;
-    color: #888;
-    margin-top: 20px;
 }
 
 /* --------------ebook payment----------- */
@@ -1144,59 +1097,7 @@ main.book-detail {
     font-size: 15px;
 }
 
-/* Event List */
-.event-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
-.event-card {
-    display: flex;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.event-card img {
-    width: 50%;
-    height: auto;
-}
-
-.event-info {
-    padding: 15px;
-    flex-grow: 1;
-}
-
-.event-info h3 {
-    font-size: 18px;
-    margin: 0 0 10px 0;
-    color: #333;
-}
-
-.event-info p {
-    font-size: 14px;
-    margin: 5px 0;
-    color: #666;
-}
-
-.btn-status {
-    align-self: center;
-    margin-right: 15px;
-    padding: 8px 15px;
-    background-color: var(--text-color2);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.btn-status:hover {
-    background-color: #e4633a !important;
-}
 
 /* ------webinar details------ */
 .col-md-8 {
@@ -1225,10 +1126,7 @@ main.book-detail {
 	margin-bottom: 20px;
 }
 
-.course-image {
-	border-radius: 8px;
-	margin-bottom: 20px;
-}
+
 #webinar {
 	width: 100%;
 	height: 300px;
@@ -1353,7 +1251,7 @@ h5 {
 	border: 1px solid #ef7a53;
 	border-radius: 25px;
 	padding: 8px 15px;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 600;
 	margin-right: 10px;
 	transition: all 0.3s ease-in-out;
@@ -1417,19 +1315,6 @@ h1 {
     object-fit: cover;
 }
 
-.button-daftar {
-	padding: 8px 12px;
-	border: 1px solid #ef7a53 !important;
-	background: transparent;
-	color: #060807;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-.button-daftar a:hover {
-	background-color: #ef7a53 !important;
-	color: white;
-}
 
   /* -----------ruang diskusi------------- */
   .discussion-room {
@@ -2286,14 +2171,17 @@ input[type="password"] {
 	position: none;
 	bottom: 0;
 	right: 0;
+	display: flex;
+	justify-content: center;
 }
 
 .footer-content {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: flex-start;
 	flex: 1;
 	flex-wrap: wrap;
+	max-width: 1440px;
 }
 
 /* Mengatur logo dan teks bahasa */
@@ -2302,8 +2190,6 @@ input[type="password"] {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
-	padding-right: 100px;
-	margin-left: 5%;
 }
 
 .logo-footer {
@@ -2355,9 +2241,7 @@ input[type="password"] {
 }
 
 .footer .down {
-	padding-top: 40px;
 	align-items: center;
-	display: flexbox;
 }
 
 /* login */

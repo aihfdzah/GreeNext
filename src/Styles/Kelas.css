@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 16px;
+	gap: 4rem;
 	border-bottom: 50px solid  #17412d;
 	margin-bottom: 32px;
 	padding-bottom: 32px;
@@ -37,16 +37,32 @@
 	border-radius: 10px;
 }
 
-
-.konten-course-horizontal {
-	
+/* Filter */
+.filter {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
 }
+
+.filter select {
+	padding: 8px;
+	background: transparent;
+	border: 1px solid #ef7a53;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.filter select:hover {
+	background: var(--text-color2);
+	color: #f5f2ed;
+}
+
 
 .image-button-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 8px;
+	gap: 16px;
 }
 
 .course-image {
@@ -64,11 +80,12 @@
 	border-radius: 20px;
 	text-align: center;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 16px;
 	cursor: pointer;
+	font-weight: 600;
 }
 
 .button-daftar:hover {
-	background-color: #17412d;
+	opacity: .8;
 }
 
