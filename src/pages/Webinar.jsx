@@ -44,7 +44,7 @@ const Webinar = () => {
 	return (
 		<>
 			<Navbar />
-			<Row className="py-3 d-flex text-left mt-5" style={{}}>
+			<Row className="d-flex text-left mt-5" style={{maxWidth:'1440px', margin:"auto", padding:"3rem 2rem"}}>
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Webinar & Seminar</h1>
 				</Col>
@@ -82,13 +82,13 @@ const Webinar = () => {
 				</Col>
 			</Row>
 
-			<div className="container mt-2" style={{ marginBottom: "30%" }}>
+			<div className="container mt-2" style={{marginBottom:"2rem", padding:"0px 2rem"}}>
 				<h1 className="text-center">Webinar & Seminar</h1>
-				<div className="d-flex align-items-center justify-content-between py-2 border-bottom mt-1 mb-3">
+				<div className="d-flex align-items-center border-bottom mb-4 pb-4" style={{justifyContent:"space-between", gap:'1.5rem'}}>
 					{/* Search Bar */}
 					<div
-						className="input-group mx-3 flex-grow-1"
-						style={{ maxWidth: "1200px", position: "relative" }}>
+						className="mx-3 flex-grow-1"
+						style={{ position: "relative" }}>
 						<i
 							className="fa-solid fa-magnifying-glass"
 							style={{
@@ -105,6 +105,8 @@ const Webinar = () => {
 								borderColor: "#ef7a53",
 								borderRadius: "20px",
 								paddingLeft: "40px",
+								paddingTop:".625rem",
+								paddingBottom:".625rem",
 							}}
 							placeholder="Cari Webinar..."
 						/>
@@ -115,14 +117,14 @@ const Webinar = () => {
 						<i
 							className="fa-regular fa-heart mx-2"
 							style={{
-								fontSize: "20px",
+								fontSize: "30px",
 								cursor: "pointer",
 								color: "#ef7a53",
 							}}></i>
 						<i
 							className="fa-solid fa-cart-shopping mx-2"
 							style={{
-								fontSize: "20px",
+								fontSize: "30px",
 								cursor: "pointer",
 								color: "#ef7a53",
 							}}></i>
@@ -133,16 +135,16 @@ const Webinar = () => {
 					id="highlightedEventCarousel"
 					className="carousel slide mt-0"
 					data-bs-ride="carousel">
-					<div className="carousel-inner">
-						<div className="carousel-item active mb-3">
+					<div className="carousel-inner mb-5">
+						<div className="carousel-item active">
 							<img
-								src="./foto2.jpg"
+								src="./smart-agriculture-2.jpg"
 								className="d-block w-100"
-								style={{ borderRadius: "10px" }}
+								style={{ borderRadius: "10px", height:'450px', objectFit:"cover", filter:"brightness(45%)" }}
 								alt="Highlight Event 1"
 							/>
 							<div className="carousel-caption">
-								<h2>Pengenalan Sistem Pertanian Presisi</h2>
+								<h2 style={{color:"white"}}>Pengenalan Sistem Pertanian Presisi</h2>
 								<p>
 									Inovasi pertanian menjadi kunci untuk meningkatkan
 									produktivitas, efisiensi, dan keberlanjutan sektor pertanian
@@ -154,13 +156,13 @@ const Webinar = () => {
 						</div>
 						<div className="carousel-item">
 							<img
-								src="./foto5.jpg"
+								src="./smart-agriculture-1.jpg"
 								className="d-block w-100"
-								style={{ borderRadius: "10px" }}
+								style={{ borderRadius: "10px", height:'450px', objectFit:'cover', filter:"brightness(45%)" }}
 								alt="Highlight Event 2"
 							/>
 							<div className="carousel-caption">
-								<h2>Sistem Teknologi Pertanian</h2>
+								<h2 style={{color:"white"}}>Sistem Teknologi Pertanian</h2>
 								<p>
 									Menyoroti bagaimana teknologi meningkatkan efisiensi pertanian
 									modern.
@@ -171,13 +173,13 @@ const Webinar = () => {
 						</div>
 						<div className="carousel-item">
 							<img
-								src="./foto6.jpg"
+								src="./smart-agriculture-3.jpg"
 								className="d-block w-100"
-								style={{ borderRadius: "10px" }}
+								style={{ borderRadius: "10px", height:'450px', objectFit:'cover', filter:"brightness(45%)" }}
 								alt="Highlight Event 3"
 							/>
 							<div className="carousel-caption">
-								<h2>Manajemen Pertanian Berkelanjutan</h2>
+								<h2 style={{color:"white"}}>Manajemen Pertanian Berkelanjutan</h2>
 								<p>
 									Fokus pada strategi untuk menjaga keberlanjutan sektor
 									pertanian.
@@ -212,9 +214,9 @@ const Webinar = () => {
 				<div className="event-list">
 					<div className="event-card">
 						<img
-							src="./foto6.jpg"
+							src="./smart-agriculture-1.jpg"
 							alt="Event Thumbnail"
-							style={{ width: "55%" }}
+							style={{ }}
 						/>
 						<div className="event-info">
 							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }}>
@@ -227,7 +229,7 @@ const Webinar = () => {
 							</p>
 							<p style={{ fontSize: "1rem", color: "#555" }}>
 								<FaMapMarkerAlt className="me-2" />
-								Lembang, <br /> Kabupaten Bandung, Jawa Barat
+								Lembang, Kabupaten Bandung, Jawa Barat
 							</p>
 							<p style={{ fontSize: "1rem", color: "#555" }}>
 								<FaCalendarAlt className="me-2" />
@@ -256,30 +258,40 @@ const Webinar = () => {
 
 					<div className="event-card">
 						<img
-							src="./foto5.jpg"
+							src="./smart-agriculture-2.jpg"
 							alt="Event Thumbnail"
-							style={{ width: "55%" }}
+							style={{  }}
 						/>
 						<div className="event-info">
-							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }}>
+							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }} className="mb-3">
 								<FaCogs className="me-2" />
 								Sistem Teknologi Pertanian
 							</h3>
-							<p style={{ fontSize: "1rem", color: "#555" }}>
+							<p style={{ fontSize: "16px", color: "#555" }}>
 								<FaUserFriends className="me-2" />
 								192 orang mengikuti seminar ini
 							</p>
-							<p style={{ fontSize: "1rem", color: "#555" }}>
+							<p style={{ fontSize: "16px", color: "#555" }}>
 								<FaMapMarkerAlt className="me-2" />
-								Lembang, <br /> Kabupaten Bandung, Jawa Barat
+								Lembang, Kabupaten Bandung, Jawa Barat
 							</p>
-							<p style={{ fontSize: "1rem", color: "#555" }}>
+							<p style={{ fontSize: "16px", color: "#555" }}>
 								<FaCalendarAlt className="me-2" />
 								Tanggal: 15 - 16 April 2025
 							</p>
 						</div>
 						<a href="./WebinarDetail">
-							<button className="btn-status">
+							<button className="btn-status" style={{
+									display: "block",
+									margin: "10px auto",
+									backgroundColor: "#ef7a53",
+									color: "#fff",
+									borderRadius: "20px",
+									padding: "10px 20px",
+									fontSize: "1rem",
+									border: "none",
+									cursor: "pointer",
+								}}>
 								<FaSignInAlt className="me-2" />
 								Daftar
 							</button>
@@ -288,30 +300,40 @@ const Webinar = () => {
 
 					<div className="event-card">
 						<img
-							src="./foto4.jpg"
+							src="./smart-agriculture-3.jpg"
 							alt="Event Thumbnail"
-							style={{ width: "55%" }}
+							style={{ }}
 						/>
 						<div className="event-info">
-							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }}>
+							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }} className="mb-3">
 								<FaLeaf className="me-2" />
 								Manajemen Pertanian
 							</h3>
-							<p style={{ fontSize: "1rem", color: "#555" }}>
+							<p style={{ fontSize: "16px", color: "#555" }}>
 								<FaUserFriends className="me-2" />
 								100 orang mengikuti seminar ini
 							</p>
-							<p style={{ fontSize: "1rem", color: "#555" }}>
+							<p style={{ fontSize: "16px", color: "#555" }}>
 								<FaVideo className="me-2" />
 								Via Zoom
 							</p>
-							<p style={{ fontSize: "1rem", color: "#555" }}>
+							<p style={{ fontSize: "16px", color: "#555" }}>
 								<FaCalendarAlt className="me-2" />
 								Tanggal: 20 Juli 2025
 							</p>
 						</div>
 						<a href="./WebinarDetail">
-							<button className="btn-status">
+							<button className="btn-status" style={{
+									display: "block",
+									margin: "10px auto",
+									backgroundColor: "#ef7a53",
+									color: "#fff",
+									borderRadius: "20px",
+									padding: "10px 20px",
+									fontSize: "1rem",
+									border: "none",
+									cursor: "pointer",
+								}}>
 								<FaSignInAlt className="me-2" />
 								Daftar
 							</button>
@@ -320,30 +342,40 @@ const Webinar = () => {
 
 					<div className="event-card">
 						<img
-							src="./foto9.jpg"
+							src="./smart-agriculture-4.jpg"
 							alt="Event Thumbnail"
-							style={{ width: "55%" }}
+							style={{  }}
 						/>
 						<div className="event-info">
-							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }}>
+							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }} className="mb-3">
 								<FaWater className="me-2" />
 								Inovasi Pertanian Hemat Air
 							</h3>
-							<p style={{ fontSize: "1rem", color: "#555" }}>
+							<p style={{ fontSize: "16px", color: "#555" }}>
 								<FaUserFriends className="me-2" />
 								122 orang mengikuti seminar ini
 							</p>
-							<p style={{ fontSize: "1rem", color: "#555" }}>
+							<p style={{ fontSize: "16px", color: "#555" }}>
 								<FaVideo className="me-2" />
 								Via Zoom
 							</p>
-							<p style={{ fontSize: "1rem", color: "#555" }}>
+							<p style={{ fontSize: "16px", color: "#555" }}>
 								<FaCalendarAlt className="me-2" />
 								Tanggal: 01 Oktober 2025
 							</p>
 						</div>
 						<a href="./WebinarDetail">
-							<button className="btn-status">
+							<button className="btn-status" style={{
+									display: "block",
+									margin: "10px auto",
+									backgroundColor: "#ef7a53",
+									color: "#fff",
+									borderRadius: "20px",
+									padding: "10px 20px",
+									fontSize: "1rem",
+									border: "none",
+									cursor: "pointer",
+								}}>
 								<FaSignInAlt className="me-2" />
 								Daftar
 							</button>
