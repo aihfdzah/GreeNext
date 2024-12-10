@@ -13,7 +13,7 @@ function Dashboard() {
 	const [error, setError] = useState(null);
 	const [user, setUser] = useState(null)
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
-	const [hasClass, setHasClass] = useState(true);
+	const [hasClass, setHasClass] = useState(true); // state untuk mengatur konten dashboard apakah memiliki kelas atau tidak
 
 	useEffect(() => {
 	const fetchUser = async () => {
@@ -351,9 +351,9 @@ if (!user) {
 								<i className="bi bi-book-half"></i>
 							</span>
 						</div>
-						<div className="ms-3 text-center" style={{ marginBottom: "30%" }}>
-							<h2>Kelas Saya</h2>
-							<p>Tidak ada kelas yang sedang berlangsung</p>
+						<div className="text-center" style={{ marginBottom: "30%" }}>
+							<h2 className="mb-3">Kelas Saya</h2>
+							<p className="mb-5 mt-2">Tidak ada kelas yang sedang berlangsung</p>
 							<Button
 								href="/kelas"
 								className="w-100"
