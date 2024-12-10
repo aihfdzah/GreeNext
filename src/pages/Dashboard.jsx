@@ -59,7 +59,7 @@ if (!user) {
 	) : (
 		<>
 		<Navbar/>
-		<Container fluid className="dashboard-container" style={{paddingRight:"4rem", paddingLeft:"4rem", maxWidth:'1440px'}}>
+		<Container fluid className="dashboard-container" style={{paddingRight:"2rem", paddingLeft:"2rem", maxWidth:'1440px'}}>
 			<Row
 				className="py-3 d-flex text-left">
 				<Col>
