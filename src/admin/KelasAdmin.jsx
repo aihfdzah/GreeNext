@@ -1,37 +1,38 @@
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Admin.css";
 import { useState } from "react";
 
-function User() {
-	const [users, setUsers] = useState([
+function KelasAdmin() {
+	const navigate = useNavigate();
+
+	const [kelas, setKelas] = useState([
 		{
 			id: 1,
-			name: "George Lindseth",
-			mobile: "+44 315 29 62",
-			email: "carlien@samad.no",
+			name: "Pemrograman Dasar",
+			level: "Mudah",
+			hours: 20,
 			status: "Active",
 		},
 		{
 			id: 2,
-			name: "Erik Dyer",
-			mobile: "+21 345 46 25",
-			email: "cristdier@home.no",
+			name: "Analisis Data",
+			level: "Menengah",
+			hours: 30,
 			status: "Active",
 		},
 		{
 			id: 3,
-			name: "Michael Campbell",
-			mobile: "+17 364 72 53",
-			email: "campbell@gmail.com",
+			name: "Pengembangan AI",
+			level: "Sulit",
+			hours: 40,
 			status: "Inactive",
 		},
 	]);
 
 	const [searchTerm, setSearchTerm] = useState("");
 	const [sidebarOpen, setSidebarOpen] = useState(true);
-	const [currentUser, setCurrentUser] = useState(null);
-	const [showModal, setShowModal] = useState(false);
-	const [activeItem, setActiveItem] = useState("user"); // Menyimpan item yang aktif
+	const [activeItem, setActiveItem] = useState("kelasadmin"); // Menyimpan item yang aktif
 
 	// Fungsi untuk mengubah item yang aktif
 	const handleMenuClick = (item) => {
@@ -42,45 +43,27 @@ function User() {
 		setSidebarOpen(!sidebarOpen);
 	};
 
+	// Fungsi Tambah Kelas
 	const handleAddNew = () => {
-		setCurrentUser(null);
-		setShowModal(true);
+		navigate("/kelasadmindetail", { state: null }); // Tanpa data kelas
 	};
 
-	const handleEditUser = (user) => {
-		setCurrentUser(user);
-		setShowModal(true);
+	// Fungsi Edit Kelas
+	const handleEditKelas = (kelasItem) => {
+		navigate("/kelasadmindetail", { state: kelasItem }); // Kirim data kelas
 	};
 
-	const handleDeleteUser = (userId) => {
-		setUsers(users.filter((user) => user.id !== userId));
-	};
-
-	const handleSaveUser = (user) => {
-		if (user.id) {
-			setUsers(users.map((u) => (u.id === user.id ? user : u)));
-		} else {
-			const newUser = { ...user, id: Date.now() };
-			setUsers([...users, newUser]);
-		}
-		setShowModal(false);
+	const handleDeleteKelas = (kelasId) => {
+		setKelas(kelas.filter((k) => k.id !== kelasId));
 	};
 
 	const handleSearch = (e) => {
 		setSearchTerm(e.target.value);
 	};
 
-	const filteredUsers = users.filter((user) =>
-		user.name.toLowerCase().includes(searchTerm.toLowerCase())
+	const filteredKelas = kelas.filter((k) =>
+		k.name.toLowerCase().includes(searchTerm.toLowerCase())
 	);
-
-	const handleImport = () => {
-		alert("Import functionality to be implemented.");
-	};
-
-	const handleExport = () => {
-		alert("Export functionality to be implemented.");
-	};
 
 	return (
 		<div className="d-flex">
@@ -176,11 +159,12 @@ function User() {
 					</ul>
 				</nav>
 			)}
+
 			<div className="content-admin flex-grow-1">
 				<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
-					<h5 className="mb-0">Pengguna</h5>
+					<h5 className="mb-0">Kelas</h5>
 					<div className="d-flex align-items-center">
 						<img
 							src="https://via.placeholder.com/40"
@@ -194,31 +178,18 @@ function User() {
 						</button>
 					</div>
 				</header>
-
 				<div className="container-admin mt-4 px-4">
 					<div className="d-flex justify-content-between align-items-center my-4">
 						<button className="btn btn-primary" onClick={handleAddNew}>
-							Tambah Pengguna
+							Tambah Kelas
 						</button>
-						<div className="d-flex">
-							<button
-								className="btn btn-outline-secondary me-2"
-								onClick={handleImport}>
-								Import Pengguna
-							</button>
-							<button
-								className="btn btn-outline-secondary"
-								onClick={handleExport}>
-								Export Pengguna
-							</button>
-						</div>
 					</div>
 
 					<div className="mb-3">
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Cari pengguna..."
+							placeholder="Cari kelas..."
 							value={searchTerm}
 							onChange={handleSearch}
 						/>
@@ -227,36 +198,36 @@ function User() {
 					<table className="table table-striped">
 						<thead>
 							<tr>
-								<th>Nama Pengguna</th>
-								<th>Telepon</th>
-								<th>Email</th>
+								<th>Nama Kelas</th>
+								<th>Kesulitan</th>
+								<th>Jam Belajar</th>
 								<th>Status</th>
 								<th>Actions</th>
 							</tr>
 						</thead>
 						<tbody>
-							{filteredUsers.map((user) => (
-								<tr key={user.id}>
-									<td>{user.name}</td>
-									<td>{user.mobile}</td>
-									<td>{user.email}</td>
+							{filteredKelas.map((k) => (
+								<tr key={k.id}>
+									<td>{k.name}</td>
+									<td>{k.level}</td>
+									<td>{k.hours}</td>
 									<td>
 										<span
 											className={`badge ${
-												user.status === "Active" ? "bg-success" : "bg-danger"
+												k.status === "Active" ? "bg-success" : "bg-danger"
 											}`}>
-											{user.status}
+											{k.status}
 										</span>
 									</td>
 									<td>
 										<button
 											className="btn btn-sm btn-outline-secondary me-2"
-											onClick={() => handleEditUser(user)}>
+											onClick={() => handleEditKelas(k)}>
 											Edit
 										</button>
 										<button
 											className="btn btn-sm btn-outline-danger"
-											onClick={() => handleDeleteUser(user.id)}>
+											onClick={() => handleDeleteKelas(k.id)}>
 											Delete
 										</button>
 									</td>
@@ -265,110 +236,9 @@ function User() {
 						</tbody>
 					</table>
 				</div>
-
-				{showModal && (
-					<UserModal
-						user={currentUser}
-						onSave={handleSaveUser}
-						onClose={() => setShowModal(false)}
-					/>
-				)}
 			</div>
 		</div>
 	);
 }
 
-function UserModal({ user, onSave, onClose }) {
-	const [formData, setFormData] = useState(
-		user || { name: "", mobile: "", email: "", status: "Active" }
-	);
-
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData({ ...formData, [name]: value });
-	};
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		onSave(formData);
-	};
-
-	return (
-		<div
-			className="modal d-block"
-			style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-			<div className="modal-dialog">
-				<div className="modal-content">
-					<div className="modal-header">
-						<h5 className="modal-title">
-							{user ? "Edit Pengguna" : "Menambah Pengguna"}
-						</h5>
-						<button className="btn-close" onClick={onClose}></button>
-					</div>
-					<form onSubmit={handleSubmit}>
-						<div className="modal-body">
-							<div className="mb-3">
-								<label className="form-label">Nama Pengguna</label>
-								<input
-									type="text"
-									className="form-control"
-									name="name"
-									value={formData.name}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Telepon</label>
-								<input
-									type="text"
-									className="form-control"
-									name="mobile"
-									value={formData.mobile}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Email</label>
-								<input
-									type="email"
-									className="form-control"
-									name="email"
-									value={formData.email}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Status</label>
-								<select
-									className="form-select"
-									name="status"
-									value={formData.status}
-									onChange={handleChange}
-									required>
-									<option value="Active">Active</option>
-									<option value="Inactive">Inactive</option>
-								</select>
-							</div>
-						</div>
-						<div className="modal-footer">
-							<button
-								type="button"
-								className="btn btn-secondary"
-								onClick={onClose}>
-								Close
-							</button>
-							<button type="submit" className="btn btn-primary">
-								Save
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	);
-}
-
-export default User;
+export default KelasAdmin;

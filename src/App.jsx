@@ -42,6 +42,8 @@ import Histori from "./pages/Histori";
 import Dashboard from "./pages/Dashboard";
 import Admin from "./admin/Admin";
 import User from "./admin/User";
+import KelasAdmin from "./admin/KelasAdmin";
+import KelasAdminDetail from "./admin/KelasAdminDetail";
 function App() {
 	return (
 		<BrowserRouter>
@@ -49,6 +51,8 @@ function App() {
 				<Route path="/" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/admin" element={<Admin />} />
+				<Route path="/kelasadmin" element={<KelasAdmin />} />
+				<Route path="/kelasadmindetail" element={<KelasAdminDetail />} />
 				<Route path="/user" element={<User />} />
 				<Route path="/dashboard" element={<Dashboard />} />
 				<Route path="/profile" element={<HalamanProfile />} />

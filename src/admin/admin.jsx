@@ -31,9 +31,15 @@ function Admin() {
 	const [sidebarOpen, setSidebarOpen] = useState(true);
 	const [currentAdmin, setCurrentAdmin] = useState(null);
 	const [showModal, setShowModal] = useState(false);
+	const [activeItem, setActiveItem] = useState("admin"); // Menyimpan item yang aktif
 
 	const toggleSidebar = () => {
 		setSidebarOpen(!sidebarOpen);
+	};
+
+	// Fungsi untuk mengubah item yang aktif
+	const handleMenuClick = (item) => {
+		setActiveItem(item);
 	};
 
 	const handleAddNew = () => {
@@ -90,73 +96,93 @@ function Admin() {
 						<li className="mb-3">
 							<a
 								href="*"
-								className="text-white text-decoration-none d-flex align-items-center">
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "profile" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("profile")}>
 								<i className="bi bi-person me-2"></i> Profile
 							</a>
 						</li>
 						<li className="mb-3">
 							<a
 								href="/user"
-								className="text-white text-decoration-none d-flex align-items-center">
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "user" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("user")}>
 								<i className="bi bi-people me-2"></i> Pengguna
 							</a>
 						</li>
 						<li className="mb-3">
 							<a
 								href="/admin"
-								className="text-white text-decoration-none d-flex align-items-center">
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "admin" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("admin")}>
 								<i className="bi bi-tools me-2"></i> Admin
 							</a>
 						</li>
 						<li className="mb-3">
 							<a
-								href="#"
-								className="text-white text-decoration-none d-flex align-items-center">
+								href="/kelasadmin"
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "kelasadmin" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("kelasadmin")}>
 								<i className="bi bi-folder2-open me-2"></i> Kelas
 							</a>
 						</li>
 						<li className="mb-3">
 							<a
 								href="#"
-								className="text-white text-decoration-none d-flex align-items-center">
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "webinar" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("webinar")}>
 								<i className="bi bi-list-task me-2"></i> Webinar
 							</a>
 						</li>
 						<li className="mb-3">
 							<a
 								href="#"
-								className="text-white text-decoration-none d-flex align-items-center">
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "ebook" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("ebook")}>
 								<i className="bi bi-clock-history me-2"></i> Ebook
 							</a>
 						</li>
 						<li className="mb-3">
 							<a
 								href="#"
-								className="text-white text-decoration-none d-flex align-items-center">
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "groupchat" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("groupchat")}>
 								<i className="bi bi-chat me-2"></i> Group Chats
 							</a>
 						</li>
 						<li>
 							<a
 								href="#"
-								className="text-white text-decoration-none d-flex align-items-center">
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "reports" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("reports")}>
 								<i className="bi bi-bar-chart me-2"></i> Reports
 							</a>
 						</li>
 					</ul>
 				</nav>
 			)}
-      
+
 			<div className="content-admin flex-grow-1">
 				<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
 					<h5 className="mb-0">Admin</h5>
 					<div className="d-flex align-items-center">
-						<div className="text-end me-4">
-							<p className="mb-0">Total Pengguna: 2000</p>
-							<p className="mb-0">Current Users: 1800</p>
-						</div>
 						<img
 							src="https://via.placeholder.com/40"
 							alt="Profile"
@@ -275,7 +301,7 @@ function AdminModal({ admin, onSave, onClose }) {
 				<div className="modal-content">
 					<div className="modal-header">
 						<h5 className="modal-title">
-							{admin ? "Edit Admin" : "Add New Admin"}
+							{admin ? "Edit Admin" : "Menambah Admin"}
 						</h5>
 						<button className="btn-close" onClick={onClose}></button>
 					</div>

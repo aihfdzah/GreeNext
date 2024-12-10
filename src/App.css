@@ -1449,7 +1449,7 @@ h1 {
   }
   
   .comment-button:hover {
-	background-color: #FF5733;
+	background-color: var(--text-color2);
   }
   
 
