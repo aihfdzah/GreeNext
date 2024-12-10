@@ -2,34 +2,34 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Admin.css";
 import { useState } from "react";
 
-function Admin() {
-	const [admins, setAdmins] = useState([
+function User() {
+	const [users, setUsers] = useState([
 		{
 			id: 1,
 			name: "George Lindseth",
 			mobile: "+44 315 29 62",
-			email: "george@admin.com",
+			email: "carlien@samad.no",
 			status: "Active",
 		},
 		{
 			id: 2,
 			name: "Erik Dyer",
 			mobile: "+21 345 46 25",
-			email: "erik@admin.com",
+			email: "cristdier@home.no",
 			status: "Active",
 		},
 		{
 			id: 3,
 			name: "Michael Campbell",
 			mobile: "+17 364 72 53",
-			email: "michael@admin.com",
+			email: "campbell@gmail.com",
 			status: "Inactive",
 		},
 	]);
 
 	const [searchTerm, setSearchTerm] = useState("");
 	const [sidebarOpen, setSidebarOpen] = useState(true);
-	const [currentAdmin, setCurrentAdmin] = useState(null);
+	const [currentUser, setCurrentUser] = useState(null);
 	const [showModal, setShowModal] = useState(false);
 
 	const toggleSidebar = () => {
@@ -37,25 +37,25 @@ function Admin() {
 	};
 
 	const handleAddNew = () => {
-		setCurrentAdmin(null);
+		setCurrentUser(null);
 		setShowModal(true);
 	};
 
-	const handleEditAdmin = (admin) => {
-		setCurrentAdmin(admin);
+	const handleEditUser = (user) => {
+		setCurrentUser(user);
 		setShowModal(true);
 	};
 
-	const handleDeleteAdmin = (adminId) => {
-		setAdmins(admins.filter((admin) => admin.id !== adminId));
+	const handleDeleteUser = (userId) => {
+		setUsers(users.filter((user) => user.id !== userId));
 	};
 
-	const handleSaveAdmin = (admin) => {
-		if (admin.id) {
-			setAdmins(admins.map((a) => (a.id === admin.id ? admin : a)));
+	const handleSaveUser = (user) => {
+		if (user.id) {
+			setUsers(users.map((u) => (u.id === user.id ? user : u)));
 		} else {
-			const newAdmin = { ...admin, id: Date.now() };
-			setAdmins([...admins, newAdmin]);
+			const newUser = { ...user, id: Date.now() };
+			setUsers([...users, newUser]);
 		}
 		setShowModal(false);
 	};
@@ -64,8 +64,8 @@ function Admin() {
 		setSearchTerm(e.target.value);
 	};
 
-	const filteredAdmins = admins.filter((admin) =>
-		admin.name.toLowerCase().includes(searchTerm.toLowerCase())
+	const filteredUsers = users.filter((user) =>
+		user.name.toLowerCase().includes(searchTerm.toLowerCase())
 	);
 
 	const handleImport = () => {
@@ -146,12 +146,12 @@ function Admin() {
 					</ul>
 				</nav>
 			)}
-      
+
 			<div className="content-admin flex-grow-1">
 				<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
-					<h5 className="mb-0">Admin</h5>
+					<h5 className="mb-0">Pengguna</h5>
 					<div className="d-flex align-items-center">
 						<div className="text-end me-4">
 							<p className="mb-0">Total Pengguna: 2000</p>
@@ -169,21 +169,22 @@ function Admin() {
 						</button>
 					</div>
 				</header>
+
 				<div className="container-admin mt-4 px-4">
 					<div className="d-flex justify-content-between align-items-center my-4">
 						<button className="btn btn-primary" onClick={handleAddNew}>
-							Tambah Admin
+							Tambah Pengguna
 						</button>
 						<div className="d-flex">
 							<button
 								className="btn btn-outline-secondary me-2"
 								onClick={handleImport}>
-								Import Admin
+								Import Pengguna
 							</button>
 							<button
 								className="btn btn-outline-secondary"
 								onClick={handleExport}>
-								Export Admin
+								Export Pengguna
 							</button>
 						</div>
 					</div>
@@ -192,7 +193,7 @@ function Admin() {
 						<input
 							type="text"
 							className="form-control"
-							placeholder="Cari admin..."
+							placeholder="Cari pengguna..."
 							value={searchTerm}
 							onChange={handleSearch}
 						/>
@@ -201,7 +202,7 @@ function Admin() {
 					<table className="table table-striped">
 						<thead>
 							<tr>
-								<th>Nama Admin</th>
+								<th>Nama Pengguna</th>
 								<th>Telepon</th>
 								<th>Email</th>
 								<th>Status</th>
@@ -209,28 +210,28 @@ function Admin() {
 							</tr>
 						</thead>
 						<tbody>
-							{filteredAdmins.map((admin) => (
-								<tr key={admin.id}>
-									<td>{admin.name}</td>
-									<td>{admin.mobile}</td>
-									<td>{admin.email}</td>
+							{filteredUsers.map((user) => (
+								<tr key={user.id}>
+									<td>{user.name}</td>
+									<td>{user.mobile}</td>
+									<td>{user.email}</td>
 									<td>
 										<span
 											className={`badge ${
-												admin.status === "Active" ? "bg-success" : "bg-danger"
+												user.status === "Active" ? "bg-success" : "bg-danger"
 											}`}>
-											{admin.status}
+											{user.status}
 										</span>
 									</td>
 									<td>
 										<button
 											className="btn btn-sm btn-outline-secondary me-2"
-											onClick={() => handleEditAdmin(admin)}>
+											onClick={() => handleEditUser(user)}>
 											Edit
 										</button>
 										<button
 											className="btn btn-sm btn-outline-danger"
-											onClick={() => handleDeleteAdmin(admin.id)}>
+											onClick={() => handleDeleteUser(user.id)}>
 											Delete
 										</button>
 									</td>
@@ -241,9 +242,9 @@ function Admin() {
 				</div>
 
 				{showModal && (
-					<AdminModal
-						admin={currentAdmin}
-						onSave={handleSaveAdmin}
+					<UserModal
+						user={currentUser}
+						onSave={handleSaveUser}
 						onClose={() => setShowModal(false)}
 					/>
 				)}
@@ -252,9 +253,9 @@ function Admin() {
 	);
 }
 
-function AdminModal({ admin, onSave, onClose }) {
+function UserModal({ user, onSave, onClose }) {
 	const [formData, setFormData] = useState(
-		admin || { name: "", mobile: "", email: "", status: "Active" }
+		user || { name: "", mobile: "", email: "", status: "Active" }
 	);
 
 	const handleChange = (e) => {
@@ -275,14 +276,14 @@ function AdminModal({ admin, onSave, onClose }) {
 				<div className="modal-content">
 					<div className="modal-header">
 						<h5 className="modal-title">
-							{admin ? "Edit Admin" : "Add New Admin"}
+							{user ? "Edit User" : "Add New User"}
 						</h5>
 						<button className="btn-close" onClick={onClose}></button>
 					</div>
 					<form onSubmit={handleSubmit}>
 						<div className="modal-body">
 							<div className="mb-3">
-								<label className="form-label">Nama Admin</label>
+								<label className="form-label">Nama Pengguna</label>
 								<input
 									type="text"
 									className="form-control"
@@ -345,4 +346,4 @@ function AdminModal({ admin, onSave, onClose }) {
 	);
 }
 
-export default Admin;
+export default User;

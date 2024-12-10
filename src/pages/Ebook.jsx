@@ -41,16 +41,14 @@ const Ebook = () => {
 			<Row
 				className="d-flex mt-5"
 				style={{
-					maxWidth:"1440px",
-					margin:"auto",
-					padding:"2rem 2rem"
+					maxWidth: "1440px",
+					margin: "auto",
+					padding: "2rem 2rem",
 				}}>
 				<Col>
-					<h1 style={{ color: "#17412d" }}>Ebook</h1>
+					<h1 style={{ color: "#17412d", fontSize: "20pt" }}>Ebook</h1>
 				</Col>
-				<Col
-					className="text-end me-auto text-left"
-					style={{}}>
+				<Col className="text-end me-auto text-left" style={{}}>
 					<Button
 						className={`button-custom ${
 							activeButton === "sumber" ? "active" : ""
