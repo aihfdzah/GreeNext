@@ -5,7 +5,6 @@ import axios from "axios";
 
 function User() {
 	const [user, setUser] = useState([]); // State untuk menyimpan data pengguna
-	console.log(user);
 	const [loading, setLoading] = useState(false); // State untuk loading
 	const [error, setError] = useState(null); // State untuk menangani error
 	const [sidebarOpen, setSidebarOpen] = useState(true); // State untuk sidebar
@@ -18,8 +17,8 @@ function User() {
 			setError(null);
 			try {
 				const response = await axios.get("http://localhost:5000/api/v1/user"); // Ganti URL ini sesuai dengan API Anda
-				console.log(response.user);
-				setUser(response.data);
+				// console.log(response.user);
+				setUser(response.data.data);
 			} catch (err) {
 				console.error("Error fetching user data:", err.message);
 				setError("Gagal memuat data pengguna. Silakan coba lagi nanti.");
@@ -41,6 +40,7 @@ function User() {
 
 	return (
 		<div className="d-flex">
+			{console.log(user)}
 			{/* Sidebar */}
 			{sidebarOpen && (
 				<nav className="sidebar-admin">
@@ -169,11 +169,8 @@ function User() {
 						<table className="table table-striped">
 							<thead>
 								<tr>
-									<th>#</th>
 									<th>Nama Pengguna</th>
-									<th>Telepon</th>
 									<th>Email</th>
-									<th>Status</th>
 								</tr>
 							</thead>
 							<tbody>
