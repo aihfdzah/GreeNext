@@ -1676,11 +1676,10 @@ option {
 }
 
 /* ------------profile-------------- */
-.containerr {
+.container-profile {
 	max-width: 1440px;
-	width: 1200px;
-	margin: 8rem 0 20rem auto;
-	padding: 50px 50px;
+	margin: 4rem auto;
+	padding: 0rem 4rem;
 	background-color: var(--background-color);
 	border-radius: 8px;
 	display: flex;
@@ -1689,8 +1688,6 @@ option {
 
 #profile {
 	flex-direction: row;
-	padding: 5px;
-	
 }
 
 #profilefoto {
@@ -1721,11 +1718,11 @@ option {
 /* Sidebar Styling */
 .sidebar {
     width: 200px;
-    background-color: var(--background-color);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+		background-color: white;
 }
 
 .sidebar img {
@@ -1763,11 +1760,11 @@ option {
 /* Profile Form Styling */
 .profile-content {
     flex: 2;
-	margin-left: 20px;
-    background-color: var(--background-color);
+		margin-left: 20px;
     border-radius: 10px;
     padding: 20px 80px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+		background-color: white;
 }
 
 
@@ -2033,14 +2030,6 @@ option {
 
 /* -----------profile keamanan----- */
 
-.profile-content {
-    flex: 2;
-	margin-left: 20px;
-    background-color: var(--background-color);
-    border-radius: 10px;
-    padding: 20px 80px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 .account-settings {
 	margin-top: 20px;
