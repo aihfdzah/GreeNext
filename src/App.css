@@ -50,7 +50,7 @@ body {
 	justify-content: space-between;
 	max-width: 1440px;
 	width: 100%;
-	padding: 0px 2rem;
+	padding: 0px 4rem;
 }
 
 .logo {
@@ -955,9 +955,6 @@ main.book-detail {
     font-size: 14px;
 }
 
-.input-group {
-    margin-bottom: 15px;
-}
 
 .input-group label {
     font-size: 14px;

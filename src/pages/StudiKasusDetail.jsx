@@ -24,7 +24,7 @@ const StudiKasusDetail = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="container mt-3">
+			<div className="container mt-3" style={{padding:'0rem 4rem'}}>
 				{/* Tombol kembali */}
 				<div>
 					<button
@@ -37,7 +37,7 @@ const StudiKasusDetail = () => {
 				</div>
 
 				{/* Kontainer utama */}
-				<div className="card-container mt-2">
+				<div className="card-container mt-5" style={{maxWidth:'1440px'}}>
 					{/* Judul */}
 					<h2>
 						PENERAPAN PERTANIAN PRESISI <br /> (PRECISION AGRICULTURE)
