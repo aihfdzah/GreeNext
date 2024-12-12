@@ -1853,6 +1853,7 @@ option {
 	padding: 50px 150%;
 	border-radius: 10px;
 	margin-bottom: 20px;
+	max-width: 450px;
 }
 
 

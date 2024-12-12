@@ -6,7 +6,7 @@ const Profileprivasi = () => {
 
 	return (
 		<div
-			className="containerr"
+			className="container-profile"
 			id="profileprivasi"
 			style={{ marginBottom: "20%", marginTop: "10%" }}>
 			<div className="sidebar">

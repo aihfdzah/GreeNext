@@ -5,7 +5,7 @@ const Profilefoto = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="containerr" id="profilefoto" style={{ marginBottom: "20%", marginTop: "10%" }}>
+		<div className="container-profile" id="profilefoto">
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
