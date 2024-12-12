@@ -1,43 +1,32 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Admin.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Admin() {
-	const [admins, setAdmins] = useState([
-		{
-			id: 1,
-			name: "George Lindseth",
-			mobile: "+44 315 29 62",
-			email: "george@admin.com",
-			status: "Active",
-		},
-		{
-			id: 2,
-			name: "Erik Dyer",
-			mobile: "+21 345 46 25",
-			email: "erik@admin.com",
-			status: "Active",
-		},
-		{
-			id: 3,
-			name: "Michael Campbell",
-			mobile: "+17 364 72 53",
-			email: "michael@admin.com",
-			status: "Inactive",
-		},
-	]);
-
+	const [admins, setAdmins] = useState([]);
 	const [searchTerm, setSearchTerm] = useState("");
 	const [sidebarOpen, setSidebarOpen] = useState(true);
 	const [currentAdmin, setCurrentAdmin] = useState(null);
 	const [showModal, setShowModal] = useState(false);
-	const [activeItem, setActiveItem] = useState("admin"); // Menyimpan item yang aktif
+	const [activeItem, setActiveItem] = useState("admin");
+
+	useEffect(() => {
+		// Fetch admins from backend on component mount
+		axios
+			.get("https://example.com/api/admins") // Ganti dengan URL endpoint backend Anda
+			.then((response) => {
+				setAdmins(response.data);
+			})
+			.catch((error) => {
+				console.error("Error fetching admin data:", error);
+			});
+	}, []);
 
 	const toggleSidebar = () => {
 		setSidebarOpen(!sidebarOpen);
 	};
 
-	// Fungsi untuk mengubah item yang aktif
 	const handleMenuClick = (item) => {
 		setActiveItem(item);
 	};
@@ -53,15 +42,35 @@ function Admin() {
 	};
 
 	const handleDeleteAdmin = (adminId) => {
-		setAdmins(admins.filter((admin) => admin.id !== adminId));
+		axios
+			.delete(`https://example.com/api/admins/${adminId}`) // Endpoint untuk menghapus admin
+			.then(() => {
+				setAdmins(admins.filter((admin) => admin.id !== adminId));
+			})
+			.catch((error) => {
+				console.error("Error deleting admin:", error);
+			});
 	};
 
 	const handleSaveAdmin = (admin) => {
 		if (admin.id) {
-			setAdmins(admins.map((a) => (a.id === admin.id ? admin : a)));
+			axios
+				.put(`https://example.com/api/admins/${admin.id}`, admin) // Endpoint untuk mengupdate admin
+				.then((response) => {
+					setAdmins(admins.map((a) => (a.id === admin.id ? response.data : a)));
+				})
+				.catch((error) => {
+					console.error("Error updating admin:", error);
+				});
 		} else {
-			const newAdmin = { ...admin, id: Date.now() };
-			setAdmins([...admins, newAdmin]);
+			axios
+				.post("https://example.com/api/admins", admin) // Endpoint untuk menambah admin baru
+				.then((response) => {
+					setAdmins([...admins, response.data]);
+				})
+				.catch((error) => {
+					console.error("Error adding admin:", error);
+				});
 		}
 		setShowModal(false);
 	};

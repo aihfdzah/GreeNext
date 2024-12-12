@@ -22,7 +22,7 @@ const Kelasdetail = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="container mt-4">
+			<div className="container mt-5">
 				{/* Tombol Kembali */}
 				<div className="back-button mb-3">
 					<button
