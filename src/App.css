@@ -2183,9 +2183,9 @@ input[type="password"] {
 	border-bottom: 1px solid #e0dddd;
   }
   
-    li:last-child {
+  /* li:last-child {
 	border-bottom: none;
-  } 
+  }  */
   
   .time {
 	font-weight: bold;
