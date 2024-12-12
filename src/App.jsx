@@ -44,7 +44,6 @@ import Admin from "./admin/Admin";
 import User from "./admin/User";
 import KelasAdmin from "./admin/KelasAdmin";
 import KelasAdminDetail from "./admin/KelasAdminDetail";
-// import Histori from "./admin/Histori";
 function App() {
 	return (
 		<BrowserRouter>
@@ -90,7 +89,6 @@ function App() {
 				<Route path="/cobankdetail" element={<COBankDetail />} />
 				<Route path="/cobanknext" element={<COBankNext />} />
 				<Route path="/coberhasil" element={<COBerhasil />} />
-				{/* <Route path="/histori" element={<Histori />} /> */}
 				<Route path="*" element={<NotFound />} />
 				<Route path="/privasi" element={<Privasi />} />
 				<Route path="/keluar" element={<Keluar />} />
