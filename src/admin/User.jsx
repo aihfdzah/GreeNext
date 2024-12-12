@@ -179,7 +179,7 @@ function User() {
 										<tr key={user.id}>
 											<td>{user.username}</td>
 											<td>{user.email}</td>
-											<td>
+											{/* <td>
 												<span
 													className={`badge ${
 														user.status === "Active"
@@ -188,7 +188,7 @@ function User() {
 													}`}>
 													{user.status}
 												</span>
-											</td>
+											</td> */}
 										</tr>
 									))
 								) : (

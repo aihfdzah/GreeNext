@@ -4,23 +4,30 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Admin() {
-	const [admins, setAdmins] = useState([]);
-	const [searchTerm, setSearchTerm] = useState("");
-	const [sidebarOpen, setSidebarOpen] = useState(true);
-	const [currentAdmin, setCurrentAdmin] = useState(null);
-	const [showModal, setShowModal] = useState(false);
-	const [activeItem, setActiveItem] = useState("admin");
+	const [user, setUser] = useState([]); // State untuk menyimpan data pengguna
+	const [loading, setLoading] = useState(false); // State untuk loading
+	const [error, setError] = useState(null); // State untuk menangani error
+	const [sidebarOpen, setSidebarOpen] = useState(true); // State untuk sidebar
+	const [activeItem, setActiveItem] = useState("user"); // State untuk item aktif pada sidebar
 
 	useEffect(() => {
-		// Fetch admins from backend on component mount
-		axios
-			.get("https://example.com/api/admins") // Ganti dengan URL endpoint backend Anda
-			.then((response) => {
-				setAdmins(response.data);
-			})
-			.catch((error) => {
-				console.error("Error fetching admin data:", error);
-			});
+		// Fungsi untuk mengambil data pengguna dari API
+		const fetchUser = async () => {
+			setLoading(true);
+			setError(null);
+			try {
+				const response = await axios.get("http://localhost:5000/api/v1/user"); // Ganti URL ini sesuai dengan API Anda
+				// console.log(response.user);
+				setUser(response.data.data);
+			} catch (err) {
+				console.error("Error fetching user data:", err.message);
+				setError("Gagal memuat data pengguna. Silakan coba lagi nanti.");
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchUser();
 	}, []);
 
 	const toggleSidebar = () => {
@@ -31,68 +38,9 @@ function Admin() {
 		setActiveItem(item);
 	};
 
-	const handleAddNew = () => {
-		setCurrentAdmin(null);
-		setShowModal(true);
-	};
-
-	const handleEditAdmin = (admin) => {
-		setCurrentAdmin(admin);
-		setShowModal(true);
-	};
-
-	const handleDeleteAdmin = (adminId) => {
-		axios
-			.delete(`https://example.com/api/admins/${adminId}`) // Endpoint untuk menghapus admin
-			.then(() => {
-				setAdmins(admins.filter((admin) => admin.id !== adminId));
-			})
-			.catch((error) => {
-				console.error("Error deleting admin:", error);
-			});
-	};
-
-	const handleSaveAdmin = (admin) => {
-		if (admin.id) {
-			axios
-				.put(`https://example.com/api/admins/${admin.id}`, admin) // Endpoint untuk mengupdate admin
-				.then((response) => {
-					setAdmins(admins.map((a) => (a.id === admin.id ? response.data : a)));
-				})
-				.catch((error) => {
-					console.error("Error updating admin:", error);
-				});
-		} else {
-			axios
-				.post("https://example.com/api/admins", admin) // Endpoint untuk menambah admin baru
-				.then((response) => {
-					setAdmins([...admins, response.data]);
-				})
-				.catch((error) => {
-					console.error("Error adding admin:", error);
-				});
-		}
-		setShowModal(false);
-	};
-
-	const handleSearch = (e) => {
-		setSearchTerm(e.target.value);
-	};
-
-	const filteredAdmins = admins.filter((admin) =>
-		admin.name.toLowerCase().includes(searchTerm.toLowerCase())
-	);
-
-	const handleImport = () => {
-		alert("Import functionality to be implemented.");
-	};
-
-	const handleExport = () => {
-		alert("Export functionality to be implemented.");
-	};
-
 	return (
 		<div className="d-flex">
+			{console.log(user)}
 			{/* Sidebar */}
 			{sidebarOpen && (
 				<nav className="sidebar-admin">
@@ -186,11 +134,12 @@ function Admin() {
 				</nav>
 			)}
 
+			{/* Content */}
 			<div className="content-admin flex-grow-1">
 				<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
-					<h5 className="mb-0">Admin</h5>
+					<h5 className="mb-0">Daftar Pengguna</h5>
 					<div className="d-flex align-items-center">
 						<img
 							src="https://via.placeholder.com/40"
@@ -204,176 +153,54 @@ function Admin() {
 						</button>
 					</div>
 				</header>
+
 				<div className="container-admin mt-4 px-4">
-					<div className="d-flex justify-content-between align-items-center my-4">
-						<button className="btn btn-primary" onClick={handleAddNew}>
-							Tambah Admin
-						</button>
-						<div className="d-flex">
-							<button
-								className="btn btn-outline-secondary me-2"
-								onClick={handleImport}>
-								Import Admin
-							</button>
-							<button
-								className="btn btn-outline-secondary"
-								onClick={handleExport}>
-								Export Admin
-							</button>
+					{loading ? (
+						<div className="text-center my-5">
+							<div className="spinner-border" role="status">
+								<span className="visually-hidden">Loading...</span>
+							</div>
 						</div>
-					</div>
-
-					<div className="mb-3">
-						<input
-							type="text"
-							className="form-control"
-							placeholder="Cari admin..."
-							value={searchTerm}
-							onChange={handleSearch}
-						/>
-					</div>
-
-					<table className="table table-striped">
-						<thead>
-							<tr>
-								<th>Nama Admin</th>
-								<th>Telepon</th>
-								<th>Email</th>
-								<th>Status</th>
-								<th>Actions</th>
-							</tr>
-						</thead>
-						<tbody>
-							{filteredAdmins.map((admin) => (
-								<tr key={admin.id}>
-									<td>{admin.name}</td>
-									<td>{admin.mobile}</td>
-									<td>{admin.email}</td>
-									<td>
-										<span
-											className={`badge ${
-												admin.status === "Active" ? "bg-success" : "bg-danger"
-											}`}>
-											{admin.status}
-										</span>
-									</td>
-									<td>
-										<button
-											className="btn btn-sm btn-outline-secondary me-2"
-											onClick={() => handleEditAdmin(admin)}>
-											Edit
-										</button>
-										<button
-											className="btn btn-sm btn-outline-danger"
-											onClick={() => handleDeleteAdmin(admin.id)}>
-											Delete
-										</button>
-									</td>
+					) : error ? (
+						<div className="alert alert-danger" role="alert">
+							{error}
+						</div>
+					) : (
+						<table className="table table-striped">
+							<thead>
+								<tr>
+									<th>Nama Pengguna</th>
+									<th>Email</th>
 								</tr>
-							))}
-						</tbody>
-					</table>
-				</div>
-
-				{showModal && (
-					<AdminModal
-						admin={currentAdmin}
-						onSave={handleSaveAdmin}
-						onClose={() => setShowModal(false)}
-					/>
-				)}
-			</div>
-		</div>
-	);
-}
-
-function AdminModal({ admin, onSave, onClose }) {
-	const [formData, setFormData] = useState(
-		admin || { name: "", mobile: "", email: "", status: "Active" }
-	);
-
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData({ ...formData, [name]: value });
-	};
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		onSave(formData);
-	};
-
-	return (
-		<div
-			className="modal d-block"
-			style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-			<div className="modal-dialog">
-				<div className="modal-content">
-					<div className="modal-header">
-						<h5 className="modal-title">
-							{admin ? "Edit Admin" : "Menambah Admin"}
-						</h5>
-						<button className="btn-close" onClick={onClose}></button>
-					</div>
-					<form onSubmit={handleSubmit}>
-						<div className="modal-body">
-							<div className="mb-3">
-								<label className="form-label">Nama Admin</label>
-								<input
-									type="text"
-									className="form-control"
-									name="name"
-									value={formData.name}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Telepon</label>
-								<input
-									type="text"
-									className="form-control"
-									name="mobile"
-									value={formData.mobile}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Email</label>
-								<input
-									type="email"
-									className="form-control"
-									name="email"
-									value={formData.email}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Status</label>
-								<select
-									className="form-select"
-									name="status"
-									value={formData.status}
-									onChange={handleChange}
-									required>
-									<option value="Active">Active</option>
-									<option value="Inactive">Inactive</option>
-								</select>
-							</div>
-						</div>
-						<div className="modal-footer">
-							<button
-								type="button"
-								className="btn btn-secondary"
-								onClick={onClose}>
-								Close
-							</button>
-							<button type="submit" className="btn btn-primary">
-								Save
-							</button>
-						</div>
-					</form>
+							</thead>
+							<tbody>
+								{user.length > 0 ? (
+									user.map((user) => (
+										<tr key={user.id}>
+											<td>{user.username}</td>
+											<td>{user.email}</td>
+											{/* <td>
+												<span
+													className={`badge ${
+														user.status === "Active"
+															? "bg-success"
+															: "bg-danger"
+													}`}>
+													{user.status}
+												</span>
+											</td> */}
+										</tr>
+									))
+								) : (
+									<tr>
+										<td colSpan="5" className="text-center">
+											Tidak ada pengguna yang ditemukan.
+										</td>
+									</tr>
+								)}
+							</tbody>
+						</table>
+					)}
 				</div>
 			</div>
 		</div>
