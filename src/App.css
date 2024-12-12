@@ -1678,7 +1678,7 @@ option {
 /* ------------profile-------------- */
 .container-profile {
 	max-width: 1440px;
-	margin: 4rem auto;
+	margin: 6rem auto;
 	padding: 0rem 4rem;
 	background-color: var(--background-color);
 	border-radius: 8px;
@@ -1762,7 +1762,7 @@ option {
     flex: 2;
 		margin-left: 20px;
     border-radius: 10px;
-    padding: 20px 80px;
+    padding: 40px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 		background-color: white;
 }
