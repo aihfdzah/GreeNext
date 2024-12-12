@@ -50,7 +50,7 @@ body {
 	justify-content: space-between;
 	max-width: 1440px;
 	width: 100%;
-	padding: 0px 2rem;
+	padding: 0px 4rem;
 }
 
 .logo {
@@ -955,9 +955,6 @@ main.book-detail {
     font-size: 14px;
 }
 
-.input-group {
-    margin-bottom: 15px;
-}
 
 .input-group label {
     font-size: 14px;
@@ -1679,11 +1676,10 @@ option {
 }
 
 /* ------------profile-------------- */
-.containerr {
+.container-profile {
 	max-width: 1440px;
-	width: 1200px;
-	margin: 8rem 0 20rem auto;
-	padding: 50px 50px;
+	margin: 6rem auto;
+	padding: 0rem 4rem;
 	background-color: var(--background-color);
 	border-radius: 8px;
 	display: flex;
@@ -1692,8 +1688,6 @@ option {
 
 #profile {
 	flex-direction: row;
-	padding: 5px;
-	
 }
 
 #profilefoto {
@@ -1724,11 +1718,11 @@ option {
 /* Sidebar Styling */
 .sidebar {
     width: 200px;
-    background-color: var(--background-color);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+		background-color: white;
 }
 
 .sidebar img {
@@ -1766,11 +1760,11 @@ option {
 /* Profile Form Styling */
 .profile-content {
     flex: 2;
-	margin-left: 20px;
-    background-color: var(--background-color);
+		margin-left: 20px;
     border-radius: 10px;
-    padding: 20px 80px;
+    padding: 40px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+		background-color: white;
 }
 
 
@@ -1859,6 +1853,7 @@ option {
 	padding: 50px 150%;
 	border-radius: 10px;
 	margin-bottom: 20px;
+	max-width: 450px;
 }
 
 
@@ -2035,6 +2030,7 @@ option {
 }
 
 /* -----------profile keamanan----- */
+
 
 .account-settings {
 	margin-top: 20px;
