@@ -1,89 +1,46 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Admin.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function User() {
-	const [users, setUsers] = useState([
-		{
-			id: 1,
-			name: "George Lindseth",
-			mobile: "+44 315 29 62",
-			email: "carlien@samad.no",
-			status: "Active",
-		},
-		{
-			id: 2,
-			name: "Erik Dyer",
-			mobile: "+21 345 46 25",
-			email: "cristdier@home.no",
-			status: "Active",
-		},
-		{
-			id: 3,
-			name: "Michael Campbell",
-			mobile: "+17 364 72 53",
-			email: "campbell@gmail.com",
-			status: "Inactive",
-		},
-	]);
+	const [user, setUser] = useState([]); // State untuk menyimpan data pengguna
+	const [loading, setLoading] = useState(false); // State untuk loading
+	const [error, setError] = useState(null); // State untuk menangani error
+	const [sidebarOpen, setSidebarOpen] = useState(true); // State untuk sidebar
+	const [activeItem, setActiveItem] = useState("user"); // State untuk item aktif pada sidebar
 
-	const [searchTerm, setSearchTerm] = useState("");
-	const [sidebarOpen, setSidebarOpen] = useState(true);
-	const [currentUser, setCurrentUser] = useState(null);
-	const [showModal, setShowModal] = useState(false);
-	const [activeItem, setActiveItem] = useState("user"); // Menyimpan item yang aktif
+	useEffect(() => {
+		// Fungsi untuk mengambil data pengguna dari API
+		const fetchUser = async () => {
+			setLoading(true);
+			setError(null);
+			try {
+				const response = await axios.get("http://localhost:5000/api/v1/user"); // Ganti URL ini sesuai dengan API Anda
+				// console.log(response.user);
+				setUser(response.data.data);
+			} catch (err) {
+				console.error("Error fetching user data:", err.message);
+				setError("Gagal memuat data pengguna. Silakan coba lagi nanti.");
+			} finally {
+				setLoading(false);
+			}
+		};
 
-	// Fungsi untuk mengubah item yang aktif
-	const handleMenuClick = (item) => {
-		setActiveItem(item);
-	};
+		fetchUser();
+	}, []);
 
 	const toggleSidebar = () => {
 		setSidebarOpen(!sidebarOpen);
 	};
 
-	const handleAddNew = () => {
-		setCurrentUser(null);
-		setShowModal(true);
-	};
-
-	const handleEditUser = (user) => {
-		setCurrentUser(user);
-		setShowModal(true);
-	};
-
-	const handleDeleteUser = (userId) => {
-		setUsers(users.filter((user) => user.id !== userId));
-	};
-
-	const handleSaveUser = (user) => {
-		if (user.id) {
-			setUsers(users.map((u) => (u.id === user.id ? user : u)));
-		} else {
-			const newUser = { ...user, id: Date.now() };
-			setUsers([...users, newUser]);
-		}
-		setShowModal(false);
-	};
-
-	const handleSearch = (e) => {
-		setSearchTerm(e.target.value);
-	};
-
-	const filteredUsers = users.filter((user) =>
-		user.name.toLowerCase().includes(searchTerm.toLowerCase())
-	);
-
-	const handleImport = () => {
-		alert("Import functionality to be implemented.");
-	};
-
-	const handleExport = () => {
-		alert("Export functionality to be implemented.");
+	const handleMenuClick = (item) => {
+		setActiveItem(item);
 	};
 
 	return (
 		<div className="d-flex">
+			{console.log(user)}
 			{/* Sidebar */}
 			{sidebarOpen && (
 				<nav className="sidebar-admin">
@@ -176,11 +133,13 @@ function User() {
 					</ul>
 				</nav>
 			)}
+
+			{/* Content */}
 			<div className="content-admin flex-grow-1">
 				<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
-					<h5 className="mb-0">Pengguna</h5>
+					<h5 className="mb-0">Daftar Pengguna</h5>
 					<div className="d-flex align-items-center">
 						<img
 							src="https://via.placeholder.com/40"
@@ -196,175 +155,52 @@ function User() {
 				</header>
 
 				<div className="container-admin mt-4 px-4">
-					<div className="d-flex justify-content-between align-items-center my-4">
-						<button className="btn btn-primary" onClick={handleAddNew}>
-							Tambah Pengguna
-						</button>
-						<div className="d-flex">
-							<button
-								className="btn btn-outline-secondary me-2"
-								onClick={handleImport}>
-								Import Pengguna
-							</button>
-							<button
-								className="btn btn-outline-secondary"
-								onClick={handleExport}>
-								Export Pengguna
-							</button>
+					{loading ? (
+						<div className="text-center my-5">
+							<div className="spinner-border" role="status">
+								<span className="visually-hidden">Loading...</span>
+							</div>
 						</div>
-					</div>
-
-					<div className="mb-3">
-						<input
-							type="text"
-							className="form-control"
-							placeholder="Cari pengguna..."
-							value={searchTerm}
-							onChange={handleSearch}
-						/>
-					</div>
-
-					<table className="table table-striped">
-						<thead>
-							<tr>
-								<th>Nama Pengguna</th>
-								<th>Telepon</th>
-								<th>Email</th>
-								<th>Status</th>
-								<th>Actions</th>
-							</tr>
-						</thead>
-						<tbody>
-							{filteredUsers.map((user) => (
-								<tr key={user.id}>
-									<td>{user.name}</td>
-									<td>{user.mobile}</td>
-									<td>{user.email}</td>
-									<td>
-										<span
-											className={`badge ${
-												user.status === "Active" ? "bg-success" : "bg-danger"
-											}`}>
-											{user.status}
-										</span>
-									</td>
-									<td>
-										<button
-											className="btn btn-sm btn-outline-secondary me-2"
-											onClick={() => handleEditUser(user)}>
-											Edit
-										</button>
-										<button
-											className="btn btn-sm btn-outline-danger"
-											onClick={() => handleDeleteUser(user.id)}>
-											Delete
-										</button>
-									</td>
+					) : error ? (
+						<div className="alert alert-danger" role="alert">
+							{error}
+						</div>
+					) : (
+						<table className="table table-striped">
+							<thead>
+								<tr>
+									<th>Nama Pengguna</th>
+									<th>Email</th>
 								</tr>
-							))}
-						</tbody>
-					</table>
-				</div>
-
-				{showModal && (
-					<UserModal
-						user={currentUser}
-						onSave={handleSaveUser}
-						onClose={() => setShowModal(false)}
-					/>
-				)}
-			</div>
-		</div>
-	);
-}
-
-function UserModal({ user, onSave, onClose }) {
-	const [formData, setFormData] = useState(
-		user || { name: "", mobile: "", email: "", status: "Active" }
-	);
-
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData({ ...formData, [name]: value });
-	};
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		onSave(formData);
-	};
-
-	return (
-		<div
-			className="modal d-block"
-			style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-			<div className="modal-dialog">
-				<div className="modal-content">
-					<div className="modal-header">
-						<h5 className="modal-title">
-							{user ? "Edit Pengguna" : "Menambah Pengguna"}
-						</h5>
-						<button className="btn-close" onClick={onClose}></button>
-					</div>
-					<form onSubmit={handleSubmit}>
-						<div className="modal-body">
-							<div className="mb-3">
-								<label className="form-label">Nama Pengguna</label>
-								<input
-									type="text"
-									className="form-control"
-									name="name"
-									value={formData.name}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Telepon</label>
-								<input
-									type="text"
-									className="form-control"
-									name="mobile"
-									value={formData.mobile}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Email</label>
-								<input
-									type="email"
-									className="form-control"
-									name="email"
-									value={formData.email}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Status</label>
-								<select
-									className="form-select"
-									name="status"
-									value={formData.status}
-									onChange={handleChange}
-									required>
-									<option value="Active">Active</option>
-									<option value="Inactive">Inactive</option>
-								</select>
-							</div>
-						</div>
-						<div className="modal-footer">
-							<button
-								type="button"
-								className="btn btn-secondary"
-								onClick={onClose}>
-								Close
-							</button>
-							<button type="submit" className="btn btn-primary">
-								Save
-							</button>
-						</div>
-					</form>
+							</thead>
+							<tbody>
+								{user.length > 0 ? (
+									user.map((user) => (
+										<tr key={user.id}>
+											<td>{user.username}</td>
+											<td>{user.email}</td>
+											<td>
+												<span
+													className={`badge ${
+														user.status === "Active"
+															? "bg-success"
+															: "bg-danger"
+													}`}>
+													{user.status}
+												</span>
+											</td>
+										</tr>
+									))
+								) : (
+									<tr>
+										<td colSpan="5" className="text-center">
+											Tidak ada pengguna yang ditemukan.
+										</td>
+									</tr>
+								)}
+							</tbody>
+						</table>
+					)}
 				</div>
 			</div>
 		</div>

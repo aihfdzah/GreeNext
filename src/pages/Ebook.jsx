@@ -39,11 +39,11 @@ const Ebook = () => {
 		<>
 			<Navbar />
 			<Row
-				className="d-flex mt-5"
+				className="py-3 d-flex text-left"
 				style={{
-					maxWidth: "1440px",
-					margin: "auto",
-					padding: "2rem 2rem",
+					marginTop: "70px",
+					maxWidth:"1440px",
+					margin:"4rem auto 1rem auto"
 				}}>
 				<Col>
 					<h1 style={{ color: "#17412d", fontSize: "20pt" }}>Ebook</h1>

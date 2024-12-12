@@ -40,7 +40,7 @@ import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
 import Histori from "./pages/Histori";
 import Dashboard from "./pages/Dashboard";
-import Admin from "./admin/Admin";
+import Admin from "./admin/admin";
 import User from "./admin/User";
 import KelasAdmin from "./admin/KelasAdmin";
 import KelasAdminDetail from "./admin/KelasAdminDetail";
