@@ -28,6 +28,22 @@ const Histori = () => {
 		return <Spinner />;
 	}
 
+  // const [activities, setActivities] = useState([
+  //   { id: 1, time: "20.11", activity: "Video Katalog Teknologi" },
+  //   { id: 2, time: "15.07", activity: "Daftar Webinar" },
+  //   { id: 3, time: "14.40", activity: "Ubah Password" },
+  //   { id: 4, time: "12.35", activity: "Melanjutkan kelas" },
+  //   { id: 5, time: "11.20", activity: "Baca e-book" },
+  //   { id: 6, time: "10.00", activity: "Melanjutkan kelas" },
+  //   { id: 7, time: "08.15", activity: "Masuk akun" },
+  // ]);
+
+  // // Fungsi untuk menghapus aktivitas berdasarkan ID
+  // const handleDelete = (id) => {
+  //   const updatedActivities = activities.filter((item) => item.id !== id);
+  //   setActivities(updatedActivities);
+  // };
+
 	return (
 		<>
 			<Navbar />
