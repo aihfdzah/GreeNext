@@ -5,6 +5,7 @@ import axios from "axios";
 
 function User() {
 	const [user, setUser] = useState([]); // State untuk menyimpan data pengguna
+	console.log(user);
 	const [loading, setLoading] = useState(false); // State untuk loading
 	const [error, setError] = useState(null); // State untuk menangani error
 	const [sidebarOpen, setSidebarOpen] = useState(true); // State untuk sidebar
@@ -17,6 +18,7 @@ function User() {
 			setError(null);
 			try {
 				const response = await axios.get("http://localhost:5000/api/v1/user"); // Ganti URL ini sesuai dengan API Anda
+				console.log(response.user);
 				setUser(response.data);
 			} catch (err) {
 				console.error("Error fetching user data:", err.message);
@@ -179,7 +181,6 @@ function User() {
 									user.map((user) => (
 										<tr key={user.id}>
 											<td>{user.username}</td>
-											<td>{user.phone}</td>
 											<td>{user.email}</td>
 											<td>
 												<span
