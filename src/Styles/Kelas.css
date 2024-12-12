@@ -1,25 +1,68 @@
 .course-item-horizontal {
 	display: flex;
 	justify-content: space-between;
-	gap: 16px;
-	padding: 16px;
+	align-items: center;
+	gap: 4rem;
 	border-bottom: 50px solid  #17412d;
-	margin-bottom: 16px;
+	margin-bottom: 32px;
+	padding-bottom: 32px;
 	background-color: #f5f2ed;
 }
 
-.konten-course-horizontal {
-	flex: 2;
+.deskripsi-course {
+	font-size: 16px;
+	color: #060807;
+	margin: 16px 0;
+	line-height: 1.5;
+}
+
+.title-course {
+	font-size: 24px;
+	font-weight: 600;
+	margin: 0;
+	color: #060807;
+}
+
+.progress-kelas {
+	width: 80%; /* Atur lebar sesuai keinginan */
+	background-color: #e0e0e0;
+	border-radius: 10px;
+	height: 10px; /* Atur tinggi progress bar */
+	margin-top: 2.5rem;
+}
+
+.progress-kelas .progress-fill {
+	height: 100%;
+	background-color: #ef7a53; /* Warna progress */
+	border-radius: 10px;
+}
+
+/* Filter */
+.filter {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	width: 200px;
 }
+
+.filter select {
+	padding: 8px;
+	background: transparent;
+	border: 1px solid #ef7a53;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.filter select:hover {
+	background: var(--text-color2);
+	color: #f5f2ed;
+}
+
 
 .image-button-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 8px;
+	gap: 16px;
 }
 
 .course-image {
@@ -37,11 +80,12 @@
 	border-radius: 20px;
 	text-align: center;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 16px;
 	cursor: pointer;
+	font-weight: 600;
 }
 
 .button-daftar:hover {
-	background-color: #17412d;
+	opacity: .8;
 }
 

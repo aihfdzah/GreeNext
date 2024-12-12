@@ -14,14 +14,15 @@ const Footer = () => {
 	};
 
 	return (
-		<footer className="footer footer-expand-lg footer-dark bg-dark text-white py-3">
-			<div className="footer-content">
+		<footer className="footer footer-expand-lg footer-dark bg-dark text-white py-4">
+			<div className="footer-content" style={{padding:"0rem 2rem"}}>
 				<div className="footer-logo">
 					<img src="./logo.png" className="logo-footer" alt="FarmEduZ Logo" />
-					<i className="bx fa-solid fa-globe d-flex flex">
-						<br />
-						Bahasa Indonesia
-					</i>
+
+					<div style={{display:"flex", alignItems:"end", gap:".25rem"}}>
+						<i className="bx fa-solid fa-globe d-flex flex"></i>
+						<span>Bahasa Indonesia</span>
+					</div>
 				</div>
 
 				<div

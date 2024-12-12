@@ -35,23 +35,20 @@ function Register() {
 		setError("");
 		console.log(formData.username, formData.password, formData.email);
 		try {
-			const response = await axios.post(
-				"http://localhost:5000/api/v1/auth/register",
-				{
-					username: formData.username,
-					password: formData.password,
-					email: formData.email,
-				},
-				{
-					headers: {
-						"Content-Type": "application/json	",
-					},
+			const response = await axios.post('http://localhost:5000/api/v1/auth/register', {
+				username : formData.username, 
+				password: formData.password, 
+				email: formData.email
+			}, 
+			{
+				headers : {
+					"Content-Type": "application/json	"
 				}
-			);
-			console.log(response.data);
-			if (response.status == 201) {
-				alert("Berhasil registrasi, Silahkan login terlebih dahulu!s");
-				navigate("/");
+			});
+			console.log(response.data)
+			if (response.status == 201){
+				alert('Berhasil registrasi, Silahkan login terlebih dahulu!');
+				navigate('/')
 			}
 		} catch (error) {
 			setError(error.response.data.message);

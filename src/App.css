@@ -1,7 +1,6 @@
 * {
 	padding: 0;
 	margin: 0;
-	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 	scroll-behavior: smooth;
 	list-style: none;
@@ -19,18 +18,17 @@
 
 *::selection {
 	background: var(--main-color);
-	color: #fff;
+	color: #f5f2ed;;
 }
 
 body {
-	position: relative;
-	display: flex;
+	position: sticky;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
 	background-color: var(--background-color);
 	margin: 0;
-	padding: 0;
+	padding: auto;
 }
 
 .navbar {
@@ -41,18 +39,23 @@ body {
 	top: 0;
 	padding: 15px 30px;
 	background-color: var(--main-color) !important;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 	z-index: 1000;
+}
+
+.nav-wrapper{
+	display: flex;
+	justify-content: space-between;
+	min-width: 1440px;
+	padding: 0px 2rem;
 }
 
 .logo {
 	position: relative;
 	width: 40px;
 	height: 40px;
-	margin-left: 10px;
-	margin-right: 50px;
 }
 
 .active-link {
@@ -112,13 +115,9 @@ body {
 
 /* ----------kelas------------ */
 .container {
-	max-width: 100%;
-	margin: 8rem 0 20rem auto;
-	padding: 50px 50px;
+	max-width: 1440px;
 	background-color: #f5f2ed;
 	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
 }
 
 .header {
@@ -186,30 +185,9 @@ body {
 /*h1*/
 h2 {
 	color: #060807;
-	margin-bottom: 50px;
 	font-weight: 600;
 }
 
-/* Filter */
-.filter {
-	display: flex;
-	flex-direction: column;
-	width: 200px;
-	margin-right: 20px;
-}
-
-.filter select {
-	padding: 8px;
-	background: transparent;
-	border: 1px solid #ef7a53;
-	border-radius: 10px;
-	margin-bottom: 10px;
-}
-
-.filter select:hover {
-	background: var(--text-color2);
-	color: #f5f2ed;
-}
 
 option {
 	background: var(--background-color);
@@ -219,8 +197,6 @@ option {
 /* Daftar Kursus */
 .daftar-kursus {
 	gap: 15px;
-	margin-left: 5%;
-	padding: 16px;
 }
 
 .course-item {
@@ -267,12 +243,7 @@ option {
 	color: #060807;
 }
 
-.deskripsi-course {
-	font-size: 14px;
-	color: #060807;
-	margin: 10px 0 10px;
-	line-height: 1.5;
-}
+
 
 .deskripsi-course span {
 	color: #ef7a53 !important;
@@ -301,20 +272,6 @@ option {
 	background: transparent;
 }
 
-.button-daftar {
-	padding: 8px 12px;
-	border: 1px solid #ef7a53 !important;
-	background: transparent;
-	color: #060807;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-.button-daftar a:hover {
-	background-color: #ef7a53 !important;
-	color: #f5f2ed;
-}
-
 /* Layout Halaman */
 .main-content {
 	display: flex;
@@ -329,7 +286,6 @@ option {
 	color: #555 !important;
 	font-size: 0.9em;
 	padding: 25px 0;
-	margin-left: 15%;
 }
 
 .pagination .prev.disabled {
@@ -374,6 +330,32 @@ option {
 	cursor: pointer;
 }
 
+/* sertifikat */
+.custom-card-col {
+    margin-bottom: 15px; /* Atur jarak sesuai keinginan */
+}
+
+.custom-button {
+	color: #f5f2ed !important;
+	border-color: #f5f2ed !important;
+	background-color: transparent;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+	background-color: #ef7a53 !important;
+	color: #ffffff !important;
+	border-color: #ef7a53 !important;
+}
+
+.custom-button:active {
+	background-color: #ef7a53 !important;
+	color: #ffffff !important;
+	border-color: #ef7a53 !important;
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+
 /* -------kelas detail         */
 
 .col-md-8 {
@@ -401,11 +383,6 @@ option {
 	margin-bottom: 20px;
 }
 
-.course-image {
-	width: 100%;
-	border-radius: 8px;
-	margin-bottom: 20px;
-}
 
 #detailkelas {
 	width: 100%;
@@ -664,7 +641,7 @@ main.book-detail {
 }
 
 .container-carousel {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 8rem 0 20rem auto;
     padding: 50px 50px;
     background-color: #f5f2ed;
@@ -846,11 +823,6 @@ main.book-detail {
     line-height: 1.5;
 }
 
-.pagination {
-    font-size: 14px;
-    color: #888;
-    margin-top: 20px;
-}
 
 .navigation {
     position: absolute;
@@ -950,12 +922,6 @@ main.book-detail {
 
 .nav-icon:hover {
     background-color: #ddd;
-}
-
-.pagination {
-    font-size: 14px;
-    color: #888;
-    margin-top: 20px;
 }
 
 /* --------------ebook payment----------- */
@@ -1131,59 +1097,7 @@ main.book-detail {
     font-size: 15px;
 }
 
-/* Event List */
-.event-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
-.event-card {
-    display: flex;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.event-card img {
-    width: 50%;
-    height: auto;
-}
-
-.event-info {
-    padding: 15px;
-    flex-grow: 1;
-}
-
-.event-info h3 {
-    font-size: 18px;
-    margin: 0 0 10px 0;
-    color: #333;
-}
-
-.event-info p {
-    font-size: 14px;
-    margin: 5px 0;
-    color: #666;
-}
-
-.btn-status {
-    align-self: center;
-    margin-right: 15px;
-    padding: 8px 15px;
-    background-color: var(--text-color2);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.btn-status:hover {
-    background-color: #e4633a !important;
-}
 
 /* ------webinar details------ */
 .col-md-8 {
@@ -1212,10 +1126,7 @@ main.book-detail {
 	margin-bottom: 20px;
 }
 
-.course-image {
-	border-radius: 8px;
-	margin-bottom: 20px;
-}
+
 #webinar {
 	width: 100%;
 	height: 300px;
@@ -1340,7 +1251,7 @@ h5 {
 	border: 1px solid #ef7a53;
 	border-radius: 25px;
 	padding: 8px 15px;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 600;
 	margin-right: 10px;
 	transition: all 0.3s ease-in-out;
@@ -1378,12 +1289,6 @@ h1 {
 	flex: 1;
 }
 
-.title-course {
-	font-size: 18px;
-	font-weight: bold;
-	margin: 0;
-	color: #060807;
-}
 
 .tag-course {
 	font-size: 13px;
@@ -1410,19 +1315,6 @@ h1 {
     object-fit: cover;
 }
 
-.button-daftar {
-	padding: 8px 12px;
-	border: 1px solid #ef7a53 !important;
-	background: transparent;
-	color: #060807;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-.button-daftar a:hover {
-	background-color: #ef7a53 !important;
-	color: white;
-}
 
   /* -----------ruang diskusi------------- */
   .discussion-room {
@@ -1438,7 +1330,7 @@ h1 {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     margin-bottom: 20px;
   }
   
@@ -1557,7 +1449,7 @@ h1 {
   }
   
   .comment-button:hover {
-	background-color: #FF5733;
+	background-color: var(--text-color2);
   }
   
 
@@ -1787,7 +1679,7 @@ option {
 
 /* ------------profile-------------- */
 .containerr {
-	max-width: 1500px;
+	max-width: 1440px;
 	width: 1200px;
 	margin: 8rem 0 20rem auto;
 	padding: 50px 50px;
@@ -1827,116 +1719,6 @@ option {
 	flex-direction: row;
 	padding: 5px;
 }
-/* 
-.sidebar {
-	flex: 1;
-	max-width: 100%;
-	background-color: #f5f2ed;
-	border-radius: 10px;
-	padding: 20px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-	text-align: center;
-}
-
-.sidebar img {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	margin-bottom: 10px;
-}
-
-.sidebar h3 {
-	margin: 10px 0 5px;
-	font-size: 18px;
-}
-
-.sidebar p {
-	color: #888;
-	font-size: 14px;
-	margin-bottom: 20px;
-}
-
-.button-sidebar {
-	display: block;
-	width: 100%;
-	padding: 5px;
-	margin-bottom: 10px;
-	border: none;
-	border-radius: 5px;
-	background-color: #f87042;
-	color: #f5f2ed;
-	font-size: 14px;
-	cursor: pointer;
-	font-weight: bold;
-} */
-
-/* Profile Form Styling
-.profile-content {
-	flex: 2;
-	background-color: #f5f2ed;
-	border-radius: 10px;
-	max-width: 100%;
-	padding: 20px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.profile-content h1 {
-	font-size: 24px;
-	font-weight: bold;
-	text-align: center;
-	margin-bottom: 5px;
-}
-
-.profile-content h2 {
-	font-size: 16px;
-	color: #888;
-	text-align: center;
-	margin-bottom: 20px;
-}
-
-.form-group {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 15px;
-	max-width: 100%;
-}
-
-.form-group label {
-	font-weight: bold;
-	margin-bottom: 5px;
-	max-width: 100%;
-}
-
-.form-group input {
-	padding: 10px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
-	font-size: 14px;
-}
-
-.form-group input:focus {
-	outline: none;
-	border-color: #f87042;
-}
-
-.form-row {
-	gap: 10px;
-}
-
-.btn-save {
-	display: block;
-	width: 100%;
-	padding: 15px;
-	border-radius: 5px;
-	background-color: #f87042;
-	color: white;
-	font-size: 16px;
-	font-weight: bold;
-	text-align: center;
-	border: none;
-	cursor: pointer;
-	margin-top: 20px;
-} */
 
 /* Sidebar Styling */
 .sidebar {
@@ -2056,24 +1838,12 @@ option {
 
 /* -------------------profilefoto----------- */
 
-/* .content {
-	flex-grow: 1;
-	padding: 40px;
-	max-width: 100%;
-} */
-/* 
-h1 {
-	font-size: 40px;
-	font-weight: 700;
-	color: #060807;
-} */
 
 .photo-preview {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 10px;
-	/* font-size: 30px; */
 	padding: 0 50px;
 }
 
@@ -2083,7 +1853,6 @@ h1 {
 
 .placeholder-icon {
 	font-size: 100px;
-	/* color: #060807; */
 	border: 1px solid #ccc;
 	background: #ccc;
 	padding: 50px 150%;
@@ -2092,19 +1861,13 @@ h1 {
 }
 
 
-/* .label {
-	text-align: left;
-} */
 
 .upload-label {
 	margin-bottom: 10px;
 	font-size: 15px;
 	text-align: center;
 }
-/* 
-.upload-control {
-	display: inline-flex;
-} */
+
 
 .upload-input {
 	display: flex;
@@ -2116,10 +1879,7 @@ h1 {
 .upload-input input[type="file"] {
     display: none;
 }
-/* 
-#input-value {
-font-size: 10px;
-} */
+
 
 .upload-button,
 .save-button {
@@ -2212,21 +1972,6 @@ font-size: 10px;
 }
 
 /* ---------------profile privasi---------- */
-/* .container-privasi {
-	text-align: center;
-	max-width: 100%;
-	margin: 8rem 0 20rem auto;
-	padding: 50px 50px;
-	background-color: white;
-	border-radius: 8px;
-	display: flex;
-	flex-direction: column;
-	
-}
-h1 {
-	font-size: 24px;
-	color: #333;
-} */
 
 .privacy-settings {
 	margin-top: 20px;
@@ -2287,25 +2032,8 @@ h1 {
 .toggle-switch:checked:before {
 	left: 21px;
 }
-/* 
-.save-button {
-	background-color: var(--text-color2);
-	color: white;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	margin-top: 20px;
-	text-align: center;
-} */
 
 /* -----------profile keamanan----- */
-/* .content {
-	flex-grow: 1;
-	padding: 40px;
-	background-color: #f5f2ed;
-	max-width: 100%;
-} */
 
 .account-settings {
 	margin-top: 20px;
@@ -2313,11 +2041,6 @@ h1 {
     flex-direction: column;
     margin-bottom: 8px;
 }
-
-/* .email-section,
-.password-section {
-	margin-bottom: 20px;
-} */
 
 .password-section,
 .email-section {
@@ -2332,9 +2055,6 @@ h1 {
     margin-bottom: 5px;
 	
 }
-/* #sandi {
-	gap: 15px;
-} */
 
 .email-section input {
     padding: 10px;
@@ -2396,7 +2116,6 @@ input[type="password"] {
 .logout-confirmation {
 	border: 1px solid #ccc;
 	border-radius: 8px;
-	/* padding: 30px; */
 	text-align: center;
 	margin-top: 20px;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -2439,23 +2158,21 @@ input[type="password"] {
 /* -----------footer----------- */
 .footer {
 	background-color: var(--main-color) !important;
-	padding: 10px 50px;
 	font-size: 14px;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
+	position: none;
 	bottom: 0;
 	right: 0;
-	width: 100%;
-	flex-direction: column;
+	display: flex;
+	justify-content: center;
 }
 
 .footer-content {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: flex-start;
 	flex: 1;
 	flex-wrap: wrap;
+	max-width: 1440px;
 }
 
 /* Mengatur logo dan teks bahasa */
@@ -2464,13 +2181,10 @@ input[type="password"] {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
-	padding-right: 100px;
-	margin-left: 5%;
 }
 
 .logo-footer {
 	width: 150px;
-	/* Ukuran logo */
 	margin-bottom: 10px;
 }
 
@@ -2518,9 +2232,7 @@ input[type="password"] {
 }
 
 .footer .down {
-	padding-top: 40px;
 	align-items: center;
-	display: flexbox;
 }
 
 /* login */

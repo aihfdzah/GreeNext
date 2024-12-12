@@ -1,0 +1,29 @@
+.sidebar-admin {
+  width: 250px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  color: #f5f2ed;
+  background-color: #17412d ;
+}
+
+.container-admin {
+  padding: 2rem;
+  background-color: #f5f2ed;
+}
+
+/* Sidebar links */
+.sidebar-link {
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  color: #ef7a53 !important;
+  font-weight: bold;
+}
+
+.sidebar-link.active {
+  color: #ef7a53 !important;
+  font-weight: bold;
+}
+

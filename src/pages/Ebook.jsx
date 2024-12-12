@@ -39,18 +39,16 @@ const Ebook = () => {
 		<>
 			<Navbar />
 			<Row
-				className="py-3 d-flex text-left"
+				className="d-flex mt-5"
 				style={{
-					marginTop: "70px",
-					marginLeft: "-100px",
-					marginBottom: "-90px",
+					maxWidth: "1440px",
+					margin: "auto",
+					padding: "2rem 2rem",
 				}}>
 				<Col>
-					<h1 style={{ color: "#17412d" }}>Ebook</h1>
+					<h1 style={{ color: "#17412d", fontSize: "20pt" }}>Ebook</h1>
 				</Col>
-				<Col
-					className="text-end me-auto text-left"
-					style={{ marginLeft: "-200px" }}>
+				<Col className="text-end me-auto text-left" style={{}}>
 					<Button
 						className={`button-custom ${
 							activeButton === "sumber" ? "active" : ""
@@ -84,7 +82,7 @@ const Ebook = () => {
 				</Col>
 			</Row>
 
-			<div className="container mt-3">
+			<div className="container">
 				<main>
 					<h1 className="text-center">E-book & Panduan</h1>
 					{/* Search Bar */}

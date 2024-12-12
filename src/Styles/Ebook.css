@@ -28,8 +28,8 @@ a {
 }
 
 main {
-	padding: 20px;
-	max-width: 800px;
+	padding: 0rem 2rem;
+	max-width: 1440px;
 	margin: auto;
 }
 
@@ -142,4 +142,58 @@ h1 {
 .progress-percentage {
 	color: #f5f2ed;
 	margin-right: 10px;
+}
+
+/* Event List */
+.event-list {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.event-card {
+	display: flex;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+	width: 40%;
+	height: 320px;
+}
+
+.event-info {
+	padding: 15px;
+	flex-grow: 1;
+}
+
+.event-info h3 {
+	font-size: 18px;
+	margin: 0 0 10px 0;
+	color: #333;
+}
+
+.event-info p {
+	font-size: 14px;
+	margin: 5px 0;
+	color: #666;
+}
+
+.btn-status {
+	align-self: center;
+	margin-right: 15px;
+	padding: 8px 15px;
+	background-color: var(--text-color2);
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.btn-status:hover {
+	background-color: #e4633a !important;
 }

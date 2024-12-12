@@ -38,13 +38,23 @@ import COBankNext from "./pages/COBankNext";
 import COBerhasil from "./pages/COBerhasil";
 import Privasi from "./pages/Privasi";
 import Keluar from "./pages/Keluar";
-
+import Histori from "./pages/Histori";
+import Dashboard from "./pages/Dashboard";
+import Admin from "./admin/Admin";
+import User from "./admin/User";
+import KelasAdmin from "./admin/KelasAdmin";
+import KelasAdminDetail from "./admin/KelasAdminDetail";
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Login />} />
 				<Route path="/register" element={<Register />} />
+				<Route path="/admin" element={<Admin />} />
+				<Route path="/kelasadmin" element={<KelasAdmin />} />
+				<Route path="/kelasadmindetail" element={<KelasAdminDetail />} />
+				<Route path="/user" element={<User />} />
+				<Route path="/dashboard" element={<Dashboard />} />
 				<Route path="/profile" element={<HalamanProfile />} />
 				<Route path="/fotoprofile" element={<FotoProfile />} />
 				<Route path="/sumberdaya" element={<EBook />} />
@@ -53,6 +63,7 @@ function App() {
 				<Route path="/kelas" element={<HalamanKelas />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/tentang" element={<Tentang />} />
+				<Route path="/histori" element={<Histori />} />
 				<Route path="/ebook" element={<Ebook />} />
 				<Route path="/detailebook" element={<Detailebook />} />
 				<Route path="/ebookfree" element={<EbookFree />} />

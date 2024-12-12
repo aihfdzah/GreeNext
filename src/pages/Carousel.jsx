@@ -24,7 +24,7 @@ const Carousel = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="container-carousel mt-3">
+			<div className="container-carousel mt-3 justify-content-center">
 				<section className="product">
 					{/* Tombol Kembali */}
 					<div className="back-button mb-3">
