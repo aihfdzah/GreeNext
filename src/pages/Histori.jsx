@@ -31,7 +31,7 @@ const Histori = () => {
 	return (
 		<>
 			<Navbar />
-			<Container className="mt-5" style={{ marginBottom: "25%" }}>
+			<Container className="mt-5" style={{ marginBottom: "1%" }}>
 				<Row
 					className="py-3 d-flex text-left"
 					style={{
@@ -73,56 +73,70 @@ const Histori = () => {
 				</Row>
         </Container>
 
-           
+          
               <div className="agenda-section">
                 <h2>Hari ini - Selasa, 10 Oktober 2023</h2>
                 
-                <ul>
-                  <li>
-                    <span className="time">20.11</span>
+                <ul className="histori">
+                  <li className="histori">
+                    <span className="time">20.11 WIB</span>
                     <span className="activity">Video Katalog Teknologi</span>
-                    <i class="fa-solid fa-trash"></i>
+                    <a href="#">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
                   </li>
 
                   <li>
-                    <span className="time">15.07</span>
+                    <span className="time">15.07 WIB</span>
                     <span className="activity">Daftar Webinar</span>
-                    <i class="fa-solid fa-trash"></i>
+                    <a href="#">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
                   </li>
 
                   <li>
-                    <span className="time">14.40</span>
+                    <span className="time">14.40 WIB</span>
                     <span className="activity">Ubah Password</span>
-                    <i class="fa-solid fa-trash"></i>
+                    <a href="#">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
                   </li>
 
                   <li>
-                    <span className="time">12.35</span>
+                    <span className="time">12.35 WIB</span>
                     <span className="activity">Melanjutkan kelas</span>
-                    <i class="fa-solid fa-trash"></i>
+                    <a href="#">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
                   </li>
 
                   <li>
-                    <span className="time">11.20</span>
+                    <span className="time">11.20 WIB</span>
                     <span className="activity">Baca e-book</span>
-                    <i class="fa-solid fa-trash"></i>
+                    <a href="#">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
                   </li>
 
                   <li>
-                    <span className="time">10.00</span>
+                    <span className="time">10.00 WIB</span>
                     <span className="activity">Melanjutkan kelas</span>
-                    <i class="fa-solid fa-trash"></i>
+                    <a href="#">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
                   </li>
 
                   <li>
-                    <span className="time">08.15</span>
+                    <span className="time">08.15 WIB</span>
                     <span className="activity">Masuk akun</span>
-                    <i class="fa-solid fa-trash"></i>
+                    <a href="#">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
                   </li>
                 </ul>
 
         <div className="agenda-section">
-          <h2>Kemaren - Senin, 09 Oktober 2023</h2>
+          <h2>Kemarin - Senin, 09 Oktober 2023</h2>
         </div>
       </div>
 
