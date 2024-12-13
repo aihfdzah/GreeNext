@@ -56,7 +56,7 @@ function KelasAdminDetail() {
 									activeItem === "profile" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("profile")}>
-								<i className="bi bi-person me-2"></i> Profile
+								<i className="fa fa-user me-2"></i> Profile
 							</a>
 						</li>
 						<li className="mb-3">
@@ -66,7 +66,7 @@ function KelasAdminDetail() {
 									activeItem === "user" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("user")}>
-								<i className="bi bi-people me-2"></i> Pengguna
+								<i className="fa fa-users me-2"></i> Pengguna
 							</a>
 						</li>
 						<li className="mb-3">
@@ -76,7 +76,7 @@ function KelasAdminDetail() {
 									activeItem === "admin" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("admin")}>
-								<i className="bi bi-tools me-2"></i> Admin
+								<i className="fa fa-cogs me-2"></i> Admin
 							</a>
 						</li>
 						<li className="mb-3">
@@ -86,7 +86,7 @@ function KelasAdminDetail() {
 									activeItem === "kelasadmin" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("kelasadmin")}>
-								<i className="bi bi-folder2-open me-2"></i> Kelas
+								<i className="fa fa-folder-open me-2"></i> Kelas
 							</a>
 						</li>
 						<li className="mb-3">
@@ -96,7 +96,7 @@ function KelasAdminDetail() {
 									activeItem === "webinar" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("webinar")}>
-								<i className="bi bi-list-task me-2"></i> Webinar
+								<i className="fa fa-tasks me-2"></i> Webinar
 							</a>
 						</li>
 						<li className="mb-3">
@@ -106,7 +106,7 @@ function KelasAdminDetail() {
 									activeItem === "ebook" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("ebook")}>
-								<i className="bi bi-clock-history me-2"></i> Ebook
+								<i className="fa fa-book me-2"></i> Ebook
 							</a>
 						</li>
 						<li className="mb-3">
@@ -116,17 +116,17 @@ function KelasAdminDetail() {
 									activeItem === "groupchat" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("groupchat")}>
-								<i className="bi bi-chat me-2"></i> Group Chats
+								<i className="fa fa-comments me-2"></i> Group Chats
 							</a>
 						</li>
 						<li>
 							<a
 								href="#"
 								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
-									activeItem === "reports" ? "active" : ""
+									activeItem === "logout" ? "active" : ""
 								}`}
-								onClick={() => handleMenuClick("reports")}>
-								<i className="bi bi-bar-chart me-2"></i> Reports
+								onClick={() => handleMenuClick("logout")}>
+								<i className="fa fa-sign-out me-2"></i> Logout
 							</a>
 						</li>
 					</ul>
