@@ -4,30 +4,30 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Admin() {
-	const [user, setUser] = useState([]); // State untuk menyimpan data pengguna
+	const [admins, setAdmins] = useState([]); // Data admin dari API
 	const [loading, setLoading] = useState(false); // State untuk loading
-	const [error, setError] = useState(null); // State untuk menangani error
+	const [error, setError] = useState(null); // State untuk error
+	const [search, setSearch] = useState(""); // State untuk pencarian
 	const [sidebarOpen, setSidebarOpen] = useState(true); // State untuk sidebar
-	const [activeItem, setActiveItem] = useState("user"); // State untuk item aktif pada sidebar
+	const [activeItem, setActiveItem] = useState("admin"); // Item aktif pada sidebar
 
 	useEffect(() => {
-		// Fungsi untuk mengambil data pengguna dari API
-		const fetchUser = async () => {
+		// Fungsi untuk mengambil data admin dari API
+		const fetchAdmins = async () => {
 			setLoading(true);
 			setError(null);
 			try {
-				const response = await axios.get("http://localhost:5000/api/v1/user"); // Ganti URL ini sesuai dengan API Anda
-				// console.log(response.user);
-				setUser(response.data.data);
+				const response = await axios.get("http://localhost:5000/api/v1/admin");
+				setAdmins(response.data.data);
 			} catch (err) {
-				console.error("Error fetching user data:", err.message);
-				setError("Gagal memuat data pengguna. Silakan coba lagi nanti.");
+				console.error("Error fetching admin data:", err.message);
+				setError("Gagal memuat data admin. Silakan coba lagi nanti.");
 			} finally {
 				setLoading(false);
 			}
 		};
 
-		fetchUser();
+		fetchAdmins();
 	}, []);
 
 	const toggleSidebar = () => {
@@ -38,9 +38,19 @@ function Admin() {
 		setActiveItem(item);
 	};
 
+	const handleSearchChange = (e) => {
+		setSearch(e.target.value);
+	};
+
+	// Filter data berdasarkan kata kunci pencarian
+	const filteredAdmins = admins.filter(
+		(admin) =>
+			admin.username.toLowerCase().includes(search.toLowerCase()) ||
+			admin.email.toLowerCase().includes(search.toLowerCase())
+	);
+
 	return (
 		<div className="d-flex">
-			{console.log(user)}
 			{/* Sidebar */}
 			{sidebarOpen && (
 				<nav className="sidebar-admin">
@@ -139,7 +149,7 @@ function Admin() {
 				<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
-					<h5 className="mb-0">Daftar Pengguna</h5>
+					<h5 className="mb-0">Daftar Admin</h5>
 					<div className="d-flex align-items-center">
 						<img
 							src="https://via.placeholder.com/40"
@@ -155,6 +165,17 @@ function Admin() {
 				</header>
 
 				<div className="container-admin mt-4 px-4">
+					{/* Input Pencarian */}
+					<div className="mb-3">
+						<input
+							type="text"
+							className="form-control"
+							placeholder="Cari admin..."
+							value={search}
+							onChange={handleSearchChange}
+						/>
+					</div>
+
 					{loading ? (
 						<div className="text-center my-5">
 							<div className="spinner-border" role="status">
@@ -169,32 +190,22 @@ function Admin() {
 						<table className="table table-striped">
 							<thead>
 								<tr>
-									<th>Nama Pengguna</th>
+									<th>Nama Admin</th>
 									<th>Email</th>
 								</tr>
 							</thead>
 							<tbody>
-								{user.length > 0 ? (
-									user.map((user) => (
-										<tr key={user.id}>
-											<td>{user.username}</td>
-											<td>{user.email}</td>
-											{/* <td>
-												<span
-													className={`badge ${
-														user.status === "Active"
-															? "bg-success"
-															: "bg-danger"
-													}`}>
-													{user.status}
-												</span>
-											</td> */}
+								{filteredAdmins.length > 0 ? (
+									filteredAdmins.map((admin) => (
+										<tr key={admin.id}>
+											<td>{admin.username}</td>
+											<td>{admin.email}</td>
 										</tr>
 									))
 								) : (
 									<tr>
-										<td colSpan="5" className="text-center">
-											Tidak ada pengguna yang ditemukan.
+										<td colSpan="2" className="text-center">
+											Tidak ada admin yang ditemukan.
 										</td>
 									</tr>
 								)}

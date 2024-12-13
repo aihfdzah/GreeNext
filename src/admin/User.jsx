@@ -4,21 +4,21 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function User() {
-	const [user, setUser] = useState([]); // State untuk menyimpan data pengguna
+	const [users, setUsers] = useState([]); // Data pengguna dari API
 	const [loading, setLoading] = useState(false); // State untuk loading
-	const [error, setError] = useState(null); // State untuk menangani error
+	const [error, setError] = useState(null); // State untuk error
+	const [search, setSearch] = useState(""); // State untuk pencarian
 	const [sidebarOpen, setSidebarOpen] = useState(true); // State untuk sidebar
-	const [activeItem, setActiveItem] = useState("user"); // State untuk item aktif pada sidebar
+	const [activeItem, setActiveItem] = useState("user"); // Item aktif pada sidebar
 
 	useEffect(() => {
 		// Fungsi untuk mengambil data pengguna dari API
-		const fetchUser = async () => {
+		const fetchUsers = async () => {
 			setLoading(true);
 			setError(null);
 			try {
-				const response = await axios.get("http://localhost:5000/api/v1/user"); // Ganti URL ini sesuai dengan API Anda
-				// console.log(response.user);
-				setUser(response.data.data);
+				const response = await axios.get("http://localhost:5000/api/v1/user");
+				setUsers(response.data.data);
 			} catch (err) {
 				console.error("Error fetching user data:", err.message);
 				setError("Gagal memuat data pengguna. Silakan coba lagi nanti.");
@@ -27,7 +27,7 @@ function User() {
 			}
 		};
 
-		fetchUser();
+		fetchUsers();
 	}, []);
 
 	const toggleSidebar = () => {
@@ -38,9 +38,19 @@ function User() {
 		setActiveItem(item);
 	};
 
+	const handleSearchChange = (e) => {
+		setSearch(e.target.value);
+	};
+
+	// Filter data berdasarkan kata kunci pencarian
+	const filteredUsers = users.filter(
+		(user) =>
+			user.username.toLowerCase().includes(search.toLowerCase()) ||
+			user.email.toLowerCase().includes(search.toLowerCase())
+	);
+
 	return (
 		<div className="d-flex">
-			{console.log(user)}
 			{/* Sidebar */}
 			{sidebarOpen && (
 				<nav className="sidebar-admin">
@@ -155,6 +165,17 @@ function User() {
 				</header>
 
 				<div className="container-admin mt-4 px-4">
+					{/* Input Pencarian */}
+					<div className="mb-3">
+						<input
+							type="text"
+							className="form-control"
+							placeholder="Cari pengguna..."
+							value={search}
+							onChange={handleSearchChange}
+						/>
+					</div>
+
 					{loading ? (
 						<div className="text-center my-5">
 							<div className="spinner-border" role="status">
@@ -174,26 +195,16 @@ function User() {
 								</tr>
 							</thead>
 							<tbody>
-								{user.length > 0 ? (
-									user.map((user) => (
+								{filteredUsers.length > 0 ? (
+									filteredUsers.map((user) => (
 										<tr key={user.id}>
 											<td>{user.username}</td>
 											<td>{user.email}</td>
-											{/* <td>
-												<span
-													className={`badge ${
-														user.status === "Active"
-															? "bg-success"
-															: "bg-danger"
-													}`}>
-													{user.status}
-												</span>
-											</td> */}
 										</tr>
 									))
 								) : (
 									<tr>
-										<td colSpan="5" className="text-center">
+										<td colSpan="2" className="text-center">
 											Tidak ada pengguna yang ditemukan.
 										</td>
 									</tr>
