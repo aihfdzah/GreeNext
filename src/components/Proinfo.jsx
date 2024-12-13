@@ -5,7 +5,7 @@ const Proinfo = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="containerr" id="profileinfo" style={{ marginBottom: "23%", marginTop: "10%"}}>
+		<div className="container-profile" id="profileinfo">
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>

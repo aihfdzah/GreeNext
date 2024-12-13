@@ -64,14 +64,16 @@ const StudiKasus = () => {
 			<Row
 				className="py-3 d-flex text-left"
 				style={{
-					marginTop: "70px",
+					margin: "4rem auto",
+					maxWidth:"1440px",
+					padding:"0rem 4rem"
 				}}>
 				<Col>
 					<h1 style={{ color: "#17412d" }}>Studi Kasus</h1>
 				</Col>
 				<Col
 					className="text-end me-auto text-left"
-					style={{ marginLeft: "-200px" }}>
+					style={{}}>
 					<Button
 						className={`button-custom ${
 							activeButton === "sumber" ? "active" : ""
@@ -106,14 +108,15 @@ const StudiKasus = () => {
 			</Row>
 
 			{/* Kontainer Studi Kasus */}
-			<div className="container mt-3 mb-5" id="studikasus">
+			<div className="container mt-3 mb-5" id="studikasus" style={{padding:"0rem 4rem"}}>
 				<h1 className="text-center">Studi Kasus</h1>
 				{/* Search Bar */}
 				<div
-					className="input-group mx-3 flex-grow-1"
+					className="input-group flex-grow-1"
 					style={{
-						maxWidth: "96%",
+						maxWidth: "100%",
 						position: "relative",
+						marginBottom:"1rem"
 					}}>
 					<i
 						className="fa-solid fa-magnifying-glass"

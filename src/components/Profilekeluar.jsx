@@ -4,9 +4,8 @@ const Profilekeluar = () => {
 	const navigate = useNavigate();
 	return (
 		<div
-			className="containerr"
-			id="profilekeluar"
-			style={{ marginBottom: "20%" , marginTop: "10%"}}>
+			className="container-profile"
+			id="profilekeluar">
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
