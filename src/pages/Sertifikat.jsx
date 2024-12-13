@@ -64,7 +64,7 @@ const Sertifikat = () => {
 	return (
 		<>
 			<Navbar />
-			<Container className="mt-5" style={{ marginBottom: "25%" }}>
+			<Container className="mt-5 mb-5">
 				<Row
 					className="py-3 d-flex text-left"
 					style={{
@@ -78,7 +78,7 @@ const Sertifikat = () => {
 							className={`me-5 w-15 button-custom ${
 								activeButton === "home" ? "active" : ""
 							}`}
-							onClick={() => handleButtonClick("home", "/home")}>
+							onClick={() => handleButtonClick("home", "/dashboard")}>
 							Home
 						</Button>
 						<Button
@@ -105,26 +105,26 @@ const Sertifikat = () => {
 					</Col>
 				</Row>
 				<Row className="py-5">
-				<Col md={6}>
-					<h3>Sertifikat</h3>
-					<p>Sertifikasi pertanian sebagai bukti ketuntasan pembelajaran.</p>
-				</Col>
-				<Col md={6}>
-					<Row style={{ marginTop: "-90px" }}>
-						<Col md={4} style={{ marginLeft: "60%" }}>
-							<div className="card" style={{ backgroundColor: "#F5F2ED" }}>
-								<div className="card-body">
-									<h5 className="card-title">6</h5>
-									<p className="card-text">Sertifikat</p>
+					<Col md={6}>
+						<h3>Sertifikat</h3>
+						<p>Sertifikasi pertanian sebagai bukti ketuntasan pembelajaran.</p>
+					</Col>
+					<Col md={6}>
+						<Row style={{ marginTop: "-90px" }}>
+							<Col md={4} style={{ marginLeft: "60%" }}>
+								<div className="card" style={{ backgroundColor: "#F5F2ED" }}>
+									<div className="card-body">
+										<h5 className="card-title">6</h5>
+										<p className="card-text">Sertifikat</p>
+									</div>
 								</div>
-							</div>
-						</Col>
-					</Row>
-				</Col>
-			</Row>
+							</Col>
+						</Row>
+					</Col>
+				</Row>
 				<Row>
 					{sertifikatList.map((cert) => (
-						<Col key={cert.id} md={4} className="mb-3 mt-5">
+						<Col key={cert.id} md={4} className="mb-0 mt-5">
 							{" "}
 							{/* Ubah margin bawah menjadi mb-3 */}
 							<Card className="shadow-sm h-100">

@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Admin.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import Spinner from "../components/Spinner";
 function Admin() {
 	const [admins, setAdmins] = useState([]); // Data admin dari API
 	const [loading, setLoading] = useState(false); // State untuk loading
@@ -29,6 +29,18 @@ function Admin() {
 
 		fetchAdmins();
 	}, []);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoading(false);
+		}, 3000);
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	if (loading) {
+		return <Spinner />;
+	}
 
 	const toggleSidebar = () => {
 		setSidebarOpen(!sidebarOpen);
@@ -60,6 +72,16 @@ function Admin() {
 						</h4>
 					</div>
 					<ul className="list-unstyled px-3">
+						<li className="mb-3">
+							<a
+								href="/dashboardadmin"
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "dashboard" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("dashboard")}>
+								<i className="fa fa-dashboard me-2"></i> Dashboard
+							</a>
+						</li>
 						<li className="mb-3">
 							<a
 								href="*"
@@ -120,30 +142,24 @@ function Admin() {
 								<i className="fa fa-book me-2"></i> Ebook
 							</a>
 						</li>
-						<li className="mb-3">
-							<a
-								href="#"
-								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
-									activeItem === "groupchat" ? "active" : ""
-								}`}
-								onClick={() => handleMenuClick("groupchat")}>
-								<i className="fa fa-comments me-2"></i> Group Chats
-							</a>
-						</li>
 						<li>
 							<a
-								href="#"
 								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
 									activeItem === "logout" ? "active" : ""
 								}`}
-								onClick={() => handleMenuClick("logout")}>
+								onClick={(e) => {
+									e.preventDefault();
+									if (window.confirm("Apakah Anda yakin ingin keluar?")) {
+										handleMenuClick("logout");
+										window.location.href = "/";
+									}
+								}}>
 								<i className="fa fa-sign-out me-2"></i> Logout
 							</a>
 						</li>
 					</ul>
 				</nav>
 			)}
-
 
 			{/* Content */}
 			<div className="content-admin flex-grow-1">

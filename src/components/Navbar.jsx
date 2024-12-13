@@ -14,6 +14,10 @@ const Navbar = () => {
 
 	const location = useLocation();
 
+	const handleLogout = () => {
+		alert("You have successfully logged out.");
+	};
+
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 			<div className="nav-wrapper">
@@ -83,7 +87,7 @@ const Navbar = () => {
 								Profile
 							</DropdownToggle>
 							<DropdownMenu>
-								<DropdownItem href="/">Log Out</DropdownItem>
+								<DropdownItem href="/" onClick={handleLogout}>Log Out</DropdownItem>
 								<DropdownItem href="/profile">Profile</DropdownItem>
 							</DropdownMenu>
 						</Dropdown>

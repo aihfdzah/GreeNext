@@ -43,6 +43,7 @@ import Dashboard from "./pages/Dashboard";
 import Admin from "./admin/admin";
 import User from "./admin/User";
 import KelasAdmin from "./admin/KelasAdmin";
+import DashboardAdmin from "./admin/DashboardAdmin";
 import KelasAdminDetail from "./admin/KelasAdminDetail";
 function App() {
 	return (
@@ -51,6 +52,7 @@ function App() {
 				<Route path="/" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/admin" element={<Admin />} />
+				<Route path="/dashboardadmin" element={<DashboardAdmin/>}/>
 				<Route path="/kelasadmin" element={<KelasAdmin />} />
 				<Route path="/kelasadmindetail" element={<KelasAdminDetail />} />
 				<Route path="/user" element={<User />} />

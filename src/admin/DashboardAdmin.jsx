@@ -1,40 +1,35 @@
-import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Admin.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
-function KelasAdmin() {
+function DashboardAdmin() {
+	const [stats] = useState({
+		users: 120,
+		classes: 45,
+		admins: 10,
+		webinars: 25,
+		ebooks: 60,
+	});
+	const [sidebarOpen, setSidebarOpen] = useState(true);
+	const [activeItem, setActiveItem] = useState("dashboard");
+	const [loading, setLoading] = useState(true);
+
 	const navigate = useNavigate();
 
-	const [kelas, setKelas] = useState([
-		{
-			id: 1,
-			name: "Pemrograman Dasar",
-			level: "Mudah",
-			hours: 20,
-			status: "Active",
-		},
-		{
-			id: 2,
-			name: "Analisis Data",
-			level: "Menengah",
-			hours: 30,
-			status: "Active",
-		},
-		{
-			id: 3,
-			name: "Pengembangan AI",
-			level: "Sulit",
-			hours: 40,
-			status: "Inactive",
-		},
-	]);
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoading(false);
+		}, 3000);
 
-	const [searchTerm, setSearchTerm] = useState("");
-	const [sidebarOpen, setSidebarOpen] = useState(true);
-	const [activeItem, setActiveItem] = useState("kelasadmin"); // Menyimpan item yang aktif
+		return () => clearTimeout(timer);
+	}, []);
 
-	// Fungsi untuk mengubah item yang aktif
+	if (loading) {
+		return <Spinner />;
+	}
+
 	const handleMenuClick = (item) => {
 		setActiveItem(item);
 	};
@@ -43,27 +38,9 @@ function KelasAdmin() {
 		setSidebarOpen(!sidebarOpen);
 	};
 
-	// Fungsi Tambah Kelas
-	const handleAddNew = () => {
-		navigate("/kelasadmindetail", { state: null }); // Tanpa data kelas
+	const handleCardClick = (route) => {
+		navigate(route);
 	};
-
-	// Fungsi Edit Kelas
-	const handleEditKelas = (kelasItem) => {
-		navigate("/kelasadmindetail", { state: kelasItem }); // Kirim data kelas
-	};
-
-	const handleDeleteKelas = (kelasId) => {
-		setKelas(kelas.filter((k) => k.id !== kelasId));
-	};
-
-	const handleSearch = (e) => {
-		setSearchTerm(e.target.value);
-	};
-
-	const filteredKelas = kelas.filter((k) =>
-		k.name.toLowerCase().includes(searchTerm.toLowerCase())
-	);
 
 	return (
 		<div className="d-flex">
@@ -165,11 +142,12 @@ function KelasAdmin() {
 				</nav>
 			)}
 
-			<div className="content-admin flex-grow-1">
+			{/* Content */}
+			<div className="content-admin flex-grow-1 ">
 				<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
-					<h5 className="mb-0">Kelas</h5>
+					<h5 className="mb-0">Dashboard</h5>
 					<div className="d-flex align-items-center">
 						<img
 							src="https://via.placeholder.com/40"
@@ -183,67 +161,74 @@ function KelasAdmin() {
 						</button>
 					</div>
 				</header>
-				<div className="container-admin mt-4 px-4">
-					<div className="d-flex justify-content-between align-items-center my-4">
-						<button className="btn btn-primary" onClick={handleAddNew}>
-							Tambah Kelas
-						</button>
-					</div>
 
-					<div className="mb-3">
-						<input
-							type="text"
-							className="form-control"
-							placeholder="Cari kelas..."
-							value={searchTerm}
-							onChange={handleSearch}
-						/>
+				<div className="container-admin px-3">
+					<div className="row g-4 " style={{ marginTop: "-150px" }}>
+						<div className="col-md-4">
+							<div
+								className="card bg-transparent border border-warning shadow "
+								style={{ color: "#ef7a53", cursor: "pointer" }}
+								onClick={() => handleCardClick("/user")}>
+								<div className="card-body text-center">
+									<i className="fa fa-users fa-2x mb-2"></i>
+									<h6 className="card-title">Pengguna</h6>
+									<h2>{stats.users}</h2>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-4">
+							<div
+								className="card bg-transparent border border-warning shadow"
+								style={{ color: "#ef7a53", cursor: "pointer" }}
+								onClick={() => handleCardClick("/kelasadmin")}>
+								<div className="card-body text-center">
+									<i className="fa fa-folder-open fa-2x mb-2"></i>
+									<h6 className="card-title">Kelas</h6>
+									<h2>{stats.classes}</h2>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-4">
+							<div
+								className="card bg-transparent border border-warning shadow"
+								style={{ color: "#ef7a53", cursor: "pointer" }}
+								onClick={() => handleCardClick("/admin")}>
+								<div className="card-body text-center">
+									<i className="fa fa-cogs fa-2x mb-2"></i>
+									<h6 className="card-title">Admin</h6>
+									<h2>{stats.admins}</h2>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-4 mt-5">
+							<div
+								className="card bg-transparent border border-warning shadow"
+								style={{ color: "#ef7a53", cursor: "pointer" }}
+								onClick={() => handleCardClick("/webinar")}>
+								<div className="card-body text-center">
+									<i className="fa fa-tasks fa-2x mb-2"></i>
+									<h6 className="card-title">Webinar</h6>
+									<h2>{stats.webinars}</h2>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-4 mt-5">
+							<div
+								className="card bg-transparent border border-warning shadow"
+								style={{ color: "#ef7a53", cursor: "pointer" }}
+								onClick={() => handleCardClick("/ebook")}>
+								<div className="card-body text-center">
+									<i className="fa fa-book fa-2x mb-2"></i>
+									<h6 className="card-title">Ebook</h6>
+									<h2>{stats.ebooks}</h2>
+								</div>
+							</div>
+						</div>
 					</div>
-
-					<table className="table table-striped">
-						<thead>
-							<tr>
-								<th>Nama Kelas</th>
-								<th>Kesulitan</th>
-								<th>Jam Belajar</th>
-								<th>Status</th>
-								<th>Actions</th>
-							</tr>
-						</thead>
-						<tbody>
-							{filteredKelas.map((k) => (
-								<tr key={k.id}>
-									<td>{k.name}</td>
-									<td>{k.level}</td>
-									<td>{k.hours}</td>
-									<td>
-										<span
-											className={`badge ${
-												k.status === "Active" ? "bg-success" : "bg-danger"
-											}`}>
-											{k.status}
-										</span>
-									</td>
-									<td>
-										<button
-											className="btn btn-sm btn-outline-secondary me-2"
-											onClick={() => handleEditKelas(k)}>
-											Edit
-										</button>
-										<button
-											className="btn btn-sm btn-outline-danger"
-											onClick={() => handleDeleteKelas(k.id)}>
-											Delete
-										</button>
-									</td>
-								</tr>
-							))}
-						</tbody>
-					</table>
 				</div>
 			</div>
 		</div>
 	);
 }
 
-export default KelasAdmin;
+export default DashboardAdmin;

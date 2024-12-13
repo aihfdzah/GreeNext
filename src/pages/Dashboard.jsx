@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 function Dashboard() {
 	// console.log(user)
 	const navigate = useNavigate();
-	const [activeButton, setActiveButton] = useState(null); // State to track the active button
+	const [activeButton, setActiveButton] = useState("home"); // State to track the active button
 	const [error, setError] = useState(null); // state untuk menampilkan error
 	const [user, setUser] = useState(null); // state untuk menampilkan user
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
@@ -83,9 +83,9 @@ function Dashboard() {
 					<Col className="text-end me-auto text-left" style={{}}>
 						<Button
 							className={`button-custom ${
-								activeButton === "dashboard" ? "active" : ""
+								activeButton === "home" ? "active" : ""
 							}`}
-							onClick={() => handleButtonClick("dashboard", "/dashboard")}>
+							onClick={() => handleButtonClick("home", "/dashboard")}>
 							Home
 						</Button>
 						<Button
@@ -99,7 +99,7 @@ function Dashboard() {
 							className={`button-custom ${
 								activeButton === "sumber" ? "active" : ""
 							}`}
-							onClick={() => handleButtonClick("sumber", "/sumber")}>
+							onClick={() => handleButtonClick("sumber", "/sumberdaya")}>
 							Sumber Daya
 						</Button>
 						<Button

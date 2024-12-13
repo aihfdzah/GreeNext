@@ -51,6 +51,16 @@ function KelasAdminDetail() {
 					<ul className="list-unstyled px-3">
 						<li className="mb-3">
 							<a
+								href="/dashboardadmin"
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "dashboard" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("dashboard")}>
+								<i className="fa fa-dashboard me-2"></i> Dashboard
+							</a>
+						</li>
+						<li className="mb-3">
+							<a
 								href="*"
 								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
 									activeItem === "profile" ? "active" : ""
@@ -109,23 +119,18 @@ function KelasAdminDetail() {
 								<i className="fa fa-book me-2"></i> Ebook
 							</a>
 						</li>
-						<li className="mb-3">
-							<a
-								href="#"
-								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
-									activeItem === "groupchat" ? "active" : ""
-								}`}
-								onClick={() => handleMenuClick("groupchat")}>
-								<i className="fa fa-comments me-2"></i> Group Chats
-							</a>
-						</li>
 						<li>
 							<a
-								href="#"
 								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
 									activeItem === "logout" ? "active" : ""
 								}`}
-								onClick={() => handleMenuClick("logout")}>
+								onClick={(e) => {
+									e.preventDefault();
+									if (window.confirm("Apakah Anda yakin ingin keluar?")) {
+										handleMenuClick("logout");
+										window.location.href = "/";
+									}
+								}}>
 								<i className="fa fa-sign-out me-2"></i> Logout
 							</a>
 						</li>
