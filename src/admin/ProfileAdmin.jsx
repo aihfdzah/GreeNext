@@ -1,34 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Admin.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import Spinner from "../components/Spinner";
-function User() {
-	const [users, setUsers] = useState([]); // Data pengguna dari API
-	const [loading, setLoading] = useState(false); // State untuk loading
-	const [error, setError] = useState(null); // State untuk error
-	const [search, setSearch] = useState(""); // State untuk pencarian
-	const [sidebarOpen, setSidebarOpen] = useState(true); // State untuk sidebar
-	const [activeItem, setActiveItem] = useState("user"); // Item aktif pada sidebar
 
-	useEffect(() => {
-		// Fungsi untuk mengambil data pengguna dari API
-		const fetchUsers = async () => {
-			setLoading(true);
-			setError(null);
-			try {
-				const response = await axios.get("http://localhost:5000/api/v1/user");
-				setUsers(response.data.data);
-			} catch (err) {
-				console.error("Error fetching user data:", err.message);
-				setError("Gagal memuat data pengguna. Silakan coba lagi nanti.");
-			} finally {
-				setLoading(false);
-			}
-		};
-
-		fetchUsers();
-	}, []);
+function ProfileAdmin() {
+	const [sidebarOpen, setSidebarOpen] = useState(true);
+	const [activeItem, setActiveItem] = useState("profile");
+	const [loading, setLoading] = useState(true);
+	const [profile, setProfile] = useState({
+		name: "Admin Name",
+		email: "admin@example.com",
+		profilePicture: "https://via.placeholder.com/150",
+	});
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -42,24 +25,35 @@ function User() {
 		return <Spinner />;
 	}
 
-	const toggleSidebar = () => {
-		setSidebarOpen(!sidebarOpen);
-	};
-
 	const handleMenuClick = (item) => {
 		setActiveItem(item);
 	};
 
-	const handleSearchChange = (e) => {
-		setSearch(e.target.value);
+	const toggleSidebar = () => {
+		setSidebarOpen(!sidebarOpen);
 	};
 
-	// Filter data berdasarkan kata kunci pencarian
-	const filteredUsers = users.filter(
-		(user) =>
-			user.username.toLowerCase().includes(search.toLowerCase()) ||
-			user.email.toLowerCase().includes(search.toLowerCase())
-	);
+	const handleProfileChange = (e) => {
+		const { name, value } = e.target;
+		setProfile((prevProfile) => ({
+			...prevProfile,
+			[name]: value,
+		}));
+	};
+
+	const handleProfilePictureChange = (e) => {
+		const file = e.target.files[0];
+		if (file) {
+			const reader = new FileReader();
+			reader.onloadend = () => {
+				setProfile((prevProfile) => ({
+					...prevProfile,
+					profilePicture: reader.result,
+				}));
+			};
+			reader.readAsDataURL(file);
+		}
+	};
 
 	return (
 		<div className="d-flex">
@@ -162,11 +156,11 @@ function User() {
 			)}
 
 			{/* Content */}
-			<div className="content-admin flex-grow-1">
-				<header
+			<div className="container-fluid">
+			<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
-					<h5 className="mb-0">Daftar Pengguna</h5>
+					<h5 className="mb-0">Profile Admin</h5>
 					<div className="d-flex align-items-center">
 						<img
 							src="https://via.placeholder.com/40"
@@ -180,59 +174,116 @@ function User() {
 						</button>
 					</div>
 				</header>
+				<div className="row justify-content-center">
+					<div className="col-md-8 col-lg-6">
+						<div className="card border-0 shadow-lg">
+							<div className="card-body p-5">
+								<div className="text-center mb-4">
+									<div className="position-relative d-inline-block">
+										<img
+											src={profile.profilePicture}
+											alt="Profile Preview"
+											className="rounded-circle shadow mb-3"
+											style={{
+												width: "150px",
+												height: "150px",
+												objectFit: "cover",
+											}}
+										/>
+										<label
+											htmlFor="profilePicture"
+											className="btn btn-primary btn-sm position-absolute bottom-0 end-0 rounded-circle"
+											style={{ padding: "8px 12px" }}>
+											<i className="fa fa-camera" style={{backgroundColor:""}}></i>
+											<input
+												type="file"
+												className="d-none"
+												id="profilePicture"
+												onChange={handleProfilePictureChange}
+											/>
+										</label>
+									</div>
+									<h4 className="mt-3 mb-1">{profile.name}</h4>
+									<p className="text-muted">{profile.email}</p>
+								</div>
 
-				<div className="container-admin mt-4 px-4">
-					{/* Input Pencarian */}
-					<div className="mb-3">
-						<input
-							type="text"
-							className="form-control"
-							placeholder="Cari pengguna..."
-							value={search}
-							onChange={handleSearchChange}
-						/>
-					</div>
+								<div className="mb-3">
+									<label htmlFor="name" className="form-label">
+										Name
+									</label>
+									<div className="input-group">
+										<span className="input-group-text">
+											<i className="fa fa-user"></i>
+										</span>
+										<input
+											type="text"
+											className="form-control"
+											id="name"
+											name="name"
+											value={profile.name}
+											onChange={handleProfileChange}
+											placeholder="Enter your full name"
+										/>
+									</div>
+								</div>
 
-					{loading ? (
-						<div className="text-center my-5">
-							<div className="spinner-border" role="status">
-								<span className="visually-hidden">Loading...</span>
+								<div className="mb-3">
+									<label htmlFor="email" className="form-label">
+										Email Address
+									</label>
+									<div className="input-group">
+										<span className="input-group-text">
+											<i className="fa fa-envelope"></i>
+										</span>
+										<input
+											type="email"
+											className="form-control"
+											id="email"
+											name="email"
+											value={profile.email}
+											onChange={handleProfileChange}
+											placeholder="Enter your email address"
+										/>
+									</div>
+								</div>
+
+								<div className="mb-3">
+									<label htmlFor="phone" className="form-label">
+										Phone Number
+									</label>
+									<div className="input-group">
+										<span className="input-group-text">
+											<i className="fa fa-phone"></i>
+										</span>
+										<input
+											type="tel"
+											className="form-control"
+											id="phone"
+											name="phone"
+											placeholder="Enter your phone number"
+										/>
+									</div>
+								</div>
+
+								<div className="d-grid gap-2">
+									<button
+										className="btn btn-primary btn-lg"
+										onClick={() => alert("Profile Updated!")}>
+										Update Profile
+									</button>
+									<button
+										className="btn btn-outline-secondary"
+										onClick={() => alert("Password Reset Request")}>
+										Reset Password
+									</button>
+								</div>
 							</div>
 						</div>
-					) : error ? (
-						<div className="alert alert-danger" role="alert">
-							{error}
-						</div>
-					) : (
-						<table className="table table-striped">
-							<thead>
-								<tr>
-									<th>Nama Pengguna</th>
-									<th>Email</th>
-								</tr>
-							</thead>
-							<tbody>
-								{filteredUsers.length > 0 ? (
-									filteredUsers.map((user) => (
-										<tr key={user.id}>
-											<td>{user.username}</td>
-											<td>{user.email}</td>
-										</tr>
-									))
-								) : (
-									<tr>
-										<td colSpan="2" className="text-center">
-											Tidak ada pengguna yang ditemukan.
-										</td>
-									</tr>
-								)}
-							</tbody>
-						</table>
-					)}
+					</div>
 				</div>
 			</div>
 		</div>
 	);
 }
 
-export default User;
+export default ProfileAdmin;

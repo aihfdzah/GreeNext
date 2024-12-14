@@ -2,26 +2,45 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Admin.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import Spinner from "../components/Spinner";
 function Admin() {
-	const [admins, setAdmins] = useState([]);
-	const [searchTerm, setSearchTerm] = useState("");
-	const [sidebarOpen, setSidebarOpen] = useState(true);
-	const [currentAdmin, setCurrentAdmin] = useState(null);
-	const [showModal, setShowModal] = useState(false);
-	const [activeItem, setActiveItem] = useState("admin");
+	const [admins, setAdmins] = useState([]); // Data admin dari API
+	const [loading, setLoading] = useState(false); // State untuk loading
+	const [error, setError] = useState(null); // State untuk error
+	const [search, setSearch] = useState(""); // State untuk pencarian
+	const [sidebarOpen, setSidebarOpen] = useState(true); // State untuk sidebar
+	const [activeItem, setActiveItem] = useState("admin"); // Item aktif pada sidebar
 
 	useEffect(() => {
-		// Fetch admins from backend on component mount
-		axios
-			.get("https://example.com/api/admins") // Ganti dengan URL endpoint backend Anda
-			.then((response) => {
-				setAdmins(response.data);
-			})
-			.catch((error) => {
-				console.error("Error fetching admin data:", error);
-			});
+		// Fungsi untuk mengambil data admin dari API
+		const fetchAdmins = async () => {
+			setLoading(true);
+			setError(null);
+			try {
+				const response = await axios.get("http://localhost:5000/api/v1/admin");
+				setAdmins(response.data.data);
+			} catch (err) {
+				console.error("Error fetching admin data:", err.message);
+				setError("Gagal memuat data admin. Silakan coba lagi nanti.");
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchAdmins();
 	}, []);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setLoading(false);
+		}, 3000);
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	if (loading) {
+		return <Spinner />;
+	}
 
 	const toggleSidebar = () => {
 		setSidebarOpen(!sidebarOpen);
@@ -31,65 +50,16 @@ function Admin() {
 		setActiveItem(item);
 	};
 
-	const handleAddNew = () => {
-		setCurrentAdmin(null);
-		setShowModal(true);
+	const handleSearchChange = (e) => {
+		setSearch(e.target.value);
 	};
 
-	const handleEditAdmin = (admin) => {
-		setCurrentAdmin(admin);
-		setShowModal(true);
-	};
-
-	const handleDeleteAdmin = (adminId) => {
-		axios
-			.delete(`https://example.com/api/admins/${adminId}`) // Endpoint untuk menghapus admin
-			.then(() => {
-				setAdmins(admins.filter((admin) => admin.id !== adminId));
-			})
-			.catch((error) => {
-				console.error("Error deleting admin:", error);
-			});
-	};
-
-	const handleSaveAdmin = (admin) => {
-		if (admin.id) {
-			axios
-				.put(`https://example.com/api/admins/${admin.id}`, admin) // Endpoint untuk mengupdate admin
-				.then((response) => {
-					setAdmins(admins.map((a) => (a.id === admin.id ? response.data : a)));
-				})
-				.catch((error) => {
-					console.error("Error updating admin:", error);
-				});
-		} else {
-			axios
-				.post("https://example.com/api/admins", admin) // Endpoint untuk menambah admin baru
-				.then((response) => {
-					setAdmins([...admins, response.data]);
-				})
-				.catch((error) => {
-					console.error("Error adding admin:", error);
-				});
-		}
-		setShowModal(false);
-	};
-
-	const handleSearch = (e) => {
-		setSearchTerm(e.target.value);
-	};
-
-	const filteredAdmins = admins.filter((admin) =>
-		admin.name.toLowerCase().includes(searchTerm.toLowerCase())
+	// Filter data berdasarkan kata kunci pencarian
+	const filteredAdmins = admins.filter(
+		(admin) =>
+			admin.username.toLowerCase().includes(search.toLowerCase()) ||
+			admin.email.toLowerCase().includes(search.toLowerCase())
 	);
-
-	const handleImport = () => {
-		alert("Import functionality to be implemented.");
-	};
-
-	const handleExport = () => {
-		alert("Export functionality to be implemented.");
-	};
 
 	return (
 		<div className="d-flex">
@@ -104,12 +74,22 @@ function Admin() {
 					<ul className="list-unstyled px-3">
 						<li className="mb-3">
 							<a
-								href="*"
+								href="/dashboardadmin"
+								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
+									activeItem === "dashboard" ? "active" : ""
+								}`}
+								onClick={() => handleMenuClick("dashboard")}>
+								<i className="fa fa-dashboard me-2"></i> Dashboard
+							</a>
+						</li>
+						<li className="mb-3">
+							<a
+								href="/profileadmin"
 								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
 									activeItem === "profile" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("profile")}>
-								<i className="bi bi-person me-2"></i> Profile
+								<i className="fa fa-user me-2"></i> Profile
 							</a>
 						</li>
 						<li className="mb-3">
@@ -119,7 +99,7 @@ function Admin() {
 									activeItem === "user" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("user")}>
-								<i className="bi bi-people me-2"></i> Pengguna
+								<i className="fa fa-users me-2"></i> Pengguna
 							</a>
 						</li>
 						<li className="mb-3">
@@ -129,7 +109,7 @@ function Admin() {
 									activeItem === "admin" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("admin")}>
-								<i className="bi bi-tools me-2"></i> Admin
+								<i className="fa fa-cogs me-2"></i> Admin
 							</a>
 						</li>
 						<li className="mb-3">
@@ -139,7 +119,7 @@ function Admin() {
 									activeItem === "kelasadmin" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("kelasadmin")}>
-								<i className="bi bi-folder2-open me-2"></i> Kelas
+								<i className="fa fa-folder-open me-2"></i> Kelas
 							</a>
 						</li>
 						<li className="mb-3">
@@ -149,7 +129,7 @@ function Admin() {
 									activeItem === "webinar" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("webinar")}>
-								<i className="bi bi-list-task me-2"></i> Webinar
+								<i className="fa fa-tasks me-2"></i> Webinar
 							</a>
 						</li>
 						<li className="mb-3">
@@ -159,38 +139,34 @@ function Admin() {
 									activeItem === "ebook" ? "active" : ""
 								}`}
 								onClick={() => handleMenuClick("ebook")}>
-								<i className="bi bi-clock-history me-2"></i> Ebook
-							</a>
-						</li>
-						<li className="mb-3">
-							<a
-								href="#"
-								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
-									activeItem === "groupchat" ? "active" : ""
-								}`}
-								onClick={() => handleMenuClick("groupchat")}>
-								<i className="bi bi-chat me-2"></i> Group Chats
+								<i className="fa fa-book me-2"></i> Ebook
 							</a>
 						</li>
 						<li>
 							<a
-								href="#"
 								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
-									activeItem === "reports" ? "active" : ""
+									activeItem === "logout" ? "active" : ""
 								}`}
-								onClick={() => handleMenuClick("reports")}>
-								<i className="bi bi-bar-chart me-2"></i> Reports
+								onClick={(e) => {
+									e.preventDefault();
+									if (window.confirm("Apakah Anda yakin ingin keluar?")) {
+										handleMenuClick("logout");
+										window.location.href = "/";
+									}
+								}}>
+								<i className="fa fa-sign-out me-2"></i> Logout
 							</a>
 						</li>
 					</ul>
 				</nav>
 			)}
 
+			{/* Content */}
 			<div className="content-admin flex-grow-1">
 				<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
-					<h5 className="mb-0">Admin</h5>
+					<h5 className="mb-0">Daftar Admin</h5>
 					<div className="d-flex align-items-center">
 						<img
 							src="https://via.placeholder.com/40"
@@ -204,176 +180,55 @@ function Admin() {
 						</button>
 					</div>
 				</header>
-				<div className="container-admin mt-4 px-4">
-					<div className="d-flex justify-content-between align-items-center my-4">
-						<button className="btn btn-primary" onClick={handleAddNew}>
-							Tambah Admin
-						</button>
-						<div className="d-flex">
-							<button
-								className="btn btn-outline-secondary me-2"
-								onClick={handleImport}>
-								Import Admin
-							</button>
-							<button
-								className="btn btn-outline-secondary"
-								onClick={handleExport}>
-								Export Admin
-							</button>
-						</div>
-					</div>
 
+				<div className="container-admin mt-4 px-4">
+					{/* Input Pencarian */}
 					<div className="mb-3">
 						<input
 							type="text"
 							className="form-control"
 							placeholder="Cari admin..."
-							value={searchTerm}
-							onChange={handleSearch}
+							value={search}
+							onChange={handleSearchChange}
 						/>
 					</div>
 
-					<table className="table table-striped">
-						<thead>
-							<tr>
-								<th>Nama Admin</th>
-								<th>Telepon</th>
-								<th>Email</th>
-								<th>Status</th>
-								<th>Actions</th>
-							</tr>
-						</thead>
-						<tbody>
-							{filteredAdmins.map((admin) => (
-								<tr key={admin.id}>
-									<td>{admin.name}</td>
-									<td>{admin.mobile}</td>
-									<td>{admin.email}</td>
-									<td>
-										<span
-											className={`badge ${
-												admin.status === "Active" ? "bg-success" : "bg-danger"
-											}`}>
-											{admin.status}
-										</span>
-									</td>
-									<td>
-										<button
-											className="btn btn-sm btn-outline-secondary me-2"
-											onClick={() => handleEditAdmin(admin)}>
-											Edit
-										</button>
-										<button
-											className="btn btn-sm btn-outline-danger"
-											onClick={() => handleDeleteAdmin(admin.id)}>
-											Delete
-										</button>
-									</td>
+					{loading ? (
+						<div className="text-center my-5">
+							<div className="spinner-border" role="status">
+								<span className="visually-hidden">Loading...</span>
+							</div>
+						</div>
+					) : error ? (
+						<div className="alert alert-danger" role="alert">
+							{error}
+						</div>
+					) : (
+						<table className="table table-striped">
+							<thead>
+								<tr>
+									<th>Nama Admin</th>
+									<th>Email</th>
 								</tr>
-							))}
-						</tbody>
-					</table>
-				</div>
-
-				{showModal && (
-					<AdminModal
-						admin={currentAdmin}
-						onSave={handleSaveAdmin}
-						onClose={() => setShowModal(false)}
-					/>
-				)}
-			</div>
-		</div>
-	);
-}
-
-function AdminModal({ admin, onSave, onClose }) {
-	const [formData, setFormData] = useState(
-		admin || { name: "", mobile: "", email: "", status: "Active" }
-	);
-
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData({ ...formData, [name]: value });
-	};
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		onSave(formData);
-	};
-
-	return (
-		<div
-			className="modal d-block"
-			style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-			<div className="modal-dialog">
-				<div className="modal-content">
-					<div className="modal-header">
-						<h5 className="modal-title">
-							{admin ? "Edit Admin" : "Menambah Admin"}
-						</h5>
-						<button className="btn-close" onClick={onClose}></button>
-					</div>
-					<form onSubmit={handleSubmit}>
-						<div className="modal-body">
-							<div className="mb-3">
-								<label className="form-label">Nama Admin</label>
-								<input
-									type="text"
-									className="form-control"
-									name="name"
-									value={formData.name}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Telepon</label>
-								<input
-									type="text"
-									className="form-control"
-									name="mobile"
-									value={formData.mobile}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Email</label>
-								<input
-									type="email"
-									className="form-control"
-									name="email"
-									value={formData.email}
-									onChange={handleChange}
-									required
-								/>
-							</div>
-							<div className="mb-3">
-								<label className="form-label">Status</label>
-								<select
-									className="form-select"
-									name="status"
-									value={formData.status}
-									onChange={handleChange}
-									required>
-									<option value="Active">Active</option>
-									<option value="Inactive">Inactive</option>
-								</select>
-							</div>
-						</div>
-						<div className="modal-footer">
-							<button
-								type="button"
-								className="btn btn-secondary"
-								onClick={onClose}>
-								Close
-							</button>
-							<button type="submit" className="btn btn-primary">
-								Save
-							</button>
-						</div>
-					</form>
+							</thead>
+							<tbody>
+								{filteredAdmins.length > 0 ? (
+									filteredAdmins.map((admin) => (
+										<tr key={admin.id}>
+											<td>{admin.username}</td>
+											<td>{admin.email}</td>
+										</tr>
+									))
+								) : (
+									<tr>
+										<td colSpan="2" className="text-center">
+											Tidak ada admin yang ditemukan.
+										</td>
+									</tr>
+								)}
+							</tbody>
+						</table>
+					)}
 				</div>
 			</div>
 		</div>
