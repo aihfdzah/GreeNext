@@ -1,22 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Admin.css";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 
-function DashboardAdmin() {
-	const [stats] = useState({
-		users: 120,
-		classes: 45,
-		admins: 10,
-		webinars: 25,
-		ebooks: 60,
-	});
+function ProfileAdmin() {
 	const [sidebarOpen, setSidebarOpen] = useState(true);
-	const [activeItem, setActiveItem] = useState("dashboard");
+	const [activeItem, setActiveItem] = useState("profile");
 	const [loading, setLoading] = useState(true);
-
-	const navigate = useNavigate();
+	const [profile, setProfile] = useState({
+		name: "Admin Name",
+		email: "admin@example.com",
+		profilePicture: "https://via.placeholder.com/150",
+	});
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -38,8 +33,26 @@ function DashboardAdmin() {
 		setSidebarOpen(!sidebarOpen);
 	};
 
-	const handleCardClick = (route) => {
-		navigate(route);
+	const handleProfileChange = (e) => {
+		const { name, value } = e.target;
+		setProfile((prevProfile) => ({
+			...prevProfile,
+			[name]: value,
+		}));
+	};
+
+	const handleProfilePictureChange = (e) => {
+		const file = e.target.files[0];
+		if (file) {
+			const reader = new FileReader();
+			reader.onloadend = () => {
+				setProfile((prevProfile) => ({
+					...prevProfile,
+					profilePicture: reader.result,
+				}));
+			};
+			reader.readAsDataURL(file);
+		}
 	};
 
 	return (
@@ -143,11 +156,11 @@ function DashboardAdmin() {
 			)}
 
 			{/* Content */}
-			<div className="content-admin flex-grow-1 ">
-				<header
+			<div className="container-fluid">
+			<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
-					<h5 className="mb-0">Dashboard</h5>
+					<h5 className="mb-0">Profile Admin</h5>
 					<div className="d-flex align-items-center">
 						<img
 							src="https://via.placeholder.com/40"
@@ -161,66 +174,108 @@ function DashboardAdmin() {
 						</button>
 					</div>
 				</header>
+				<div className="row justify-content-center">
+					<div className="col-md-8 col-lg-6">
+						<div className="card border-0 shadow-lg">
+							<div className="card-body p-5">
+								<div className="text-center mb-4">
+									<div className="position-relative d-inline-block">
+										<img
+											src={profile.profilePicture}
+											alt="Profile Preview"
+											className="rounded-circle shadow mb-3"
+											style={{
+												width: "150px",
+												height: "150px",
+												objectFit: "cover",
+											}}
+										/>
+										<label
+											htmlFor="profilePicture"
+											className="btn btn-primary btn-sm position-absolute bottom-0 end-0 rounded-circle"
+											style={{ padding: "8px 12px" }}>
+											<i className="fa fa-camera" style={{backgroundColor:""}}></i>
+											<input
+												type="file"
+												className="d-none"
+												id="profilePicture"
+												onChange={handleProfilePictureChange}
+											/>
+										</label>
+									</div>
+									<h4 className="mt-3 mb-1">{profile.name}</h4>
+									<p className="text-muted">{profile.email}</p>
+								</div>
 
-				<div className="container-admin px-3">
-					<div className="row g-4 " style={{ marginTop: "-150px" }}>
-						<div className="col-md-4">
-							<div
-								className="card bg-transparent border border-warning shadow "
-								style={{ color: "#ef7a53", cursor: "pointer" }}
-								onClick={() => handleCardClick("/user")}>
-								<div className="card-body text-center">
-									<i className="fa fa-users fa-2x mb-2"></i>
-									<h6 className="card-title">Pengguna</h6>
-									<h2>{stats.users}</h2>
+								<div className="mb-3">
+									<label htmlFor="name" className="form-label">
+										Name
+									</label>
+									<div className="input-group">
+										<span className="input-group-text">
+											<i className="fa fa-user"></i>
+										</span>
+										<input
+											type="text"
+											className="form-control"
+											id="name"
+											name="name"
+											value={profile.name}
+											onChange={handleProfileChange}
+											placeholder="Enter your full name"
+										/>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div className="col-md-4">
-							<div
-								className="card bg-transparent border border-warning shadow"
-								style={{ color: "#ef7a53", cursor: "pointer" }}
-								onClick={() => handleCardClick("/kelasadmin")}>
-								<div className="card-body text-center">
-									<i className="fa fa-folder-open fa-2x mb-2"></i>
-									<h6 className="card-title">Kelas</h6>
-									<h2>{stats.classes}</h2>
+
+								<div className="mb-3">
+									<label htmlFor="email" className="form-label">
+										Email Address
+									</label>
+									<div className="input-group">
+										<span className="input-group-text">
+											<i className="fa fa-envelope"></i>
+										</span>
+										<input
+											type="email"
+											className="form-control"
+											id="email"
+											name="email"
+											value={profile.email}
+											onChange={handleProfileChange}
+											placeholder="Enter your email address"
+										/>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div className="col-md-4">
-							<div
-								className="card bg-transparent border border-warning shadow"
-								style={{ color: "#ef7a53", cursor: "pointer" }}
-								onClick={() => handleCardClick("/admin")}>
-								<div className="card-body text-center">
-									<i className="fa fa-cogs fa-2x mb-2"></i>
-									<h6 className="card-title">Admin</h6>
-									<h2>{stats.admins}</h2>
+
+								<div className="mb-3">
+									<label htmlFor="phone" className="form-label">
+										Phone Number
+									</label>
+									<div className="input-group">
+										<span className="input-group-text">
+											<i className="fa fa-phone"></i>
+										</span>
+										<input
+											type="tel"
+											className="form-control"
+											id="phone"
+											name="phone"
+											placeholder="Enter your phone number"
+										/>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div className="col-md-4 mt-5">
-							<div
-								className="card bg-transparent border border-warning shadow"
-								style={{ color: "#ef7a53", cursor: "pointer" }}
-								onClick={() => handleCardClick("/webinar")}>
-								<div className="card-body text-center">
-									<i className="fa fa-tasks fa-2x mb-2"></i>
-									<h6 className="card-title">Webinar</h6>
-									<h2>{stats.webinars}</h2>
-								</div>
-							</div>
-						</div>
-						<div className="col-md-4 mt-5">
-							<div
-								className="card bg-transparent border border-warning shadow"
-								style={{ color: "#ef7a53", cursor: "pointer" }}
-								onClick={() => handleCardClick("/ebook")}>
-								<div className="card-body text-center">
-									<i className="fa fa-book fa-2x mb-2"></i>
-									<h6 className="card-title">Ebook</h6>
-									<h2>{stats.ebooks}</h2>
+
+								<div className="d-grid gap-2">
+									<button
+										className="btn btn-primary btn-lg"
+										onClick={() => alert("Profile Updated!")}>
+										Update Profile
+									</button>
+									<button
+										className="btn btn-outline-secondary"
+										onClick={() => alert("Password Reset Request")}>
+										Reset Password
+									</button>
 								</div>
 							</div>
 						</div>
@@ -231,4 +286,4 @@ function DashboardAdmin() {
 	);
 }
 
-export default DashboardAdmin;
+export default ProfileAdmin;

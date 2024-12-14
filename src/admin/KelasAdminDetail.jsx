@@ -61,7 +61,7 @@ function KelasAdminDetail() {
 						</li>
 						<li className="mb-3">
 							<a
-								href="*"
+								href="/profileadmin"
 								className={`text-white text-decoration-none d-flex align-items-center sidebar-link ${
 									activeItem === "profile" ? "active" : ""
 								}`}

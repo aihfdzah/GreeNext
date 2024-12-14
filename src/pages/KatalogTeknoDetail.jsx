@@ -22,7 +22,7 @@ const KatalogTeknoDetail = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="container mt-3">
+			<div className="container" style={{marginTop:"70px"}}>
 				{/* Tombol Kembali */}
 				<div className="mb-5">
 					<button
