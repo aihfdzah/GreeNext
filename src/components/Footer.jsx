@@ -15,7 +15,7 @@ const Footer = () => {
 
 	return (
 		<footer className="footer footer-expand-lg footer-dark bg-dark text-white py-4">
-			<div className="footer-content" style={{padding:"0rem 2rem"}}>
+			<div className="footer-content" style={{padding:"0rem 4rem"}}>
 				<div className="footer-logo">
 					<img src="./logo.png" className="logo-footer" alt="FarmEduZ Logo" />
 
