@@ -1575,31 +1575,13 @@ option {
 }
 
 /* ----------------Tentang Kita---------------- */
-.about-section,
-.features-section {
-	margin-bottom: 2rem;
-	padding: 50px 45px;
-	color: var();
-}
 
-.about h2 {
-	color: var(--main-color);
-	font-size: 2rem;
-	margin-bottom: 4rem;
-}
 
-.about-content {
-	display: flex;
-	align-items: flex-start;
-	gap: 1rem;
-	position: absolute;
-}
 
-.about-text {
-	flex: 1;
-	padding-right: 60%;
-	z-index: 1;
-}
+
+
+
+
 
 .about p {
 	font-size: 18px;
@@ -1616,15 +1598,12 @@ option {
 	max-width: 100%;
 	border-radius: 5px;
 	position: relative;
-	top: 71%;
-	left: 50%;
 	height: auto;
 	z-index: 0;
-	margin-right: 15px;
 }
 
 .features {
-	margin-top: 2rem;
+	margin: 4rem 0rem;
 }
 
 .features h3 {

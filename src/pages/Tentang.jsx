@@ -23,8 +23,8 @@ const Tentang = () => {
 			<div className="container mt-0">
 				<div className="about-section">
 					<section className="about">
-						<h2>Tentang Kita</h2>
-						<div className="about-content">
+						<h2 style={{margin:"5rem auto 1rem auto", padding:"0rem 4rem"}}>Tentang Kita</h2>
+						<div className="about-content mt-4" style={{display:"flex", padding:"0rem 4rem", gap:"3rem"}}>
 							<div className="about-text">
 								<p>
 									<strong>FarmEduz</strong> adalah platform edukasi pertanian
@@ -41,8 +41,6 @@ const Tentang = () => {
 									Team <br /> FarmEduz
 								</p>
 							</div>
-						</div>
-						<div>
 							<img src="./about.jpg" className="about-image" />
 						</div>
 					</section>
