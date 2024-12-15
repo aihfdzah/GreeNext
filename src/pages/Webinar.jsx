@@ -44,7 +44,13 @@ const Webinar = () => {
 	return (
 		<>
 			<Navbar />
-			<Row className="d-flex text-left mt-5" style={{maxWidth:'1440px', margin:"auto", padding:"3rem 2rem"}}>
+			<Row
+				className="py-3 d-flex text-left"
+				style={{
+					marginTop: "70px",
+					maxWidth: "1440px",
+					margin: "4rem auto 1rem auto",
+				}}>
 				<Col>
 					<h1 style={{ color: "#17412d", fontSize: "16pt" }}>
 						Webinar & Seminar
@@ -84,13 +90,15 @@ const Webinar = () => {
 				</Col>
 			</Row>
 
-			<div className="container mt-2" style={{marginBottom:"2rem", padding:"0px 2rem"}}>
+			<div
+				className="container mt-2"
+				style={{ marginBottom: "2rem", padding: "0px 2rem" }}>
 				<h1 className="text-center">Webinar & Seminar</h1>
-				<div className="d-flex align-items-center border-bottom mb-4 pb-4" style={{justifyContent:"space-between", gap:'1.5rem'}}>
+				<div
+					className="d-flex align-items-center border-bottom mb-4 pb-4"
+					style={{ justifyContent: "space-between", gap: "1.5rem" }}>
 					{/* Search Bar */}
-					<div
-						className="mx-3 flex-grow-1"
-						style={{ position: "relative" }}>
+					<div className="mx-3 flex-grow-1" style={{ position: "relative" }}>
 						<i
 							className="fa-solid fa-magnifying-glass"
 							style={{
@@ -107,8 +115,8 @@ const Webinar = () => {
 								borderColor: "#ef7a53",
 								borderRadius: "20px",
 								paddingLeft: "40px",
-								paddingTop:".625rem",
-								paddingBottom:".625rem",
+								paddingTop: ".625rem",
+								paddingBottom: ".625rem",
 							}}
 							placeholder="Cari Webinar..."
 						/>
@@ -142,11 +150,18 @@ const Webinar = () => {
 							<img
 								src="./smart-agriculture-2.jpg"
 								className="d-block w-100"
-								style={{ borderRadius: "10px", height:'450px', objectFit:"cover", filter:"brightness(45%)" }}
+								style={{
+									borderRadius: "10px",
+									height: "450px",
+									objectFit: "cover",
+									filter: "brightness(45%)",
+								}}
 								alt="Highlight Event 1"
 							/>
 							<div className="carousel-caption">
-								<h2 style={{color:"white"}}>Pengenalan Sistem Pertanian Presisi</h2>
+								<h2 style={{ color: "white" }}>
+									Pengenalan Sistem Pertanian Presisi
+								</h2>
 								<p>
 									Inovasi pertanian menjadi kunci untuk meningkatkan
 									produktivitas, efisiensi, dan keberlanjutan sektor pertanian
@@ -160,11 +175,16 @@ const Webinar = () => {
 							<img
 								src="./smart-agriculture-1.jpg"
 								className="d-block w-100"
-								style={{ borderRadius: "10px", height:'450px', objectFit:'cover', filter:"brightness(45%)" }}
+								style={{
+									borderRadius: "10px",
+									height: "450px",
+									objectFit: "cover",
+									filter: "brightness(45%)",
+								}}
 								alt="Highlight Event 2"
 							/>
 							<div className="carousel-caption">
-								<h2 style={{color:"white"}}>Sistem Teknologi Pertanian</h2>
+								<h2 style={{ color: "white" }}>Sistem Teknologi Pertanian</h2>
 								<p>
 									Menyoroti bagaimana teknologi meningkatkan efisiensi pertanian
 									modern.
@@ -177,11 +197,18 @@ const Webinar = () => {
 							<img
 								src="./smart-agriculture-3.jpg"
 								className="d-block w-100"
-								style={{ borderRadius: "10px", height:'450px', objectFit:'cover', filter:"brightness(45%)" }}
+								style={{
+									borderRadius: "10px",
+									height: "450px",
+									objectFit: "cover",
+									filter: "brightness(45%)",
+								}}
 								alt="Highlight Event 3"
 							/>
 							<div className="carousel-caption">
-								<h2 style={{color:"white"}}>Manajemen Pertanian Berkelanjutan</h2>
+								<h2 style={{ color: "white" }}>
+									Manajemen Pertanian Berkelanjutan
+								</h2>
 								<p>
 									Fokus pada strategi untuk menjaga keberlanjutan sektor
 									pertanian.
@@ -218,7 +245,7 @@ const Webinar = () => {
 						<img
 							src="./smart-agriculture-1.jpg"
 							alt="Event Thumbnail"
-							style={{ }}
+							style={{}}
 						/>
 						<div className="event-info">
 							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }}>
@@ -262,10 +289,12 @@ const Webinar = () => {
 						<img
 							src="./smart-agriculture-2.jpg"
 							alt="Event Thumbnail"
-							style={{  }}
+							style={{}}
 						/>
 						<div className="event-info">
-							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }} className="mb-3">
+							<h3
+								style={{ fontSize: "1.5rem", fontWeight: "600" }}
+								className="mb-3">
 								<FaCogs className="me-2" />
 								Sistem Teknologi Pertanian
 							</h3>
@@ -283,7 +312,9 @@ const Webinar = () => {
 							</p>
 						</div>
 						<a href="./WebinarDetail">
-							<button className="btn-status" style={{
+							<button
+								className="btn-status"
+								style={{
 									display: "block",
 									margin: "10px auto",
 									backgroundColor: "#ef7a53",
@@ -304,10 +335,12 @@ const Webinar = () => {
 						<img
 							src="./smart-agriculture-3.jpg"
 							alt="Event Thumbnail"
-							style={{ }}
+							style={{}}
 						/>
 						<div className="event-info">
-							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }} className="mb-3">
+							<h3
+								style={{ fontSize: "1.5rem", fontWeight: "600" }}
+								className="mb-3">
 								<FaLeaf className="me-2" />
 								Manajemen Pertanian
 							</h3>
@@ -325,7 +358,9 @@ const Webinar = () => {
 							</p>
 						</div>
 						<a href="./WebinarDetail">
-							<button className="btn-status" style={{
+							<button
+								className="btn-status"
+								style={{
 									display: "block",
 									margin: "10px auto",
 									backgroundColor: "#ef7a53",
@@ -346,10 +381,12 @@ const Webinar = () => {
 						<img
 							src="./smart-agriculture-4.jpg"
 							alt="Event Thumbnail"
-							style={{  }}
+							style={{}}
 						/>
 						<div className="event-info">
-							<h3 style={{ fontSize: "1.5rem", fontWeight: "600" }} className="mb-3">
+							<h3
+								style={{ fontSize: "1.5rem", fontWeight: "600" }}
+								className="mb-3">
 								<FaWater className="me-2" />
 								Inovasi Pertanian Hemat Air
 							</h3>
@@ -367,7 +404,9 @@ const Webinar = () => {
 							</p>
 						</div>
 						<a href="./WebinarDetail">
-							<button className="btn-status" style={{
+							<button
+								className="btn-status"
+								style={{
 									display: "block",
 									margin: "10px auto",
 									backgroundColor: "#ef7a53",

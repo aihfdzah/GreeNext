@@ -1,34 +1,22 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Admin.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
-function User() {
-	const [users, setUsers] = useState([]); // Data pengguna dari API
-	const [loading, setLoading] = useState(false); // State untuk loading
-	const [error, setError] = useState(null); // State untuk error
-	const [search, setSearch] = useState(""); // State untuk pencarian
-	const [sidebarOpen, setSidebarOpen] = useState(true); // State untuk sidebar
-	const [activeItem, setActiveItem] = useState("user"); // Item aktif pada sidebar
 
-	useEffect(() => {
-		// Fungsi untuk mengambil data pengguna dari API
-		const fetchUsers = async () => {
-			setLoading(true);
-			setError(null);
-			try {
-				const response = await axios.get("http://localhost:5000/api/v1/user");
-				setUsers(response.data.data);
-			} catch (err) {
-				console.error("Error fetching user data:", err.message);
-				setError("Gagal memuat data pengguna. Silakan coba lagi nanti.");
-			} finally {
-				setLoading(false);
-			}
-		};
+function DashboardAdmin() {
+	const [stats] = useState({
+		users: 120,
+		classes: 45,
+		admins: 10,
+		webinars: 25,
+		ebooks: 60,
+	});
+	const [sidebarOpen, setSidebarOpen] = useState(true);
+	const [activeItem, setActiveItem] = useState("dashboard");
+	const [loading, setLoading] = useState(true);
 
-		fetchUsers();
-	}, []);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -42,24 +30,17 @@ function User() {
 		return <Spinner />;
 	}
 
-	const toggleSidebar = () => {
-		setSidebarOpen(!sidebarOpen);
-	};
-
 	const handleMenuClick = (item) => {
 		setActiveItem(item);
 	};
 
-	const handleSearchChange = (e) => {
-		setSearch(e.target.value);
+	const toggleSidebar = () => {
+		setSidebarOpen(!sidebarOpen);
 	};
 
-	// Filter data berdasarkan kata kunci pencarian
-	const filteredUsers = users.filter(
-		(user) =>
-			user.username.toLowerCase().includes(search.toLowerCase()) ||
-			user.email.toLowerCase().includes(search.toLowerCase())
-	);
+	const handleCardClick = (route) => {
+		navigate(route);
+	};
 
 	return (
 		<div className="d-flex">
@@ -162,11 +143,11 @@ function User() {
 			)}
 
 			{/* Content */}
-			<div className="content-admin flex-grow-1">
+			<div className="content-admin flex-grow-1 ">
 				<header
 					className="d-flex justify-content-between align-items-center py-3 px-4 shadow-sm"
 					style={{ backgroundColor: "#f5f2ed" }}>
-					<h5 className="mb-0">Daftar Pengguna</h5>
+					<h5 className="mb-0">Dashboard</h5>
 					<div className="d-flex align-items-center">
 						<img
 							src="https://via.placeholder.com/40"
@@ -181,58 +162,73 @@ function User() {
 					</div>
 				</header>
 
-				<div className="container-admin mt-4 px-4">
-					{/* Input Pencarian */}
-					<div className="mb-3">
-						<input
-							type="text"
-							className="form-control"
-							placeholder="Cari pengguna..."
-							value={search}
-							onChange={handleSearchChange}
-						/>
-					</div>
-
-					{loading ? (
-						<div className="text-center my-5">
-							<div className="spinner-border" role="status">
-								<span className="visually-hidden">Loading...</span>
+				<div className="container-admin px-3">
+					<div className="row g-4 " style={{ marginTop: "-150px" }}>
+						<div className="col-md-4">
+							<div
+								className="card bg-transparent border border-warning shadow "
+								style={{ color: "#ef7a53", cursor: "pointer" }}
+								onClick={() => handleCardClick("/user")}>
+								<div className="card-body text-center">
+									<i className="fa fa-users fa-2x mb-2"></i>
+									<h6 className="card-title">Pengguna</h6>
+									<h2>{stats.users}</h2>
+								</div>
 							</div>
 						</div>
-					) : error ? (
-						<div className="alert alert-danger" role="alert">
-							{error}
+						<div className="col-md-4">
+							<div
+								className="card bg-transparent border border-warning shadow"
+								style={{ color: "#ef7a53", cursor: "pointer" }}
+								onClick={() => handleCardClick("/kelasadmin")}>
+								<div className="card-body text-center">
+									<i className="fa fa-folder-open fa-2x mb-2"></i>
+									<h6 className="card-title">Kelas</h6>
+									<h2>{stats.classes}</h2>
+								</div>
+							</div>
 						</div>
-					) : (
-						<table className="table table-striped">
-							<thead>
-								<tr>
-									<th>Nama Pengguna</th>
-									<th>Email</th>
-								</tr>
-							</thead>
-							<tbody>
-								{filteredUsers.length > 0 ? (
-									filteredUsers.map((user) => (
-										<tr key={user.id}>
-											<td>{user.username}</td>
-											<td>{user.email}</td>
-										</tr>
-									))
-								) : (
-									<tr>
-										<td colSpan="2" className="text-center">
-											Tidak ada pengguna yang ditemukan.
-										</td>
-									</tr>
-								)}
-							</tbody>
-						</table>
-					)}
+						<div className="col-md-4">
+							<div
+								className="card bg-transparent border border-warning shadow"
+								style={{ color: "#ef7a53", cursor: "pointer" }}
+								onClick={() => handleCardClick("/admin")}>
+								<div className="card-body text-center">
+									<i className="fa fa-cogs fa-2x mb-2"></i>
+									<h6 className="card-title">Admin</h6>
+									<h2>{stats.admins}</h2>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-4 mt-5">
+							<div
+								className="card bg-transparent border border-warning shadow"
+								style={{ color: "#ef7a53", cursor: "pointer" }}
+								onClick={() => handleCardClick("/webinar")}>
+								<div className="card-body text-center">
+									<i className="fa fa-tasks fa-2x mb-2"></i>
+									<h6 className="card-title">Webinar</h6>
+									<h2>{stats.webinars}</h2>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-4 mt-5">
+							<div
+								className="card bg-transparent border border-warning shadow"
+								style={{ color: "#ef7a53", cursor: "pointer" }}
+								onClick={() => handleCardClick("/ebook")}>
+								<div className="card-body text-center">
+									<i className="fa fa-book fa-2x mb-2"></i>
+									<h6 className="card-title">Ebook</h6>
+									<h2>{stats.ebooks}</h2>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	);
 }
 
-export default User;
+export default DashboardAdmin;
