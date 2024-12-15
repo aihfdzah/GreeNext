@@ -41,9 +41,9 @@ const Ebook = () => {
 			<Row
 				className="py-3 d-flex text-left"
 				style={{
-					marginTop: "70px",
 					maxWidth:"1440px",
-					margin:"4rem auto 1rem auto"
+					margin:"4rem auto 1rem auto",
+					padding:"0rem 4rem"
 				}}>
 				<Col>
 					<h1 style={{ color: "#17412d", fontSize: "20pt" }}>Ebook</h1>
