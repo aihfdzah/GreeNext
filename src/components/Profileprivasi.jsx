@@ -8,7 +8,7 @@ const Profileprivasi = () => {
 		<div
 			className="container-profile"
 			id="profileprivasi"
-			style={{ marginBottom: "20%", marginTop: "8%" }}>
+			style={{padding:"0rem 4rem"}}>
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>

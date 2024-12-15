@@ -5,7 +5,7 @@ const Profilekeamanan = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container-profile" id="profilekeamanan" >
+		<div className="container-profile" id="profilekeamanan" style={{padding:"0rem 4rem"}} >
 			<div className="sidebar">
 				<img src={profile} alt="Profile Picture" />
 				<h3>Wahyu Rojolele</h3>
