@@ -31,7 +31,7 @@ const COKartuGagal = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="container mt-5">
+			<div className="container" style={{margin:"80px 0px"}}>
 				{/* Tombol Kembali */}
 				{/* <div className="mb-4">
 					<button

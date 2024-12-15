@@ -31,7 +31,7 @@ const COKartuEror = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="container mt-5">
+			<div className="container mt-5 mb-5">
 				{/* Tombol Kembali */}
 				{/* <div className="mb-4">
 					<button
@@ -45,7 +45,7 @@ const COKartuEror = () => {
 					{/* Form Pembayaran */}
 					<div className="col-lg-7">
 						<div className="form-container p-4 border rounded">
-							<h2 className="mb-4">Pembayaran Ebook</h2>
+							<h2 className="mb-4">Pembayaran Kelas</h2>
 							<div className="payment-options mb-3">
 								<label className="me-3">
 									<input
