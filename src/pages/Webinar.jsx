@@ -47,9 +47,9 @@ const Webinar = () => {
 			<Row
 				className="py-3 d-flex text-left"
 				style={{
-					marginTop: "70px",
 					maxWidth: "1440px",
 					margin: "4rem auto 1rem auto",
+					padding:"0rem 4rem"
 				}}>
 				<Col>
 					<h1 style={{ color: "#17412d", fontSize: "16pt" }}>
@@ -92,7 +92,7 @@ const Webinar = () => {
 
 			<div
 				className="container mt-2"
-				style={{ marginBottom: "2rem", padding: "0px 2rem" }}>
+				style={{ marginBottom: "2rem", padding: "0px 4rem" }}>
 				<h1 className="text-center">Webinar & Seminar</h1>
 				<div
 					className="d-flex align-items-center border-bottom mb-4 pb-4"
