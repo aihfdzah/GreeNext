@@ -100,8 +100,7 @@ if (!user) {
 				<Col md={6}>
 					<h2>
 						Selamat Datang Kembali,{" "}
-						<span style={{ color: "#ef7a53" }}>{user.username}</span>
-						<span>{user.email}</span>
+						<span style={{ color: "#ef7a53", textTransform:"capitalize" }}>{user.username}</span>
 					</h2>
 					<p>Ayo lanjutkan kelasnya sampai tuntas!</p>
 				</Col>
