@@ -1,7 +1,28 @@
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import profile from "../assets/Profile.png";
 const Profilekeluar = () => {
 	const navigate = useNavigate();
+
+	const logoutUser = async () => {
+		try {
+			const response = axios.post('http://localhost:5000/api/v1/auth/logout', {},{
+				withCredentials:true // include cookie.
+			})
+	
+			if((await response).status == 200){
+				console.log(response.data);
+				alert('Logout successfully!')
+				navigate('/')
+				console.log('masuk sini kah?')
+			}
+			
+		} catch (error) {
+			console.error('Log Out Error!', error.message)
+			alert("Failed to logout")
+		}
+	}
+
 	return (
 		<div
 			className="container-profile"
@@ -53,7 +74,7 @@ const Profilekeluar = () => {
 					<div className="button-group">
 						<button className="cancel-button">Batal</button>
 						<button className="logout-button">
-						<a href="/" >Keluar</a>
+						<a onClick={logoutUser} >Keluar</a>
 							</button>
 					</div>
 				</div>

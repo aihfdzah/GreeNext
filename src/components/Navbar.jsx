@@ -1,6 +1,7 @@
 import Profile from "../assets/profile.png";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import axios from "axios";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
 	Dropdown,
 	DropdownToggle,
@@ -9,14 +10,30 @@ import {
 } from "reactstrap";
 
 const Navbar = () => {
+	const navigate = useNavigate();
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
 	const location = useLocation();
-
-	const handleLogout = () => {
-		alert("You have successfully logged out.");
-	};
+	
+	const logoutUser = async () => {
+		try {
+			const response = axios.post('http://localhost:5000/api/v1/auth/logout', {},{
+				withCredentials:true // include cookie.
+			})
+	
+			if((await response).status == 200){
+				console.log(response.data);
+				alert('Logout successfully!')
+				navigate('/login')
+				console.log('masuk sini kah?')
+			}
+			
+		} catch (error) {
+			console.error('Log Out Error!', error.message)
+			alert("Failed to logout")
+		}
+	}
 
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -87,7 +104,7 @@ const Navbar = () => {
 								Profile
 							</DropdownToggle>
 							<DropdownMenu>
-								<DropdownItem href="/" onClick={handleLogout}>Log Out</DropdownItem>
+								<DropdownItem onClick={logoutUser}>Log Out</DropdownItem>
 								<DropdownItem href="/profile">Profile</DropdownItem>
 							</DropdownMenu>
 						</Dropdown>
