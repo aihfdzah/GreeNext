@@ -24,18 +24,15 @@ const Kelasdetail = () => {
 			<Navbar />
 			<div className="container mt-5">
 				{/* Tombol Kembali */}
-				<div className="back-button mb-3">
-					<button
-						className="btn btn-transparant d-flex align-items-center gap-2"
-						onClick={() => navigate("/kelas")}>
-						<i className="fa fa-arrow-left"></i> {/* Ikon panah kiri */}
-						Kembali
-					</button>
-				</div>
 
 				<div className="row display-flex flex-wrap-wrap gap-20px">
 					{/* <!-- Course Details --> */}
 					<div className="col-md-8">
+					<a
+						onClick={() => navigate("/kelas")}
+						style={{cursor:'pointer', padding:'1rem 0rem', display:'block',}}>
+						<i className="fa fa-arrow-left" style={{fontSize:"20px"}}></i> {/* Ikon panah kiri */}
+					</a>
 						<h1 className="course-title">
 							Belajar Teknologi Pertanian Modern: Drone untuk Pertanian Cerdas
 						</h1>
