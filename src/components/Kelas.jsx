@@ -168,7 +168,7 @@ const Kelas = () => {
 									</div>
 								</div>
 								<div className="image-button-container">
-									<img src="./foto2.jpg" alt="Course" className="course-image" />
+									<img src={course.image_cover ? `./${course.image_cover}` : "./foto2.jpg"} alt="Course" className="course-image" />
 									<a
 										href="/detailkls"
 										className="button-daftar"
