@@ -362,13 +362,11 @@ option {
 .col-md-8 {
 	flex: 0 0 66.66%;
 	max-width: 66.66%;
-	padding: 50px 45px;
 }
 
 .col-md-4 {
 	flex: 0 0 33.33%;
 	max-width: 33.33%;
-	margin-top: 17%;
 }
 
 /* Course Details */
@@ -1101,15 +1099,9 @@ main.book-detail {
 .col-md-8 {
 	flex: 0 0 66.66%;
 	max-width: 66.66%;
-	padding: 50px 45px;
 }
 
 
-.col-md-4 {
-	flex: 0 0 33.33%;
-	max-width: 33.33%;
-	margin-top: 17%;
-}
 
 /* Course Details */
 .course-title {

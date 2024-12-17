@@ -38,7 +38,7 @@ const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 			<div className="nav-wrapper">
-				<img src="./logo2.png" className="logo" alt="logo" />
+				<img src="../logo2.png" className="logo" alt="logo" />
 				<div
 					className="collapse navbar-collapse justify-content-center"
 					id="navbarNav">

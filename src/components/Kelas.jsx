@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Spinner from "../components/Spinner";
 import MiniSpinner from "../components/MiniSpinner";
+import { Link } from "react-router-dom";
 
 const Kelas = () => {
 	const [courses, setCourses] = useState([]) // State untuk simpan courses
@@ -158,9 +159,9 @@ const Kelas = () => {
 									<p className="title-course">{course.name}</p>
 									<p className="deskripsi-course">
 										{truncate(course.description, 120)}
-										<a href="/detailkls" className="next">
+										<Link to={`${course.id}`} className="next">
 											Detail
-										</a>
+										</Link>
 									</p>
 									<div className="tag-course">
 										<span style={{textTransform:'capitalize', }}>{course.difficulty}</span>
@@ -169,9 +170,9 @@ const Kelas = () => {
 									</div>
 								</div>
 								<div className="image-button-container">
-									<img src={course.image_cover ? `./${course.image_cover}` : "./foto2.jpg"} alt="Course" className="course-image" />
-									<a
-										href="/detailkls"
+									<img src={course.image_cover ? `../${course.image_cover}` : "../foto2.jpg"} alt="Course" className="course-image" />
+									<Link 
+										to={`${course.id}`}
 										className="button-daftar"
 										style={{
 											borderRadius: "20px",
@@ -179,7 +180,7 @@ const Kelas = () => {
 											marginTop: "10px",
 										}}>
 										Daftar Sekarang
-									</a>
+									</Link>
 								</div>
 							</div>
 						))) : (

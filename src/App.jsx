@@ -83,7 +83,7 @@ function App() {
 				<Route path="/ruangdiskusidetail" element={<RuangDiskusiDetail />} />
 				<Route path="/katalogteknologi" element={<KatalogTeknologi />} />
 				<Route path="/katalogteknodetail" element={<KatalogTeknoDetail />} />
-				<Route path="/detailkls" element={<KelasDetail />} />
+				<Route path="/kelas/:id" element={<KelasDetail />} />
 				<Route path="/sertifikat" element={<Sertifikat />} />
 				<Route path="/cokartu" element={<COKartu />} />
 				<Route path="/cokartupass" element={<COKartuPass />} />

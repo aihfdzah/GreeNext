@@ -17,7 +17,7 @@ const Footer = () => {
 		<footer className="footer footer-expand-lg footer-dark bg-dark text-white py-4">
 			<div className="footer-content" style={{padding:"0rem 4rem"}}>
 				<div className="footer-logo">
-					<img src="./logo.png" className="logo-footer" alt="FarmEduZ Logo" />
+					<img src="../logo.png" className="logo-footer" alt="FarmEduZ Logo" />
 
 					<div style={{display:"flex", alignItems:"end", gap:".25rem"}}>
 						<i className="bx fa-solid fa-globe d-flex flex"></i>
