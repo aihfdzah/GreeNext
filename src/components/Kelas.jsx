@@ -20,9 +20,11 @@ const Kelas = () => {
 		setSearchLoading(true);
 
 		// timeout for loading
-		setTimeout(() => {
+		const timer = setTimeout(() => {
 			setSearchLoading(false)
 		},300)
+
+		return () => clearTimeout(timer)
 	};
 
 	const filteredCourse = courses.filter(
@@ -147,14 +149,13 @@ const Kelas = () => {
 					{/* ---------------- Daftar Kursus ------------- */}
 					<div className="daftar-kursus display-flex flex-direction-column" style={{width:"100%"}}>
 						{/* Query course from database */}
-						{searchLoading ? (<div style={{margin:'auto', display:"flex", justifyContent:"center", alignContent:'start'}}><MiniSpinner /></div>) : (filteredCourse.map((course) => (
+						{searchLoading ? (<div style={{margin:'auto', display:"flex", justifyContent:"center", alignContent:'start'}}><MiniSpinner /></div>) : filteredCourse.length > 0 ? (filteredCourse.map((course) => (
 							<div
 								key={course.id}
 								className="course-item-horizontal  border-0 border-bottom"
 								style={{ borderBottomColor: " #17412d", minWidth:"100%"}}>
 								<div className="konten-course-horizontal">
 									<p className="title-course">{course.name}</p>
-									{console.log(course)}
 									<p className="deskripsi-course">
 										{truncate(course.description, 120)}
 										<a href="/detailkls" className="next">
@@ -181,170 +182,23 @@ const Kelas = () => {
 									</a>
 								</div>
 							</div>
-						)))}
+						))) : (
+							<div
+								style={{
+									margin:'auto',
+									textAlign:'center',
+									padding:'20px',
+									color:'#555'
+								}}
+							>
+								<i 
+								className="fa-solid fa-triangle-exclamation"
+								style={{fontSize:'80px', marginBottom:'1.5rem'}}></i>
+								<h3>Kelas tidak ditemukan</h3>
+								<p>Coba cari dengan kata kunci lain!</p>
+							</div>
+						)}
 						
-
-						{/* <div className="course-item-horizontal  border-0 border-bottom">
-							<div className="konten-course-horizontal">
-								<p className="title-course">
-									Pertanian Berkelanjutan dan Agroekologi
-								</p>
-								<p className="deskripsi-course">
-									Fokus pada konsep dan praktik pertanian berkelanjutan, kursus
-									ini mengajarkan tentang bagaimana meminimalkan dampak
-									lingkungan dari aktivitas pertanian ...
-									<a href="/detailkls" className="next">
-										Baca Selengkapnya
-									</a>
-								</p>
-								<div className="tag-course">
-									<span>Menengah</span>
-									<span>4.8/5</span>
-									<span>Gratis</span>
-								</div>
-							</div>
-							<div className="image-button-container">
-								<img src="./foto3.jpg" alt="Course" className="course-image" />
-								<a
-									href="/detailkls"
-									className="button-daftar"
-									style={{
-										borderRadius: "20px",
-										width: "200px",
-										marginTop: "10px",
-									}}>
-									Daftar Sekarang
-								</a>
-							</div>
-						</div> */}
-
-						{/* <div className="course-item-horizontal  border-0 border-bottom">
-							<div className="konten-course-horizontal">
-								<p className="title-course">Pengantar Pertanian Modern</p>
-								<p className="deskripsi-course">
-									Kursus ini memberikan pemahaman dasar tentang pertanian
-									modern, mulai dari praktik pertanian tradisional hingga
-									perkembangan teknologi yang diterapkan ...
-									<a href="/detailkls" className="next">
-										Baca Selengkapnya
-									</a>
-								</p>
-								<div className="tag-course">
-									<span>Menengah</span>
-									<span>4.8/5</span>
-									<span>Gratis</span>
-								</div>
-							</div>
-							<div className="image-button-container">
-								<img src="./foto4.jpg" alt="Course" className="course-image" />
-								<a
-									href="/detailkls"
-									className="button-daftar"
-									style={{
-										borderRadius: "20px",
-										width: "200px",
-										marginTop: "10px",
-									}}>
-									Daftar Sekarang
-								</a>
-							</div>
-						</div>
-
-						<div className="course-item-horizontal  border-0 border-bottom">
-							<div className="konten-course-horizontal">
-								<p className="title-course">Pengantar Pertanian Modern</p>
-								<p className="deskripsi-course">
-									Kursus ini memberikan pemahaman dasar tentang pertanian
-									modern, mulai dari praktik pertanian tradisional hingga
-									perkembangan teknologi yang diterapkan ...
-									<a href="/detailkls" className="next">
-										Baca Selengkapnya
-									</a>
-								</p>
-								<div className="tag-course">
-									<span>Menengah</span>
-									<span>4.8/5</span>
-									<span>Gratis</span>
-								</div>
-							</div>
-							<div className="image-button-container">
-								<img src="./foto5.jpg" alt="Course" className="course-image" />
-								<a
-									href="/detailkls"
-									className="button-daftar"
-									style={{
-										borderRadius: "20px",
-										width: "200px",
-										marginTop: "10px",
-									}}>
-									Daftar Sekarang
-								</a>
-							</div>
-						</div>
-
-						<div className="course-item-horizontal  border-0 border-bottom">
-							<div className="konten-course-horizontal">
-								<p className="title-course">Pengantar Pertanian Modern</p>
-								<p className="deskripsi-course">
-									Kursus ini memberikan pemahaman dasar tentang pertanian
-									modern, mulai dari praktik pertanian tradisional hingga
-									perkembangan teknologi yang diterapkan ...
-									<a href="/detailkls" className="next">
-										Baca Selengkapnya
-									</a>
-								</p>
-								<div className="tag-course">
-									<span>Menengah</span>
-									<span>4.8/5</span>
-									<span>Gratis</span>
-								</div>
-							</div>
-							<div className="image-button-container">
-								<img src="./foto6.jpg" alt="Course" className="course-image" />
-								<a
-									href="/detailkls"
-									className="button-daftar"
-									style={{
-										borderRadius: "20px",
-										width: "200px",
-										marginTop: "10px",
-									}}>
-									Daftar Sekarang
-								</a>
-							</div>
-						</div>
-
-						<div className="course-item-horizontal  border-0 border-bottom">
-							<div className="konten-course-horizontal">
-								<p className="title-course">Pengantar Pertanian Modern</p>
-								<p className="deskripsi-course">
-									Kursus ini memberikan pemahaman dasar tentang pertanian
-									modern, mulai dari praktik pertanian tradisional hingga
-									perkembangan teknologi yang diterapkan ...
-									<a href="/detailkls" className="next">
-										Baca Selengkapnya
-									</a>
-								</p>
-								<div className="tag-course">
-									<span>Menengah</span>
-									<span>4.8/5</span>
-									<span>Gratis</span>
-								</div>
-							</div>
-							<div className="image-button-container">
-								<img src="./foto1.jpg" alt="Course" className="course-image" />
-								<a
-									href="/detailkls"
-									className="button-daftar"
-									style={{
-										borderRadius: "20px",
-										width: "200px",
-										marginTop: "10px",
-									}}>
-									Daftar Sekarang
-								</a>
-							</div>
-						</div> */}
 
 						{/* Tambahkan lebih banyak course-item-horizontal serupa */}
 					</div>
