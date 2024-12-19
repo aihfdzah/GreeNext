@@ -73,7 +73,7 @@ const KatalogTeknoDetail = () => {
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 								referrerpolicy="strict-origin-when-cross-origin"
 								allowfullscreen></iframe>
-								<img src={`../${item.image}`} alt={item.name} style={{maxHeight:'400px', maxHeight:'600px', objectFit:'cover'}}/>
+								<img src={`../${item.image}`} alt={item.name} style={{maxWidth:'400px', maxHeight:'600px', objectFit:'cover'}}/>
 						</div>
 
 						<div className="text" style={{lineHeight:'2.5rem', textAlign:'justify', marginBottom:'4rem'}}>
