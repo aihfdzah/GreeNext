@@ -20,10 +20,6 @@ main.book-detail {
 	color: #333;
 }
 
-.content {
-	display: flex;
-	gap: 30px;
-}
 
 #detailebook {
 	flex-direction: row;

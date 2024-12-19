@@ -1,28 +1,77 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Row, Col, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import { useEffect } from "react";
 import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
 import "../Styles/KatalogTeknologi.css";
+import axios from "axios";
+import MiniSpinner from "../components/MiniSpinner";
+
+
 const KatalogTeknologi = () => {
 	const [activeButton, setActiveButton] = useState("katalogteknologi"); // Initialize activeButton state
 	const navigate = useNavigate(); // Initialize navigation
-	const [searchQuery, setSearchQuery] = useState("");
+	const [search, setSearch] = useState("");
+	const [searchLoading, setSearchLoading] = useState(false);
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
+	const [catalog, setCatalog] = useState([])
+	const searchTimeout = useRef(null);
 
 	const handleButtonClick = (buttonName, path) => {
 		setActiveButton(buttonName);
 		navigate(path);
 	};
 
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setLoading(false);
-		}, 3000); // Simulasikan loading selama 3 detik
+	const truncate = (str, maxLength) => {
+		return str.length > maxLength ? str.slice(0, maxLength) + "... " : str;
+	};
 
-		return () => clearTimeout(timer);
+	const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+    setSearchLoading(true);
+
+    // Clear any previous timeout
+    if (searchTimeout.current) {
+        clearTimeout(searchTimeout.current);
+    }
+
+    // Set a new timeout
+    searchTimeout.current = setTimeout(() => {
+        setSearchLoading(false);
+    }, 300);
+};
+
+// Cleanup timeout on unmount
+useEffect(() => {
+	return () => {
+			if (searchTimeout.current) {
+					clearTimeout(searchTimeout.current);
+			}
+	};
+}, []);
+
+	const filteredCatalog = catalog.filter(
+		(item) =>
+			item.name.toLowerCase().includes(search.toLowerCase()) ||
+			item.description.toLowerCase().includes(search.toLowerCase()) 
+	);
+
+	useEffect(() => {
+		const fetchCatalogTech = async () => {
+			setLoading(true)
+			try {
+				const response = await axios.get('http://localhost:5000/api/v1/tech-catalog/')
+				setCatalog(response.data.data)
+			} catch (error) {
+				console.error('Error Get Catalog', error.message)
+			} finally{
+				setLoading(false)
+			}
+				
+		}
+		fetchCatalogTech();
 	}, []);
 
 	// Jika sedang loading, tampilkan spinner
@@ -33,6 +82,7 @@ const KatalogTeknologi = () => {
 	return (
 		<>
 			<Navbar />
+			{console.log(catalog)}
 			<Row
 				className="py-3 d-flex text-left"
 				style={{
@@ -79,7 +129,7 @@ const KatalogTeknologi = () => {
 				</Col>
 			</Row>
 
-			<div className="container mt-4" style={{marginBottom:'10rem', padding:"0rem 4rem"}}>
+			<div className="container mt-4" style={{marginBottom:'10rem', padding:"0rem 4rem", minHeight:'40vh'}}>
 				<h1 className="text-center">Katalog Teknologi</h1>
 				{/* Search Bar */}
 				<div
@@ -105,118 +155,40 @@ const KatalogTeknologi = () => {
 							paddingLeft: "40px",
 						}}
 						placeholder="Katalog Teknologi..."
-						value={searchQuery}
-						onChange={(e) => setSearchQuery(e.target.value)}
+						onChange={handleSearchChange}
 					/>
 				</div>
 
-				<div class="list-item mt-2">
-					<div class="item-content">
-						<img
-							src="./sensor tanah.jpg"
-							alt="Sensor Tanah"
-							class="item-image"
-						/>
-						<div class="item-text">
-							<p class="item-title">Sensor Tanah</p>
-							<p class="item-desc">
-								Digunakan untuk mengukur kadar air, pH, dan nutrisi tanah.
-							</p>
+				{searchLoading ? (
+						<div style={{ margin: 'auto', display: 'flex', justifyContent: 'center', alignContent: 'start' }}>
+								<MiniSpinner />
 						</div>
-					</div>
+				) : filteredCatalog.length > 0 ? (
+						filteredCatalog.map((item) => (
+								<div className="list-item mt-2" key={item.id}>
+										<div className="item-content">
+												<img
+														src={`./${item.image}`}
+														alt={item.name}
+														className="item-image"
+												/>
+												<div className="item-text">
+														<p className="item-title" style={{textTransform:'capitalize'}}>{item.name}</p>
+														<p className="item-desc">
+																{truncate(item.description, 150)}
+														</p>
+												</div>
+										</div>
 
-					<div class="item-action">
-						<i className="fa fa-eye"></i>
-						<a href="/katalogteknodetail">Lihat detail</a>
-					</div>
-				</div>
-
-				<div class="list-item">
-					<div class="item-content">
-						<img
-							src="./lampu grow led.jpg"
-							alt="Lampu Grow LED"
-							class="item-image"
-						/>
-						<div class="item-text">
-							<p class="item-title">Lampu Grow LED</p>
-							<p class="item-desc">
-								Lampu khusus untuk mendukung pertumbuhan tanaman di dalam
-								ruangan.
-							</p>
-						</div>
-					</div>
-
-					<div class="item-action">
-						<i className="fa fa-eye"></i>
-						<a href="#">Lihat detail</a>
-					</div>
-				</div>
-				<div class="list-item">
-					<div class="item-content">
-						<img
-							src="./smart sprinklee.jpg"
-							alt="Lampu Grow LED"
-							class="item-image"
-						/>
-						<div class="item-text">
-							<p class="item-title">
-								Smart Sprinkle (Penyiraman Tanaman Cerdas)
-							</p>
-							<p class="item-desc">
-								Sistem penyiraman tanaman yang bisa diatur waktu dan
-								intensitasnya.
-							</p>
-						</div>
-					</div>
-
-					<div class="item-action">
-						<i className="fa fa-eye"></i>
-						<a href="#">Lihat detail</a>
-					</div>
-				</div>
-				<div class="list-item">
-					<div class="item-content">
-						<img
-							src="./traktor mini elektrik.jpg"
-							alt="Lampu Grow LED"
-							class="item-image"
-						/>
-						<div class="item-text">
-							<p class="item-title">Traktor Mini Elektrik</p>
-							<p class="item-desc">
-								Alat bantu yang efisien dan mudah digunakan untuk mengelola
-								lahan kecil hingga menengah.
-							</p>
-						</div>
-					</div>
-
-					<div class="item-action">
-						<i className="fa fa-eye"></i>
-						<a href="#">Lihat detail</a>
-					</div>
-				</div>
-				<div class="list-item">
-					<div class="item-content">
-						<img
-							src="drone pertanian.jpg"
-							alt="Lampu Grow LED"
-							class="item-image"
-						/>
-						<div class="item-text">
-							<p class="item-title">Drone Pertanian</p>
-							<p class="item-desc">
-								Digunakan untuk pemantauan tanaman dan penyemprotan
-								pupuk/pestisida dari udara.
-							</p>
-						</div>
-					</div>
-
-					<div class="item-action">
-						<i className="fa fa-eye"></i>
-						<a href="#">Lihat detail</a>
-					</div>
-				</div>
+										<div className="item-action">
+												<i className="fa fa-eye"></i>
+												<Link to={`${item.id}`}>Lihat detail</Link>
+										</div>
+								</div>
+						))
+				) : (
+						<p className="text-center mt-4">No data found</p>
+				)}
 			</div>
 
 			<Footer />

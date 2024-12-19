@@ -12,24 +12,40 @@ const Kelasdetail = () => {
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
 	const [courses, setCourses] = useState([]) // state untuk menyimpan course
 	const [notFound, setNotFound] = useState(false) // no course state
+	const [modules, setModules] = useState([])
+	const [moduleContents, setModuleContents] = useState([])
 
 	useEffect(() => {
-		const getCourseData = async (idCourse) => {
+		const fetchCourseDetails = async (idCourse) => {
 			try {
-				const response = await axios.get(`http://localhost:5000/api/v1/course/${idCourse}`)	
-				if(response.data.data.length === 0 ){
+				const [courseResponse, moduleResponse, contentResponse] = await Promise.all([
+					axios.get(`http://localhost:5000/api/v1/course/${idCourse}`, {withCredentials:true}),
+					axios.get(`http://localhost:5000/api/v1/course/module/${idCourse}`, {withCredentials:true}),
+					axios.get(`http://localhost:5000/api/v1/course/module/${idCourse}/content`, {withCredentials:true})
+				])
+				// const response = await axios.get(`http://localhost:5000/api/v1/course/${idCourse}`, {withCredentials:true})	
+				if(courseResponse.data.data.length === 0 ){
 					setNotFound(true);
 				} else {
-					setCourses(response.data.data)
+					setCourses(courseResponse.data.data)
+					setModules(moduleResponse.data.data)
 				}
+				 // Organize contents by module ID
+				const organizedContents = contentResponse.data.data.reduce((acc, content) => {
+          acc[content.id_module] = acc[content.id_module] || [];
+          acc[content.id_module].push(content);
+          return acc;
+        }, {});
+        setModuleContents(organizedContents);
+				// const moduleResponse = await axios.get(`http://localhost:5000/api/v1/course/module/${idCourse}`, {withCredentials:true})
 			} catch (error) {
 				console.error('Error Fetch Course Data', error.message)
-				console.log(response.data.message);
+				// console.log(response.data.message);
 			} finally {
 				setLoading(false)
 			}
 		}
-		getCourseData(id)
+		fetchCourseDetails(id)
 	}, []);
 
 	// Jika sedang loading, tampilkan spinner
@@ -56,7 +72,7 @@ const Kelasdetail = () => {
 				{/* Course Data	 */}
 				{!loading && !notFound && courses.map((course) => (
 					<div className="row display-flex flex-wrap-wrap gap-20px" key={course.id}>
-						<div className="col-md-8" style={{paddingLeft:"4rem", paddingTop:'1rem'}}>
+						<div className="col-md-8" style={{paddingLeft:"4rem", paddingTop:'1rem', paddingBottom:"4rem"}}>
 						<a
 							onClick={() => navigate("/kelas")}
 							style={{cursor:'pointer', padding:'1rem 0rem', display:'block',}}>
@@ -78,44 +94,26 @@ const Kelasdetail = () => {
 							<p className="course-description" style={{marginTop:"2rem", lineHeight:'2.2rem'}}>
 								{course.description}
 							</p>
-
-							<div className="accordion">
-								<h4>Materi Kelas</h4>
-								<div className="accordion-item">
-									<div className="accordion-header1">
-										Minggu 1 - Pengantar Teknologi Drone untuk Pertanian
-									</div>
-									<div className="accordion-content">
-										<p>Pengantar (01:42)</p>
-										<p>Apa itu drone pertanian? (01:42)</p>
-										<p>
-											Penggunaan jenis drone untuk memenuhi pertumbuhan tanaman
-											(01:42)
-										</p>
-										<p>
-											Cara memilih drone yang sesuai untuk kebutuhan pertanian
-											(01:42)
-										</p>
-									</div>
-								</div>
-
-								<div className="accordion-item">
-									<div className="accordion-header">
-										Minggu 2 - Teknik Pengoperasian Drone
-									</div>
-									<div className="accordion-content">
-										{/* <p>Detail materi untuk Minggu 2 akan tersedia di sini.</p> */}
-									</div>
-								</div>
-
-								<div className="accordion-item">
-									<div className="accordion-header">
-										Minggu 3 - Aplikasi Praktis dan Studi Kasus
-									</div>
-									<div className="accordion-content">
-										{/* <p>Detail materi untuk Minggu 3 akan tersedia di sini.</p> */}
-									</div>
-								</div>
+						<div className="accordion">
+							<h4 className="mb-4">Materi Kelas</h4>
+							{modules.length > 0 ? (
+								modules.map((module) => (
+										<div className="accordion-item">
+											<div className="accordion-header">
+												{`Modul ${module.module_number} - ${module.module_description}`}
+											</div>
+											<div className="content" style={{textAlign:'left', padding:"0rem 1rem"}}>
+												{moduleContents[module.id] && moduleContents[module.id].length > 0 ? (
+													<ol style={{display:'flex', flexDirection:"column", gap:".5rem"}}>
+														{moduleContents[module.id].map((content) => (
+															<li key={content.id}>{content.title}</li>
+														))}
+													</ol>
+													) : (<p>No content available for this module.</p>)
+													}
+											</div>
+										</div>
+						))) : (<p>Materi kelas belum tersedia{console.log(modules)}</p>)}
 							</div>
 						</div>
 
@@ -123,7 +121,9 @@ const Kelasdetail = () => {
 						<div className="col-md-4" style={{marginTop:'10rem', paddingRight: "4rem"}}>
 							<div className="benefits-card">
 								<div className="price">{Number(course.price) > 0 ? (new Intl.NumberFormat('id-ID', {style:'currency', currency:"IDR"}).format(course.price)) : 'Gratis'}</div>
-								<a href="/cokartu" className="btn-orange">
+								<a href={`/course-learn-phase/${courses[0].id}/${modules[0].id}`} className="btn-orange" style={{cursor:"pointer"}} onClick={() => {
+									alert('Berhasil mendaftar kelas. Anda sudah bisa mengakses kelas!')
+								}}>
 									Daftar Kelas
 								</a>
 								<h5>Benefit yang didapatkan</h5>

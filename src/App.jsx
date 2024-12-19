@@ -46,6 +46,7 @@ import ProfileAdmin from "./admin/ProfileAdmin";
 import KelasAdmin from "./admin/KelasAdmin";
 import DashboardAdmin from "./admin/DashboardAdmin";
 import KelasAdminDetail from "./admin/KelasAdminDetail";
+import CourseLearnPhase from "./pages/CourseLearnPhase";
 function App() {
 	return (
 		<BrowserRouter>
@@ -82,8 +83,9 @@ function App() {
 				<Route path="/ruangdiskusi" element={<RuangDiskusi />} />
 				<Route path="/ruangdiskusidetail" element={<RuangDiskusiDetail />} />
 				<Route path="/katalogteknologi" element={<KatalogTeknologi />} />
-				<Route path="/katalogteknodetail" element={<KatalogTeknoDetail />} />
+				<Route path="/katalogteknologi/:id" element={<KatalogTeknoDetail />} />
 				<Route path="/kelas/:id" element={<KelasDetail />} />
+				<Route path="/course-learn-phase/:id/:id_module" element=	{<CourseLearnPhase />} />
 				<Route path="/sertifikat" element={<Sertifikat />} />
 				<Route path="/cokartu" element={<COKartu />} />
 				<Route path="/cokartupass" element={<COKartuPass />} />
@@ -93,9 +95,9 @@ function App() {
 				<Route path="/cobankdetail" element={<COBankDetail />} />
 				<Route path="/cobanknext" element={<COBankNext />} />
 				<Route path="/coberhasil" element={<COBerhasil />} />
-				<Route path="*" element={<NotFound />} />
 				<Route path="/privasi" element={<Privasi />} />
 				<Route path="/keluar" element={<Keluar />} />
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
 	);

@@ -45,7 +45,7 @@ const Kelas = () => {
 				setCourses(response.data.data)
 			} catch (error) {
 				console.error("Error Request getCourse", error.message)
-				console.log(response.data.message)
+				// console.log(response.data.message)
 			} finally {
 				setLoading(false)
 			}
