@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import profile from "../assets/Profile.png";
+import profile from "../assets/profile.png";
 const Profilekeluar = () => {
 	const navigate = useNavigate();
 
