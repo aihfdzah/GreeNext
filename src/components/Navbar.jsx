@@ -25,7 +25,7 @@ const Navbar = () => {
 			if((await response).status == 200){
 				console.log(response.data);
 				alert('Logout successfully!')
-				navigate('/login')
+				navigate('/')
 				console.log('masuk sini kah?')
 			}
 			
@@ -48,7 +48,7 @@ const Navbar = () => {
 								className={`nav-link ${
 									location.pathname === "/dashboard" ? "active-link" : ""
 								}`}
-								href="/dashboard">
+								href={navigate('/dashboard')}>
 								Dashboard
 							</a>
 						</li>
