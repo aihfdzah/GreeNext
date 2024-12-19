@@ -58,7 +58,7 @@ const Navbar = () => {
 								className={`nav-link ${
 									location.pathname === "/kelas" ? "active-link" : ""
 								}`}
-								href="/kelas">
+								href={navigate('/kelas')}>
 								Kelas
 							</a>
 						</li>
@@ -68,7 +68,7 @@ const Navbar = () => {
 								className={`nav-link ${
 									location.pathname === "/sumberdaya" ? "active-link" : ""
 								}`}
-								href="/sumberdaya">
+								href={navigate('/sumberdaya')}>
 								Sumber Daya
 							</a>
 						</li>
@@ -78,7 +78,7 @@ const Navbar = () => {
 								className={`nav-link ${
 									location.pathname === "/tentang" ? "active-link" : ""
 								}`}
-								href="/tentang">
+								href={navigate("/tentang")}>
 								Tentang Kita
 							</a>
 						</li>
