@@ -13,7 +13,7 @@ function Dashboard() {
 	const [error, setError] = useState(null);  // state untuk menampilkan error
 	const [user, setUser] = useState(null) // state untuk menampilkan user
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
-	const [hasClass, setHasClass] = useState(true); // state untuk mengatur konten dashboard apakah memiliki kelas atau tidak
+	const [hasClass, setHasClass] = useState(false); // state untuk mengatur konten dashboard apakah memiliki kelas atau tidak
 
 	useEffect(() => {
 	const fetchUser = async () => {

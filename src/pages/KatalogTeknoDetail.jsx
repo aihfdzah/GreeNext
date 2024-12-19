@@ -1,19 +1,40 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useNavigate } from "react-router-dom"; // Untuk navigasi
+import { useNavigate, useParams } from "react-router-dom"; // Untuk navigasi
 import { useState, useEffect } from "react";
 import Spinner from "../components/Spinner"; // Pastikan path sesuai dengan lokasi Spinner.js
+import axios from "axios";
 const KatalogTeknoDetail = () => {
+	const {id} = useParams() // get id from kelas
 	const navigate = useNavigate(); // Hook untuk navigasi
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
+	const [items, setItems] = useState([])
 
 	useEffect(() => {
-		const timer = setTimeout(() => {
-			setLoading(false);
-		}, 3000); // Simulasikan loading selama 3 detik
-
-		return () => clearTimeout(timer);
+		const fetchCatalogDetails = async (idCatalog) => {
+			try {
+				setLoading(true)
+				const response = await axios.get(`http://localhost:5000/api/v1/tech-catalog/${id}`)
+				setItems(response.data.data)
+				console.log(response.data.data)
+			} catch (error) {
+				console.error("Error fetch catalog data", error.message)
+			} finally {
+				setLoading(false)
+			}
+		}
+		fetchCatalogDetails(id)
 	}, []);
+
+	const getEmbedUrl = (url) => {
+    // Check if the URL is a standard YouTube watch URL
+    const videoIdMatch = url.match(/v=([a-zA-Z0-9_-]+)/);
+    if (videoIdMatch && videoIdMatch[1]) {
+        return `https://www.youtube.com/embed/${videoIdMatch[1]}`;
+    }
+    // If URL is already in embed format or invalid, return it as is
+    return url;
+};
 
 	// Jika sedang loading, tampilkan spinner
 	if (loading) {
@@ -24,46 +45,44 @@ const KatalogTeknoDetail = () => {
 			<Navbar />
 			<div className="container" style={{marginTop:"70px"}}>
 				{/* Tombol Kembali */}
-				<div className="mb-5">
-					<button
-						className="btn btn-trasparant d-flex align-items-center gap-2"
-						onClick={() => navigate("/katalogteknologi")}>
-						<i className="fa fa-arrow-left"></i> {/* Ikon Back */}
-						Kembali
-					</button>
+				<div className="mb-3">
+					<a
+						onClick={() => navigate("/katalogteknologi")}
+						style={{cursor:'pointer', padding:'1rem 0rem', display:'block',}}>
+						<i className="fa fa-arrow-left" style={{fontSize:'20px'}}></i> {/* Ikon Back */}
+					</a>
 				</div>
-				<div className="text-room">
-					<h1
-						style={{
-							fontSize: "2rem",
-							fontWeight: "bold",
-							marginTop: "-30px",
-						}}>
-						Sensor pH Tanah
-					</h1>
-					<div className="headerr">
-						<iframe
-							width="750"
-							height="400"
-							src="https://www.youtube.com/embed/3_V-q_wHoxo?si=CSHuXlxlMvI5wtef"
-							title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin"
-							allowfullscreen></iframe>
-					</div>
+				{items.map((item) => (
+					<div className="text-room">
+						<h1
+							style={{
+								fontSize: "2rem",
+								fontWeight: "bold",
+								textTransform:"capitalize"
+							}}>
+							{item.name}
+						</h1>
+						<div className="headerr" style={{display:'flex', alignContent:'center', gap:'4rem', margin:'2.5rem 0rem'}}>
+							{console.log(item.video)}
+							<iframe
+								width="750"
+								height="400"
+								src={getEmbedUrl(item.video)}
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allowfullscreen></iframe>
+								<img src={`../${item.image}`} alt={item.name} style={{maxHeight:'400px', maxHeight:'600px', objectFit:'cover'}}/>
+						</div>
 
-					<div className="text">
-						<p>
-							Pelajari cara memanfaatkan teknologi drone dalam sektor pertanian
-							untuk meningkatkan hasil panen dan efisiensi lahan. Kelas ini
-							dirancang untuk memberikan pengetahuan praktis dalam
-							mengoperasikan drone, memetakan lahan, dan menganalisis data
-							pertanian secara cerdas. Cocok bagi pemula maupun profesional yang
-							ingin mengembangkan keterampilan di era pertanian 4.0.
-						</p>
+						<div className="text" style={{lineHeight:'2.5rem', textAlign:'justify', marginBottom:'4rem'}}>
+							<p>
+								{item.description}
+							</p>
+						</div>
 					</div>
-				</div>
+				))}
 			</div>
 
 			<Footer />
