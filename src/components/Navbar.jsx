@@ -48,8 +48,7 @@ const Navbar = () => {
 								className={`nav-link ${
 									location.pathname === "/dashboard" ? "active-link" : ""
 								}`}
-								href="./dashboard"
-								onClick={navigate('/dashboard')}>
+								href="./dashboard">
 								Dashboard
 							</a>
 						</li>
@@ -59,8 +58,7 @@ const Navbar = () => {
 								className={`nav-link ${
 									location.pathname === "/kelas" ? "active-link" : ""
 								}`}
-								href='/kelas'
-								onClick={navigate('/kelas')}>
+								href='./kelas'>
 								Kelas
 							</a>
 						</li>
@@ -70,8 +68,7 @@ const Navbar = () => {
 								className={`nav-link ${
 									location.pathname === "/sumberdaya" ? "active-link" : ""
 								}`}
-								href='/sumberdaya'
-								onClick={navigate('/sumberdaya')}>
+								href='./sumberdaya'>
 								Sumber Daya
 							</a>
 						</li>
@@ -81,8 +78,7 @@ const Navbar = () => {
 								className={`nav-link ${
 									location.pathname === "/tentang" ? "active-link" : ""
 								}`}
-								href='/tentang'
-								onClick={navigate('/tentang')}>
+								href='./tentang'>
 								Tentang Kita
 							</a>
 						</li>
