@@ -14,7 +14,7 @@ const KatalogTeknoDetail = () => {
 		const fetchCatalogDetails = async (idCatalog) => {
 			try {
 				setLoading(true)
-				const response = await axios.get(`http://localhost:5000/api/v1/tech-catalog/${id}`)
+				const response = await axios.get(`https://greenext-server-production.up.railway.app/api/v1/tech-catalog/${id}`)
 				setItems(response.data.data)
 				console.log(response.data.data)
 			} catch (error) {

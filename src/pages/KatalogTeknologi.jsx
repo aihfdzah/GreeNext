@@ -62,7 +62,7 @@ useEffect(() => {
 		const fetchCatalogTech = async () => {
 			setLoading(true)
 			try {
-				const response = await axios.get('http://localhost:5000/api/v1/tech-catalog/')
+				const response = await axios.get('https://greenext-server-production.up.railway.app/api/v1/tech-catalog/')
 				setCatalog(response.data.data)
 			} catch (error) {
 				console.error('Error Get Catalog', error.message)

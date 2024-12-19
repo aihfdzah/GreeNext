@@ -12,12 +12,12 @@ function Dashboard() {
 	const [error, setError] = useState(null);  // state untuk menampilkan error
 	const [user, setUser] = useState(null) // state untuk menampilkan user
 	const [loading, setLoading] = useState(true); // State untuk mengatur loading spinner
-	const [hasClass, setHasClass] = useState(true); // state untuk mengatur konten dashboard apakah memiliki kelas atau tidak
+	const [hasClass, setHasClass] = useState(false); // state untuk mengatur konten dashboard apakah memiliki kelas atau tidak
 
 	useEffect(() => {
 	const fetchUser = async () => {
 		try {
-			const response = await axios.get("http://localhost:5000/api/v1/auth/me", {
+			const response = await axios.get("https://greenext-server-production.up.railway.app/api/v1/auth/me", {
 				withCredentials: true, // Ensure cookies are sent with the request
 			});
 			setUser(response.data.user); // Update user state

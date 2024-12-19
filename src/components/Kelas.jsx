@@ -41,7 +41,7 @@ const Kelas = () => {
 			setLoading(true)
 			setError(null)
 			try {
-				const response = await axios.get('http://localhost:5000/api/v1/course/')
+				const response = await axios.get('https://greenext-server-production.up.railway.app/api/v1/course/')
 				setCourses(response.data.data)
 			} catch (error) {
 				console.error("Error Request getCourse", error.message)

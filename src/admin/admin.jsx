@@ -17,7 +17,7 @@ function Admin() {
 			setLoading(true);
 			setError(null);
 			try {
-				const response = await axios.get("http://localhost:5000/api/v1/admin");
+				const response = await axios.get("https://greenext-server-production.up.railway.app/api/v1/admin");
 				setAdmins(response.data.data);
 			} catch (err) {
 				console.error("Error fetching admin data:", err.message);

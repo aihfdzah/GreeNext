@@ -29,10 +29,10 @@ function CourseLearnPhase() {
     const fetchCourseDetails = async (idCourse, idModule) => {
       try {
         const [singleModuleResponse, courseResponse, moduleResponse, contentResponse] = await Promise.all([
-          axios.get(`http://localhost:5000/api/v1/course/module/${idCourse}/content/${idModule}`),
-          axios.get(`http://localhost:5000/api/v1/course/${idCourse}`, { withCredentials: true }),
-          axios.get(`http://localhost:5000/api/v1/course/module/${idCourse}`, { withCredentials: true }),
-          axios.get(`http://localhost:5000/api/v1/course/module/${idCourse}/content`, { withCredentials: true }),
+          axios.get(`https://greenext-server-production.up.railway.app/api/v1/course/module/${idCourse}/content/${idModule}`),
+          axios.get(`https://greenext-server-production.up.railway.app/api/v1/course/${idCourse}`, { withCredentials: true }),
+          axios.get(`https://greenext-server-production.up.railway.app/api/v1/course/module/${idCourse}`, { withCredentials: true }),
+          axios.get(`https://greenext-server-production.up.railway.app/api/v1/course/module/${idCourse}/content`, { withCredentials: true }),
         ]);
 
         if (courseResponse.data.data.length === 0) {

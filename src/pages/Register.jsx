@@ -35,7 +35,7 @@ function Register() {
 		setError("");
 		console.log(formData.username, formData.password, formData.email);
 		try {
-			const response = await axios.post('http://localhost:5000/api/v1/auth/register', {
+			const response = await axios.post('https://greenext-server-production.up.railway.app/api/v1/auth/register', {
 				username : formData.username, 
 				password: formData.password, 
 				email: formData.email

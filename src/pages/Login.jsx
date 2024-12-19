@@ -35,7 +35,7 @@ function Login() {
 		console.log(formData.email, formData.password);
 		try {
 			const response = await axios.post(
-				"http://localhost:5000/api/v1/auth/login",
+				"https://greenext-server-production.up.railway.app/api/v1/auth/login",
 				{
 					email: formData.email,
 					password: formData.password,
